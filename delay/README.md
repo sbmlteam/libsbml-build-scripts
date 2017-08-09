@@ -10,7 +10,7 @@ Scripts and utilities used to build and deploy a libSBML release
 
 --------
 
-##Builds done on delay
+## Builds done on delay
 
 [Standalone python](https://github.com/sbmlteam/libsbml-build-scripts/blob/delay/delay/python-create-standalone.md)
 
