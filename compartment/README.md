@@ -11,6 +11,8 @@ Ubuntu 14.04.5 (32 bit)
 
 Nightly build
 
+Python Anaconda packages
+
 -----
 
 For more information contact Sarah or Brett
