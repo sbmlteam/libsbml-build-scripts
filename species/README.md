@@ -15,6 +15,8 @@ Nightly build
 
 Python wheels
 
+Python Anaconda packages
+
 ------------
 
 For more information contact Sarah or Brett
