@@ -17,6 +17,8 @@ Mac dmg installer
 
 MATLAB 2017a for mac binaries
 
+Python mac binaries, PyPI whl and Anaconda package
+
 -------
 
 For more information contact Sarah or Brett
