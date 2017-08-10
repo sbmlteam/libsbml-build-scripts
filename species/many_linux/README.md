@@ -1,6 +1,6 @@
 # Creating Linux Python wheels
 
-Theses scripts generate a variety of libSBML Linux wheels for PyPI using ManyLinux containers, this can takes some time.
+These scripts generate a variety of libSBML Linux wheels for PyPI using ManyLinux containers, this can takes some time. The ManyLinux build depends on the source package being available on PyPI, so that `pip install` will work.
 
 * build_libsbml.sh
 * run_libsbml.sh
