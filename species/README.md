@@ -15,7 +15,7 @@ Nightly build
 
 Python wheels
 
-Python Anaconda packages
+Python Anaconda package
 
 ------------
 

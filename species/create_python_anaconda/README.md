@@ -3,7 +3,7 @@
 * Unpack a copy of the "full" Python source archive `tar xf python-libsbml-experimental-<ver>.tar.gz`
 * cd into your newly unpacked archive
 
-Fire up your editor `nano setup.py` and look for this section of code
+Fire up your editor `nano setup.py` and look for this section of the code:
 
 ```
 try:
@@ -11,6 +11,7 @@ try:
 except ImportError:
   from distutils.core import setup, Extension
 ```
+
 or 
 
 ```
@@ -22,20 +23,17 @@ and simply add the following lines.
 
 ```
 try:
-    import distutils.command.bdist_conda
+  import distutils.command.bdist_conda
 except:
-    pass  
+  print('No bdist_conda')
 
 ```
 
-Now use Anaconda to build the Anaconda binaries. Anaconda Python lives in `` so we need to call its Python binary, assuming we are in ~/work/<archive>
+Now use Anaconda, the default Python, to build the binaries:
 
-* run `../../anaconda2/bin/python setup.py bdist_conda` this will compile the Ananconda package
+* run `python setup.py bdist_conda` to compile the Ananconda package
 * Once you have a Conda package we need to upload it to the Anaconda cloud. 
-* Log in to the Anaconda cloud first id you need to `../anaconda2/bin/anaconda login`
-* upload with `../anaconda2/bin/anaconda upload --user SBMLTeam /Users/frank/anaconda2/conda-bld/osx-64/python-libsbml-experimental-<ver>-py27_0.tar.bz2`
+* Log in to the Anaconda cloud first with `anaconda login`
+* Upload with `anaconda upload --user SBMLTeam `/home/fbergman/anaconda2/conda-bld/linux-64/python-libsbml-experimental-<ver>-py27h115b96f_0.tar.bz2`
 
-
-
-
-
+The hashy thing after py27 is a Conda thing and can be ignored.
