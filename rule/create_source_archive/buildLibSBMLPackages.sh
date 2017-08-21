@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DIRECTORY=$(cd `dirname $0` && pwd)
-VERSION=5.15.2
+VERSION=$1
 DB_DIR=$HOME/Dropbox/sbmlteam-libsbml-dist/$VERSION
 OUT_DIR=$HOME/out_dir
 BUILD_DIR=$HOME/build_dir
@@ -13,6 +13,9 @@ fi
 if [ -d "$BUILD_DIR" ]; then
 	rm -rf "$BUILD_DIR"
 fi
+
+cp $OUT_DIR/libsbml-$VERSION-src.tar.gz $DB_DIR/libSBML-$VERSION-src.tar.gz
+cp $OUT_DIR/libsbml-$VERSION-src.zip $DB_DIR/libSBML-$VERSION-src.zip
 
 
 cd $HOME
@@ -52,3 +55,11 @@ cpack -G TGZ --config ./CPackSourceConfig.cmake
 cpack -G ZIP --config ./CPackSourceConfig.cmake
 cp libSBML-$VERSION-Source.tar.gz $OUT_DIR/
 cp libSBML-$VERSION-Source.zip $OUT_DIR/
+
+cd $DB_DIR
+rm libsbml-$VERSION-src.tar.gz
+rm libsbml-$VERSION-src.zip
+
+cd $OUT_DIR
+cp libsbml-$VERSION-*.* $DB_DIR/*
+
