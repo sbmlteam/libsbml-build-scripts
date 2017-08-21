@@ -7,6 +7,7 @@
 ## RUN
 
 From the frank home directory run
+
 1. ~/gitrepo/libsbml-build-scripts/rule/createGnuSource.sh 
 
 ## RESULT
