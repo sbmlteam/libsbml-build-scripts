@@ -61,5 +61,5 @@ rm libsbml-$VERSION-src.tar.gz
 rm libsbml-$VERSION-src.zip
 
 cd $OUT_DIR
-cp libSBML-$VERSION-*.* $DB_DIR/*.*
+cp libSBML-$VERSION-*.* $DB_DIR
 
