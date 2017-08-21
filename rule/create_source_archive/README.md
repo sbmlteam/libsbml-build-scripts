@@ -1,4 +1,15 @@
-# rule src archive build
+# Create source archives
+
+## PREREQUISITES
+
+1. The package archives should be created using Delay: create package archives.
+
+## RUN
+
+From the frank home directory run
+1. ~/gitrepo/libsbml-build-scripts/rule/createGnuSource.sh 
+
+## RESULT
 
 Log in to rule via ssh as: frank@rule.caltech.edu 
 Rule uses franks dropbox account and synchronizes the sbmlteam-libsbml-dist directory. 

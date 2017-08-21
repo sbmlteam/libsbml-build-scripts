@@ -1,8 +1,6 @@
 #!/bin/bash
 
 DIRECTORY=$(cd `dirname $0` && pwd)
-VERSION=5.15.2
-DB_DIR=$HOME/Dropbox/sbmlteam-libsbml-dist/$VERSION
 OUT_DIR=$HOME/out_dir
 SOURCE_DIR=$HOME/Development/libsbml_gnumake
 C_LOGFILE=$OUT_DIR/mac-gnumake-configure-log.txt
