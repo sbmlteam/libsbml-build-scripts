@@ -10,4 +10,6 @@ should be executed in the build directory that contains the following scripts. E
 * build_libsbml.sh
 * build_libsbml_experimental.sh
 
-NOTE! Root (sudo) level access is required to run docker containers. 
+NOTE! Root (sudo) level access is required to run docker containers.
+
+TODO: Python 2.6 support is being deprecated in many_linux so should be removed from the build.
