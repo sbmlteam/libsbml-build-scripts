@@ -3,8 +3,12 @@
 
 DIRECTORY=$(cd `dirname $0` && pwd)
 
+PACKAGE_MAKER=$DIRECTORY/../PackageMaker.app/Contents/MacOS/PackageMaker
+SOURCE_DIR=$DIRECTORY/../Development/libsbml
+
+
 OSX_MAJOR_VER=`uname -r | cut -d'.' -f1`
-if expr &{OSX_MAJOR_VER} \>= 16 | grep -q 1; then
+if expr ${OSX_MAJOR_VER} \>= 16 | grep -q 1; then
 MACOS="sierra"
 elif expr ${OSX_MAJOR_VER} \>= 15 | grep -q 1; then
 MACOS="elcapitan"
@@ -18,16 +22,14 @@ elif expr ${OSX_MAJOR_VER} \>= 11 | grep -q 1; then
   MACOS="lion"
 elif expr ${OSX_MAJOR_VER} \>= 10 | grep -q 1; then
   MACOS="snowleopard"
+  PACKAGE_MAKER=/Developer/Applications/Utilities/PackageMaker.app/Contents/MacOS/PackageMaker
+  SOURCE_DIR=$DIRECTORY/../../../../../libsbml
 else
   MACOS="leopard"
 fi
 
 
-PACKAGE_MAKER=$DIRECTORY/../PackageMaker.app/Contents/MacOS/PackageMaker
-
-SOURCE_DIR=$DIRECTORY/../Development/libsbml
-
-PACKAGE_VERSION=5.15.0
+PACKAGE_VERSION=$1
 XML_PARSER=libxml2
 DISKDIR=disk-image
 PKGNAME=libSBML-${PACKAGE_VERSION}-${XML_PARSER}-${MACOS}.pkg
