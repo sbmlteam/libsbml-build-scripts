@@ -2,7 +2,8 @@
 
 ## PREREQUISITES
 
-1. The package archives should be created using Delay: create package archives.
+1. These scripts assume that the libSBML svn branch is checked out in home/Development/libsbml_gnumake.
+2. The package archives should be created using Delay: create package archives.
 
 ## RUN
 

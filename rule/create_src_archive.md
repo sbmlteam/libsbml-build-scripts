@@ -3,5 +3,5 @@ Creates the source archives
 
 ## Folder location
 
-Currently run from dropbox/sbmlteam-libsbml-dist
+These run from the in-situ gitrepo directory.
 
