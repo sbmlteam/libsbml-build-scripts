@@ -2,9 +2,16 @@
 
 DIRECTORY=$(cd `dirname $0` && pwd)
 
-SOURCE_DIR=$DIRECTORY/../../../libsbml-experimental
+INSTALL_DIR=$DIRECTORY/../../common/mac_installer/installer/libsbml-dist
 
-BUILD_DIR=$DIRECTORY/../../../working/buildExpSVN
+SOURCE_DIR=$DIRECTORY/../../../../libsbml-experimental
+
+BUILD_DIR=$DIRECTORY/../../../../working/buildExpSVN
+
+
+cd $INSTALL_DIR
+rm -r $INSTALL_DIR/*
+cd $SOURCE_DIR
 
 cd $SOURCE_DIR
 # update SVN
