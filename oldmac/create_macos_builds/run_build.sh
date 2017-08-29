@@ -10,7 +10,7 @@ BUILD_DIR=$DIRECTORY/../../../../working/buildSVN
 
 
 cd $INSTALL_DIR
-rm -r $INSTALL_DIR/*
+rm -r $INSTALL_DIR
 cd $SOURCE_DIR
 
 # update SVN
