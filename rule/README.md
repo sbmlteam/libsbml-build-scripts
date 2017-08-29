@@ -13,7 +13,9 @@ macOS Sierra (10.12)
 
 Source archive
 
-Mac dmg installer
+Mac OS builds
+
+Mac dmg installer (see common directory)
 
 MATLAB 2017a for mac binaries
 

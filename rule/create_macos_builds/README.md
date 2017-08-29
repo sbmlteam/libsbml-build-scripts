@@ -1,4 +1,4 @@
-# Create dmg
+# Create macos builds
 
 ## PREREQUISITES
 
