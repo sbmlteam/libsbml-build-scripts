@@ -3,9 +3,9 @@
 
 DIRECTORY=$(cd `dirname $0` && pwd)
 
-SOURCE_DIR=$DIRECTORY/../Development/libsbml
+SOURCE_DIR=$DIRECTORY/../../../../Development/libsbml
 
-BUILD_DIR=$DIRECTORY/../Development/build_stable
+BUILD_DIR=$DIRECTORY/../../../../Development/build_stable
 
 
 cd $SOURCE_DIR
