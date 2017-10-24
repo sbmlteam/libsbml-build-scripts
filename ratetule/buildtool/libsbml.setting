@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-16"?>
 <Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SVN>c:\Program Files\TortoiseSVN\bin\svn.exe</SVN>
-  <Swig>c:\swigwin-3.0.2\swig.exe</Swig>
+  <Swig>C:\swigwin-3.0.12\swig.exe</Swig>
   <InnoSetupCompiler>c:\Program Files (x86)\Inno Setup 5\ISCC.exe</InnoSetupCompiler>
   <Cmake>C:\Program Files (x86)\CMake\bin\cmake.exe</Cmake>
   <Settings32>
