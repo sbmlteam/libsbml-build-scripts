@@ -5,7 +5,7 @@ DEP_DIR=$DEV_DIR/install_dependencies
 DEP_ARCHIVE=$DIRECTORY/libsbml_dependencies.zip
 SVN_REPO=https://svn.code.sf.net/p/sbml/code/trunk/libsbml
 TODAY=`date +%Y-%m-%d`
-VERSION=5.15.2
+VERSION=5.15.3
 
 ARCH=`uname -m`
 FILE=x86

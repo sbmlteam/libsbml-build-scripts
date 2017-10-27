@@ -1,0 +1,1 @@
+copy /y build_matlab.sh C:\vm-share\*

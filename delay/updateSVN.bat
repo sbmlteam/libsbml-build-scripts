@@ -1,0 +1,9 @@
+cd C:\Development\libsbml-src-32
+svn update
+cd C:\Development\libsbml-src-64
+svn update
+cd C:\Development\libsbml-experimental-src-32
+svn update
+cd C:\Development\libsbml-experimental-src-64
+svn update
+cd C:\gitrepo\libsbml-build-scripts\delay
