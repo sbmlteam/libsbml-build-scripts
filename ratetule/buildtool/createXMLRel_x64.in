@@ -465,6 +465,7 @@ copy /y "%INSTALL_DIR_32%\bindings\python\src\dist\libsbml-%VERSION%.win-amd64-p
 copy /y "%INSTALL_DIR_32%\bindings\python\src\dist\libsbml-%VERSION%.win-amd64-py3.3.exe" libSBML-%VERSION%-win-py3.3-amd64.exe
 copy /y "%INSTALL_DIR_32%\bindings\python\src\dist\libsbml-%VERSION%.win-amd64-py3.4.exe" libSBML-%VERSION%-win-py3.4-amd64.exe
 copy /y "%INSTALL_DIR_32%\bindings\python\src\dist\libsbml-%VERSION%.win-amd64-py3.5.exe" libSBML-%VERSION%-win-py3.5-amd64.exe
+copy /y "%INSTALL_DIR_32%\bindings\python\src\dist\libsbml-%VERSION%.win-amd64-py3.6.exe" libSBML-%VERSION%-win-py3.6-amd64.exe
 
 
 if "%DROP_DIR%" == "" goto DONE_COPYING

@@ -29,6 +29,10 @@ SET PYTHON_34_64=C:\Python64\Python34\python.exe
 SET PYTHON_35_32=C:\Python32\Python35\python.exe
 SET PYTHON_35_64=C:\Python64\Python35\python.exe
 
+SET PYTHON_36_32=C:\Python32\Python36\python.exe
+SET PYTHON_36_64=C:\Python64\Python36\python.exe
+
+
 cd  /d %WIN_INST_DIR%
 
 cmake .
@@ -227,6 +231,21 @@ mkdir "%SOURCE_32%\build\lib.win-amd64-3.5\libsbml"
 copy "%INIT3_FILE%" "%SOURCE_32%\build\lib.win-amd64-3.5\libsbml\__init__.py"
 move  "%SOURCE_32%\b64\RelWithDebInfo\_libsbml.pyd" "%SOURCE_32%\build\lib.win-amd64-3.5\libsbml"
 
+REM build python 3.6
+rd /s /q "%SOURCE_32%\b32
+call "%SOURCE_32%\buildPython32.bat" "%PYTHON_36_32%" "%DEP_DIR_32%"
+mkdir "%SOURCE_32%\build\lib.win32-3.6"
+mkdir "%SOURCE_32%\build\lib.win32-3.6\libsbml"
+copy  "%INIT3_FILE%" "%SOURCE_32%\build\lib.win32-3.6\libsbml\__init__.py"
+move  "%SOURCE_32%\b32\_libsbml.pyd" "%SOURCE_32%\build\lib.win32-3.6\libsbml"
+
+rd /s /q "%SOURCE_32%\b64
+call "%SOURCE_32%\buildPython64.bat" "%PYTHON_36_64%" "%DEP_DIR_64%"
+mkdir "%SOURCE_32%\build\lib.win-amd64-3.6"
+mkdir "%SOURCE_32%\build\lib.win-amd64-3.6\libsbml"
+copy "%INIT3_FILE%" "%SOURCE_32%\build\lib.win-amd64-3.6\libsbml\__init__.py"
+move  "%SOURCE_32%\b64\RelWithDebInfo\_libsbml.pyd" "%SOURCE_32%\build\lib.win-amd64-3.6\libsbml"
+
 :: 
 :: copy files for anaconda
 :: 
@@ -252,6 +271,8 @@ copy /y \Development\create-conda-stable\out\64\* C:\inetpub\wwwroot\Files\anaco
 "%PYTHON_34_32%" setup32.py bdist_wheel --skip-build
 "%PYTHON_35_32%" setup32.py bdist_wininst --skip-build  --target-version="3.5" --bitmap libsbml-python-installer-graphic.bmp
 "%PYTHON_35_32%" setup32.py bdist_wheel --skip-build
+"%PYTHON_36_32%" setup32.py bdist_wininst --skip-build  --target-version="3.6" --bitmap libsbml-python-installer-graphic.bmp
+"%PYTHON_36_32%" setup32.py bdist_wheel --skip-build
 
 REM dist utils fails to create the python 25 64bit installer
 REM "%PYTHON_25_64%" setup64.py bdist_wininst --skip-build --target-version="2.5"
@@ -267,6 +288,8 @@ REM "%PYTHON_25_64%" setup64.py bdist_wininst --skip-build --target-version="2.5
 "%PYTHON_34_64%" setup64.py bdist_wheel --skip-build
 "%PYTHON_35_64%" setup64.py bdist_wininst --skip-build --target-version="3.5" --bitmap libsbml-python-installer-graphic.bmp
 "%PYTHON_35_64%" setup64.py bdist_wheel --skip-build
+"%PYTHON_36_64%" setup64.py bdist_wininst --skip-build --target-version="3.6" --bitmap libsbml-python-installer-graphic.bmp
+"%PYTHON_36_64%" setup64.py bdist_wheel --skip-build
 
 REM here we can test the new bindindgs
 cd  /d %WIN_INST_DIR%
@@ -277,6 +300,7 @@ call "%WIN_INST_DIR%\testPython.bat" %PYTHON_32_32% %SOURCE_32%\build\lib.win32-
 call "%WIN_INST_DIR%\testPython.bat" %PYTHON_33_32% %SOURCE_32%\build\lib.win32-3.3\ %LIBSBML_ROOT%\src\bindings\python
 call "%WIN_INST_DIR%\testPython.bat" %PYTHON_34_32% %SOURCE_32%\build\lib.win32-3.4\ %LIBSBML_ROOT%\src\bindings\python
 call "%WIN_INST_DIR%\testPython.bat" %PYTHON_35_32% %SOURCE_32%\build\lib.win32-3.5\ %LIBSBML_ROOT%\src\bindings\python
+call "%WIN_INST_DIR%\testPython.bat" %PYTHON_36_32% %SOURCE_32%\build\lib.win32-3.6\ %LIBSBML_ROOT%\src\bindings\python
 
 REM call "%WIN_INST_DIR%\testPython.bat" %PYTHON_25_64% %SOURCE_32%\build\lib.win-amd64-2.5\ %LIBSBML_ROOT%\src\bindings\python
 call "%WIN_INST_DIR%\testPython.bat" %PYTHON_26_64% %SOURCE_32%\build\lib.win-amd64-2.6\ %LIBSBML_ROOT%\src\bindings\python
@@ -285,6 +309,7 @@ call "%WIN_INST_DIR%\testPython.bat" %PYTHON_32_64% %SOURCE_32%\build\lib.win-am
 call "%WIN_INST_DIR%\testPython.bat" %PYTHON_33_64% %SOURCE_32%\build\lib.win-amd64-3.3\ %LIBSBML_ROOT%\src\bindings\python
 call "%WIN_INST_DIR%\testPython.bat" %PYTHON_34_64% %SOURCE_32%\build\lib.win-amd64-3.4\ %LIBSBML_ROOT%\src\bindings\python
 call "%WIN_INST_DIR%\testPython.bat" %PYTHON_35_64% %SOURCE_32%\build\lib.win-amd64-3.5\ %LIBSBML_ROOT%\src\bindings\python
+call "%WIN_INST_DIR%\testPython.bat" %PYTHON_36_64% %SOURCE_32%\build\lib.win-amd64-3.6\ %LIBSBML_ROOT%\src\bindings\python
 
 
 :COPYONLY
@@ -297,6 +322,7 @@ copy /y "%SOURCE_32%\dist\libsbml-$$VERSION$$.win32-py3.2.exe" "$$OUT_DIR$$\libS
 copy /y "%SOURCE_32%\dist\libsbml-$$VERSION$$.win32-py3.3.exe" "$$OUT_DIR$$\libSBML-$$VERSION$$-win-py3.3-x86.exe"
 copy /y "%SOURCE_32%\dist\libsbml-$$VERSION$$.win32-py3.4.exe" "$$OUT_DIR$$\libSBML-$$VERSION$$-win-py3.4-x86.exe"
 copy /y "%SOURCE_32%\dist\libsbml-$$VERSION$$.win32-py3.5.exe" "$$OUT_DIR$$\libSBML-$$VERSION$$-win-py3.5-x86.exe"
+copy /y "%SOURCE_32%\dist\libsbml-$$VERSION$$.win32-py3.6.exe" "$$OUT_DIR$$\libSBML-$$VERSION$$-win-py3.6-x86.exe"
 
 copy /y "%SOURCE_32%\dist\libsbml-$$VERSION$$.win-amd64-py2.6.exe" "$$OUT_DIR$$\libSBML-$$VERSION$$-win-py2.6-amd64.exe"
 copy /y "%SOURCE_32%\dist\libsbml-$$VERSION$$.win-amd64-py2.7.exe" "$$OUT_DIR$$\libSBML-$$VERSION$$-win-py2.7-amd64.exe"
@@ -304,6 +330,7 @@ copy /y "%SOURCE_32%\dist\libsbml-$$VERSION$$.win-amd64-py3.2.exe" "$$OUT_DIR$$\
 copy /y "%SOURCE_32%\dist\libsbml-$$VERSION$$.win-amd64-py3.3.exe" "$$OUT_DIR$$\libSBML-$$VERSION$$-win-py3.3-amd64.exe"
 copy /y "%SOURCE_32%\dist\libsbml-$$VERSION$$.win-amd64-py3.4.exe" "$$OUT_DIR$$\libSBML-$$VERSION$$-win-py3.4-amd64.exe"
 copy /y "%SOURCE_32%\dist\libsbml-$$VERSION$$.win-amd64-py3.5.exe" "$$OUT_DIR$$\libSBML-$$VERSION$$-win-py3.5-amd64.exe"
+copy /y "%SOURCE_32%\dist\libsbml-$$VERSION$$.win-amd64-py3.6.exe" "$$OUT_DIR$$\libSBML-$$VERSION$$-win-py3.6-amd64.exe"
 
 
 goto ALL_DONE
