@@ -28,7 +28,6 @@ SET PYTHON_34_32=C:\Python32\Python34\python.exe
 SET PYTHON_34_64=C:\Python64\Python34\python.exe
 SET PYTHON_35_32=C:\Python32\Python35\python.exe
 SET PYTHON_35_64=C:\Python64\Python35\python.exe
-
 SET PYTHON_36_32=C:\Python32\Python36\python.exe
 SET PYTHON_36_64=C:\Python64\Python36\python.exe
 
@@ -129,14 +128,12 @@ mkdir "%SOURCE_32%\build\lib.win32-2.5\libsbml"
 copy  "%INIT2_FILE%" "%SOURCE_32%\build\lib.win32-2.5\libsbml\__init__.py"
 move  "%SOURCE_32%\b32\_libsbml.pyd" "%SOURCE_32%\build\lib.win32-2.5\libsbml"
 
-
 REM rd /s /q "%SOURCE_32%\b64
 REM call  "%SOURCE_32%\buildPython64.bat" "%PYTHON_25_64%" "%DEP_DIR_64%"
 REM mkdir "%SOURCE_32%\build\lib.win-amd64-2.5"
 REM mkdir "%SOURCE_32%\build\lib.win-amd64-2.5\libsbml"
 REM copy  "%INIT2_FILE%" "%SOURCE_32%\build\lib.win-amd64-2.5\libsbml\__init__.py"
 REM move  "%SOURCE_32%\b64\RelWithDebInfo\_libsbml.pyd" "%SOURCE_32%\build\lib.win-amd64-2.5\libsbml"
-
 
 REM build python 2.6
 rd /s /q "%SOURCE_32%\b32
@@ -161,7 +158,6 @@ mkdir "%SOURCE_32%\build\lib.win32-2.7\libsbml"
 copy  "%INIT2_FILE%" "%SOURCE_32%\build\lib.win32-2.7\libsbml\__init__.py"
 move  "%SOURCE_32%\b32\_libsbml.pyd" "%SOURCE_32%\build\lib.win32-2.7\libsbml"
 
-
 rd /s /q "%SOURCE_32%\b64
 call "%SOURCE_32%\buildPython64.bat" "%PYTHON_27_64%" "%DEP_DIR_64%"
 mkdir "%SOURCE_32%\build\lib.win-amd64-2.7"
@@ -176,7 +172,6 @@ mkdir "%SOURCE_32%\build\lib.win32-3.2"
 mkdir "%SOURCE_32%\build\lib.win32-3.2\libsbml"
 copy  "%INIT3_FILE%" "%SOURCE_32%\build\lib.win32-3.2\libsbml\__init__.py"
 move  "%SOURCE_32%\b32\_libsbml.pyd" "%SOURCE_32%\build\lib.win32-3.2\libsbml"
-
 
 rd /s /q "%SOURCE_32%\b64
 call "%SOURCE_32%\buildPython64.bat" "%PYTHON_32_64%" "%DEP_DIR_64%"
@@ -222,7 +217,6 @@ mkdir "%SOURCE_32%\build\lib.win32-3.5"
 mkdir "%SOURCE_32%\build\lib.win32-3.5\libsbml"
 copy  "%INIT3_FILE%" "%SOURCE_32%\build\lib.win32-3.5\libsbml\__init__.py"
 move  "%SOURCE_32%\b32\_libsbml.pyd" "%SOURCE_32%\build\lib.win32-3.5\libsbml"
-
 
 rd /s /q "%SOURCE_32%\b64
 call "%SOURCE_32%\buildPython64.bat" "%PYTHON_35_64%" "%DEP_DIR_64%"
@@ -334,7 +328,6 @@ copy /y "%SOURCE_32%\dist\libsbml-$$VERSION$$.win-amd64-py3.6.exe" "$$OUT_DIR$$\
 
 
 goto ALL_DONE
-
 
 
 :MISSING_DEPENDENCIES
