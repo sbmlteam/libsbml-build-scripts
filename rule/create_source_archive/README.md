@@ -9,9 +9,9 @@
 
 From the frank home directory run
 
-1. ~/gitrepo/libsbml-build-scripts/rule/buildGnuSource.sh This creates a source archive and puts it into the ~/out_dir directory.
+1. ~/gitrepo/libsbml-build-scripts/rule/create\_source\_archive/buildGnuSource.sh This creates a source archive and puts it into the ~/out_dir directory.
 2. Test the created archive.
-3. Run ~/gitrepo/libsbml-build-scripts/rule/buildLibsbmlPackages.sh VERSION_NO
+3. Run ~/gitrepo/libsbml-build-scripts/rule/create\_source\_archive/buildLibsbmlPackages.sh VERSION_NO
 
 ## RESULT
 
