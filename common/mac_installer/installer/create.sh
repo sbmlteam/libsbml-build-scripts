@@ -3,12 +3,14 @@
 
 DIRECTORY=$(cd `dirname $0` && pwd)
 
-PACKAGE_MAKER=$DIRECTORY/../PackageMaker.app/Contents/MacOS/PackageMaker
-SOURCE_DIR=$DIRECTORY/../Development/libsbml
+PACKAGE_MAKER=$DIRECTORY/../../../../../Development/PackageMaker.app/Contents/MacOS/PackageMaker
+SOURCE_DIR=$DIRECTORY/../../../../../Development/libsbml
 
 
 OSX_MAJOR_VER=`uname -r | cut -d'.' -f1`
-if expr ${OSX_MAJOR_VER} \>= 16 | grep -q 1; then
+if expr ${OSX_MAJOR_VER} \>= 17 | grep -q 1; then
+MACOS="highsierra"
+elif expr ${OSX_MAJOR_VER} \>= 16 | grep -q 1; then
 MACOS="sierra"
 elif expr ${OSX_MAJOR_VER} \>= 15 | grep -q 1; then
 MACOS="elcapitan"
@@ -43,6 +45,9 @@ cd ${DIRECTORY}
 
 if ! test -e ${DIRECTORY}/libsbml-dist/bin; then
 mkdir ${DIRECTORY}/libsbml-dist/bin
+else
+rm -r ${DIRECTORY}/libsbml-dist/bin
+mkdir ${DIRECTORY}/libsbml-dist/bin
 fi
 
 cp uninstall-libsbml-pkg.sh ${DIRECTORY}/libsbml-dist/bin
@@ -52,9 +57,6 @@ sed -e s:@PACKAGE_LOCATION@:$DIRECTORY/libsbml-dist/:g -e s:@PACKAGE_VERSION@:$P
 sed -e s:@PACKAGE_LOCATION@:$DIRECTORY/libsbml-dist/:g -e s:@PACKAGE_VERSION@:$PACKAGE_VERSION:g -e s:@XML_PARSER@:$XML_PARSER:g $DIRECTORY/libsbml-package.pmdoc/01local.xml.in > $DIRECTORY/libsbml-package.pmdoc/01local.xml
 
 sed -e s:@PACKAGE_LOCATION@:$DIRECTORY/libsbml-dist/:g -e s:@PACKAGE_VERSION@:$PACKAGE_VERSION:g -e s:@XML_PARSER@:$XML_PARSER:g $DIRECTORY/libsbml-package.pmdoc/index.xml.in > $DIRECTORY/libsbml-package.pmdoc/index.xml
-
-sed -e s:@PACKAGE_LOCATION@:$DIRECTORY/libsbml-dist/:g -e s:@PACKAGE_VERSION@:$PACKAGE_VERSION:g -e s:@XML_PARSER@:$XML_PARSER:g $DIRECTORY/resources/package-readme.txt.in > $DIRECTORY/resources/package-readme.txt
-
 
 sed -e s:@PACKAGE_LOCATION@:$DIRECTORY/libsbml-dist/:g -e s:@PACKAGE_VERSION@:$PACKAGE_VERSION:g -e s:@XML_PARSER@:$XML_PARSER:g $DIRECTORY/resources/package-readme.txt.in > $DIRECTORY/resources/package-readme.txt
 

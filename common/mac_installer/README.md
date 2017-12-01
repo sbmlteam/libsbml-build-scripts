@@ -1,7 +1,5 @@
 # Mac Installer
 
-**NOTE: Not checked on rule yet (only on oldmac)**
-
 ## PREREQUISITES
 
 1. The mac build has been done and installed into the installer/libsbml-dist folder.
@@ -10,7 +8,7 @@
 
 ## RUN
 
-1. Run ./create.sh version_no
+1. From mac\_installer/installer directory run ./create.sh version_no
 2. Copy to dropbox
 
 ## RESULT
