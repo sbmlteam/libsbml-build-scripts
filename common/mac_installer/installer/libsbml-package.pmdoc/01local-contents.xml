@@ -1,6 +1,6 @@
 <pkg-contents spec="1.12">
   <f n="local" o="root" g="wheel" p="16877"
-  pt="@PACKAGE_LOCATION@"
+  pt="/Users/frank/gitrepo/libsbml-build-scripts/common/mac_installer/installer/libsbml-dist/"
   m="true" t="file">
     <f n="bin" o="root" g="staff" p="16877">
       <f n="uninstall-libsbml-pkg.sh" o="root" g="staff" p="33261">
