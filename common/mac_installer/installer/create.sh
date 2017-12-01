@@ -8,7 +8,9 @@ SOURCE_DIR=$DIRECTORY/../../../../../Development/libsbml
 
 
 OSX_MAJOR_VER=`uname -r | cut -d'.' -f1`
-if expr ${OSX_MAJOR_VER} \>= 16 | grep -q 1; then
+if expr ${OSX_MAJOR_VER} \>= 17 | grep -q 1; then
+MACOS="highsierra"
+elif expr ${OSX_MAJOR_VER} \>= 16 | grep -q 1; then
 MACOS="sierra"
 elif expr ${OSX_MAJOR_VER} \>= 15 | grep -q 1; then
 MACOS="elcapitan"
