@@ -1,0 +1,9 @@
+libsbml.pth
+libsbml_wrap.cpp
+setup32.py
+setup64.py
+libsbml/__init__.py
+libsbml.egg-info/PKG-INFO
+libsbml.egg-info/SOURCES.txt
+libsbml.egg-info/dependency_links.txt
+libsbml.egg-info/top_level.txt
