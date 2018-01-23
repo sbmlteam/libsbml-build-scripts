@@ -179,7 +179,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 DEP_DIR:UNINITIALIZED=C:/Development/dependencies/64bit/lib
 
 //No help, variable specified on the command line.
-EXTRA_DEFS:UNINITIALIZED=USE_COMP;USE_LAYOUT;USE_FBC;USE_QUAL;USE_GROUPS;USE_MULTI;LIBSBML_COMPILED_IN_SRC;LIBSBML_USE_LEGACY_MATH
+EXTRA_DEFS:UNINITIALIZED=USE_COMP;USE_LAYOUT;USE_FBC;USE_QUAL;USE_RENDER;USE_GROUPS;USE_MULTI;LIBSBML_COMPILED_IN_SRC;LIBSBML_USE_LEGACY_MATH
 
 //No help, variable specified on the command line.
 LIBSBML_LIB:UNINITIALIZED=C:/Development/libsbml-64-inst/lib/libsbml-static.lib
@@ -188,7 +188,7 @@ LIBSBML_LIB:UNINITIALIZED=C:/Development/libsbml-64-inst/lib/libsbml-static.lib
 LIBSBML_ROOT_SOURCE_DIR:UNINITIALIZED=C:/Development/libsbml
 
 //No help, variable specified on the command line.
-PACKAGE_VERSION:UNINITIALIZED=5.15.2
+PACKAGE_VERSION:UNINITIALIZED=5.16.0
 
 //Additional paths to the RTOOLS / GCC binary directories to build
 // package

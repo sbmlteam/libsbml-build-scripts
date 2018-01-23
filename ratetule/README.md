@@ -18,6 +18,8 @@ R windows installers
 
 Anaconda windows
 
+Linux builds are serrved from `c:\Dropbox\libsbml_linux\` after being built on species and compartment
+
 ----------
 
-For more information contact Sarah or Brett
+For more information contact Sarah or Brett or Frank

@@ -188,7 +188,7 @@ LIBSBML_LIB:UNINITIALIZED=C:/Development/libsbml-32-inst-package/lib/libsbml-sta
 LIBSBML_ROOT_SOURCE_DIR:UNINITIALIZED=C:/Development/libsbml-with-packages
 
 //No help, variable specified on the command line.
-PACKAGE_VERSION:UNINITIALIZED=5.15.2
+PACKAGE_VERSION:UNINITIALIZED=5.16.0
 
 //Additional paths to the RTOOLS / GCC binary directories to build
 // package

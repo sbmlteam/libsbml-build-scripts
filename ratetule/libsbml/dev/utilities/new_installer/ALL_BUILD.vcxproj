@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{0BBD78C3-E4D6-4692-8C86-F3C3631ADA95}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Development/libsbml/dev/utilities/new_installer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"c:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Development/libsbml/dev/utilities/new_installer -BC:/Development/libsbml/dev/utilities/new_installer --check-stamp-file C:/Development/libsbml/dev/utilities/new_installer/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Development/libsbml/dev/utilities/new_installer/CMakeLists.txt;C:\Development\libsbml\dev\utilities\new_installer\CMakeLists.txt;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeSystemSpecificInitialize.cmake;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeCCompiler.cmake;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC.cmake;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCCompiler.cmake.in;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckStructHasMember.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceRuns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckIncludeFileCXX.cmake;C:\Development\libsbml\dev\utilities\new_installer\install_libsbml_script_xml_win32.iss.in;C:\Development\libsbml\dev\utilities\new_installer\install_libsbml_script_xml_win64.iss.in;C:\Development\libsbml\dev\utilities\new_installer\matlab\install_matlab_libsbml_script_xml_win32.in;C:\Development\libsbml\dev\utilities\new_installer\matlab\install_matlab_libsbml_script_xml_win64.in;C:\Development\libsbml\dev\utilities\new_installer\python\setup32.in;C:\Development\libsbml\dev\utilities\new_installer\python\setup64.in;C:\Development\libsbml\dev\utilities\new_installer\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Development/libsbml/dev/utilities/new_installer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"c:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Development/libsbml/dev/utilities/new_installer -BC:/Development/libsbml/dev/utilities/new_installer --check-stamp-file C:/Development/libsbml/dev/utilities/new_installer/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Development/libsbml/dev/utilities/new_installer/CMakeLists.txt;C:\Development\libsbml\dev\utilities\new_installer\CMakeLists.txt;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeSystemSpecificInitialize.cmake;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeCCompiler.cmake;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC.cmake;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCCompiler.cmake.in;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckStructHasMember.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceRuns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckIncludeFileCXX.cmake;C:\Development\libsbml\dev\utilities\new_installer\install_libsbml_script_xml_win32.iss.in;C:\Development\libsbml\dev\utilities\new_installer\install_libsbml_script_xml_win64.iss.in;C:\Development\libsbml\dev\utilities\new_installer\matlab\install_matlab_libsbml_script_xml_win32.in;C:\Development\libsbml\dev\utilities\new_installer\matlab\install_matlab_libsbml_script_xml_win64.in;C:\Development\libsbml\dev\utilities\new_installer\python\setup32.in;C:\Development\libsbml\dev\utilities\new_installer\python\setup64.in;C:\Development\libsbml\dev\utilities\new_installer\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Development/libsbml/dev/utilities/new_installer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"c:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Development/libsbml/dev/utilities/new_installer -BC:/Development/libsbml/dev/utilities/new_installer --check-stamp-file C:/Development/libsbml/dev/utilities/new_installer/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Development/libsbml/dev/utilities/new_installer/CMakeLists.txt;C:\Development\libsbml\dev\utilities\new_installer\CMakeLists.txt;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeSystemSpecificInitialize.cmake;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeCCompiler.cmake;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC.cmake;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCCompiler.cmake.in;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckStructHasMember.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceRuns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckIncludeFileCXX.cmake;C:\Development\libsbml\dev\utilities\new_installer\install_libsbml_script_xml_win32.iss.in;C:\Development\libsbml\dev\utilities\new_installer\install_libsbml_script_xml_win64.iss.in;C:\Development\libsbml\dev\utilities\new_installer\matlab\install_matlab_libsbml_script_xml_win32.in;C:\Development\libsbml\dev\utilities\new_installer\matlab\install_matlab_libsbml_script_xml_win64.in;C:\Development\libsbml\dev\utilities\new_installer\python\setup32.in;C:\Development\libsbml\dev\utilities\new_installer\python\setup64.in;C:\Development\libsbml\dev\utilities\new_installer\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Development/libsbml/dev/utilities/new_installer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"c:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Development/libsbml/dev/utilities/new_installer -BC:/Development/libsbml/dev/utilities/new_installer --check-stamp-file C:/Development/libsbml/dev/utilities/new_installer/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Development/libsbml/dev/utilities/new_installer/CMakeLists.txt;C:\Development\libsbml\dev\utilities\new_installer\CMakeLists.txt;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeSystemSpecificInitialize.cmake;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeCCompiler.cmake;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC.cmake;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCCompiler.cmake.in;C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\3.8.2\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckStructHasMember.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckCSourceRuns.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-3.8\Modules\CheckIncludeFileCXX.cmake;C:\Development\libsbml\dev\utilities\new_installer\install_libsbml_script_xml_win32.iss.in;C:\Development\libsbml\dev\utilities\new_installer\install_libsbml_script_xml_win64.iss.in;C:\Development\libsbml\dev\utilities\new_installer\matlab\install_matlab_libsbml_script_xml_win32.in;C:\Development\libsbml\dev\utilities\new_installer\matlab\install_matlab_libsbml_script_xml_win64.in;C:\Development\libsbml\dev\utilities\new_installer\python\setup32.in;C:\Development\libsbml\dev\utilities\new_installer\python\setup64.in;C:\Development\libsbml\dev\utilities\new_installer\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Development\libsbml\dev\utilities\new_installer\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Development\libsbml\dev\utilities\new_installer\ZERO_CHECK.vcxproj">
+      <Project>{32DCBF49-4AE8-4110-A438-870A2BDCA724}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
