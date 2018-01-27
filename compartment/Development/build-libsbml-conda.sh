@@ -53,6 +53,8 @@ conda install -y conda-build
 # grab the latest package from PyPi 
 conda skeleton pypi ${PACKAGE_NAME}
 
+# read -n1 -r -p "Press any key to continue..." key
+
 # build the different versions
 conda build --python 2.7 ${PACKAGE_NAME}
 conda build --python 3.3 ${PACKAGE_NAME}
