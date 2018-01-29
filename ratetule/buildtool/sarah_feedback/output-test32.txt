@@ -1,0 +1,41 @@
+      Start 11: test_csharp_bindings
+
+11: Test command: C:\working\Build-tool\test4\build32\src\bindings\csharp\TestRW.exe "C:/libsbml-core/examples/sample-models/from-spec/level-2/"
+11: Test timeout computed to be: 9.99988e+006
+11: Testing LibSBML: 5.4.0
+11: 
+11: .......[WriteSBML] Error: cannot write test.xml
+11: ...................................................................................................................................................................................................................
+11: 1 test failed.
+11: 
+11/17 Test #11: test_csharp_bindings .............***Failed    0.52 sec
+test 12
+      Start 12: test_csharp_bindings_full
+
+
+14: C:/libsbml-core/src/bindings/perl/t/06__TestWriteSBML.t ............. ok
+14: C:/libsbml-core/src/bindings/perl/t/06__TestWriteSBMLL3.t ........... ok
+14: ValueError invalid null reference in method 'new_CVTerm', argument 1 of type 'XMLNode const'
+14: # Looks like your test exited with 255 before it could output anything.
+14: C:/libsbml-core/src/bindings/perl/t/07__TestCVTerms.t ............... 
+14: Dubious, test returned 255 (wstat 65280, 0xff00)
+14: Failed 22/22 subtests 
+14: C:/libsbml-core/src/bindings/perl/t/07__TestModelHistory.t .......... ok
+14: C:/libsbml-core/src/bindings/perl/t/07__TestRDFAnnotation2.t ........ ok
+14: 
+14: Test Summary Report
+14: -------------------
+14: C:/libsbml-core/src/bindings/perl/t/07__TestCVTerms.t             (Wstat: 65280 Tests: 0 Failed: 0)
+14:   Non-zero exit status: 255
+14:   Parse errors: Bad plan.  You planned 22 tests but ran 0.
+14: Files=41, Tests=3342,  7 wallclock secs ( 0.56 usr +  0.16 sys =  0.72 CPU)
+14: Result: FAIL
+14: Failed 1/41 test programs. 0/3342 subtests failed.
+14/17 Test #14: test_perl_binding ................***Failed    7.79 sec
+test 15
+
+
+
+The following tests FAILED:
+	 11 - test_csharp_bindings (Failed)
+	 14 - test_perl_binding (Failed)
