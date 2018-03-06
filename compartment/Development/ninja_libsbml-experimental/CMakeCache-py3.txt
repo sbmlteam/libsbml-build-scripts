@@ -439,7 +439,7 @@ PERL_INCLUDE_PATH:PATH=/usr/lib/perl/5.18/CORE
 PERL_LIBRARY:FILEPATH=/usr/lib/libperl.so.5.18.2
 
 //Path to a program.
-PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3.4m
+PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python2.7
 
 //Path to a file.
 PYTHON_INCLUDE_DIR:PATH=/usr/include/python3.4m
