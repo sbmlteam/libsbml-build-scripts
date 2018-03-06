@@ -439,13 +439,13 @@ PERL_INCLUDE_PATH:PATH=/usr/lib/perl/5.18/CORE
 PERL_LIBRARY:FILEPATH=/usr/lib/libperl.so.5.18.2
 
 //Path to a program.
-PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
+PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3.4m
 
 //Path to a file.
-PYTHON_INCLUDE_DIR:PATH=/usr/include/python2.7
+PYTHON_INCLUDE_DIR:PATH=/usr/include/python3.4m
 
 //Path to a file.
-PYTHON_INCLUDE_DIR2:PATH=/usr/include/i386-linux-gnu/python2.7
+PYTHON_INCLUDE_DIR2:PATH=/usr/include/i386-linux-gnu/python3.4m
 
 //Install python binaries using the specified install prefix.
 PYTHON_INSTALL_IN_PREFIX:BOOL=ON
@@ -455,7 +455,7 @@ PYTHON_INSTALL_IN_PREFIX:BOOL=ON
 PYTHON_INSTALL_WITH_SETUP:BOOL=OFF
 
 //Path to a library.
-PYTHON_LIBRARY:FILEPATH=/usr/lib/i386-linux-gnu/libpython2.7.so
+PYTHON_LIBRARY:FILEPATH=/usr/lib/i386-linux-gnu/libpython3.4m.so
 
 //Path to a library.
 PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
@@ -632,7 +632,7 @@ binding_java_lib_LIB_DEPENDS:STATIC=general;sbml-static;
 binding_perl_lib_LIB_DEPENDS:STATIC=general;sbml-static;general;/usr/lib/libperl.so.5.18.2;
 
 //Dependencies for the target
-binding_python_lib_LIB_DEPENDS:STATIC=general;sbml-static;general;/usr/lib/i386-linux-gnu/libpython2.7.so;
+binding_python_lib_LIB_DEPENDS:STATIC=general;sbml-static;general;/usr/lib/i386-linux-gnu/libpython3.4m.so;
 
 //Dependencies for the target
 binding_r_lib_LIB_DEPENDS:STATIC=general;sbml-static;general;/usr/lib/libR.so;
@@ -839,9 +839,9 @@ FIND_PACKAGE_MESSAGE_DETAILS_Perl:INTERNAL=[/usr/bin/perl][v5.18.2()]
 //Details about finding PerlLibs
 FIND_PACKAGE_MESSAGE_DETAILS_PerlLibs:INTERNAL=[/usr/lib/libperl.so.5.18.2][/usr/lib/perl/5.18/CORE][v5.18.2()]
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.6()]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python3.4m][v3.4.3()]
 //Details about finding PythonLibs
-FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/i386-linux-gnu/libpython2.7.so][/usr/include/python2.7;/usr/include/i386-linux-gnu/python2.7][v2.7.6()]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/i386-linux-gnu/libpython3.4m.so][/usr/include/python3.4m;/usr/include/i386-linux-gnu/python3.4m][v3.4.3()]
 //Details about finding Ruby
 FIND_PACKAGE_MESSAGE_DETAILS_Ruby:INTERNAL=[/usr/bin/ruby][/usr/include/ruby-1.9.1][/usr/lib/libruby-1.9.1.so][/usr/include/ruby-1.9.1/i686-linux][v1.9.1()]
 //Details about finding SWIG
