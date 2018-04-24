@@ -25,6 +25,8 @@ SET VERSION=%THIS_VERSION%
 CALL create-zip-multi.bat %VERSION%
 SET VERSION=%THIS_VERSION%
 CALL create-zip-qual.bat %VERSION%
+SET VERSION=%THIS_VERSION%
+CALL create-zip-render.bat %VERSION%
 
 cd %LIBSBML_EXPER_SRC_DIR%
 del *.zip
@@ -35,8 +37,6 @@ SET VERSION=%THIS_VERSION%
 CALL create-zip-distrib.bat %VERSION%
 SET VERSION=%THIS_VERSION%
 CALL create-zip-dyn.bat %VERSION%
-SET VERSION=%THIS_VERSION%
-CALL create-zip-render.bat %VERSION%
 SET VERSION=%THIS_VERSION%
 CALL create-zip-req.bat %VERSION%
 SET VERSION=%THIS_VERSION%
