@@ -15,4 +15,4 @@ From the frank home directory run
 
 ## RESULT
 
-The first script builds a src archive which should be tested. The second script does all teh copying/creating necessary. The final 6 src archives are placed in the appropriate dropbox directory. 
+The first script builds a src archive which should be tested. The second script does all the copying/creating necessary. The final 6 src archives are placed in the appropriate dropbox directory. 
