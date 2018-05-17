@@ -5,4 +5,6 @@ Create the complete set of all 32/64 bit standalone installers, PyPI wheels and 
 Actually both directories have been used, the current (15.7.0) build has been done in the src-64 directory as these (newer) files include support for Py36. 
 
 ## Folder location
-`c:\Development\libsbml-experimental-src-64\dev\utilities`
+`c:\Development\libsbml-experimental-src-64\dev\utilities\build-python`
+
+*TODO* for both stable and experimental the 32 and 64 bit branches need to be sychronised!!!
