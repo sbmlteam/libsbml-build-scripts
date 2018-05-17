@@ -37,3 +37,8 @@ Now use Anaconda, the default Python, to build the binaries:
 * Upload with `anaconda upload --user SBMLTeam `/home/fbergman/anaconda2/conda-bld/linux-64/python-libsbml-experimental-<ver>-py27h115b96f_0.tar.bz2`
 
 The hashy thing after py27 is a Conda thing and can be ignored.
+
+UPDATE:
+
+There are semi-automated scripts for generating conda packages for multiple Python versions.
+
