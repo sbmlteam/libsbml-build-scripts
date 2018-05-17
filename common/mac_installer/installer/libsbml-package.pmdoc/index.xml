@@ -1,7 +1,7 @@
 <pkmkdoc spec="1.12">
   <properties>
     <title>LibSBML</title>
-    <build>libSBML--libxml2.pkg</build>
+    <build>libSBML-5.17.0-libxml2.pkg</build>
     <organization>org.sbml.libsbml</organization>
     <userSees ui="both" />
     <min-target os="3" />
@@ -12,11 +12,11 @@
     <scripts></scripts>
   </distribution>
   <description>Welcome to the installation program for libSBML
-  . In the following panels, you will be guided through the
+  5.17.0. In the following panels, you will be guided through the
   steps necessary to install the libSBML library and the language
   interfaces on your system.</description>
   <contents>
-    <choice title="libSBML " id="libsbml"
+    <choice title="libSBML 5.17.0" id="libsbml"
     tooltip="libSBML library files" starts_selected="true"
     starts_enabled="true" starts_hidden="false">
       <customLoc allowAltVol="true">/usr/local</customLoc>

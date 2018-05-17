@@ -1,0 +1,13 @@
+Name: libSBML
+Description: A library for reading/writing/manipulating SBML
+URL: http://sbml.org/Software/libSBML
+Version: 5.17.0
+
+prefix=/Users/frank/gitrepo/libsbml-build-scripts/common/mac_installer/installer/libsbml-dist
+libdir=/Users/frank/gitrepo/libsbml-build-scripts/common/mac_installer/installer/libsbml-dist/lib
+includedir=/Users/frank/gitrepo/libsbml-build-scripts/common/mac_installer/installer/libsbml-dist/include
+
+Libs: -L${libdir} -lsbml
+Libs.private:        /usr/lib/libxml2.dylib /usr/lib/libbz2.dylib /usr/lib/libz.dylib -lstdc++ -lm
+Cflags: -I${includedir}
+Requires.private: libxml-2.0 >= 2.6.22
