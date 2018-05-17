@@ -14,12 +14,14 @@ cmake -DSRC_DIR=%LIBSBML_SRC% -DBUILD_DIR=%THIS_DIR%\python-src\build\lib.win-am
 cmake -DSRC_DIR=%LIBSBML_SRC% -DBUILD_DIR=%THIS_DIR%\python-src\build\lib.win-amd64-3.5 -DOUT_DIR=%THIS_DIR%\out -DNAME=%NAME% -P source\create-conda-archives.cmake
 cmake -DSRC_DIR=%LIBSBML_SRC% -DBUILD_DIR=%THIS_DIR%\python-src\build\lib.win-amd64-3.3 -DOUT_DIR=%THIS_DIR%\out -DNAME=%NAME% -P source\create-conda-archives.cmake
 cmake -DSRC_DIR=%LIBSBML_SRC% -DBUILD_DIR=%THIS_DIR%\python-src\build\lib.win-amd64-2.7 -DOUT_DIR=%THIS_DIR%\out -DNAME=%NAME% -P source\create-conda-archives.cmake
+cmake -DSRC_DIR=%LIBSBML_SRC% -DBUILD_DIR=%THIS_DIR%\python-src\build\lib.win-amd64-3.6 -DOUT_DIR=%THIS_DIR%\out -DNAME=%NAME% -P source\create-conda-archives.cmake
 move *.bz2 dist\conda-x64
 
 cmake -DSRC_DIR=%LIBSBML_SRC% -DBUILD_DIR=%THIS_DIR%\python-src\build\lib.win32-3.6 -DOUT_DIR=%THIS_DIR%\out -DNAME=%NAME% -P source\create-conda-archives.cmake
 cmake -DSRC_DIR=%LIBSBML_SRC% -DBUILD_DIR=%THIS_DIR%\python-src\build\lib.win32-3.5 -DOUT_DIR=%THIS_DIR%\out -DNAME=%NAME% -P source\create-conda-archives.cmake
 cmake -DSRC_DIR=%LIBSBML_SRC% -DBUILD_DIR=%THIS_DIR%\python-src\build\lib.win32-3.3 -DOUT_DIR=%THIS_DIR%\out -DNAME=%NAME% -P source\create-conda-archives.cmake
 cmake -DSRC_DIR=%LIBSBML_SRC% -DBUILD_DIR=%THIS_DIR%\python-src\build\lib.win32-2.7 -DOUT_DIR=%THIS_DIR%\out -DNAME=%NAME% -P source\create-conda-archives.cmake
+cmake -DSRC_DIR=%LIBSBML_SRC% -DBUILD_DIR=%THIS_DIR%\python-src\build\lib.win32-3.6 -DOUT_DIR=%THIS_DIR%\out -DNAME=%NAME% -P source\create-conda-archives.cmake
 move *.bz2 dist\conda-x86
 
 rd /s /q out

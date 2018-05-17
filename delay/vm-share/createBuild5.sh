@@ -16,10 +16,10 @@ fi
 #Build script for RPM and DEB files
 SVN_REPO=https://svn.code.sf.net/p/sbml/code/trunk/libsbml
 INSTALL_PREFIX=/usr
-VERSION=libSBML-5.16.0
+VERSION=libSBML-5.17.0
 SUFFIX=
-SVN_DIR=libsbml
-BUILD_DIR=build5
+SVN_DIR=/mnt/hgfs/share/libsbml
+BUILD_DIR=Development/build5
 ARCH=`uname -m`
 DIR=32
 LIB_SUFFIX=lib
@@ -39,18 +39,8 @@ fi
 echo ...
 echo ...Dist build script for $VERSION \($DIR bit\)
 echo ...
-echo ...check out $VERSION
-svn co $SVN_REPO  --non-interactive > $S_LOGFILE 2>&1
-cd $SVN_DIR
-svn update --non-interactive >> $S_LOGFILE 2>&1
 
-#rm -rf src/sbml/packages/comp
-#rm -rf src/sbml/packages/fbc
-#rm -rf src/sbml/packages/quals
-#unzip -o /mnt/hgfs/share/libSBML-5.8.0-comp-src.zip
-#unzip -o /mnt/hgfs/share/libSBML-5.8.0-fbc-src.zip
-#unzip -o /mnt/hgfs/share/libSBML-5.8.0-qual-src.zip
-
+echo $SVN_DIR
 if [ ! -d "../$BUILD_DIR" ]; then
   mkdir ../$BUILD_DIR
 fi
@@ -67,8 +57,8 @@ fi
 test -f CMakeCache.txt && rm CMakeCache.txt
 
 echo ...Configure $VERSION
-cmake -DWITH_CHECK=ON -DWITH_JAVA=ON -DWITH_CPP_NAMESPACE=OFF -DWITH_PYTHON=OFF -DENABLE_LAYOUT=ON -DENABLE_MULTI=ON -DENABLE_GROUPS=ON -DENABLE_FBC=ON -DENABLE_COMP=ON  -DENABLE_QUAL=ON -DWITH_RUBY=ON -DWITH_PERL=ON -DWITH_CSHARP=$WITH_MONO -DCMAKE_INSTALL_PREFIX=$INSTALL_PREFIX -DCMAKE_INSTALL_LIBDIR=$INSTALL_PREFIX/$LIB_SUFFIX ../$SVN_DIR  
-cmake -DWITH_CHECK=ON -DWITH_JAVA=ON -DWITH_CPP_NAMESPACE=OFF -DWITH_PYTHON=OFF -DENABLE_LAYOUT=ON -DENABLE_MULTI=ON -DENABLE_GROUPS=ON -DENABLE_FBC=ON -DENABLE_COMP=ON  -DENABLE_QUAL=ON -DWITH_RUBY=ON -DWITH_PERL=ON -DWITH_CSHARP=$WITH_MONO -DCMAKE_INSTALL_PREFIX=$INSTALL_PREFIX -DCMAKE_INSTALL_LIBDIR=$INSTALL_PREFIX/$LIB_SUFFIX ../$SVN_DIR > $C_LOGFILE 2>&1
+cmake -DWITH_CHECK=ON -DWITH_JAVA=ON -DWITH_CPP_NAMESPACE=OFF -DWITH_PYTHON=OFF -DENABLE_RENDER=ON -DENABLE_LAYOUT=ON -DENABLE_MULTI=ON -DENABLE_GROUPS=ON -DENABLE_FBC=ON -DENABLE_COMP=ON  -DENABLE_QUAL=ON -DWITH_RUBY=ON -DWITH_PERL=ON -DWITH_CSHARP=$WITH_MONO -DCMAKE_INSTALL_PREFIX=$INSTALL_PREFIX -DCMAKE_INSTALL_LIBDIR=$INSTALL_PREFIX/$LIB_SUFFIX $SVN_DIR  
+cmake -DWITH_CHECK=ON -DWITH_JAVA=ON -DWITH_CPP_NAMESPACE=OFF -DWITH_PYTHON=OFF -DENABLE_RENDER=ON -DENABLE_LAYOUT=ON -DENABLE_MULTI=ON -DENABLE_GROUPS=ON -DENABLE_FBC=ON -DENABLE_COMP=ON  -DENABLE_QUAL=ON -DWITH_RUBY=ON -DWITH_PERL=ON -DWITH_CSHARP=$WITH_MONO -DCMAKE_INSTALL_PREFIX=$INSTALL_PREFIX -DCMAKE_INSTALL_LIBDIR=$INSTALL_PREFIX/$LIB_SUFFIX $SVN_DIR > $C_LOGFILE 2>&1
 
 if [ "$SKIP_BUILD" = "false" ]; then
   echo ...build $VERSION
@@ -80,11 +70,11 @@ fi
 #cpack
 cpack -G TGZ > $P_LOGFILE 2>&1
 if grep -q Ubuntu /proc/version; then
-  echo ... create DEB
-  cpack -G DEB $EXTRA_ARG >> $P_LOGFILE 2>&1
+ echo ... create DEB
+ cpack -G DEB $EXTRA_ARG >> $P_LOGFILE 2>&1
 else
-  echo ... create RPM  
-  cpack -G RPM >> $P_LOGFILE 2>&1
+ echo ... create RPM  
+ cpack -G RPM >> $P_LOGFILE 2>&1
 fi
 
 #ctest
@@ -95,22 +85,22 @@ cp $VERSION-Linux.* $DEST_DIR/$DIR/
 
 if grep -q Ubuntu /proc/version; then
   echo ...copy deb
-  cp $S_LOGFILE $DEST_DIR/$DIR/${VERSION}${SUFFIX}-Linux-$FILE-ubuntu-svn.txt
-  cp $C_LOGFILE $DEST_DIR/$DIR/${VERSION}${SUFFIX}-Linux-$FILE-ubuntu-configure.txt
-  cp $M_LOGFILE $DEST_DIR/$DIR/${VERSION}${SUFFIX}-Linux-$FILE-ubuntu-make.txt
-  cp $P_LOGFILE $DEST_DIR/$DIR/${VERSION}${SUFFIX}-Linux-$FILE-ubuntu-package.txt
-  cp $C2_LOGFILE $DEST_DIR/$DIR/${VERSION}${SUFFIX}-Linux-$FILE-ubuntu-check.txt
-  cp $VERSION-Linux.deb $DEST_DIR/$DIR/${VERSION}${SUFFIX}-Linux-$FILE.deb
-  cp $VERSION-Linux.tar.gz $DEST_DIR/$DIR/${VERSION}${SUFFIX}-Linux-$FILE-binaries-ubuntu.tar.gz
+  cp $S_LOGFILE $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-ubuntu-svn.txt
+  cp $C_LOGFILE $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-ubuntu-configure.txt
+  cp $M_LOGFILE $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-ubuntu-make.txt
+  cp $P_LOGFILE $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-ubuntu-package.txt
+  cp $C2_LOGFILE $DEST_DIR/$DIR/${VERSION-Linux-$FILE-ubuntu-check.txt
+  cp $VERSION-Linux.deb $DEST_DIR/$DIR/${VERSION}$-Linux-$FILE.deb
+  cp $VERSION-Linux.tar.gz $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-binaries-ubuntu.tar.gz
 else
   echo ...copy rpm
-  cp $S_LOGFILE $DEST_DIR/$DIR/${VERSION}${SUFFIX}-Linux-$FILE-centos-svn.txt
-  cp $C_LOGFILE $DEST_DIR/$DIR/${VERSION}${SUFFIX}-Linux-$FILE-centos-configure.txt
-  cp $M_LOGFILE $DEST_DIR/$DIR/${VERSION}${SUFFIX}-Linux-$FILE-centos-make.txt
-  cp $P_LOGFILE $DEST_DIR/$DIR/${VERSION}${SUFFIX}-Linux-$FILE-centos-package.txt
-  cp $C2_LOGFILE $DEST_DIR/$DIR/${VERSION}${SUFFIX}-Linux-$FILE-centos-check.txt
-  cp $VERSION-Linux.rpm $DEST_DIR/$DIR/${VERSION}${SUFFIX}-Linux-$FILE.rpm
-  cp $VERSION-Linux.tar.gz $DEST_DIR/$DIR/${VERSION}${SUFFIX}-Linux-$FILE-binaries-centos.tar.gz
+  cp $S_LOGFILE $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-centos-svn.txt
+  cp $C_LOGFILE $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-centos-configure.txt
+  cp $M_LOGFILE $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-centos-make.txt
+  cp $P_LOGFILE $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-centos-package.txt
+  cp $C2_LOGFILE $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-centos-check.txt
+  cp $VERSION-Linux.rpm $DEST_DIR/$DIR/${VERSION}-Linux-$FILE.rpm
+  cp $VERSION-Linux.tar.gz $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-binaries-centos.tar.gz
 fi
 
 
