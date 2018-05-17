@@ -54,7 +54,48 @@ Next we use Anaconda (not native as before) to build the Anaconda binaries. Anac
 * Log in to the Anaconda cloud first id you need to `../anaconda2/bin/anaconda login`
 * upload with `../anaconda2/bin/anaconda upload --user SBMLTeam /Users/frank/anaconda2/conda-bld/osx-64/python-libsbml-experimental-<ver>-py27_0.tar.bz2`
 
+UPDATE 5.17.0: OSX ANACONDA 
+Once the source package has been uploaded to PyPI we can create all Anaconda packages:
+
+ cd ~\Developemt
+ ./create_conda_xxx.sh python-libsbml-experimental
+ ./create_conda_xxx.sh python-libsbml
+
+and then upload with 
+
+ ../anaconda2/bin/anaconda upload --user SBMLTeam /Users/frank/anaconda2/conda-bld/osx-64/python-libsbml-experimental-<ver>-<pyver>.tar.bz2`
+ ../anaconda2/bin/anaconda upload --user SBMLTeam /Users/frank/anaconda2/conda-bld/osx-64/python-libsbml-<ver>-<pyver>_0.tar.bz2`
+ 
+UPDATE 5.17.0: WINDOWS binaries
+
+connect to delay
+
+update the subversion repositories to the release version
+
+ libsbml-experimental-src-32
+ libsbml-experimental-src-64 
+
+Next go to the python packaging tools, check for modifications in the setup.py and cmake files (new packages):
+
+ cd c:\Development\libsbml-experimental-src-64\dev\utilities\build-python\
+ run build_all.bat
+
+FUTURE
+
+try:
+  from setuptools import setup, Extension
+  try: 
+    import distutils.command.bdist_conda
+  except: 
+    pass
+except:
+  from distutils.core import setup, Extension
+  try: 
+    import distutils.command.bdist_conda
+  except: 
+    pass
+    
 
 
-
+-DUSE_RENDER
 
