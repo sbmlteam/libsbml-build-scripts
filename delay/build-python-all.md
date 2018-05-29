@@ -14,4 +14,3 @@ while `stable` is built in the 32bit branch:
 `c:\Development\libsbml-src-32\dev\utilities\build-python\`
 `c:\Development\libsbml-experimental-src-64\dev\utilities\build-python\`
 
-*TODO* for both stable and experimental the 32 and 64 bit branches need to be sychronised!!!
