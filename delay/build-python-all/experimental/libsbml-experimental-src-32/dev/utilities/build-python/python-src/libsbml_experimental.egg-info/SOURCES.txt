@@ -1,9 +1,0 @@
-libsbml.pth
-libsbml_wrap.cpp
-setup32.py
-setup64.py
-libsbml/__init__.py
-libsbml_experimental.egg-info/PKG-INFO
-libsbml_experimental.egg-info/SOURCES.txt
-libsbml_experimental.egg-info/dependency_links.txt
-libsbml_experimental.egg-info/top_level.txt
