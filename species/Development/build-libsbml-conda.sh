@@ -41,10 +41,10 @@ fi
 
 cd $BUILD_DIR
 
-if [ -d ${PACKAGE_NAME} ]
-then
- rm -rf ${PACKAGE_NAME}
-fi
+# if [ -d ${PACKAGE_NAME} ]
+# then
+#  rm -rf ${PACKAGE_NAME}
+# fi
 
 # upgrade anaconda 
 #conda update -y --prefix $ANACONDA_DIR anaconda
