@@ -269,9 +269,6 @@ NODE_GYP_EXECUTABLE=C:/Users/fbergman/AppData/Roaming/npm/node-gyp.cmd
 // nodejs
 NODEJS_EXECUTABLE=C:/Program Files (x86)/nodejs/node.exe
 
-//Legacy Math
-LIBSBML_USE_LEGACY_MATH=ON
-
 //Unit tests
 WITH_CHECK:BOOL=ON
 

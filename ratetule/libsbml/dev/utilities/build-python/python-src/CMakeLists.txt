@@ -63,7 +63,7 @@ add_definitions(-DUSE_COMP
 				-DUSE_LAYOUT 
 				-DUSE_MULTI
 				-DUSE_GROUPS
-				-DLIBSBML_USE_LEGACY_MATH
+				-DUSE_RENDER
 )
 
 

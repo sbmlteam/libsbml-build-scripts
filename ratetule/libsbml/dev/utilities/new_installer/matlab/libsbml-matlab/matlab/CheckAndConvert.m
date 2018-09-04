@@ -201,13 +201,13 @@ else
         else
 
             % find the opening bracket
-            Open = ismember(OpenBracket, LogIndex(i)+3) == 1;
+            Open = find(ismember(OpenBracket, LogIndex(i)+3) == 1,1);
 
             % find closing bracket
             Close = find(CloseBracket > LogIndex(i)+3, 1);
 
             % is there a comma between
-            Greater = find(Comma > OpenBracket(Open));
+            Greater = find(Comma > OpenBracket(Open),1);
             Less = find(Comma < CloseBracket(Close));
 
             if (isempty(Greater) || isempty(Less))
@@ -356,22 +356,26 @@ if (isempty(Start))
     return;
 end;
 
-% need to distinguish between 'or' and 'floor'
-if (strcmp(LogicalExpression, 'or('))
-    StartFloor = strfind(Formula, 'floor(');
-    if (~isempty(StartFloor))
-        newStart = [];
-        index = 1;
-        for j = 1:length(Start)
-            floorStart = Start(j)-3;
-            if (contains(StartFloor, floorStart) == 0)
-                newStart(index) = Start(j);
-                index = index + 1;
-            end;
+possValues = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_';
+% remove any functions that may end in the name of a logical eg floor or
+% myand
+newStart = [];
+index = 1;
+for j = 1:length(Start)
+    if Start(j) ~= 1
+        prev = Formula(Start(j)-1);
+        if ~ismember(prev, possValues)
+            newStart(index) = Start(j);
+            index = index + 1;
         end;
-        Start = newStart;
-    end;
+    else
+        newStart(index) = Start(j);
+        index = index + 1;
+    end;    
 end;
+Start = newStart;
+
+
 
 % if not found; no arguments - return
 if (isempty(Start))
