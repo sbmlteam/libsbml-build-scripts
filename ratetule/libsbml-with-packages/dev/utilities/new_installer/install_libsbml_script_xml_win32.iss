@@ -1,19 +1,19 @@
-; Version No is currently 5.16.1
+; Version No is currently 5.17.1
 ; Check before use
 
 
 [Setup]
 AppName=libSBML
-AppVerName=libSBML 5.16.1
+AppVerName=libSBML 5.17.1
 AppPublisher=SBML Team
 AppPublisherURL=http://sbml.org
 AppSupportURL=http://sbml.org
 AppUpdatesURL=http://sbml.org
-DefaultDirName={pf}\SBML\libSBML-5.16.1-libxml2-x86
+DefaultDirName={pf}\SBML\libSBML-5.17.1-libxml2-x86
 DefaultGroupName=libSBML
 DisableProgramGroupPage=yes
 OutputDir=.\Output
-OutputBaseFilename=libSBML-5.16.1-win-x86
+OutputBaseFilename=libSBML-5.17.1-win-x86
 WizardSmallImageFile=.\graphics\libsbml-installer-mini-logo.bmp
 WizardImageFile=.\graphics\libsbml-installer-graphic.bmp
 UsePreviousAppDir=no
@@ -39,7 +39,7 @@ Root: HKCU; Subkey: Software\SBML; Flags: uninsdeletekeyifempty
 Root: HKCU; Subkey: Software\SBML\libSBML; Flags: uninsdeletekey
 Root: HKLM; Subkey: Software\SBML; Flags: uninsdeletekeyifempty
 Root: HKLM; Subkey: Software\SBML\libSBML; Flags: uninsdeletekey
-Root: HKLM; Subkey: Software\SBML\libSBML; ValueType: string; ValueName: Version; ValueData: 5.16.1
+Root: HKLM; Subkey: Software\SBML\libSBML; ValueType: string; ValueName: Version; ValueData: 5.17.1
 Root: HKLM; Subkey: Software\SBML\libSBML; ValueType: string; ValueName: InstallPath; ValueData: {app}
 
 [Code]
@@ -311,7 +311,7 @@ begin
 
   Note: it includes a version number
 **********************************************************************************************************}
-  MsgBox('This setup installs the Windows version of libSBML 5.16.1 built using the libxml2 2.7.3 XML Parser library. All the necessary libraries are included. The source code is available as a separate download.', mbInformation, mb_Ok);
+  MsgBox('This setup installs the Windows version of libSBML 5.17.1 built using the libxml2 2.7.3 XML Parser library. All the necessary libraries are included. The source code is available as a separate download.', mbInformation, mb_Ok);
 end;
 
 
@@ -327,7 +327,7 @@ procedure InitializeWizard;
 begin
   {get data from system}
   PreviousInstalledVersion := GetVersion();
-  ThisVersion := '5.16.1';
+  ThisVersion := '5.17.1';
   GetPython25Dir('');
   GetPython26Dir('');
   GetPython27Dir('');
@@ -661,12 +661,12 @@ end;
 
 [Run]
 
-Filename: "{app}\bindings\python\libSBML-5.16.1-win-py2.5-x86.exe"; Check: GetPython25;
-Filename: "{app}\bindings\python\libSBML-5.16.1-win-py2.6-x86.exe"; Check: GetPython26;
-Filename: "{app}\bindings\python\libSBML-5.16.1-win-py2.7-x86.exe"; Check: GetPython27;
-Filename: "{app}\bindings\python\libSBML-5.16.1-win-py3.2-x86.exe"; Check: GetPython32;
-Filename: "{app}\bindings\python\libSBML-5.16.1-win-py3.4-x86.exe"; Check: GetPython34;
-Filename: "{app}\bindings\python\libSBML-5.16.1-win-py3.5-x86.exe"; Check: GetPython34;
-Filename: "{app}\bindings\matlab\libSBML-5.16.1-win-matlab-x86.exe"; Check: GetMatlab;
+Filename: "{app}\bindings\python\libSBML-5.17.1-win-py2.5-x86.exe"; Check: GetPython25;
+Filename: "{app}\bindings\python\libSBML-5.17.1-win-py2.6-x86.exe"; Check: GetPython26;
+Filename: "{app}\bindings\python\libSBML-5.17.1-win-py2.7-x86.exe"; Check: GetPython27;
+Filename: "{app}\bindings\python\libSBML-5.17.1-win-py3.2-x86.exe"; Check: GetPython32;
+Filename: "{app}\bindings\python\libSBML-5.17.1-win-py3.4-x86.exe"; Check: GetPython34;
+Filename: "{app}\bindings\python\libSBML-5.17.1-win-py3.5-x86.exe"; Check: GetPython34;
+Filename: "{app}\bindings\matlab\libSBML-5.17.1-win-matlab-x86.exe"; Check: GetMatlab;
 
 
