@@ -249,13 +249,13 @@ PERL_LIBRARY:FILEPATH=$$CMAKE_PERL_LIB_32$$
 PYTHON_DEBUG_LIBRARY:FILEPATH=PYTHON_DEBUG_LIBRARY-NOTFOUND
 
 //Path to a program.
-PYTHON_EXECUTABLE:FILEPATH=$$CMAKE_PYTHON32_32$$/python.exe
+PYTHON_EXECUTABLE:FILEPATH=$$CMAKE_PYTHON27_32$$/python.exe
 
 //Path to a file.
-PYTHON_INCLUDE_DIR:PATH=$$CMAKE_PYTHON32_32$$/include
+PYTHON_INCLUDE_DIR:PATH=$$CMAKE_PYTHON27_32$$/include
 
 //Path to a library.
-PYTHON_LIBRARY:FILEPATH=$$CMAKE_PYTHON32_32$$/libs/python32.lib
+PYTHON_LIBRARY:FILEPATH=$$CMAKE_PYTHON27_32$$/libs/python27.lib
 
 //Path to a program.
 SWIG_EXECUTABLE:FILEPATH=$$CMAKE_SWIG$$
@@ -268,9 +268,6 @@ NODE_GYP_EXECUTABLE=C:/Users/fbergman/AppData/Roaming/npm/node-gyp.cmd
 
 // nodejs
 NODEJS_EXECUTABLE=C:/Program Files (x86)/nodejs/node.exe
-
-//Legacy Math
-LIBSBML_USE_LEGACY_MATH=ON
 
 //Unit tests
 WITH_CHECK:BOOL=ON
@@ -369,7 +366,7 @@ binding_java_lib_LIB_DEPENDS:STATIC=general;libsbml-static;
 binding_perl_lib_LIB_DEPENDS:STATIC=general;libsbml-static;general;$$CMAKE_PERL_32$$/lib/CORE/perl516.lib;
 
 //Dependencies for the target
-binding_python_lib_LIB_DEPENDS:STATIC=general;libsbml-static;general;$$CMAKE_PYTHON32_32$$/libs/python32.lib;
+binding_python_lib_LIB_DEPENDS:STATIC=general;libsbml-static;general;$$CMAKE_PYTHON27_32$$/libs/python27.lib;
 
 //Dependencies for the target
 libsbml-static_LIB_DEPENDS:STATIC=general;$$CMAKE_DEP_32$$/lib/libbz2.lib;general;$$CMAKE_DEP_32$$/lib/zdll.lib;general;$$CMAKE_DEP_32$$/lib/libxml2.lib;general;WS2_32.lib;general;$$CMAKE_DEP_32$$/lib/libiconv.lib;general;$$CMAKE_DEP_32$$/lib/zdll.lib;
@@ -526,9 +523,9 @@ FIND_PACKAGE_MESSAGE_DETAILS_Perl:INTERNAL=[$$CMAKE_PERL_32$$/bin/perl.exe]
 //Details about finding PerlLibs
 FIND_PACKAGE_MESSAGE_DETAILS_PerlLibs:INTERNAL=[$$CMAKE_PERL_32$$/lib/CORE/perl516.lib][$$CMAKE_PERL_32$$/lib/CORE]
 //Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[$$CMAKE_PYTHON32_32$$/python.exe]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[$$CMAKE_PYTHON27_32$$/python.exe]
 //Details about finding PythonLibs
-FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[$$CMAKE_PYTHON32_32$$/libs/python32.lib][$$CMAKE_PYTHON32_32$$/include]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[$$CMAKE_PYTHON27_32$$/libs/python27.lib][$$CMAKE_PYTHON27_32$$/include]
 //ADVANCED property for variable: JAVA_AWT_INCLUDE_PATH
 JAVA_AWT_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: JAVA_AWT_LIBRARY
@@ -580,7 +577,7 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_INCLUDE_DIR
 PYTHON_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //Path to where Python.h is found (deprecated)
-PYTHON_INCLUDE_PATH:INTERNAL=$$CMAKE_PYTHON32_32$$/include
+PYTHON_INCLUDE_PATH:INTERNAL=$$CMAKE_PYTHON27_32$$/include
 //ADVANCED property for variable: PYTHON_LIBRARY
 PYTHON_LIBRARY-ADVANCED:INTERNAL=1
 

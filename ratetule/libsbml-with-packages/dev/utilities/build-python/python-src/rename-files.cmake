@@ -41,21 +41,43 @@ endif()
 MATH(EXPR LIBSBML_VERSION_NUMERIC "${LIBSBML_VERSION_MAJOR} * 10000 + ${LIBSBML_VERSION_MINOR} * 100 + ${LIBSBML_VERSION_PATCH}" )
 set(PACKAGE_VERSION "${LIBSBML_VERSION_MAJOR}.${LIBSBML_VERSION_MINOR}.${LIBSBML_VERSION_PATCH}${LIBSBML_VERSION_RELEASE}")
 
-set (VERSIONS 2.5 2.6 2.7 3.0 3.1 3.2 3.3 3.4 3.5)
+# version hack if required for PyPI (bgoli)
+# set(PACKAGE_VERSION2 "5.15.3${LIBSBML_VERSION_RELEASE}")
+
+set (VERSIONS 2.6 2.7 3.0 3.1 3.2 3.3 3.4 3.5 3.6)
+
 foreach(version ${VERSIONS})
+  # version hack if required for PyPI (bgoli)
+  # set(version_whl ${version})
+  # string(REPLACE "." "" version_whl "${version_whl}" )
 
   if (EXISTS "${OUT_DIR}/libsbml-experimental-${PACKAGE_VERSION}.win32-py${version}.exe")
     file(RENAME 
        "${OUT_DIR}/libsbml-experimental-${PACKAGE_VERSION}.win32-py${version}.exe" 
-       "${OUT_DIR}/libSBML-experimental-${PACKAGE_VERSION}-win-py${version}-x86.exe"
+       "${OUT_DIR}/libSBML-experimental-${PACKAGE_VERSION2}-win-py${version}-x86.exe"
     )
   endif()
   
   if (EXISTS "${OUT_DIR}/libsbml-experimental-${PACKAGE_VERSION}.win-amd64-py${version}.exe")
     file(RENAME 
        "${OUT_DIR}/libsbml-experimental-${PACKAGE_VERSION}.win-amd64-py${version}.exe" 
-       "${OUT_DIR}/libSBML-experimental-${PACKAGE_VERSION}-win-py${version}-x64.exe"
+       "${OUT_DIR}/libSBML-experimental-${PACKAGE_VERSION2}-win-py${version}-x64.exe"
     )
   endif()
+  
+  # version hack if required for PyPI (bgoli)
+  # if (EXISTS "${OUT_DIR}/python_libsbml_experimental-${PACKAGE_VERSION}-cp${version_whl}-cp${version_whl}m-win_amd64.whl")
+  #   file(RENAME 
+  #      "${OUT_DIR}/python_libsbml_experimental-${PACKAGE_VERSION}-cp${version_whl}-cp${version_whl}m-win_amd64.whl" 
+  #      "${OUT_DIR}/python_libsbml_experimental-${PACKAGE_VERSION2}-cp${version_whl}-cp${version_whl}m-win_amd64.whl"
+  #   )  
+  # endif()
+  
+  # if (EXISTS "${OUT_DIR}/python_libsbml_experimental-${PACKAGE_VERSION}-cp${version_whl}-cp${version_whl}m-win32.whl")
+  #   file(RENAME 
+  #      "${OUT_DIR}/python_libsbml_experimental-${PACKAGE_VERSION}-cp${version_whl}-cp${version_whl}m-win32.whl" 
+  #      "${OUT_DIR}/python_libsbml_experimental-${PACKAGE_VERSION2}-cp${version_whl}-cp${version_whl}m-win32.whl"
+  #   )  
+  # endif() 
   
 endforeach()
