@@ -324,10 +324,10 @@ WITH_JAVA:BOOL=ON
 WITH_JAVASCRIPT:BOOL=ON
 
 // nodegyp
-NODE_GYP_EXECUTABLE=C:/Users/fbergman/AppData/Roaming/npm/node-gyp.cmd
+NODE_GYP_EXECUTABLE=c:/tools/nodejs_x86/node_modules/npm/bin/node-gyp-bin/node-gyp.cmd
 
 // nodejs
-NODEJS_EXECUTABLE=C:/Program Files (x86)/nodejs/node.exe
+NODEJS_EXECUTABLE=c:/tools/nodejs_x86/node.exe
 
 //Use libxml XML parser
 WITH_LIBXML:BOOL=ON
