@@ -236,25 +236,6 @@
  * 'rem' all as @sbmlconstant{AST_FUNCTION,ASTNodeType_t} with the appropriate
  * name set.
  * </ul>
- *
- * @class doc_package_math_settings
- *
- * @par
- * This setting affects whether the math added in a given SBML
- * Level&nbsp;3 package are parsed as those added MathML elements, 
- * or whether they are added as generic functions or variables
- * with those names.
- *
- * @class doc_package_math_values
- *
- * <ul>
- * <li> @sbmlconstant{L3P_PARSE_PACKAGE_MATH_DIRECTLY,} (value = @c true): parse any 
- * string defined in a given SBML L3 package as its corresponding ASTType_t.
- * <li> @sbmlconstant{L3P_PARSE_PACKAGE_MATH_AS_GENERIC,} (value = @c false): 
- * parse any string that would have been defined in the given SBML L3 package
- * as @sbmlconstant{AST_FUNCTION,ASTNodeType_t} or @sbmlconstant{AST_NAME,ASTNodeType_t} 
- * with the appropriate name set.
- * </ul>
  */
 
 #ifndef L3ParserSettings_h
@@ -264,8 +245,6 @@
 #include <sbml/common/extern.h>
 #include <sbml/common/sbmlfwd.h>
 #include <sbml/util/StringBuffer.h>
-#include <sbml/math/ASTNodeType.h>
-
 
 
 /**
@@ -401,23 +380,6 @@ typedef enum
 #define L3P_PARSE_L3V2_FUNCTIONS_AS_GENERIC  false
 
 
- /**
- * Parse the functions added in distrib.
- *
- * @see L3ParserSettings::getParseDistribFunctions()
- * @see L3ParserSettings::setParseDistribFunctions()
- */
-#define L3P_PARSE_PACKAGE_MATH_DIRECTLY true
-
- /**
- * Parse the '%' symbol as an expanded 'piecewise' function (valid in all levels/versions).
- *
- * @see L3ParserSettings::getParseDistribFunctions()
- * @see L3ParserSettings::setParseDistribFunctions()
- */
-#define L3P_PARSE_PACKAGE_MATH_AS_GENERIC  false
-
-
 typedef enum
 {
     INFIX_SYNTAX_NAMED_SQUARE_BRACKETS
@@ -426,7 +388,6 @@ typedef enum
 } L3ParserGrammarLineType_t;
 
 
-#include <sbml/extension/ASTBasePlugin.h>
 
 #ifdef __cplusplus
 
@@ -451,7 +412,8 @@ private:
   bool mAvoCsymbol;
   bool mStrCmpIsCaseSensitive;
   bool mModuloL3v2;
-  std::map<ExtendedMathType_t, bool> mParsePackages;
+  bool ml3v2Functions;
+  std::vector<ASTBasePlugin*> mPlugins;
   /** @endcond */
 
 public:
@@ -901,8 +863,8 @@ public:
 
 
   /**
-  * Indicates the current behavior set for handling whether to
-  * parse the functions added in L3v2 as that MathML or not.
+  * Indicates the current behavior set for handling the '%' sumbol in
+  * mathematical formulas.
   *
   * @copydetails doc_l3v2_function_settings
   *
@@ -910,47 +872,30 @@ public:
   * values are as follows:
   * @copydetails doc_l3v2_function_values
   *
-  * @see setParsePackageMath(@if java boolean@endif)
+  * @see setParseModuloL3v2(@if java boolean@endif)
   */
   bool getParseL3v2Functions() const;
 
 
   /**
-  * Sets the behavior for handling functions added in SBML packages
-  *
-  * @copydetails doc_package_math_settings
-  *
-  * This method lets you tell the parser which behavior to use---either
-  * to parse the functions added in a given package as their built-in counterparts,
-  * or as generic functions with that name (to be defined by SBML as
-  * function definitions).  The two possibilities are
-  * represented using the following constants:
-  *
-  * @copydetails doc_package_math_values
-  *
-  * @param l3v2functions a boolean value (one of the constants
-  * @sbmlconstant{L3P_PARSE_L3V2_FUNCTIONS_DIRECTLY,} or
-  * @sbmlconstant{L3P_PARSE_L3V2_FUNCTIONS_AS_GENERIC,})
-  * indicating how to interpret those function names.
-  *
-  * @see getParsePackageMath()
-  */
-  void setParsePackageMath(ExtendedMathType_t package, bool parsepackage);
-
-
-  /**
-  * Indicates the current behavior set for handling whether to
-  * parse the functions added in the given package as that MathML or not.
-  *
-  * @copydetails doc_package_math_settings
-  *
-  * @return A boolean indicating the behavior currently set.  The possible
-  * values are as follows:
-  * @copydetails doc_package_math_values
-  *
-  * @see setParsePackageMath(@if java boolean@endif)
-  */
-  bool getParsePackageMath(ExtendedMathType_t package) const;
+   * Set up the plugins for this L3ParserSettings, based on the
+   * SBMLNamespaces object.
+   *
+   * When a SBMLNamespaces object is provided, the parser will only interpret
+   * infix syntax understood by the core libSBML @em plus the packages
+   * indicated by the SBMLNamespaces objects provided.  ASTNode objects
+   * returned by the L3Parser will contain those SBMLNamespaces objects, and
+   * will be used to parse certain constructs that may only be understood by
+   * packages (e.g., vectors for the SBML Level&nbsp;3 "arrays" package).
+   * Note that by default, all packages that were compiled with this version
+   * of libSBML are included, so this function is most useful as a way to
+   * turn @em off certain namespaces, such as might be desired if your tool
+   * does not support vectors, for example.
+   *
+   * @param sbmlns a SBMLNamespaces object to be used.  If @c NULL is given
+   * as the value, all plugins will be loaded.
+   */
+  void setPlugins(const SBMLNamespaces * sbmlns);
 
 
   /** @cond doxygenLibsbmlInternal */
@@ -1002,9 +947,15 @@ private:
    * Should do caseless string comparison.  Return the type of the function,
    * or AST_UNKNOWN if nothing found.
    */
-  ASTNodeType_t getPackageFunctionFor(const std::string& name) const;
+  int getPackageFunctionFor(const std::string& name) const;
 
 
+  /**
+   * Delete the plugin objects.
+   */
+  void deletePlugins();
+
+  /** @endcond */
 };
 
 

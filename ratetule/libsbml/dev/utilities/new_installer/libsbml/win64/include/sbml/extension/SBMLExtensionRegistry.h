@@ -48,7 +48,6 @@
 #define SBMLExtensionRegistry_h
 
 #include <sbml/extension/SBMLExtension.h>
-#include <sbml/extension/ASTBasePlugin.h>
 LIBSBML_CPP_NAMESPACE_BEGIN
 
 
@@ -77,7 +76,6 @@ public:
   typedef std::map<std::string, const SBMLExtension*>              SBMLExtensionMap;
   typedef std::pair<std::string, const SBMLExtension*>             SBMLExtensionPair;
   typedef SBMLExtensionMap::iterator                               SBMLExtensionMapIter;
-
   /** @endcond */
 #endif //SWIG
 
@@ -377,9 +375,6 @@ public:
    */
   static std::string getRegisteredPackageName(unsigned int index);
 
-  std::vector<ASTBasePlugin*> getASTPlugins();
-  unsigned int getNumASTPlugins();
-  const ASTBasePlugin * getASTPlugin(unsigned int i);
 
 private:
 
@@ -397,7 +392,6 @@ private:
   /** @cond doxygenLibsbmlInternal */
   SBMLExtensionMap  mSBMLExtensionMap;
   SBasePluginMap    mSBasePluginMap;
-  std::vector<ASTBasePlugin*>  mASTPluginsVector;
 
   static SBMLExtensionRegistry* mInstance;
 
