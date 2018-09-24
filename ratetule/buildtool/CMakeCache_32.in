@@ -314,6 +314,9 @@ ENABLE_REQUIREDELEMENTS:BOOL=OFF
 //Enable Spatial package
 ENABLE_SPATIAL:BOOL=OFF
 
+// Enable l3v2 extended math
+ENABLE_L3V2EXTENDEDMATH:BOOL=ON
+
 //Generate Java bindings
 WITH_JAVA:BOOL=ON
 
