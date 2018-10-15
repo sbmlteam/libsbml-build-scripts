@@ -1,0 +1,18 @@
+
+
+
+printRegisteredPackages.cpp
+[ 91%] Building C object examples/c++/CMakeFiles/example_cpp_printRegisteredPackages.dir/util.c.obj
+util.c
+Linking CXX executable printRegisteredPackages.exe
+   Creating library printRegisteredPackages.lib and object printRegisteredPackages.exp
+NMAKE : fatal error U1077: '"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe"' : return code '0xffffffff'
+
+Stop.
+
+NMAKE : fatal error U1077: '"c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\BIN\nmake.exe"' : return code '0x2'
+
+Stop.
+mt.exe : general error c101008d: Failed to write the updated manifest to the resource of file "printRegisteredPackages.exe". Access is denied.
+NMAKE : fatal error U1077: '"c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\BIN\nmake.exe"' : return code '0x2'
+

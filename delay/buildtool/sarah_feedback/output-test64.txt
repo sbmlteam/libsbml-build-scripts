@@ -1,0 +1,360 @@
+Starting Test
+UpdateCTestConfiguration  from :C:/working/Build-tool/test4/build64/DartConfiguration.tcl
+UpdateCTestConfiguration  from :C:/working/Build-tool/test4/build64/DartConfiguration.tcl
+Test project C:/working/Build-tool/test4/build64
+Constructing a list of tests
+Done constructing a list of tests
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+      Start  1: test_sbml_package_layout_run
+
+1: Test command: C:\working\Build-tool\test4\build64\src\sbml\packages\layout\sbml\test\RelWithDebInfo\test_sbml_package_layout.exe
+1: Test timeout computed to be: 9.99988e+006
+1: Running suite(s): Point
+1:  Dimensions
+1:  BoundingBox
+1:  LineSegment
+1:  CubicBezier
+1:  Curve
+1:  GraphicalObject
+1:  CompartmentGlyph
+1:  SpeciesGlyph
+1:  ReactionGlyph
+1:  SpeciesReferenceGlyph
+1:  TextGlyph
+1:  Layout
+1:  LayoutCreation
+1:  LayoutFormatter
+1:  SBMLHandler
+1:  LayoutWriting
+1: 100%: Checks: 253, Failures: 0, Errors: 0
+ 1/14 Test  #1: test_sbml_package_layout_run .....   Passed    0.51 sec
+test 2
+      Start  2: test_sbml_annotation_run
+
+2: Test command: C:\working\Build-tool\test4\build64\src\sbml\annotation\test\RelWithDebInfo\test_sbml_annotation.exe
+2: Test timeout computed to be: 9.99988e+006
+2: Running suite(s): CVTerms
+2:  CVTerms_newSetters
+2:  ModelHistory
+2:  Date_newSetters
+2:  ModelCreator_newSetters
+2:  ModelHistory_newSetters
+2:  CopyAndClone
+2:  RDFAnnotation
+2:  RDFAnnotation2
+2:  Validation
+2:  RDFAnnotation_C
+2:  L3ModelHistory
+2: 100%: Checks: 108, Failures: 0, Errors: 0
+ 2/14 Test  #2: test_sbml_annotation_run .........   Passed    0.65 sec
+test 3
+      Start  3: test_sbml_conversion_run
+
+3: Test command: C:\working\Build-tool\test4\build64\src\sbml\conversion\test\RelWithDebInfo\test_sbml_conversion.exe
+3: Test timeout computed to be: 9.99988e+006
+3: Running suite(s): ConversionOption
+3:  SBMLRuleConverter
+3:  ConversionProperties
+3:  SBMLConverterRegistry
+3:  UnitsConverter
+3:  UnitsConverter2
+3:  UnitsConverterL2
+3: 100%: Checks: 138, Failures: 0, Errors: 0
+ 3/14 Test  #3: test_sbml_conversion_run .........   Passed    1.14 sec
+test 4
+      Start  4: test_sbml_extension_run
+
+4: Test command: C:\working\Build-tool\test4\build64\src\sbml\extension\test\RelWithDebInfo\test_sbml_extension.exe
+4: Test timeout computed to be: 9.99988e+006
+4: Running suite(s): SBaseExtensionPoint
+4:  SBasePlugin
+4:  SBasePluginCreator
+4:  SBasePluginCreatorBase
+4:  SBMLDocumentPlugin
+4:  SBMLExtension
+4:  SBMLExtensionNamespaces
+4:  SBMLExtensionRegistry
+4: 100%: Checks: 19, Failures: 0, Errors: 0
+ 4/14 Test  #4: test_sbml_extension_run ..........   Passed    0.31 sec
+test 5
+      Start  5: test_sbml_math_run
+
+5: Test command: C:\working\Build-tool\test4\build64\src\sbml\math\test\RelWithDebInfo\test_sbml_math.exe
+5: Test timeout computed to be: 9.99988e+006
+5: Running suite(s): ASTNode
+5:  FormulaFormatter
+5:  FormulaParser
+5:  FormulaTokenizer
+5:  ReadMathML
+5:  WriteMathML
+5:  test-data/mathML_1.xml
+5:  test-data/mathML_2.xml
+5:  TestValidASTNode
+5: 100%: Checks: 255, Failures: 0, Errors: 0
+ 5/14 Test  #5: test_sbml_math_run ...............   Passed    0.36 sec
+test 6
+      Start  6: test_sbml_sbml_run
+
+6: Test command: C:\working\Build-tool\test4\build64\src\sbml\test\RelWithDebInfo\test_sbml_sbml.exe
+6: Test timeout computed to be: 9.99988e+006
+6: Running suite(s): ReadSBML
+6:  SBMLValidator API
+6:  RenameIDs
+6:  RemoveFromParent
+6:  GetMultipleObjects
+6:  WriteSBML
+6:  WriteL3SBML
+6:  AlgebraicRule
+6:  AssignmentRule
+6:  Compartment
+6:  L3_Compartment
+6:  Compartment_newSetters
+6:  CompartmentType
+6:  CompartmentType_newSetters
+6:  CompartmentVolumeRule
+6:  Constraint
+6:  Constraint_newSetters
+6:  Delay
+6:  Event
+6:  L3_Event
+6:  Event_newSetters
+6:  EventAssignment
+6:  EventAssignment_newSetters
+6:  FunctionDefinition
+6:  FunctionDefinition_newSetters
+6:  InitialAssignment
+6:  InitialAssignment_newSetters
+6:  KineticLaw
+6:  KineticLaw_newSetters
+6:  L3_KineticLaw
+6:  ListOf
+6:  Model
+6:  L3_Model
+6:  Model_newSetters
+6:  ModifierSpeciesReference
+6:  Parameter
+6:  L3_Parameter
+6:  L3_LocalParameter
+6:  Parameter_newSetters
+6:  ParameterRule
+6:  Priority
+6:  RateRule
+6:  Reaction
+6:  L3_Reaction
+6:  Reaction_newSetters
+6:  Rule
+6:  Rule_newSetters
+6:  SBase
+6:  SBase_newSetters
+6:  Species
+6:  L3_Species
+6:  Species_newSetters
+6:  SpeciesReference
+6:  L3_SpeciesReference
+6:  SpeciesReference_newSetters
+6:  SpeciesConcentrationRule
+6:  SpeciesType
+6:  SpeciesType_newSetters
+6:  StoichiometryMath
+6:  Trigger
+6:  L3Trigger
+6:  Unit
+6:  L3_Unit
+6:  Unit_newSetters
+6:  UnitDefinition
+6:  UnitDefinition_newSetters
+6:  UnitKind
+6:  CopyAndClone
+6:  SBMLConvert
+6:  SBMLConvertStrict
+6:  SBMLDocument
+6:  SBMLError
+6:  test-data/l1v1-branch.xml
+6:  test-data/l1v1-units.xml
+6:  test-data/l1v1-rules.xml
+6:  test-data/l1v1-minimal.xml
+6:  test-data/l2v1-assignment.xml
+6:  test-data/l2v2-newComponents.xml
+6:  test-data/l2v3-all.xml
+6:  test-data/l2v4-new.xml
+6:  test-data/l3v1-new.xml
+6:  ConsistencyChecks
+6:  ParentObject
+6:  AncestorObject
+6:  InternalConsistencyChecks
+6:  HasReqdAtt
+6:  HasReqdElements
+6:  SBMLNamespaces
+6:  SyntaxChecker
+6:  SBMLConstructorException
+6:  SBMLTransforms
+6:  GetMultipleObjects
+6: 100%: Checks: 1512, Failures: 0, Errors: 0
+ 6/14 Test  #6: test_sbml_sbml_run ...............   Passed    2.28 sec
+test 7
+      Start  7: test_sbml_units_run
+
+7: Test command: C:\working\Build-tool\test4\build64\src\sbml\units\test\RelWithDebInfo\test_sbml_units.exe
+7: Test timeout computed to be: 9.99988e+006
+7: Running suite(s): UtilsUnit
+7:  UtilsUnitDefinition
+7:  UnitFormulaFormatter
+7:  UnitFormulaFormatter1
+7:  FormulaUnitData
+7:  DerivedUnitDefinition
+7:  UnitFormulaFormatter2
+7: 100%: Checks: 60, Failures: 0, Errors: 0
+ 7/14 Test  #7: test_sbml_units_run ..............   Passed    0.44 sec
+test 8
+      Start  8: test_sbml_util_run
+
+8: Test command: C:\working\Build-tool\test4\build64\src\sbml\util\test\RelWithDebInfo\test_sbml_util.exe
+8: Test timeout computed to be: 9.99988e+006
+8: Running suite(s): memory
+8:  util
+8:  List
+8:  Stack
+8:  StringBuffer
+8: 100%: Checks: 56, Failures: 0, Errors: 0
+ 8/14 Test  #8: test_sbml_util_run ...............   Passed    0.09 sec
+test 9
+      Start  9: test_sbml_validator_run
+
+9: Test command: C:\working\Build-tool\test4\build64\src\sbml\validator\test\RelWithDebInfo\test_sbml_validator.exe "C:/libsbml-core/src/sbml/validator/test"
+9: Test timeout computed to be: 9.99988e+006
+9: 
+9: Validator testrunner
+9: ====================
+9: using test data from           : C:/libsbml-core/src/sbml/validator/test/test-data
+9: using conversion test data from: C:/libsbml-core/src/sbml/validator/test/test-data-conversion
+9: 
+9: Testing Bad XML Constraints (0000 - 10000).
+9: 100%: Checks: 72, Failures: 0
+9: Testing General XML Consistency Constraints (10000 - 10199).
+9: 100%: Checks: 176, Failures: 0
+9: Testing General MathML Consistency Constraints (10200 - 10299).
+9: 100%: Checks: 300, Failures: 0
+9: Testing Id Consistency Constraints (10300 - 10399).
+9: 100%: Checks: 327, Failures: 0
+9: Testing General Annotation Consistency Constraints (10400 - 10499).
+9: 100%: Checks: 40, Failures: 0
+9: Testing Unit Consistency Constraints (10500 - 10599).
+9: 100%: Checks: 911, Failures: 0
+9: Testing Overdetermined Constraints (10600 - 10699).
+9: 100%: Checks: 23, Failures: 0
+9: Testing SBO Consistency Constraints (10700 - 10799).
+9: 100%: Checks: 128, Failures: 0
+9: Testing General Notes Consistency Constraints (10800 - 19999).
+9: 100%: Checks: 62, Failures: 0
+9: Testing Model Consistency Constraints (20000 - 29999).
+9: 100%: Checks: 1635, Failures: 0
+9: Testing L1 Compatibility Constraints (91000 - 91999).
+9: 100%: Checks: 87, Failures: 0
+9: Testing L2v1 Compatibility Constraints (92000 - 92999).
+9: 100%: Checks: 38, Failures: 0
+9: Testing L2v2 Compatibility Constraints (93000 - 93999).
+9: 100%: Checks: 23, Failures: 0
+9: Testing L2v3 Compatibility Constraints (94000 - 94999).
+9: 100%: Checks: 22, Failures: 0
+9: Testing L2v4 Compatibility Constraints (95000 - 95999).
+9: 100%: Checks: 21, Failures: 0
+9: Testing L3v1 Compatibility Constraints (96000 - 96999).
+9: 100%: Checks: 31, Failures: 0
+9: Testing Additional SBML Constraints (99100 - 99199).
+9: 100%: Checks: 115, Failures: 0
+9: Testing Additional Math Constraints (99200 - 99299).
+9: 100%: Checks: 104, Failures: 0
+9: Testing Additional SBML Constraints (99300 - 99399).
+9: 100%: Checks: 7, Failures: 0
+9: Testing Additional Unit Constraints (99500 - 99599).
+9: 100%: Checks: 123, Failures: 0
+9: Testing Additional SBO Constraints (99700 - 99799).
+9: 100%: Checks: 24, Failures: 0
+9: Testing Modeling Practice Constraints (80000 - 89999).
+9: 100%: Checks: 38, Failures: 0
+ 9/14 Test  #9: test_sbml_validator_run ..........   Passed   57.13 sec
+test 10
+      Start 10: test_sbml_xml_run
+
+10: Test command: C:\working\Build-tool\test4\build64\src\sbml\xml\test\RelWithDebInfo\test_sbml_xml.exe
+10: Test timeout computed to be: 9.99988e+006
+10: Running suite(s): XMLAttributes
+10:  CopyAndClone
+10:  XMLNamespaces
+10:  XMLTriple
+10:  XMLToken
+10:  XMLToken_newSetters
+10:  XMLNode
+10:  XMLNode_newSetters
+10:  XMLError
+10:  XMLErrorC
+10:  XMLErrorLog
+10:  XMLInputStream
+10:  XMLOutputStream
+10: <!-- Created by foo version bar on 2012-02-11 15:15 with libSBML version 5.4.0. -->
+10:  XMLAttributesC
+10:  XMLExceptions
+10: 100%: Checks: 134, Failures: 0, Errors: 0
+10/14 Test #10: test_sbml_xml_run ................   Passed    0.14 sec
+test 11
+      Start 11: test_csharp_bindings
+
+11: Test command: C:\working\Build-tool\test4\build64\src\bindings\csharp\TestRW.exe "C:/libsbml-core/examples/sample-models/from-spec/level-2/"
+11: Test timeout computed to be: 9.99988e+006
+11: Testing LibSBML: 5.4.0
+11: 
+11: ...........................................................................................................................................................................................................................
+11: All tests passed.
+11: 
+11/14 Test #11: test_csharp_bindings .............   Passed    2.55 sec
+test 12
+      Start 12: test_csharp_bindings_full
+
+12: Test command: C:\working\Build-tool\test4\build64\src\bindings\csharp\TestRunner.exe "-d" "C:/libsbml-core/src/sbml/test/test-data" "-l" "C:/working/Build-tool/test4/build64/src/bindings/csharp/libsbmlcsP.dll" "-w" "C:/libsbml-core/src/bindings/csharp"
+12: Test timeout computed to be: 9.99988e+006
+12: LibSBML C# Testrunner
+12: =====================
+12: Running the tests with: 
+12: 	Data Directory:   C:/libsbml-core/src/sbml/test/test-data
+12: 
+12: .......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................<!-- Created by foo version bar on 2012-02-11 15:15 with libSBML version 5.4.0. -->
+12: .....................................
+12: 
+12: Total Number of Tests 1750, failures 0
+12: 
+12: All tests passed.
+12: 
+12/14 Test #12: test_csharp_bindings_full ........   Passed    5.01 sec
+test 13
+      Start 13: test_matlab_binding
+
+13: Test command: "C:\Program Files\MATLAB\R2010b\bin\matlab.bat" "-nosplash" "-nodesktop" "-memmgr" "debug" "-logfile" "runTests.log" "-r" "runTests;quit;"
+13: Test timeout computed to be: 9.99988e+006
+13: CAUTION: MATLAB.BAT will be obsoleted soon. Please change links and scripts to use bin\MATLAB.EXE
+13/14 Test #13: test_matlab_binding ..............   Passed    1.42 sec
+test 14
+      Start 14: test_python_binding
+
+14: Test command: C:\Python\Python27\python.exe "C:/working/Build-tool/test4/build64/src/bindings/python/test.py" "-p" "-b" "C:/libsbml-core/src/bindings/python/test"
+14: Test timeout computed to be: 9.99988e+006
+14: Traceback (most recent call last):
+14:   File "C:/working/Build-tool/test4/build64/src/bindings/python/test.py", line 71, in <module>
+14:     if unittest.TextTestRunner(verbosity=1).run(suite()).wasSuccessful() :
+14:   File "C:/working/Build-tool/test4/build64/src/bindings/python/test.py", line 48, in suite
+14:     module = __import__(module_name)
+14:   File "C:/libsbml-core/src/bindings/python/test/sbml\TestAlgebraicRule.py", line 34, in <module>
+14:     import libsbml
+14:   File "C:\working\Build-tool\test4\build64\src\bindings\python\libsbml.py", line 776, in <module>
+14:     LIBSBML_CONV_PKG_CONSIDERED_UNKNOWN = _libsbml.LIBSBML_CONV_PKG_CONSIDERED_UNKNOWN
+14: AttributeError: 'module' object has no attribute 'LIBSBML_CONV_PKG_CONSIDERED_UNKNOWN'
+14/14 Test #14: test_python_binding ..............***Failed    7.43 sec
+Errors while running CTest
+
+93% tests passed, 1 tests failed out of 14
+
+Total Test time (real) =  82.43 sec
+
+The following tests FAILED:
+	 14 - test_python_binding (Failed)

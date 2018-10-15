@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SVN>c:\Program Files\TortoiseSVN\bin\svn.exe</SVN>
+  <Swig>C:\swigwin-3.0.12\swig.exe</Swig>
+  <InnoSetupCompiler>c:\Program Files (x86)\Inno Setup 5\ISCC.exe</InnoSetupCompiler>
+  <Cmake>c:\Program Files\CMake\bin\cmake.exe</Cmake>
+  <Settings32>
+    <Enabled>true</Enabled>
+    <BuildDir>c:\Development\libsbml-32</BuildDir>
+    <PackageBuildDir>c:\Development\libsbml-32-packages</PackageBuildDir>
+    <PackageInstallDir>c:\Development\libsbml-32-inst-package</PackageInstallDir>
+    <DependencyDir>c:\Development\dependencies\32bit</DependencyDir>
+    <InstallDir>c:\Development\libsbml-32-inst</InstallDir>
+    <JdkDirectory>c:\Program Files (x86)\Java\jdk1.7.0_05</JdkDirectory>
+    <MatlabDirectory>c:\Program Files (x86)\MATLAB\R2011b</MatlabDirectory>
+    <PerlDirectory>C:\Perl_516</PerlDirectory>
+    <Python26Directory>c:\Python32\Python26</Python26Directory>
+    <Python27Directory>c:\Python32\Python27</Python27Directory>
+    <Python32Directory>c:\Python32\Python32</Python32Directory>
+    <OldDependencies>C:\Program Files (x86)\SBML\libSBML-4.2.0-libxml2-x86\win32</OldDependencies>
+    <Python25Directory>c:\Python32\Python25</Python25Directory>
+    <OctaveDirectory>c:\Program Files (x86)\Octave-3.6.1\</OctaveDirectory>
+  </Settings32>
+  <Settings64>
+    <Enabled>true</Enabled>
+    <BuildDir>c:\Development\libsbml-64</BuildDir>
+    <PackageBuildDir>c:\Development\libsbml-64-packages</PackageBuildDir>
+    <PackageInstallDir>c:\Development\libsbml-64-inst-package</PackageInstallDir>
+    <DependencyDir>c:\Development\dependencies\64bit</DependencyDir>
+    <InstallDir>c:\Development\libsbml-64-inst</InstallDir>
+    <JdkDirectory>c:\Program Files\Java\jdk1.7.0_05</JdkDirectory>
+    <MatlabDirectory>c:\Program Files\MATLAB\R2011b</MatlabDirectory>
+    <PerlDirectory>C:\Perl64_516</PerlDirectory>
+    <Python26Directory>c:\Python64\Python26</Python26Directory>
+    <Python27Directory>c:\Python64\Python27</Python27Directory>
+    <Python32Directory>c:\Python64\Python32</Python32Directory>
+    <OldDependencies>C:\Program Files\SBML\libSBML-4.2.0-libxml2-x64\win64</OldDependencies>
+  </Settings64>
+  <SourceDir>c:\Development\libsbml</SourceDir>
+  <PackageSourceDir>c:\Development\libsbml-with-packages</PackageSourceDir>
+  <PackageZipDir>c:\Development\libsbml-packages</PackageZipDir>
+  <OutputDir>c:\inetpub\wwwroot\Files</OutputDir>
+  <CmakeDirectory>c:\Program Files (x86)\CMake 2.8</CmakeDirectory>
+  <Build32BeforeInstall>true</Build32BeforeInstall>
+  <Build64BeforeInstall>true</Build64BeforeInstall>
+  <BuildPyBeforeInstall>true</BuildPyBeforeInstall>
+</Settings>
