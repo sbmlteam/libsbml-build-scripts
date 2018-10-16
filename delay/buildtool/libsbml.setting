@@ -29,7 +29,7 @@
     <DependencyDir>c:\Development\dependencies\x64\release-static</DependencyDir>
     <InstallDir>c:\Development\libsbml-64-inst</InstallDir>
     <JdkDirectory>c:\Program Files\Java\jdk1.7.0_05</JdkDirectory>
-    <MatlabDirectory>c:\Program Files\MATLAB\R2011b</MatlabDirectory>
+    <MatlabDirectory>c:\Program Files\MATLAB\R2017a</MatlabDirectory>
     <PerlDirectory>C:\Perl64_516</PerlDirectory>
     <Python26Directory>c:\Python64\Python26</Python26Directory>
     <Python27Directory>c:\Python64\Python27</Python27Directory>
