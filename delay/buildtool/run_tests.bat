@@ -24,7 +24,7 @@ del /Q "%TEMP%\check*"
 SET PATH=C:\Development\libsbml-64-inst\bin;%ORIGPATH%
 cd /d C:\Development\libsbml-64
 echo Starting Tests: %date% %time% > %BUILDTOOL_DIR%\test_log64.txt
-ctest -V -C RelWithDebInfo >> %BUILDTOOL_DIR%\test_log64.txt
+ctest -V -C Release >> %BUILDTOOL_DIR%\test_log64.txt
 echo Finished Tests: %date% %time% >> %BUILDTOOL_DIR%\test_log64.txt
 copy /y %BUILDTOOL_DIR%\test_log64.txt  C:\inetpub\wwwroot\Files
 del /Q "%TEMP%\check*"
