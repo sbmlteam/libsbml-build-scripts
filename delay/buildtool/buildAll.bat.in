@@ -6,7 +6,7 @@ REM 2011/02/26 Frank Bergmann
 REM
 
 REM ensure visual studio is in the path
-if "%INCLUDE%"=="" call vs14.bat
+if "%INCLUDE%"=="" call c:\Development\vs14.bat
 
 REM set up directory variables
 SET BASE_DIR=%~dp0
@@ -61,14 +61,14 @@ REM REM BUILD 64bit libsbml
 mkdir "%BUILD_DIR_64_BIT%"
 cd /d "%BUILD_DIR_64_BIT%"
 copy "%BASE_DIR%\CMakeCache_64.txt" CMakeCache.txt
-cmake -G "Visual Studio 10 Win64" -DCMAKE_INSTALL_PREFIX=$$INST_64$$ -DCMAKE_SIZEOF_VOID_P=8 %LIBSBML_ROOT% 
-cmake -G "Visual Studio 10 Win64" -DCMAKE_INSTALL_PREFIX=$$INST_64$$ -DCMAKE_SIZEOF_VOID_P=8 %LIBSBML_ROOT%  
-devenv libsbml.sln /build RelWithDebInfo
+cmake -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=$$INST_64$$ -DCMAKE_SIZEOF_VOID_P=8 %LIBSBML_ROOT% 
+cmake -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=$$INST_64$$ -DCMAKE_SIZEOF_VOID_P=8 %LIBSBML_ROOT%  
+"c:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" libsbml.sln /build Release
 rd /s /q $$INST_64$$\include
-devenv libsbml.sln /build RelWithDebInfo /project INSTALL
+"c:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" libsbml.sln /build Release /project INSTALL
 
 if "%ZIP_DIR%" == "" goto DONE_64
-cpack -G ZIP -C RelWithDebInfo
+cpack -G ZIP -C Release
 move /Y *.zip "%ZIP_DIR%"
 
 :DONE_64

@@ -9,7 +9,7 @@
     <BuildDir>c:\Development\libsbml-32</BuildDir>
     <PackageBuildDir>c:\Development\libsbml-32-packages</PackageBuildDir>
     <PackageInstallDir>c:\Development\libsbml-32-inst-package</PackageInstallDir>
-    <DependencyDir>c:\Development\dependencies\32bit</DependencyDir>
+    <DependencyDir>c:\Development\dependencies\x86\release-static</DependencyDir>
     <InstallDir>c:\Development\libsbml-32-inst</InstallDir>
     <JdkDirectory>c:\Program Files (x86)\Java\jdk1.7.0_05</JdkDirectory>
     <MatlabDirectory>c:\Program Files (x86)\MATLAB\R2011b</MatlabDirectory>
@@ -26,7 +26,7 @@
     <BuildDir>c:\Development\libsbml-64</BuildDir>
     <PackageBuildDir>c:\Development\libsbml-64-packages</PackageBuildDir>
     <PackageInstallDir>c:\Development\libsbml-64-inst-package</PackageInstallDir>
-    <DependencyDir>c:\Development\dependencies\64bit</DependencyDir>
+    <DependencyDir>c:\Development\dependencies\x64\release-static</DependencyDir>
     <InstallDir>c:\Development\libsbml-64-inst</InstallDir>
     <JdkDirectory>c:\Program Files\Java\jdk1.7.0_05</JdkDirectory>
     <MatlabDirectory>c:\Program Files\MATLAB\R2011b</MatlabDirectory>

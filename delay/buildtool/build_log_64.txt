@@ -1,0 +1,229 @@
+
+Build LibSBML64 bit
+
+: Build LibSBML64 bit
+00:00:00.0156000: 'vs14.bat' is not recognized as an internal or external command,
+00:00:00.0156000: operable program or batch file.
+00:00:00.0156000: A subdirectory or file c:\Development\libsbml-64 already exists.
+00:00:00.0156000:         1 file(s) copied.
+00:00:00.0156000: CMake Error: Error: generator : Visual Studio 10 2010 Win64
+00:00:00.0156000: Does not match the generator used previously: Visual Studio 14 2015 Win64
+00:00:00.0156000: Either remove the CMakeCache.txt file and CMakeFiles directory or choose a different binary directory.
+00:00:00.0156000: CMake Error: Error: generator : Visual Studio 10 2010 Win64
+00:00:00.0156000: Does not match the generator used previously: Visual Studio 14 2015 Win64
+00:00:00.0156000: Either remove the CMakeCache.txt file and CMakeFiles directory or choose a different binary directory.
+00:00:00.0156000: 'devenv' is not recognized as an internal or external command,
+00:00:00.0156000: operable program or batch file.
+00:00:00.0156000: The system cannot find the file specified.
+00:00:00.0156000: 'devenv' is not recognized as an internal or external command,
+00:00:00.0156000: operable program or batch file.
+00:00:00.0156000: CPack Error: CPack project name not specified
+00:00:00.0156000: A duplicate file name exists, or the file
+00:00:00.0156000: cannot be found.
+00:00:00.0156000: 
+00:00:00.0156000: 
+00:00:00.0156000: 
+
+DONE
+
+
+Build LibSBML64 bit
+
+: Build LibSBML64 bit
+00:00:00.0156000: 'vs14.bat' is not recognized as an internal or external command,
+00:00:00.0156000: operable program or batch file.
+00:00:00.0156000: A subdirectory or file c:\Development\libsbml-64 already exists.
+00:00:00.0156000:         1 file(s) copied.
+00:00:00.0156000: CMake Error: Error: generator : Visual Studio 10 2010 Win64
+00:00:00.0156000: Does not match the generator used previously: Visual Studio 14 2015 Win64
+00:00:00.0156000: Either remove the CMakeCache.txt file and CMakeFiles directory or choose a different binary directory.
+00:00:00.0156000: CMake Error: Error: generator : Visual Studio 10 2010 Win64
+00:00:00.0156000: Does not match the generator used previously: Visual Studio 14 2015 Win64
+00:00:00.0156000: Either remove the CMakeCache.txt file and CMakeFiles directory or choose a different binary directory.
+00:00:00.0156000: 'devenv' is not recognized as an internal or external command,
+00:00:00.0156000: operable program or batch file.
+00:00:00.0156000: The system cannot find the file specified.
+00:00:00.0156000: 'devenv' is not recognized as an internal or external command,
+00:00:00.0156000: operable program or batch file.
+00:00:00.0156000: CPack Error: CPack project name not specified
+00:00:00.0156000: A duplicate file name exists, or the file
+00:00:00.0156000: cannot be found.
+00:00:00.0156000: 
+00:00:00.0156000: 
+00:00:00.0156000: 
+
+DONE
+
+
+Build LibSBML64 bit
+
+: Build LibSBML64 bit
+00:00:00.0120007: "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" 
+00:00:01.0120579: A subdirectory or file c:\Development\libsbml-64 already exists.
+00:00:01.0120579:         1 file(s) copied.
+00:00:03.5122009: -- The C compiler identification is MSVC 19.0.24215.1
+00:00:04.5122581: -- The CXX compiler identification is MSVC 19.0.24215.1
+00:00:04.5122581: -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/x86_amd64/cl.exe
+00:00:05.5123153: -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/x86_amd64/cl.exe -- works
+00:00:06.0123439: -- Detecting C compiler ABI info
+00:00:07.0124011: -- Detecting C compiler ABI info - done
+00:00:07.0124011: -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/x86_amd64/cl.exe
+00:00:08.0124583: -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/x86_amd64/cl.exe -- works
+00:00:08.0124583: -- Detecting CXX compiler ABI info
+00:00:09.0125155: -- Detecting CXX compiler ABI info - done
+00:00:09.0125155: -- Detecting CXX compile features
+00:00:10.5126013: -- Detecting CXX compile features - done
+00:00:10.5126013: -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/x86_amd64/cl.exe -- works
+00:00:10.5126013: -- Detecting C compile features
+00:00:10.5126013: -- Detecting C compile features - done
+00:00:12.0126871: -- 
+00:00:12.0126871: ----------------------------------------------------------------------
+00:00:12.0126871: libSBML version 5.17.1
+00:00:12.0126871: ----------------------------------------------------------------------
+00:00:12.0126871: 
+00:00:12.0126871:    More information and the latest version are available online at
+00:00:12.0126871:    http://sbml.org/Software/libSBML
+00:00:12.0126871: 
+00:00:12.0126871:    Please report problems using the issue tracker at
+00:00:12.0126871:    http://sbml.org/Software/libsbml/issue-tracker
+00:00:12.0126871: 
+00:00:12.0126871:    To contact the developers directly, email libsbml-team@googlegroups.com
+00:00:12.0126871: 
+00:00:12.0126871:    Configured on host 'DELAY'
+00:00:12.0126871:      host type                       = Windows
+00:00:12.0126871:      host operating system           = Windows 6.1.7601
+00:00:12.0126871:      host CPU architecture           = AMD64
+00:00:12.0126871: 
+00:00:12.0126871:    General build flags:
+00:00:12.0126871:      CC                              = C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/x86_amd64/cl.exe
+00:00:12.0126871:      CXX                             = C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/x86_amd64/cl.exe
+00:00:12.0126871:      CPPFLAGS                        =  -DWIN32 -DLIBSBML_EXPORTS -DLIBLAX_EXPORTS -D_CRT_SECURE_NO_WARNINGS
+00:00:12.0126871:      CFLAGS                          = /DWIN32 /D_WINDOWS /W3
+00:00:12.0126871:      CXXFLAGS                        = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MP
+00:00:12.0126871:      LDFLAGS                         = /machine:x64
+00:00:12.0126871: 
+00:00:12.0126871:    XML parser library configuration:
+00:00:12.0126871:      XML library                     = libxml2
+00:00:12.0126871:      CPPFLAGS for XML                = -Ic:/Development/dependencies/x64/release-static/include
+00:00:12.0126871:      LIBS for XML                    = c:/Development/dependencies/x64/release-static/lib/libxml2.lib
+00:00:12.0126871: 
+00:00:12.0126871:    Other libSBML configuration settings:
+00:00:12.0126871:      Installation $prefix            = C:/Development/libsbml-64-inst
+00:00:12.0126871: --      Using SWIG                      = C:/swigwin-3.0.12/swig.exe (Version 3.0.12)
+00:00:12.0126871: --      Using libcheck                  = c:/Development/dependencies/x64/release-static/lib/libcheck.lib
+00:00:12.0126871: --      Using C++ namespace ('libsbml') = no
+00:00:12.0126871: -- 
+00:00:12.0126871: --      Build examples                  = no
+00:00:12.0126871: -- 
+00:00:12.0126871: -- 
+00:00:12.0126871: --    Support for SBML Level 3 Packages: 
+00:00:12.0126871: --      SBML 'comp' package    = ON
+00:00:12.0126871: --      SBML 'fbc' package     = ON
+00:00:12.0126871: --      SBML 'groups' package  = ON
+00:00:12.0126871: --      SBML 'l3v2extendedmath' package  = ON
+00:00:12.0126871: --      SBML 'layout' package  = ON
+00:00:12.0126871: --      SBML 'multi' package   = ON
+00:00:12.0126871: --      SBML 'qual' package    = ON
+00:00:12.0126871: --      SBML 'render' package  = ON
+00:00:12.0126871: -- 
+00:00:12.0126871: 
+00:00:12.0126871: -- Other potentially important settings:
+00:00:12.0126871: --   Compression support is enabled for .zip and .gz files
+00:00:12.0126871: --   Compression support is enabled for .bz2 files
+00:00:12.0126871: -- 
+00:00:12.0126871: ----------------------------------------------------------------------
+00:00:12.0126871: -- Configuring done
+00:00:15.0128587: -- Generating done
+00:00:15.0128587: -- Build files have been written to: C:/Development/libsbml-64
+00:00:15.5128873: -- Detecting C compile features
+00:00:15.5128873: -- Detecting C compile features - done
+00:00:16.0129159: -- 
+00:00:16.0129159: ----------------------------------------------------------------------
+00:00:16.0129159: libSBML version 5.17.1
+00:00:16.0129159: ----------------------------------------------------------------------
+00:00:16.0129159: 
+00:00:16.0129159:    More information and the latest version are available online at
+00:00:16.0129159:    http://sbml.org/Software/libSBML
+00:00:16.0129159: 
+00:00:16.0129159:    Please report problems using the issue tracker at
+00:00:16.0129159:    http://sbml.org/Software/libsbml/issue-tracker
+00:00:16.0129159: 
+00:00:16.0129159:    To contact the developers directly, email libsbml-team@googlegroups.com
+00:00:16.0129159: 
+00:00:16.0129159:    Configured on host 'DELAY'
+00:00:16.0129159:      host type                       = Windows
+00:00:16.0129159:      host operating system           = Windows 6.1.7601
+00:00:16.0129159:      host CPU architecture           = AMD64
+00:00:16.0129159: 
+00:00:16.0129159:    General build flags:
+00:00:16.0129159:      CC                              = C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/x86_amd64/cl.exe
+00:00:16.0129159:      CXX                             = C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/x86_amd64/cl.exe
+00:00:16.0129159:      CPPFLAGS                        =  -DWIN32 -DLIBSBML_EXPORTS -DLIBLAX_EXPORTS -D_CRT_SECURE_NO_WARNINGS
+00:00:16.0129159:      CFLAGS                          = /DWIN32 /D_WINDOWS /W3
+00:00:16.0129159:      CXXFLAGS                        = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MP
+00:00:16.0129159:      LDFLAGS                         = /machine:x64
+00:00:16.0129159: 
+00:00:16.0129159:    XML parser library configuration:
+00:00:16.0129159:      XML library                     = libxml2
+00:00:16.0129159:      CPPFLAGS for XML                = -Ic:/Development/dependencies/x64/release-static/include
+00:00:16.0129159:      LIBS for XML                    = c:/Development/dependencies/x64/release-static/lib/libxml2.lib
+00:00:16.0129159: 
+00:00:16.0129159:    Other libSBML configuration settings:
+00:00:16.0129159:      Installation $prefix            = C:/Development/libsbml-64-inst
+00:00:16.0129159: --      Using SWIG                      = C:/swigwin-3.0.12/swig.exe (Version 3.0.12)
+00:00:16.0129159: --      Using libcheck                  = c:/Development/dependencies/x64/release-static/lib/libcheck.lib
+00:00:16.0129159: --      Using C++ namespace ('libsbml') = no
+00:00:16.0129159: -- 
+00:00:16.0129159: --      Build examples                  = no
+00:00:16.0129159: -- 
+00:00:16.0129159: -- 
+00:00:16.0129159: --    Support for SBML Level 3 Packages: 
+00:00:16.0129159: --      SBML 'comp' package    = ON
+00:00:16.0129159: --      SBML 'fbc' package     = ON
+00:00:16.0129159: --      SBML 'groups' package  = ON
+00:00:16.0129159: --      SBML 'l3v2extendedmath' package  = ON
+00:00:16.0129159: --      SBML 'layout' package  = ON
+00:00:16.0129159: --      SBML 'multi' package   = ON
+00:00:16.0129159: --      SBML 'qual' package    = ON
+00:00:16.0129159: --      SBML 'render' package  = ON
+00:00:16.0129159: -- 
+00:00:16.0129159: 
+00:00:16.0129159: -- Other potentially important settings:
+00:00:16.0129159: --   Compression support is enabled for .zip and .gz files
+00:00:16.0129159: --   Compression support is enabled for .bz2 files
+00:00:16.0129159: -- 
+00:00:16.0129159: ----------------------------------------------------------------------
+00:00:16.0129159: -- Configuring done
+00:00:18.5130589: -- Generating done
+00:00:18.5130589: -- Build files have been written to: C:/Development/libsbml-64
+00:00:18.5130589: 'devenv' is not recognized as an internal or external command,
+00:00:18.5130589: operable program or batch file.
+00:00:18.5130589: The system cannot find the file specified.
+00:00:18.5130589: 'devenv' is not recognized as an internal or external command,
+00:00:18.5130589: operable program or batch file.
+00:00:18.5130589: CPack: Create package using ZIP
+00:00:18.5130589: CPack: Install projects
+00:00:18.5130589: CPack: - Install project: libsbml
+00:00:22.5132877: CMake Error at C:/Development/libsbml-64/src/cmake_install.cmake:757 (file):
+00:00:22.5132877:   file INSTALL cannot find
+00:00:22.5132877:   "C:/Development/libsbml-64/src/Release/libsbml.dll".
+00:00:22.5132877: Call Stack (most recent call first):
+00:00:22.5132877:   C:/Development/libsbml-64/cmake_install.cmake:80 (include)
+00:00:22.5132877: 
+00:00:22.5132877: 
+00:00:22.5132877: CMake Error at C:/Development/libsbml-64/src/cmake_install.cmake:801 (file):
+00:00:22.5132877:   file INSTALL cannot find
+00:00:22.5132877:   "C:/Development/libsbml-64/src/Release/libsbml-static.lib".
+00:00:22.5132877: Call Stack (most recent call first):
+00:00:22.5132877:   C:/Development/libsbml-64/cmake_install.cmake:80 (include)
+00:00:22.5132877: 
+00:00:22.5132877: 
+00:00:22.5132877: CPack Error: Error when generating package: libSBML
+00:00:22.5132877: A duplicate file name exists, or the file
+00:00:22.5132877: cannot be found.
+00:00:22.5132877: 
+00:00:22.5132877: 
+00:00:22.5132877: 
+
+DONE
+
