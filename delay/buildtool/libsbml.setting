@@ -11,15 +11,15 @@
     <PackageInstallDir>c:\Development\libsbml-32-inst-package</PackageInstallDir>
     <DependencyDir>c:\Development\dependencies\x86\release-static</DependencyDir>
     <InstallDir>c:\Development\libsbml-32-inst</InstallDir>
-    <JdkDirectory>c:\Program Files (x86)\Java\jdk1.7.0_05</JdkDirectory>
-    <MatlabDirectory>c:\Program Files (x86)\MATLAB\R2011b</MatlabDirectory>
-    <PerlDirectory>C:\Perl_516</PerlDirectory>
+    <JdkDirectory>c:\tools\java\x86\jdk1.7.0_05</JdkDirectory>
+    <MatlabDirectory>c:\tools\MATLAB\x86\R2011b</MatlabDirectory>
+    <PerlDirectory>c:\tools\perl\Perl_516</PerlDirectory>
     <Python26Directory>c:\python32\Python26</Python26Directory>
     <Python27Directory>c:\python32\Python27</Python27Directory>
     <Python32Directory>c:\Python32\Python32</Python32Directory>
-    <OldDependencies>C:\Program Files (x86)\SBML\libSBML-4.2.0-libxml2-x86\win32</OldDependencies>
+    <OldDependencies>c:\tools\libsbml_old_dependencies\libSBML-4.2.0-libxml2-x86\win32</OldDependencies>
     <Python25Directory>c:\python32\Python25</Python25Directory>
-    <OctaveDirectory>c:\Program Files (x86)\Octave-3.6.1\</OctaveDirectory>
+    <OctaveDirectory>c:\tools\octave\x86\Octave-3.6.1</OctaveDirectory>
   </Settings32>
   <Settings64>
     <Enabled>true</Enabled>
@@ -28,13 +28,13 @@
     <PackageInstallDir>c:\Development\libsbml-64-inst-package</PackageInstallDir>
     <DependencyDir>c:\Development\dependencies\x64\release-static</DependencyDir>
     <InstallDir>c:\Development\libsbml-64-inst</InstallDir>
-    <JdkDirectory>c:\Program Files\Java\jdk1.7.0_05</JdkDirectory>
-    <MatlabDirectory>c:\Program Files\MATLAB\R2017a</MatlabDirectory>
-    <PerlDirectory>C:\Perl64_516</PerlDirectory>
+    <JdkDirectory>c:\tools\java\x64\jdk1.7.0_05</JdkDirectory>
+    <MatlabDirectory>c:\tools\MATLAB\x64\R2011b</MatlabDirectory>
+    <PerlDirectory>c:\tools\perl\Perl64_516</PerlDirectory>
     <Python26Directory>c:\Python64\Python26</Python26Directory>
     <Python27Directory>c:\Python64\Python27</Python27Directory>
     <Python32Directory>c:\Python64\Python32</Python32Directory>
-    <OldDependencies>C:\Program Files\SBML\libSBML-4.2.0-libxml2-x64\win64</OldDependencies>
+    <OldDependencies>c:\tools\libsbml_old_dependencies\libSBML-4.2.0-libxml2-x64\win64</OldDependencies>
   </Settings64>
   <SourceDir>c:\Development\libsbml</SourceDir>
   <PackageSourceDir>c:\Development\libsbml-with-packages</PackageSourceDir>
