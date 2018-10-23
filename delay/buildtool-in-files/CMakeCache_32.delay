@@ -462,6 +462,12 @@ MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 //Path to a file.
 MSVC_REDIST_DIR:PATH=C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/redist
 
+//The file name of the nodejs executable.
+NODEJS_EXECUTABLE:FILEPATH=C:/tools/nodejs_x86/node.exe
+
+//The file name of the node-gyp executable.
+NODE_GYP_EXECUTABLE:FILEPATH=C:/tools/nodejs_x86/node_modules/npm/bin/node-gyp-bin/node-gyp.cmd
+
 //Path to a program.
 P4COMMAND:FILEPATH=P4COMMAND-NOTFOUND
 
@@ -570,7 +576,7 @@ WITH_EXPAT:BOOL=OFF
 WITH_JAVA:BOOL=ON
 
 //Generate the experimental Node.js language interface for libSBML.
-WITH_JAVASCRIPT:BOOL=OFF
+WITH_JAVASCRIPT:BOOL=ON
 
 //Use the libxml2 XML parser library.
 WITH_LIBXML:BOOL=ON
@@ -763,7 +769,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=65
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=66
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RC_COMPILER
