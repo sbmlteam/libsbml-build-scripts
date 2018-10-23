@@ -42,13 +42,22 @@ REM BUILD 32bit libsbml
 mkdir "%BUILD_DIR_32_BIT%"
 cd /d "%BUILD_DIR_32_BIT%"
 copy "%BASE_DIR%\CMakeCache_32.txt" CMakeCache.txt
-cmake -G "NMake Makefiles" -DCMAKE_INSTALL_PREFIX=$$INST_32$$ -DCMAKE_SIZEOF_VOID_P=4 %LIBSBML_ROOT% 
-cmake -G "NMake Makefiles" -DCMAKE_INSTALL_PREFIX=$$INST_32$$ -DCMAKE_SIZEOF_VOID_P=4 %LIBSBML_ROOT% 
-nmake
+
+cmake -G "Visual Studio 14 2015" -DCMAKE_INSTALL_PREFIX=$$INST_32$$ -DCMAKE_SIZEOF_VOID_P=4 %LIBSBML_ROOT% 
+cmake -G "Visual Studio 14 2015" -DCMAKE_INSTALL_PREFIX=$$INST_32$$ -DCMAKE_SIZEOF_VOID_P=4 %LIBSBML_ROOT%  
+"c:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" libsbml.sln /build Release
 rd /s /q $$INST_32$$\include
-rd /s /q $$INST_32$$\win32\include
-rd /s /q $$INST_32$$\win64\include
-nmake install
+"c:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" libsbml.sln /build Release /project INSTALL
+
+
+
+REM cmake -G "NMake Makefiles" -DCMAKE_INSTALL_PREFIX=$$INST_32$$ -DCMAKE_SIZEOF_VOID_P=4 %LIBSBML_ROOT% 
+REM cmake -G "NMake Makefiles" -DCMAKE_INSTALL_PREFIX=$$INST_32$$ -DCMAKE_SIZEOF_VOID_P=4 %LIBSBML_ROOT% 
+REM nmake
+REM rd /s /q $$INST_32$$\include
+REM rd /s /q $$INST_32$$\win32\include
+REM rd /s /q $$INST_32$$\win64\include
+REM nmake install
 
 if "%ZIP_DIR%" == "" goto DONE_32
 cpack -G ZIP
