@@ -520,7 +520,7 @@ PYTHON_INSTALL_IN_PREFIX:BOOL=ON
 PYTHON_INSTALL_WITH_SETUP:BOOL=OFF
 
 //Path to a library.
-PYTHON_LIBRARY:FILEPATH=C:/python64/Python27/libs/python36.lib
+PYTHON_LIBRARY:FILEPATH=C:/python64/Python27/libs/python27.lib
 
 //Path to a library.
 PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
@@ -651,7 +651,7 @@ binding_java_lib_LIB_DEPENDS:STATIC=general;libsbml-static;
 binding_perl_lib_LIB_DEPENDS:STATIC=general;libsbml-static;general;C:/tools/perl/Perl64_516/lib/CORE/perl516.lib;
 
 //Dependencies for the target
-binding_python_lib_LIB_DEPENDS:STATIC=general;libsbml-static;general;C:/python64/Python27/libs/python36.lib;
+binding_python_lib_LIB_DEPENDS:STATIC=general;libsbml-static;general;C:/python64/Python27/libs/python27.lib;
 
 //Dependencies for the target
 binding_r_lib_LIB_DEPENDS:STATIC=general;libsbml-static;general;C:/Program Files/R/R-3.1.1/bin/x64/Rlib.lib;
@@ -878,7 +878,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_PerlLibs:INTERNAL=[C:/tools/perl/Perl64_516/lib/COR
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[C:/python64/Python27/python.exe][v2.7.13()]
 //Details about finding PythonLibs
-FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[C:/python64/Python27/libs/python36.lib][C:/python64/Python27/include][v2.7.13()]
+FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[C:/python64/Python27/libs/python27.lib][C:/python64/Python27/include][v2.7.13()]
 //Details about finding SWIG
 FIND_PACKAGE_MESSAGE_DETAILS_SWIG:INTERNAL=[C:/swigwin-3.0.12/swig.exe][C:/swigwin-3.0.12/Lib][v3.0.12()]
 //ADVANCED property for variable: GITCOMMAND
