@@ -4,6 +4,8 @@ REM This file will build libsbml for windows (32 and 64 bit)
 REM
 REM 2011/02/26 Frank Bergmann
 REM
+REM 2018/10/25 Updated for VS14 Brett G. Olivier
+REM
 
 REM ensure visual studio is in the path
 if "%INCLUDE%"=="" call c:\Development\vs14.bat
