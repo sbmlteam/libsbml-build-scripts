@@ -322,7 +322,7 @@ ENABLE_REQUIREDELEMENTS:BOOL=ON
 ENABLE_SPATIAL:BOOL=ON
 
 //Call exit(-1) in case of allocation or file error.
-EXIT_ON_ERROR:BOOL=ON
+EXIT_ON_ERROR:BOOL=OFF
 
 //List of additional include directories to use during compilation.
 //\nSeparate multiple directories using semicolons.

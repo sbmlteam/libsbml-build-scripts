@@ -657,7 +657,7 @@ binding_csharp_native_lib_LIB_DEPENDS:STATIC=general;libsbml-static;
 binding_java_lib_LIB_DEPENDS:STATIC=general;libsbml-static;
 
 //Dependencies for the target
-binding_perl_lib_LIB_DEPENDS:STATIC=general;libsbml-static;general;$$CMAKE_PERL_32$$/lib/CORE/perl516.lib;
+binding_perl_lib_LIB_DEPENDS:STATIC=general;libsbml-static;general;$$CMAKE_PERL_64$$/lib/CORE/perl516.lib;
 
 //Dependencies for the target
 binding_python_lib_LIB_DEPENDS:STATIC=general;libsbml-static;general;$$CMAKE_PYTHON27_64$$/libs/python27.lib;
