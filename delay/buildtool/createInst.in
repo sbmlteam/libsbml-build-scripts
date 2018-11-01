@@ -9,7 +9,7 @@ SET COMPILER=$$INNO_COMPIER$$
 SET DROP_DIR=$$OUT_DIR$$
 
 REM ensure visual studio is in the path
-if "%INCLUDE%"=="" call vs10.bat
+if "%INCLUDE%"=="" call c:\Development\vs14.bat
 
 REM set up directory variables
 SET THIS_BASE_DIR=%~dp0

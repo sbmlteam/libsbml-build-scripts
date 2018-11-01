@@ -8,7 +8,7 @@ REM 2018/10/25 Updated for VS14 Brett G. Olivier
 REM
 
 REM ensure visual studio is in the path
-if "%INCLUDE%"=="" call vs10.bat
+if "%INCLUDE%"=="" call c:\Development\vs14.bat
 
 REM set up directory variables
 SET BASE_DIR=%~dp0
