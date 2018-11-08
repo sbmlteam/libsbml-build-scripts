@@ -3,7 +3,7 @@ Setlocal EnableDelayedExpansion
 SET THIS_DIR=%~dp0
 SET LIBSBML_SRC=%THIS_DIR%\..\..\..\
 SET BUILD_DIR=%THIS_DIR%\build_32
-SET NAME=python-libsbml
+SET NAME=python-libsbml-experimental
 
 pushd %THIS_DIR%\python-src
 

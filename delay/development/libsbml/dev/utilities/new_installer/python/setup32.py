@@ -35,7 +35,7 @@ try:
 except ImportError:
   from distutils.core import setup, Extension
  
-setup(name             = "libsbml", 
+setup(name             = "python-libsbml-experimental", 
       version          = "5.17.1",
       description      = "LibSBML Python API",
       long_description = ("LibSBML is a library for reading, writing and "+

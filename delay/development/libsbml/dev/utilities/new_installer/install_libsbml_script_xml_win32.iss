@@ -24,15 +24,15 @@ SolidCompression=yes
 Name: english; MessagesFile: compiler:Default.isl
 
 [Files]
-Source: C:\Development\libsbml\dev\utilities\new_installer\libsbml\*; DestDir: {app}; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: C:\Development\libsbml\dev\utilities\new_installer\libsbml\bindings\nodejs\*; DestDir: {app}\bindings\nodejs\; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: C:\Development\libsbml\dev\utilities\new_installer\libsbml\bindings\java\*; DestDir: {code:GetJavaDir}; Flags: ignoreversion recursesubdirs createallsubdirs; Check: GetJava
-;Source: C:\Development\libsbml\dev\utilities\new_installer\libsbml\bindings\octave\*; DestDir: {code:GetOctaveDir}; Flags: ignoreversion recursesubdirs createallsubdirs; Check: GetOctave
-; Source: C:\Development\libsbml\dev\utilities\new_installer\libsbml\win32\bin\libsbml.dll; DestDir: {code:GetOctaveDir}; Flags: ignoreversion recursesubdirs createallsubdirs; Check: GetOctave
-Source: C:\Development\libsbml\dev\utilities\new_installer\libsbml\bindings\csharp\*; DestDir: {code:GetCSharpDir}; Flags: ignoreversion recursesubdirs createallsubdirs; Check: GetCSharp
-Source: C:\Development\libsbml\dev\utilities\new_installer\libsbml\bindings\perl\Libsbml.pm; DestDir: {code:GetPerlLibDir}; Flags: ignoreversion recursesubdirs createallsubdirs; Check: GetPerl
-Source: C:\Development\libsbml\dev\utilities\new_installer\libsbml\bindings\perl\Libsbml.pod; DestDir: {code:GetPerlLibDir}; Flags: ignoreversion recursesubdirs createallsubdirs; Check: GetPerl
-Source: C:\Development\libsbml\dev\utilities\new_installer\libsbml\bindings\perl\Libsbml.dll; DestDir: {code:GetPerlAutoDir}; Flags: ignoreversion recursesubdirs createallsubdirs; Check: GetPerl
+Source: C:\Development\libsbml-with-packages\dev\utilities\new_installer\libsbml\*; DestDir: {app}; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Development\libsbml-with-packages\dev\utilities\new_installer\libsbml\bindings\nodejs\*; DestDir: {app}\bindings\nodejs\; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: C:\Development\libsbml-with-packages\dev\utilities\new_installer\libsbml\bindings\java\*; DestDir: {code:GetJavaDir}; Flags: ignoreversion recursesubdirs createallsubdirs; Check: GetJava
+;Source: C:\Development\libsbml-with-packages\dev\utilities\new_installer\libsbml\bindings\octave\*; DestDir: {code:GetOctaveDir}; Flags: ignoreversion recursesubdirs createallsubdirs; Check: GetOctave
+; Source: C:\Development\libsbml-with-packages\dev\utilities\new_installer\libsbml\win32\bin\libsbml.dll; DestDir: {code:GetOctaveDir}; Flags: ignoreversion recursesubdirs createallsubdirs; Check: GetOctave
+Source: C:\Development\libsbml-with-packages\dev\utilities\new_installer\libsbml\bindings\csharp\*; DestDir: {code:GetCSharpDir}; Flags: ignoreversion recursesubdirs createallsubdirs; Check: GetCSharp
+Source: C:\Development\libsbml-with-packages\dev\utilities\new_installer\libsbml\bindings\perl\Libsbml.pm; DestDir: {code:GetPerlLibDir}; Flags: ignoreversion recursesubdirs createallsubdirs; Check: GetPerl
+Source: C:\Development\libsbml-with-packages\dev\utilities\new_installer\libsbml\bindings\perl\Libsbml.pod; DestDir: {code:GetPerlLibDir}; Flags: ignoreversion recursesubdirs createallsubdirs; Check: GetPerl
+Source: C:\Development\libsbml-with-packages\dev\utilities\new_installer\libsbml\bindings\perl\Libsbml.dll; DestDir: {code:GetPerlAutoDir}; Flags: ignoreversion recursesubdirs createallsubdirs; Check: GetPerl
 
 [Registry]
 Root: HKCU; Subkey: Software\SBML; Flags: uninsdeletekeyifempty

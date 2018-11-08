@@ -46,7 +46,7 @@ if exist python-src\b64_35 rd /s /q python-src\b64_35
 if exist python-src\b64_36 rd /s /q python-src\b64_36
 if exist python-src\build rd /s /q python-src\build
 if exist python-src\libsbml rd /s /q python-src\libsbml
-if exist python-src\libsbml.egg-info rd /s /q python-src\libsbml.egg-info
+if exist python-src\libsbml_experimental.egg-info rd /s /q python-src\libsbml_experimental.egg-info
 if exist python-src\dist rd /s /q python-src\dist
 if "%MODE%"=="TEMP" goto DONE
 
