@@ -31,7 +31,7 @@ pushd %BASE_DIR%
 REM create build dir
 if not exist %BUILD_DIR% mkdir %BUILD_DIR%
 cd %BUILD_DIR%
-cmake -G "NMake Makefiles"  -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE="%PYTHON_INTERP%" -DDEP_DIR="%DEP_DIR%" ..
+cmake -G "NMake Makefiles"  -DCMAKE_BUILD_TYPE=Release -DWITH_STATIC_RUNTIME=ON -DPYTHON_EXECUTABLE="%PYTHON_INTERP%" -DDEP_DIR="%DEP_DIR%" ..
 nmake
 
 goto ALL_DONE

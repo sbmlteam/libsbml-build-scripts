@@ -1,4 +1,4 @@
-# Install script for directory: C:/Development/libsbml-with-packages/dev/utilities/new_installer
+# Install script for directory: C:/Development/libsbml/dev/utilities/new_installer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Development/libsbml-with-packages/dev/utilities/new_installer/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Development/libsbml/dev/utilities/new_installer/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -270,6 +270,8 @@ move  "%SOURCE_32%\b64_\_libsbml.pyd" "%SOURCE_32%\build\lib.win-amd64-3.7\libsb
 rd /s /q \Development\create-conda-stable\build
 xcopy /y /S \Development\libsbml-32-inst-package\bindings\python\src\build \Development\create-conda-stable\build\
 call \Development\create-conda-stable\create-conda-stable.bat python-libsbml-experimental
+mkdir "c:\inetpub\wwwroot\Files\anaconda-32"
+mkdir "c:\inetpub\wwwroot\Files\anaconda-64"
 copy /y \Development\create-conda-stable\out\32\* "c:\inetpub\wwwroot\Files\anaconda-32"
 copy /y \Development\create-conda-stable\out\64\* "c:\inetpub\wwwroot\Files\anaconda-64"
 
@@ -315,11 +317,6 @@ REM "%PYTHON_32_64%" setup64.py bdist_wheel --skip-build
 "%PYTHON_37_64%" setup64.py bdist_wheel --skip-build
 
 
-REM Bulk copy wheels to outdir\wheels
-mkdir "c:\inetpub\wwwroot\Files\whls"
-copy /y "%SOURCE_32%\dist\*.whl" "c:\inetpub\wwwroot\Files\whls"
-
-
 REM here we can test the new bindindgs
 cd  /d %WIN_INST_DIR%
 REM call "%WIN_INST_DIR%\testPython.bat" %PYTHON_25_32% %SOURCE_32%\build\lib.win32-2.5\ %LIBSBML_PACKAGE_ROOT%\src\bindings\python
@@ -347,23 +344,39 @@ REM Copy binaries
 
 
 REM copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py2.5.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py2.5-packages-x86.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py2.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py2.6-packages-x86.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py2.7.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py2.7-packages-x86.exe"
-REM copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py3.2.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.2-packages-x86.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py3.3.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.3-packages-x86.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py3.4.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.4-packages-x86.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py3.5.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.5-packages-x86.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py3.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.6-packages-x86.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py3.7.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.7-packages-x86.exe"
+copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win32-py2.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py2.6-packages-x86.exe"
+copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win32-py2.7.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py2.7-packages-x86.exe"
+REM copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win32-py3.2.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.2-packages-x86.exe"
+copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win32-py3.3.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.3-packages-x86.exe"
+copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win32-py3.4.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.4-packages-x86.exe"
+copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win32-py3.5.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.5-packages-x86.exe"
+copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win32-py3.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.6-packages-x86.exe"
+copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win32-py3.7.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.7-packages-x86.exe"
 
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win-amd64-py2.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py2.6-packages-amd64.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win-amd64-py2.7.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py2.7-packages-amd64.exe"
-REM copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win-amd64-py3.2.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.2-packages-amd64.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win-amd64-py3.3.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.3-packages-amd64.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win-amd64-py3.4.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.4-packages-amd64.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win-amd64-py3.5.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.5-packages-amd64.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win-amd64-py3.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.6-packages-amd64.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win-amd64-py3.7.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.7-packages-amd64.exe"
+copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win-amd64-py2.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py2.6-packages-amd64.exe"
+copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win-amd64-py2.7.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py2.7-packages-amd64.exe"
+REM copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win-amd64-py3.2.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.2-packages-amd64.exe"
+copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win-amd64-py3.3.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.3-packages-amd64.exe"
+copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win-amd64-py3.4.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.4-packages-amd64.exe"
+copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win-amd64-py3.5.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.5-packages-amd64.exe"
+copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win-amd64-py3.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.6-packages-amd64.exe"
+copy /y "%SOURCE_32%\dist\python-libsbml-experimental-5.17.1.win-amd64-py3.7.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.7-packages-amd64.exe"
+
+REM Copy wheels to outdir\wheels-experimental
+mkdir "c:\inetpub\wwwroot\Files\wheels-experimental"
+copy /y "%SOURCE_32%\dist\*.whl" "c:\inetpub\wwwroot\Files\wheels-experimental"
+REM copy /y "%SOURCE_32%\dist\libsbml-5.17.1-cp27-cp27m-win_amd64.whl" "c:\inetpub\wwwroot\Files\wheels-experimental\python-libsbml-experimental-5.17.1-cp27-cp27m-win_amd64.whl"  
+REM copy /y "%SOURCE_32%\dist\libsbml-5.17.1-cp27-cp27m-win32.whl" "c:\inetpub\wwwroot\Files\wheels-experimental\python-libsbml-experimental-5.17.1-cp27-cp27m-win32.whl" 
+REM copy /y "%SOURCE_32%\dist\libsbml-5.17.1-cp33-cp33m-win_amd64.whl" "c:\inetpub\wwwroot\Files\wheels-experimental\python-libsbml-experimental-5.17.1-cp33-cp33m-win_amd64.whl"
+REM copy /y "%SOURCE_32%\dist\libsbml-5.17.1-cp33-cp33m-win32.whl" "c:\inetpub\wwwroot\Files\wheels-experimental\python-libsbml-experimental-5.17.1-cp33-cp33m-win32.whl"
+REM copy /y "%SOURCE_32%\dist\libsbml-5.17.1-cp34-cp34m-win_amd64.whl" "c:\inetpub\wwwroot\Files\wheels-experimental\python-libsbml-experimental-5.17.1-cp34-cp34m-win_amd64.whl"
+REM copy /y "%SOURCE_32%\dist\libsbml-5.17.1-cp34-cp34m-win32.whl" "c:\inetpub\wwwroot\Files\wheels-experimental\python-libsbml-experimental-5.17.1-cp34-cp34m-win32.whl"
+REM copy /y "%SOURCE_32%\dist\libsbml-5.17.1-cp35-cp35m-win_amd64.whl" "c:\inetpub\wwwroot\Files\wheels-experimental\python-libsbml-experimental-5.17.1-cp35-cp35m-win_amd64.whl"
+REM copy /y "%SOURCE_32%\dist\libsbml-5.17.1-cp35-cp35m-win32.whl" "c:\inetpub\wwwroot\Files\wheels-experimental\python-libsbml-experimental-5.17.1-cp35-cp35m-win32.whl"
+REM copy /y "%SOURCE_32%\dist\libsbml-5.17.1-cp36-cp36m-win_amd64.whl" "c:\inetpub\wwwroot\Files\wheels-experimental\python-libsbml-experimental-5.17.1-cp36-cp36m-win_amd64.whl"
+REM copy /y "%SOURCE_32%\dist\libsbml-5.17.1-cp36-cp36m-win32.whl" "c:\inetpub\wwwroot\Files\wheels-experimental\python-libsbml-experimental-5.17.1-cp36-cp36m-win32.whl"
+REM copy /y "%SOURCE_32%\dist\libsbml-5.17.1-cp37-cp37m-win_amd64.whl" "c:\inetpub\wwwroot\Files\wheels-experimental\python-libsbml-experimental-5.17.1-cp37-cp37m-win_amd64.whl"
+REM copy /y "%SOURCE_32%\dist\libsbml-5.17.1-cp37-cp37m-win32.whl" "c:\inetpub\wwwroot\Files\wheels-experimental\python-libsbml-experimental-5.17.1-cp37-cp37m-win32.whl" 
 
 
 :echo BRETT DEBUG

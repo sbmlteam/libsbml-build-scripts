@@ -12,7 +12,7 @@ if "%INCLUDE%"=="" call c:\Development\vs14.bat
 
 REM set up directory variables
 SET BASE_DIR=%~dp0
-SET LIBSBML_ROOT=c:\Development\libsbml-with-packages
+SET LIBSBML_ROOT=c:\Development\libsbml
 
 REM if set to a directory, zip files will be produced
 REM and copied into it. To disable simply comment out 
@@ -30,8 +30,8 @@ REM dependencies are present
 SET DEPENDENCIES_32_BIT=c:\Development\dependencies\x86\release-static
 SET DEPENDENCIES_64_BIT=c:\Development\dependencies\x64\release-static
 
-SET BUILD_DIR_32_BIT=c:\Development\libsbml-32-packages
-SET BUILD_DIR_64_BIT=c:\Development\libsbml-64-packages
+SET BUILD_DIR_32_BIT=c:\Development\libsbml-32
+SET BUILD_DIR_64_BIT=c:\Development\libsbml-64
 
 REM IF EXIST "%BUILD_DIR_32_BIT%" goto BUILD_DIR_EXISTS
 REM IF EXIST "%BUILD_DIR_64_BIT%" goto BUILD_DIR_EXISTS
@@ -45,23 +45,25 @@ mkdir "%BUILD_DIR_32_BIT%"
 cd /d "%BUILD_DIR_32_BIT%"
 copy "%BASE_DIR%\CMakeCache_32.txt" CMakeCache.txt
 
-cmake -G "Visual Studio 14 2015" -DCMAKE_INSTALL_PREFIX=c:\Development\libsbml-32-inst-package -DCMAKE_SIZEOF_VOID_P=4 %LIBSBML_ROOT% 
-cmake -G "Visual Studio 14 2015" -DCMAKE_INSTALL_PREFIX=c:\Development\libsbml-32-inst-package -DCMAKE_SIZEOF_VOID_P=4 %LIBSBML_ROOT%  
+cmake -G "Visual Studio 14 2015" -DCMAKE_INSTALL_PREFIX=c:\Development\libsbml-32-inst -DCMAKE_SIZEOF_VOID_P=4 %LIBSBML_ROOT% 
+cmake -G "Visual Studio 14 2015" -DCMAKE_INSTALL_PREFIX=c:\Development\libsbml-32-inst -DCMAKE_SIZEOF_VOID_P=4 %LIBSBML_ROOT%  
 "c:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" libsbml.sln /build Release
-rd /s /q c:\Development\libsbml-32-inst-package\include
+rd /s /q c:\Development\libsbml-32-inst\include
 "c:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" libsbml.sln /build Release /project INSTALL
 
-REM cmake -G "NMake Makefiles" -DCMAKE_INSTALL_PREFIX=c:\Development\libsbml-32-inst-package -DCMAKE_SIZEOF_VOID_P=4 %LIBSBML_ROOT% 
-REM cmake -G "NMake Makefiles" -DCMAKE_INSTALL_PREFIX=c:\Development\libsbml-32-inst-package -DCMAKE_SIZEOF_VOID_P=4 %LIBSBML_ROOT% 
+
+
+REM cmake -G "NMake Makefiles" -DCMAKE_INSTALL_PREFIX=c:\Development\libsbml-32-inst -DCMAKE_SIZEOF_VOID_P=4 %LIBSBML_ROOT% 
+REM cmake -G "NMake Makefiles" -DCMAKE_INSTALL_PREFIX=c:\Development\libsbml-32-inst -DCMAKE_SIZEOF_VOID_P=4 %LIBSBML_ROOT% 
 REM nmake
-REM rd /s /q c:\Development\libsbml-32-inst-package\include
-REM rd /s /q c:\Development\libsbml-32-inst-package\win32\include
-REM rd /s /q c:\Development\libsbml-32-inst-package\win64\include
+REM rd /s /q c:\Development\libsbml-32-inst\include
+REM rd /s /q c:\Development\libsbml-32-inst\win32\include
+REM rd /s /q c:\Development\libsbml-32-inst\win64\include
 REM nmake install
 
 if "%ZIP_DIR%" == "" goto DONE_32
 cpack -G ZIP
-move /Y *.zip "%ZIP_DIR%\package"
+move /Y *.zip "%ZIP_DIR%"
 
 :DONE_32
 if "%1" == "--32bitonly" goto ALL_DONE
@@ -70,16 +72,15 @@ REM REM BUILD 64bit libsbml
 mkdir "%BUILD_DIR_64_BIT%"
 cd /d "%BUILD_DIR_64_BIT%"
 copy "%BASE_DIR%\CMakeCache_64.txt" CMakeCache.txt
-cmake -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=c:\Development\libsbml-64-inst-package -DCMAKE_SIZEOF_VOID_P=8 %LIBSBML_ROOT% 
-cmake -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=c:\Development\libsbml-64-inst-package -DCMAKE_SIZEOF_VOID_P=8 %LIBSBML_ROOT%  
+cmake -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=c:\Development\libsbml-64-inst -DCMAKE_SIZEOF_VOID_P=8 %LIBSBML_ROOT% 
+cmake -G "Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX=c:\Development\libsbml-64-inst -DCMAKE_SIZEOF_VOID_P=8 %LIBSBML_ROOT%  
 "c:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" libsbml.sln /build Release
-rd /s /q c:\Development\libsbml-64-inst-package\include
+rd /s /q c:\Development\libsbml-64-inst\include
 "c:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" libsbml.sln /build Release /project INSTALL
-
 
 if "%ZIP_DIR%" == "" goto DONE_64
 cpack -G ZIP -C Release
-move /Y *.zip "%ZIP_DIR%\package"
+move /Y *.zip "%ZIP_DIR%"
 
 :DONE_64
 
