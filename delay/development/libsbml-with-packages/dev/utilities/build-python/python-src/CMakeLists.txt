@@ -61,11 +61,16 @@ add_definitions(-DUSE_COMP
 				-DUSE_FBC 
 				-DUSE_QUAL 
 				-DUSE_LAYOUT 
-				-DUSE_MULTI
+				-DUSE_MULTI 
 				-DUSE_GROUPS
-				-DUSE_RENDER
+				-DUSE_RENDER 
+				-DUSE_L3V2EXTENDEDMATH
+				-DUSE_ARRAYS 
+				-DUSE_DISTRIB 
+				-DUSE_DYN 
+				-DUSE_REQUIREDELEMENTS 
+				-DUSE_SPATIAL
 )
-
 
 # set build type default
 set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Choose the type of build, options are: None (CMAKE_CXX_FLAGS or CMAKE_C_FLAGS are used), Debug, Release, RelWithDebInfo, MinSizeRel" FORCE )
