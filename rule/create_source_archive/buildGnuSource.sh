@@ -33,7 +33,7 @@ svn cleanup > $S_LOGFILE 2>&1
 svn update  >> $S_LOGFILE 2>&1
 
 # configure build 
-./configure --with-libxml=/usr --with-swig=/usr/local --with-csharp --with-ruby=/usr --with-perl=/usr --with-python --with-java=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/ --with-check --enable-layout=no  > $C_LOGFILE  2>&1 
+./configure --with-libxml=/usr --with-swig=/usr/local --with-csharp --with-ruby=/usr --with-perl=/usr --with-python --with-java=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/ --with-check --enable-layout=no  --enable-l3v2extendedmath=yes > $C_LOGFILE  2>&1 
 
 make dist-zip > $P_LOGFILE 2>&1
 
