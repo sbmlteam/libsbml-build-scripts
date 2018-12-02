@@ -89,11 +89,53 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Enable/Disable output of compile commands during generation.
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=OFF
 
+//user executables (bin)
+CMAKE_INSTALL_BINDIR:PATH=bin
+
+//read-only architecture-independent data (DATAROOTDIR)
+CMAKE_INSTALL_DATADIR:PATH=
+
+//read-only architecture-independent data root (share)
+CMAKE_INSTALL_DATAROOTDIR:PATH=share
+
+//documentation root (DATAROOTDIR/doc/PROJECT_NAME)
+CMAKE_INSTALL_DOCDIR:PATH=
+
+//C header files (include)
+CMAKE_INSTALL_INCLUDEDIR:PATH=include
+
+//info documentation (DATAROOTDIR/info)
+CMAKE_INSTALL_INFODIR:PATH=
+
 //Full path to the library output directory
 CMAKE_INSTALL_LIBDIR:PATH=lib
 
+//program executables (libexec)
+CMAKE_INSTALL_LIBEXECDIR:PATH=libexec
+
+//locale-dependent data (DATAROOTDIR/locale)
+CMAKE_INSTALL_LOCALEDIR:PATH=
+
+//modifiable single-machine data (var)
+CMAKE_INSTALL_LOCALSTATEDIR:PATH=var
+
+//man documentation (DATAROOTDIR/man)
+CMAKE_INSTALL_MANDIR:PATH=
+
+//C header files for non-gcc (/usr/include)
+CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
+
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr
+
+//system admin executables (sbin)
+CMAKE_INSTALL_SBINDIR:PATH=sbin
+
+//modifiable architecture-independent data (com)
+CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
+
+//read-only single-machine data (etc)
+CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
@@ -251,7 +293,7 @@ ENABLE_ARRAYS:BOOL=ON
 // Composition ('comp') package.
 ENABLE_COMP:BOOL=ON
 
-//Enable libSBML support for the SBML Level 3 Distributions ('distrib')
+//Enable libSBML support for the SBML Level 3 Distrib ('distrib')
 // package.
 ENABLE_DISTRIB:BOOL=ON
 
@@ -266,6 +308,10 @@ ENABLE_FBC:BOOL=ON
 //Enable libSBML support for the SBML Level 3 Groups ('groups')
 // package.
 ENABLE_GROUPS:BOOL=ON
+
+//Enable libSBML support for the SBML Level 3 L3v2extendedmath
+// ('l3v2extendedmath') package.
+ENABLE_L3V2EXTENDEDMATH:BOOL=ON
 
 //Enable libSBML support for the SBML Level 3 Graphical Layout
 // ('layout') package.
@@ -380,11 +426,8 @@ LIBSBML_ROOT_SOURCE_DIR:PATH=/home/fbergman/Development/libsbml-experimental
 // library.
 LIBSBML_SHARED_VERSION:BOOL=ON
 
-//Use libSBML's legacy math implementation of ASTs, instead of
-// the one
-//\nintroduced in libSBML 5.10 for better support of SBML Level
-// 3 packages.
-LIBSBML_USE_LEGACY_MATH:BOOL=OFF
+//No help, variable specified on the command line.
+LIBSBML_USE_LEGACY_MATH:UNINITIALIZED=OFF
 
 //Compile using 'strict includes' rules: libSBML header files won't
 //\nuse SBMLTypes.h, among others.
@@ -459,6 +502,9 @@ PYTHON_LIBRARY:FILEPATH=/usr/lib/i386-linux-gnu/libpython3.4m.so
 
 //Path to a library.
 PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
+
+//Enable the new Python API2 with warnings.
+PYTHON_USE_API2_WARNINGS:BOOL=OFF
 
 //Do not actually link against the python library, instead use
 // the undefined lookup mechanism, that .
@@ -728,10 +774,38 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Start directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/fbergman/Development/libsbml-experimental
+//ADVANCED property for variable: CMAKE_INSTALL_BINDIR
+CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DATADIR
+CMAKE_INSTALL_DATADIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DATAROOTDIR
+CMAKE_INSTALL_DATAROOTDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_DOCDIR
+CMAKE_INSTALL_DOCDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_INCLUDEDIR
+CMAKE_INSTALL_INCLUDEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_INFODIR
+CMAKE_INSTALL_INFODIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_INSTALL_LIBDIR
 CMAKE_INSTALL_LIBDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LIBEXECDIR
+CMAKE_INSTALL_LIBEXECDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LOCALEDIR
+CMAKE_INSTALL_LOCALEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_LOCALSTATEDIR
+CMAKE_INSTALL_LOCALSTATEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_MANDIR
+CMAKE_INSTALL_MANDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_OLDINCLUDEDIR
+CMAKE_INSTALL_OLDINCLUDEDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SBINDIR
+CMAKE_INSTALL_SBINDIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SHAREDSTATEDIR
+CMAKE_INSTALL_SHAREDSTATEDIR-ADVANCED:INTERNAL=1
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
+//ADVANCED property for variable: CMAKE_INSTALL_SYSCONFDIR
+CMAKE_INSTALL_SYSCONFDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MAKE_PROGRAM
@@ -749,7 +823,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=46
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=50
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -833,7 +907,7 @@ EXIT_ON_ERROR-ADVANCED:INTERNAL=1
 //Details about finding JNI
 FIND_PACKAGE_MESSAGE_DETAILS_JNI:INTERNAL=[/usr/lib/jvm/default-java/jre/lib/i386/libjawt.so][/usr/lib/jvm/default-java/jre/lib/i386/client/libjvm.so][/usr/lib/jvm/default-java/include][/usr/lib/jvm/default-java/include][/usr/lib/jvm/default-java/include][v()]
 //Details about finding Java
-FIND_PACKAGE_MESSAGE_DETAILS_Java:INTERNAL=[/usr/bin/java][/usr/bin/jar][/usr/bin/javac][/usr/bin/javah][/usr/bin/javadoc][v1.7.0.151()]
+FIND_PACKAGE_MESSAGE_DETAILS_Java:INTERNAL=[/usr/bin/java][/usr/bin/jar][/usr/bin/javac][/usr/bin/javah][/usr/bin/javadoc][v1.7.0.181()]
 //Details about finding Perl
 FIND_PACKAGE_MESSAGE_DETAILS_Perl:INTERNAL=[/usr/bin/perl][v5.18.2()]
 //Details about finding PerlLibs
