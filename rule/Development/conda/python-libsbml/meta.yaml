@@ -1,0 +1,38 @@
+{% set name = "python-libsbml" %}
+{% set version = "5.17.2" %}
+{% set file_ext = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_value = "3174b68588a395e9365fff9bcb19692d583525980bc21f33ccee9f3cd45cecfe" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
+  '{{ hash_type }}': '{{ hash_value }}'
+
+build:
+  number: 0
+  script: 'python setup.py install '
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+
+about:
+  home: The package home page
+  license: LGPL
+  license_family: LGPL
+  license_file: ''
+  summary: LibSBML Python API
+  description: LibSBML is a library for reading, writing and manipulating the Systems Biology Markup Language (SBML).  It is written in ISO C and C++, supports SBML Levels 1, 2 and 3, and runs on Linux,
+    Microsoft Windows, and Apple MacOS X.  For more information about SBML, please see http://sbml.org.
+  doc_url: ''
+  dev_url: ''
+
+extra:
+  recipe-maintainers: ''
