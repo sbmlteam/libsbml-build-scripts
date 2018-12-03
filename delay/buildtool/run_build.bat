@@ -19,13 +19,15 @@ echo Starting new Build (32 bit build): %date% %time% >> build_log.txt
 echo Starting new Build (64 bit build): %date% %time% >> build_log.txt
 %BUILDTOOL_DIR%\LibSBMLBuild.exe -f %BUILDTOOL_DIR%\libsbml.setting -64 >> build_log.txt
 
+echo Starting new Package build: %date% %time%
+
 echo Starting new Build (32 bit package build): %date% %time% >> build_log.txt
 %BUILDTOOL_DIR%\LibSBMLBuild.exe -f %BUILDTOOL_DIR%\libsbml.setting -p32 >> build_log.txt
 
 echo Starting new Build (64 bit package build): %date% %time% >> build_log.txt
 %BUILDTOOL_DIR%\LibSBMLBuild.exe -f %BUILDTOOL_DIR%\libsbml.setting -p64 >> build_log.txt
 
-echo Starting new Python Package build: %date% %time%
+echo Starting Python Package builds: %date% %time%
 
 echo Starting new Build (Python builds): %date% %time% >> build_log.txt
 %BUILDTOOL_DIR%\LibSBMLBuild.exe -f %BUILDTOOL_DIR%\libsbml.setting -py >> build_log.txt

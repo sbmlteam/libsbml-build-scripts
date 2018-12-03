@@ -262,3 +262,200 @@ Build LibSBML 32 bit
 00:00:21.6216380: -- Configuring done
 00:00:30.8744544: -- Generating done
 00:00:30.8744544: -- Build files have been written to: C:/Development/libsbml-32
+00:07:33.3295976: CPack: Create package using ZIP
+00:07:33.8443985: CPack: Install projects
+00:07:33.8443985: CPack: - Install project: libsbml
+00:07:40.5232103: 
+00:07:40.5232103: Notice: the libSBML R interface must be installed separately.
+00:07:40.5232103: To install it, please execute the following shell command:
+00:07:40.5232103:   R CMD INSTALL C:/Development/libsbml-32/src/bindings/r/libSBML_5.17.2.zip
+00:07:40.5232103: 
+00:07:43.0972148: CPack: Create package
+00:07:53.9080338: CPack: - package: C:/Development/libsbml-32/libSBML-5.17.2-win32.zip generated.
+00:07:53.9080338: c:\Development\libsbml-32\libSBML-5.17.2-win32.zip
+00:07:53.9080338:         1 file(s) moved.
+00:07:53.9080338: 
+00:07:53.9080338: 
+00:07:53.9080338: 
+
+DONE
+
+Starting new Build (64 bit build): Mon 12/03/2018  3:39:01.65 
+
+Build LibSBML64 bit
+
+: Build LibSBML64 bit
+00:00:00.0156001: "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" 
+00:00:00.5304010: A subdirectory or file c:\Development\libsbml-64 already exists.
+00:00:00.5304010:         1 file(s) copied.
+00:00:00.5304010: -- Detecting C compile features
+00:00:00.5304010: -- Detecting C compile features - done
+00:00:02.0748037: -- Copying files from c:/Development/libsbml/dependencies/bin/
+00:00:02.0748037: -- Found Java: c:/tools/java/x64/jdk1.7.0_05/bin/java.exe (found version "1.7.0.05") found components:  Development 
+00:00:04.1340073: CMake Warning (dev) at src/bindings/r/CMakeLists.txt:339 (get_target_property):
+00:00:04.1340073:   Policy CMP0026 is not set: Disallow use of the LOCATION target property.
+00:00:04.1340073:   Run "cmake --help-policy CMP0026" for policy details.  Use the cmake_policy
+00:00:04.1340073:   command to set the policy and suppress this warning.
+00:00:04.1340073: 
+00:00:04.1340073:   The LOCATION property should not be read from target "binding_r_lib".  Use
+00:00:04.1340073:   the target name directly with add_custom_command, or use the generator
+00:00:04.1340073:   expression $<TARGET_FILE>, as appropriate.
+00:00:04.1340073: 
+00:00:04.1340073: This warning is for project developers.  Use -Wno-dev to suppress it.
+00:00:04.1340073: 
+00:00:05.1636091: CMake Warning at examples/c++/comp/CMakeLists.txt:99 (message):
+00:00:05.1636091:   comp example: The SBML HTTP Resolver example cannot be built as libcurl was
+00:00:05.1636091:   not found.
+00:00:05.1636091: 
+00:00:05.1636091: 
+00:00:05.6784100: -- 
+00:00:05.6784100: ----------------------------------------------------------------------
+00:00:05.6784100: libSBML version 5.17.2
+00:00:05.6784100: ----------------------------------------------------------------------
+00:00:05.6784100: 
+00:00:05.6784100:    More information and the latest version are available online at
+00:00:05.6784100:    http://sbml.org/Software/libSBML
+00:00:05.6784100: 
+00:00:05.6784100:    Please report problems using the issue tracker at
+00:00:05.6784100:    http://sbml.org/Software/libsbml/issue-tracker
+00:00:05.6784100: 
+00:00:05.6784100:    To contact the developers directly, email libsbml-team@googlegroups.com
+00:00:05.6784100: 
+00:00:05.6784100:    Configured on host 'DELAY'
+00:00:05.6784100:      host type                       = Windows
+00:00:05.6784100:      host operating system           = Windows 6.1.7601
+00:00:05.6784100:      host CPU architecture           = AMD64
+00:00:05.6784100: 
+00:00:05.6784100:    General build flags:
+00:00:05.6784100:      CC                              = C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/x86_amd64/cl.exe
+00:00:05.6784100:      CXX                             = C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/x86_amd64/cl.exe
+00:00:05.6784100:      CPPFLAGS                        =  -DWIN32 -DLIBSBML_EXPORTS -DLIBLAX_EXPORTS -D_CRT_SECURE_NO_WARNINGS
+00:00:05.6784100:      CFLAGS                          = /DWIN32 /D_WINDOWS /W3
+00:00:05.6784100:      CXXFLAGS                        = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MP
+00:00:05.6784100:      LDFLAGS                         = /machine:x64
+00:00:05.6784100: 
+00:00:05.6784100:    XML parser library configuration:
+00:00:05.6784100:      XML library                     = libxml2
+00:00:05.6784100:      CPPFLAGS for XML                = -Ic:/Development/dependencies/x64/release-static/include
+00:00:05.6784100:      LIBS for XML                    = c:/Development/dependencies/x64/release-static/lib/libxml2.lib
+00:00:05.6784100: 
+00:00:05.6784100:    Other libSBML configuration settings:
+00:00:05.6784100:      Installation $prefix            = C:/Development/libsbml-64-inst
+00:00:05.6784100: --      Using SWIG                      = C:/swigwin-3.0.12/swig.exe (Version 3.0.12)
+00:00:05.6784100: --      Using C#                        = C:/Windows/Microsoft.NET/Framework/v2.0.50727/csc.exe
+00:00:05.6784100: --      Using Java                      = c:/tools/java/x64/jdk1.7.0_05/bin/java.exe
+00:00:05.6784100: --      Using Node.js                   = C:/tools/nodejs_x64/node_modules/npm/bin/node-gyp-bin/node-gyp.cmd
+00:00:05.6784100: --      Using Python                    = c:/Python64/Python27/python.exe
+00:00:05.6784100: --      Using Perl                      = c:/tools/perl/Perl64_516/bin/perl.exe
+00:00:05.6784100: --      Using Matlab                    = c:/tools/MATLAB/x64/R2011b
+00:00:05.6784100: --      Using R                         = C:/Program Files/R/R-3.1.1/bin/R.exe
+00:00:05.6784100: --      Using libcheck                  = c:/Development/dependencies/x64/release-static/lib/libcheck.lib
+00:00:05.6784100: --      Using C++ namespace ('libsbml') = no
+00:00:05.6784100: -- 
+00:00:05.6784100: --      Build examples                  = yes
+00:00:05.6784100: -- 
+00:00:05.6784100: -- 
+00:00:05.6784100: --    Support for SBML Level 3 Packages: 
+00:00:05.6784100: --      SBML 'comp' package    = ON
+00:00:05.6784100: --      SBML 'fbc' package     = ON
+00:00:05.6784100: --      SBML 'groups' package  = ON
+00:00:05.6784100: --      SBML 'l3v2extendedmath' package  = ON
+00:00:05.6784100: --      SBML 'layout' package  = ON
+00:00:05.6784100: --      SBML 'multi' package   = ON
+00:00:05.6784100: --      SBML 'qual' package    = ON
+00:00:05.6784100: --      SBML 'render' package  = ON
+00:00:05.6784100: -- 
+00:00:05.6784100: 
+00:00:05.6784100: -- Other potentially important settings:
+00:00:05.6784100: --   Compression support is enabled for .zip and .gz files
+00:00:05.6784100: --   Compression support is enabled for .bz2 files
+00:00:05.6784100: -- 
+00:00:05.6784100: ----------------------------------------------------------------------
+00:00:05.6784100: -- Configuring done
+00:00:15.8865874: -- Generating done
+00:00:15.8865874: -- Build files have been written to: C:/Development/libsbml-64
+00:00:15.8865874: -- Detecting C compile features
+00:00:15.8865874: -- Detecting C compile features - done
+00:00:17.3866732: -- Copying files from c:/Development/libsbml/dependencies/bin/
+00:00:19.4448941: CMake Warning (dev) at src/bindings/r/CMakeLists.txt:339 (get_target_property):
+00:00:19.4448941:   Policy CMP0026 is not set: Disallow use of the LOCATION target property.
+00:00:19.4448941:   Run "cmake --help-policy CMP0026" for policy details.  Use the cmake_policy
+00:00:19.4448941:   command to set the policy and suppress this warning.
+00:00:19.4448941: 
+00:00:19.4448941:   The LOCATION property should not be read from target "binding_r_lib".  Use
+00:00:19.4448941:   the target name directly with add_custom_command, or use the generator
+00:00:19.4448941:   expression $<TARGET_FILE>, as appropriate.
+00:00:19.4448941: 
+00:00:19.4448941: This warning is for project developers.  Use -Wno-dev to suppress it.
+00:00:19.4448941: 
+00:00:19.9596950: CMake Warning at examples/c++/comp/CMakeLists.txt:99 (message):
+00:00:19.9596950:   comp example: The SBML HTTP Resolver example cannot be built as libcurl was
+00:00:19.9596950:   not found.
+00:00:19.9596950: 
+00:00:19.9596950: 
+00:00:20.9892968: -- 
+00:00:20.9892968: ----------------------------------------------------------------------
+00:00:20.9892968: libSBML version 5.17.2
+00:00:20.9892968: ----------------------------------------------------------------------
+00:00:20.9892968: 
+00:00:20.9892968:    More information and the latest version are available online at
+00:00:20.9892968:    http://sbml.org/Software/libSBML
+00:00:20.9892968: 
+00:00:20.9892968:    Please report problems using the issue tracker at
+00:00:20.9892968:    http://sbml.org/Software/libsbml/issue-tracker
+00:00:20.9892968: 
+00:00:20.9892968:    To contact the developers directly, email libsbml-team@googlegroups.com
+00:00:20.9892968: 
+00:00:20.9892968:    Configured on host 'DELAY'
+00:00:20.9892968:      host type                       = Windows
+00:00:20.9892968:      host operating system           = Windows 6.1.7601
+00:00:20.9892968:      host CPU architecture           = AMD64
+00:00:20.9892968: 
+00:00:20.9892968:    General build flags:
+00:00:20.9892968:      CC                              = C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/x86_amd64/cl.exe
+00:00:20.9892968:      CXX                             = C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/x86_amd64/cl.exe
+00:00:20.9892968:      CPPFLAGS                        =  -DWIN32 -DLIBSBML_EXPORTS -DLIBLAX_EXPORTS -D_CRT_SECURE_NO_WARNINGS
+00:00:20.9892968:      CFLAGS                          = /DWIN32 /D_WINDOWS /W3
+00:00:20.9892968:      CXXFLAGS                        = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MP
+00:00:20.9892968:      LDFLAGS                         = /machine:x64
+00:00:20.9892968: 
+00:00:20.9892968:    XML parser library configuration:
+00:00:20.9892968:      XML library                     = libxml2
+00:00:20.9892968:      CPPFLAGS for XML                = -Ic:/Development/dependencies/x64/release-static/include
+00:00:20.9892968:      LIBS for XML                    = c:/Development/dependencies/x64/release-static/lib/libxml2.lib
+00:00:20.9892968: 
+00:00:20.9892968:    Other libSBML configuration settings:
+00:00:20.9892968:      Installation $prefix            = C:/Development/libsbml-64-inst
+00:00:20.9892968: --      Using SWIG                      = C:/swigwin-3.0.12/swig.exe (Version 3.0.12)
+00:00:20.9892968: --      Using C#                        = C:/Windows/Microsoft.NET/Framework/v2.0.50727/csc.exe
+00:00:20.9892968: --      Using Java                      = c:/tools/java/x64/jdk1.7.0_05/bin/java.exe
+00:00:20.9892968: --      Using Node.js                   = C:/tools/nodejs_x64/node_modules/npm/bin/node-gyp-bin/node-gyp.cmd
+00:00:20.9892968: --      Using Python                    = c:/Python64/Python27/python.exe
+00:00:20.9892968: --      Using Perl                      = c:/tools/perl/Perl64_516/bin/perl.exe
+00:00:20.9892968: --      Using Matlab                    = c:/tools/MATLAB/x64/R2011b
+00:00:20.9892968: --      Using R                         = C:/Program Files/R/R-3.1.1/bin/R.exe
+00:00:20.9892968: --      Using libcheck                  = c:/Development/dependencies/x64/release-static/lib/libcheck.lib
+00:00:20.9892968: --      Using C++ namespace ('libsbml') = no
+00:00:20.9892968: -- 
+00:00:20.9892968: --      Build examples                  = yes
+00:00:20.9892968: -- 
+00:00:20.9892968: -- 
+00:00:20.9892968: --    Support for SBML Level 3 Packages: 
+00:00:20.9892968: --      SBML 'comp' package    = ON
+00:00:20.9892968: --      SBML 'fbc' package     = ON
+00:00:20.9892968: --      SBML 'groups' package  = ON
+00:00:20.9892968: --      SBML 'l3v2extendedmath' package  = ON
+00:00:20.9892968: --      SBML 'layout' package  = ON
+00:00:20.9892968: --      SBML 'multi' package   = ON
+00:00:20.9892968: --      SBML 'qual' package    = ON
+00:00:20.9892968: --      SBML 'render' package  = ON
+00:00:20.9892968: -- 
+00:00:20.9892968: 
+00:00:20.9892968: -- Other potentially important settings:
+00:00:20.9892968: --   Compression support is enabled for .zip and .gz files
+00:00:20.9892968: --   Compression support is enabled for .bz2 files
+00:00:20.9892968: -- 
+00:00:20.9892968: ----------------------------------------------------------------------
+00:00:20.9892968: -- Configuring done
+00:00:29.7409121: -- Generating done
+00:00:30.2557130: -- Build files have been written to: C:/Development/libsbml-64
