@@ -1,4 +1,4 @@
-Starting Tests: Sun 12/02/2018 14:04:09.37 
+Starting Tests: Mon 12/03/2018  3:22:09.23 
 UpdateCTestConfiguration  from :C:/Development/libsbml-32/DartConfiguration.tcl
 Parse Config file:C:/Development/libsbml-32/DartConfiguration.tcl
 UpdateCTestConfiguration  from :C:/Development/libsbml-32/DartConfiguration.tcl
@@ -21,7 +21,7 @@ test 1
 1:  TestMultipleNamespaces
 1:  SBMLCompCheckConsistency
 1: 100%: Checks: 14, Failures: 0, Errors: 0
-  1/175 Test   #1: test_comp_extensions_run ......................   Passed    0.45 sec
+  1/174 Test   #1: test_comp_extensions_run ......................   Passed    0.42 sec
 test 2
         Start   2: test_comp_sbase_run
 
@@ -41,7 +41,7 @@ test 2
 2:  comp_sBaseRef
 2:  comp_submodel
 2: 100%: Checks: 94, Failures: 0, Errors: 0
-  2/175 Test   #2: test_comp_sbase_run ...........................   Passed    0.16 sec
+  2/174 Test   #2: test_comp_sbase_run ...........................   Passed    0.14 sec
 test 3
         Start   3: test_comp_util_run
 
@@ -58,7 +58,7 @@ test 3
 3:  SBMLCompFlatteningNewFlags
 3:  SBMLCompFlatteningConverterStripPackage
 3: 100%: Checks: 356, Failures: 0, Errors: 0
-  3/175 Test   #3: test_comp_util_run ............................   Passed    3.62 sec
+  3/174 Test   #3: test_comp_util_run ............................   Passed    3.62 sec
 test 4
         Start   4: test_comp_validator_run
 
@@ -77,7 +77,7 @@ test 4
 4: 100%: Checks: 14, Failures: 0
 4: Testing Unit Consistency Constraints (10500 - 10599).
 4: 100%: Checks: 22, Failures: 0
-  4/175 Test   #4: test_comp_validator_run .......................   Passed    0.76 sec
+  4/174 Test   #4: test_comp_validator_run .......................   Passed    0.78 sec
 test 5
         Start   5: test_sbml_package_fbc_run
 
@@ -90,7 +90,7 @@ test 5
 5:  ReadFbcExtension
 5:  FbcAssociation
 5: 100%: Checks: 36, Failures: 0, Errors: 0
-  5/175 Test   #5: test_sbml_package_fbc_run .....................   Passed    0.14 sec
+  5/174 Test   #5: test_sbml_package_fbc_run .....................   Passed    0.16 sec
 test 6
         Start   6: test_fbc_validator_run
 
@@ -107,7 +107,7 @@ test 6
 6: 100%: Checks: 170, Failures: 0
 6: Testing Id Consistency Constraints (10300 - 10399).
 6: 100%: Checks: 11, Failures: 0
-  6/175 Test   #6: test_fbc_validator_run ........................   Passed    0.50 sec
+  6/174 Test   #6: test_fbc_validator_run ........................   Passed    0.50 sec
 test 7
         Start   7: test_extension_package_groups_run
 
@@ -120,7 +120,7 @@ test 7
 7:  ReadGroupsExtension
 7:  GroupsModelPlugin
 7: 100%: Checks: 25, Failures: 0, Errors: 0
-  7/175 Test   #7: test_extension_package_groups_run .............   Passed    0.08 sec
+  7/174 Test   #7: test_extension_package_groups_run .............   Passed    0.08 sec
 test 8
         Start   8: test_groups_validator_run
 
@@ -137,7 +137,7 @@ test 8
 8: 100%: Checks: 95, Failures: 0
 8: Testing Id Consistency Constraints (10300 - 10399).
 8: 100%: Checks: 11, Failures: 0
-  8/175 Test   #8: test_groups_validator_run .....................   Passed    0.11 sec
+  8/174 Test   #8: test_groups_validator_run .....................   Passed    0.09 sec
 test 9
         Start   9: test_l3v2extendedmath_validator_run
 
@@ -154,7 +154,7 @@ test 9
 9: 100%: Checks: 4, Failures: 0
 9: Testing Unit Consistency Constraints (10500 - 10599).
 9: 100%: Checks: 6, Failures: 0
-  9/175 Test   #9: test_l3v2extendedmath_validator_run ...........   Passed    0.05 sec
+  9/174 Test   #9: test_l3v2extendedmath_validator_run ...........   Passed    0.03 sec
 test 10
         Start  10: test_extension_package_l3v2extendedmath_run
 
@@ -166,7 +166,7 @@ test 10
 10:  WriteL3v2EMExtension
 10:  ReadL3v2EMExtension
 10: 100%: Checks: 12, Failures: 0, Errors: 0
- 10/175 Test  #10: test_extension_package_l3v2extendedmath_run ...   Passed    0.03 sec
+ 10/174 Test  #10: test_extension_package_l3v2extendedmath_run ...   Passed    0.05 sec
 test 11
         Start  11: test_sbml_package_layout_run
 
@@ -194,7 +194,7 @@ test 11
 11:  SBMLHandler
 11:  LayoutWriting
 11: 100%: Checks: 288, Failures: 0, Errors: 0
- 11/175 Test  #11: test_sbml_package_layout_run ..................   Passed    0.53 sec
+ 11/174 Test  #11: test_sbml_package_layout_run ..................   Passed    0.55 sec
 test 12
         Start  12: test_layout_validator_run
 
@@ -211,7 +211,7 @@ test 12
 12: 100%: Checks: 223, Failures: 0
 12: Testing Id Consistency Constraints (10300 - 10399).
 12: 100%: Checks: 18, Failures: 0
- 12/175 Test  #12: test_layout_validator_run .....................   Passed    1.03 sec
+ 12/174 Test  #12: test_layout_validator_run .....................   Passed    1.05 sec
 test 13
         Start  13: test_sbml_package_multi_run
 
@@ -223,7 +223,7 @@ test 13
 13:  MultiCheckConsistency
 13:  MultiAST
 13: 100%: Checks: 16, Failures: 0, Errors: 0
- 13/175 Test  #13: test_sbml_package_multi_run ...................   Passed    0.06 sec
+ 13/174 Test  #13: test_sbml_package_multi_run ...................   Passed    0.06 sec
 test 14
         Start  14: test_multi_validator_run
 
@@ -242,7 +242,7 @@ test 14
 14: 100%: Checks: 123, Failures: 0
 14: Testing Id Consistency Constraints (10300 - 10999).
 14: 100%: Checks: 16, Failures: 0
- 14/175 Test  #14: test_multi_validator_run ......................   Passed    0.17 sec
+ 14/174 Test  #14: test_multi_validator_run ......................   Passed    0.19 sec
 test 15
         Start  15: test_extension_package_qual_run
 
@@ -255,7 +255,7 @@ test 15
 15:  ReadQualExtension
 15:  GetAllElements
 15: 100%: Checks: 20, Failures: 0, Errors: 0
- 15/175 Test  #15: test_extension_package_qual_run ...............   Passed    0.06 sec
+ 15/174 Test  #15: test_extension_package_qual_run ...............   Passed    0.06 sec
 test 16
         Start  16: test_sbml_package_qual_run
 
@@ -272,7 +272,7 @@ test 16
 16:  ListOfFunctionTerms
 16:  CopyAndClone
 16: 100%: Checks: 73, Failures: 0, Errors: 0
- 16/175 Test  #16: test_sbml_package_qual_run ....................   Passed    0.11 sec
+ 16/174 Test  #16: test_sbml_package_qual_run ....................   Passed    0.09 sec
 test 17
         Start  17: test_qual_validator_run
 
@@ -291,7 +291,7 @@ test 17
 17: 100%: Checks: 4, Failures: 0
 17: Testing Math Consistency Constraints (10200 - 10299).
 17: 100%: Checks: 3, Failures: 0
- 17/175 Test  #17: test_qual_validator_run .......................   Passed    0.22 sec
+ 17/174 Test  #17: test_qual_validator_run .......................   Passed    0.23 sec
 test 18
         Start  18: test_sbml_package_render_run
 
@@ -329,7 +329,7 @@ test 18
 18:  RenderReading
 18:  RenderWriting
 18: 100%: Checks: 136, Failures: 0, Errors: 0
- 18/175 Test  #18: test_sbml_package_render_run ..................   Passed    0.92 sec
+ 18/174 Test  #18: test_sbml_package_render_run ..................   Passed    0.94 sec
 test 19
         Start  19: test_render_validator_run
 
@@ -344,7 +344,7 @@ test 19
 19: 
 19: Testing General XML Consistency Constraints (20000 - 29999).
 19: 100%: Checks: 111, Failures: 0
- 19/175 Test  #19: test_render_validator_run .....................   Passed    0.19 sec
+ 19/174 Test  #19: test_render_validator_run .....................   Passed    0.20 sec
 test 20
         Start  20: test_sbml_annotation_run
 
@@ -369,7 +369,7 @@ test 20
 20:  RDFAnnotationNestedCVTerm
 20:  RDFAnnotationV4
 20: 100%: Checks: 180, Failures: 0, Errors: 0
- 20/175 Test  #20: test_sbml_annotation_run ......................   Passed    0.47 sec
+ 20/174 Test  #20: test_sbml_annotation_run ......................   Passed    0.47 sec
 test 21
         Start  21: test_sbml_conversion_run
 
@@ -389,7 +389,7 @@ test 21
 21:  LevelVersionConverter
 21:  RateOfConverter
 21: 100%: Checks: 171, Failures: 0, Errors: 0
- 21/175 Test  #21: test_sbml_conversion_run ......................   Passed    0.47 sec
+ 21/174 Test  #21: test_sbml_conversion_run ......................   Passed    0.48 sec
 test 22
         Start  22: test_sbml_extension_run
 
@@ -407,7 +407,7 @@ test 22
 22:  SBMLExtensionRegistry
 22:  TestUnknownPackages
 22: 100%: Checks: 30, Failures: 0, Errors: 0
- 22/175 Test  #22: test_sbml_extension_run .......................   Passed    0.06 sec
+ 22/174 Test  #22: test_sbml_extension_run .......................   Passed    0.06 sec
 test 23
         Start  23: test_sbml_math_run
 
@@ -432,7 +432,7 @@ test 23
 23:  TestGetValue
 23:  test-data/L3V2Math.xml
 23: 100%: Checks: 677, Failures: 0, Errors: 0
- 23/175 Test  #23: test_sbml_math_run ............................   Passed    0.69 sec
+ 23/174 Test  #23: test_sbml_math_run ............................   Passed    0.73 sec
 test 24
         Start  24: test_sbml_sbml_run
 
@@ -546,7 +546,7 @@ test 24
 24:  SBaseIdName
 24:  Generic Attribute Functions
 24: 100%: Checks: 1730, Failures: 0, Errors: 0
- 24/175 Test  #24: test_sbml_sbml_run ............................   Passed    2.82 sec
+ 24/174 Test  #24: test_sbml_sbml_run ............................   Passed    2.59 sec
 test 25
         Start  25: test_sbml_units_run
 
@@ -566,7 +566,7 @@ test 25
 25:  UnitFormulaFormatter3
 25:  DerivedUnitDefinitionUndefined
 25: 100%: Checks: 178, Failures: 0, Errors: 0
- 25/175 Test  #25: test_sbml_units_run ...........................   Passed    1.05 sec
+ 25/174 Test  #25: test_sbml_units_run ...........................   Passed    1.06 sec
 test 26
         Start  26: test_sbml_util_run
 
@@ -578,7 +578,7 @@ test 26
 26:  Stack
 26:  StringBuffer
 26: 100%: Checks: 57, Failures: 0, Errors: 0
- 26/175 Test  #26: test_sbml_util_run ............................   Passed    0.09 sec
+ 26/174 Test  #26: test_sbml_util_run ............................   Passed    0.09 sec
 test 27
         Start  27: test_sbml_validator_run
 
@@ -654,7 +654,7 @@ test 27
 27: 100%: Checks: 30, Failures: 0
 27: Testing Modeling Practice Constraints (80000 - 89999).
 27: 100%: Checks: 56, Failures: 0
- 27/175 Test  #27: test_sbml_validator_run .......................   Passed    6.91 sec
+ 27/174 Test  #27: test_sbml_validator_run .......................   Passed    7.24 sec
 test 28
         Start  28: test_sbml_xml_run
 
@@ -673,11 +673,11 @@ test 28
 28:  XMLErrorLog
 28:  XMLInputStream
 28:  XMLOutputStream
-28: <!-- Created by foo version bar on 2018-12-02 14:04 with libSBML version 5.17.2. -->
+28: <!-- Created by foo version bar on 2018-12-03 03:22 with libSBML version 5.17.2. -->
 28:  XMLAttributesC
 28:  XMLExceptions
 28: 100%: Checks: 129, Failures: 0, Errors: 0
- 28/175 Test  #28: test_sbml_xml_run .............................   Passed    0.12 sec
+ 28/174 Test  #28: test_sbml_xml_run .............................   Passed    0.16 sec
 test 29
         Start  29: test_csharp_bindings
 
@@ -688,7 +688,7 @@ test 29
 29: ...........................................................................................................................................................................................................................
 29: All tests passed.
 29: 
- 29/175 Test  #29: test_csharp_bindings ..........................   Passed    0.78 sec
+ 29/174 Test  #29: test_csharp_bindings ..........................   Passed    1.06 sec
 test 30
         Start  30: test_csharp_bindings_full
 
@@ -699,28 +699,28 @@ test 30
 30: Running the tests with: 
 30: 	Data Directory:   c:/Development/libsbml/src/sbml/test/test-data
 30: 
-30: .........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................<!-- Created by foo version bar on 2018-12-02 14:04 with libSBML version 5.17.2. -->
+30: .........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................<!-- Created by foo version bar on 2018-12-03 03:22 with libSBML version 5.17.2. -->
 30: .....................................
 30: 
 30: Total Number of Tests 1830, failures 0
 30: 
 30: All tests passed.
 30: 
- 30/175 Test  #30: test_csharp_bindings_full .....................   Passed    1.37 sec
+ 30/174 Test  #30: test_csharp_bindings_full .....................   Passed    1.56 sec
 test 31
         Start  31: test_java_binding
 
 31: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-Xss8m" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "-cp" "C:\Development\libsbml-32\src\bindings\java\libsbmlj.jar;C:\Development\libsbml-32\src\bindings\java;C:\Development\libsbml-32\src\bindings\java\test" "AutoTestRunner"
 31: Test timeout computed to be: 3000
 31: ....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
- 31/175 Test  #31: test_java_binding .............................   Passed    0.41 sec
+ 31/174 Test  #31: test_java_binding .............................   Passed    0.37 sec
 test 32
         Start  32: test_java_printversion
 
 32: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-Xss8m" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "-cp" "C:\Development\libsbml-32\src\bindings\java\libsbmlj.jar;C:\Development\libsbml-32\src\bindings\java;C:\Development\libsbml-32\src\bindings\java\test" "TestPrintVersion" "5.17.2"
 32: Test timeout computed to be: 3000
 32: .
- 32/175 Test  #32: test_java_printversion ........................   Passed    0.16 sec
+ 32/174 Test  #32: test_java_printversion ........................   Passed    0.14 sec
 test 33
         Start  33: test_perl_binding
 
@@ -768,1033 +768,1060 @@ test 33
 33: C:/Development/libsbml/src/bindings/perl/t/07__TestModelHistory.t .......... ok
 33: C:/Development/libsbml/src/bindings/perl/t/07__TestRDFAnnotation2.t ........ ok
 33: All tests successful.
-33: Files=41, Tests=3364, 10 wallclock secs ( 0.36 usr +  0.11 sys =  0.47 CPU)
+33: Files=41, Tests=3364, 12 wallclock secs ( 0.39 usr +  0.08 sys =  0.47 CPU)
 33: Result: PASS
- 33/175 Test  #33: test_perl_binding .............................   Passed   10.75 sec
+ 33/174 Test  #33: test_perl_binding .............................   Passed   11.59 sec
 test 34
-        Start  34: test_matlab_binding
+        Start  34: test_python_binding
 
-34: Test command: C:\tools\MATLAB\x86\R2011b\bin\matlab.exe "-nosplash" "-nodesktop" "-memmgr" "debug" "-logfile" "runTests.log" "-r" "runTests;quit;"
+34: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml-32/src/bindings/python/test.py" "-p" "C:/Development/libsbml-32/src/bindings/python/Release" "-b" "C:/Development/libsbml/src/bindings/python/test"
 34: Test timeout computed to be: 3000
- 34/175 Test  #34: test_matlab_binding ...........................   Passed    0.08 sec
+34: ......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................<!-- Created by foo version bar on 2018-12-03 03:22 with libSBML version 5.17.2. -->
+34: .....................................................................................................................................................................................................................................................................................................................................................................................
+34: ----------------------------------------------------------------------
+34: Ran 1819 tests in 0.485s
+34: 
+34: OK
+ 34/174 Test  #34: test_python_binding ...........................   Passed    1.55 sec
 test 35
-        Start  35: test_python_binding
+        Start  35: test_python_printversion
 
-35: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml-32/src/bindings/python/test.py" "-p" "C:/Development/libsbml-32/src/bindings/python/Release" "-b" "C:/Development/libsbml/src/bindings/python/test"
+35: Test command: C:\python32\Python27\python.exe "-c" "import libsbml; assert libsbml.getLibSBMLDottedVersion() == '5.17.2'" "-p" "C:/Development/libsbml-32/src/bindings/python/Release" "-b" "C:/Development/libsbml/src/bindings/python/test"
+35: Environment variables: 
+35:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 35: Test timeout computed to be: 3000
-35: ......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................<!-- Created by foo version bar on 2018-12-02 14:04 with libSBML version 5.17.2. -->
-35: .....................................................................................................................................................................................................................................................................................................................................................................................
-35: ----------------------------------------------------------------------
-35: Ran 1819 tests in 0.483s
-35: 
-35: OK
- 35/175 Test  #35: test_python_binding ...........................   Passed    0.87 sec
+ 35/174 Test  #35: test_python_printversion ......................   Passed    0.22 sec
 test 36
-        Start  36: test_python_printversion
+        Start  36: test_python_addCVTerms
 
-36: Test command: C:\python32\Python27\python.exe "-c" "import libsbml; assert libsbml.getLibSBMLDottedVersion() == '5.17.2'" "-p" "C:/Development/libsbml-32/src/bindings/python/Release" "-b" "C:/Development/libsbml/src/bindings/python/test"
+36: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/addCVTerms.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addCVTerms.out.xml"
 36: Environment variables: 
 36:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 36: Test timeout computed to be: 3000
- 36/175 Test  #36: test_python_printversion ......................   Passed    0.23 sec
+ 36/174 Test  #36: test_python_addCVTerms ........................   Passed    0.23 sec
 test 37
-        Start  37: test_python_addCVTerms
+        Start  37: test_python_addingEvidenceCodes_1
 
-37: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/addCVTerms.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addCVTerms.out.xml"
+37: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/addingEvidenceCodes_1.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_1.out.xml"
 37: Environment variables: 
 37:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 37: Test timeout computed to be: 3000
- 37/175 Test  #37: test_python_addCVTerms ........................   Passed    0.23 sec
+ 37/174 Test  #37: test_python_addingEvidenceCodes_1 .............   Passed    0.23 sec
 test 38
-        Start  38: test_python_addingEvidenceCodes_1
+        Start  38: test_python_addingEvidenceCodes_2
 
-38: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/addingEvidenceCodes_1.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_1.out.xml"
+38: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/addingEvidenceCodes_2.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_2.out.xml"
 38: Environment variables: 
 38:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 38: Test timeout computed to be: 3000
- 38/175 Test  #38: test_python_addingEvidenceCodes_1 .............   Passed    0.20 sec
+ 38/174 Test  #38: test_python_addingEvidenceCodes_2 .............   Passed    0.23 sec
 test 39
-        Start  39: test_python_addingEvidenceCodes_2
+        Start  39: test_python_addModelHistory
 
-39: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/addingEvidenceCodes_2.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_2.out.xml"
+39: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/addModelHistory.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addModelHistory.out.xml"
 39: Environment variables: 
 39:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 39: Test timeout computed to be: 3000
- 39/175 Test  #39: test_python_addingEvidenceCodes_2 .............   Passed    0.25 sec
+39: Status for addCreator: succeeded
+39: Set created date:      succeeded
+39: Set modified date:     succeeded
+39: Set model history:     unknown
+ 39/174 Test  #39: test_python_addModelHistory ...................   Passed    0.23 sec
 test 40
-        Start  40: test_python_addModelHistory
+        Start  40: test_python_append_to_note
 
-40: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/addModelHistory.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addModelHistory.out.xml"
+40: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/append_to_note.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekineticext.xml" "veq" "a new note" "append_to_note.out.xml"
 40: Environment variables: 
 40:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 40: Test timeout computed to be: 3000
-40: Status for addCreator: succeeded
-40: Set created date:      succeeded
-40: Set modified date:     succeeded
-40: Set model history:     unknown
- 40/175 Test  #40: test_python_addModelHistory ...................   Passed    0.23 sec
+40: Body before change: 
+40: <body xmlns="http://www.w3.org/1999/xhtml">
+40:   <p xmlns="http://www.w3.org/1999/xhtml">Some notes</p>
+40: </body>
+40: 
+40: Body after change: 
+40: <body xmlns="http://www.w3.org/1999/xhtml">
+40:   <p xmlns="http://www.w3.org/1999/xhtml">Some notes</p>a new note</body>
+ 40/174 Test  #40: test_python_append_to_note ....................   Passed    0.25 sec
 test 41
-        Start  41: test_python_append_to_note
+        Start  41: test_python_appendAnnotation
 
-41: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/append_to_note.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekineticext.xml" "veq" "a new note" "append_to_note.out.xml"
+41: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/appendAnnotation.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "appendAnnotation.out.xml"
 41: Environment variables: 
 41:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 41: Test timeout computed to be: 3000
-41: Body before change: 
-41: <body xmlns="http://www.w3.org/1999/xhtml">
-41:   <p xmlns="http://www.w3.org/1999/xhtml">Some notes</p>
-41: </body>
-41: 
-41: Body after change: 
-41: <body xmlns="http://www.w3.org/1999/xhtml">
-41:   <p xmlns="http://www.w3.org/1999/xhtml">Some notes</p>a new note</body>
- 41/175 Test  #41: test_python_append_to_note ....................   Passed    0.22 sec
+ 41/174 Test  #41: test_python_appendAnnotation ..................   Passed    0.23 sec
 test 42
-        Start  42: test_python_appendAnnotation
+        Start  42: test_python_convertSBML
 
-42: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/appendAnnotation.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "appendAnnotation.out.xml"
+42: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/convertSBML.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "convertSBML.out.xml"
 42: Environment variables: 
 42:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 42: Test timeout computed to be: 3000
- 42/175 Test  #42: test_python_appendAnnotation ..................   Passed    0.22 sec
+42: Attempting to convert Level 3 Version 1 model to Level 3 Version 2.
+42: 
+42: Conversion completed.
+42: 
+ 42/174 Test  #42: test_python_convertSBML .......................   Passed    0.25 sec
 test 43
-        Start  43: test_python_convertSBML
+        Start  43: test_python_createExampleSBML
 
-43: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/convertSBML.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "convertSBML.out.xml"
+43: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/createExampleSBML.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "createExampleSBMLy.out.xml"
 43: Environment variables: 
 43:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 43: Test timeout computed to be: 3000
-43: Attempting to convert Level 3 Version 1 model to Level 3 Version 2.
+43: line 1: (99505 [Warning]) In situations where a mathematical expression contains literal numbers or parameters whose units have not been declared, it is not possible to verify accurately the consistency of the units in the expression. 
+43:  The units of the <kineticLaw> <math> expression 'f(S1) * compartmentOne / t' cannot be fully checked. Unit consistency reported as either no errors or further unit errors related to this object may not be accurate.
 43: 
-43: Conversion completed.
+43: Wrote file 'enzymaticreaction.xml'
+43: Wrote file 'units.xml'
 43: 
- 43/175 Test  #43: test_python_convertSBML .......................   Passed    0.25 sec
+43: Notice: encountered 1 validation warning in model 'functionExample'.
+43: 
+43: Wrote file 'functiondef.xml'
+ 43/174 Test  #43: test_python_createExampleSBML .................   Passed    0.28 sec
 test 44
-        Start  44: test_python_createExampleSBML
+        Start  44: test_python_createSimpleModel
 
-44: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/createExampleSBML.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "createExampleSBMLy.out.xml"
+44: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/createSimpleModel.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "createSimpleModel.out.xml"
 44: Environment variables: 
 44:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 44: Test timeout computed to be: 3000
-44: line 1: (99505 [Warning]) In situations where a mathematical expression contains literal numbers or parameters whose units have not been declared, it is not possible to verify accurately the consistency of the units in the expression. 
-44:  The units of the <kineticLaw> <math> expression 'f(S1) * compartmentOne / t' cannot be fully checked. Unit consistency reported as either no errors or further unit errors related to this object may not be accurate.
+44: <?xml version="1.0" encoding="UTF-8"?>
+44: <sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+44:   <model substanceUnits="mole" timeUnits="second" extentUnits="mole">
+44:     <listOfUnitDefinitions>
+44:       <unitDefinition id="per_second">
+44:         <listOfUnits>
+44:           <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
+44:         </listOfUnits>
+44:       </unitDefinition>
+44:     </listOfUnitDefinitions>
+44:     <listOfCompartments>
+44:       <compartment id="c1" spatialDimensions="3" size="1" units="litre" constant="true"/>
+44:     </listOfCompartments>
+44:     <listOfSpecies>
+44:       <species id="s1" compartment="c1" initialAmount="5" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+44:       <species id="s2" compartment="c1" initialAmount="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+44:     </listOfSpecies>
+44:     <listOfParameters>
+44:       <parameter id="k" value="1" units="per_second" constant="true"/>
+44:     </listOfParameters>
+44:     <listOfReactions>
+44:       <reaction id="r1" reversible="false" fast="false">
+44:         <listOfReactants>
+44:           <speciesReference species="s1" constant="true"/>
+44:         </listOfReactants>
+44:         <listOfProducts>
+44:           <speciesReference species="s2" constant="true"/>
+44:         </listOfProducts>
+44:         <kineticLaw>
+44:           <math xmlns="http://www.w3.org/1998/Math/MathML">
+44:             <apply>
+44:               <times/>
+44:               <ci> k </ci>
+44:               <ci> s1 </ci>
+44:               <ci> c1 </ci>
+44:             </apply>
+44:           </math>
+44:         </kineticLaw>
+44:       </reaction>
+44:     </listOfReactions>
+44:   </model>
+44: </sbml>
 44: 
-44: Wrote file 'enzymaticreaction.xml'
-44: Wrote file 'units.xml'
-44: 
-44: Notice: encountered 1 validation warning in model 'functionExample'.
-44: 
-44: Wrote file 'functiondef.xml'
- 44/175 Test  #44: test_python_createExampleSBML .................   Passed    0.25 sec
+ 44/174 Test  #44: test_python_createSimpleModel .................   Passed    0.22 sec
 test 45
-        Start  45: test_python_createSimpleModel
+        Start  45: test_python_echoSBML
 
-45: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/createSimpleModel.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "createSimpleModel.out.xml"
+45: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/echoSBML.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "echoSBML.out.xml"
 45: Environment variables: 
 45:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 45: Test timeout computed to be: 3000
-45: <?xml version="1.0" encoding="UTF-8"?>
-45: <sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
-45:   <model substanceUnits="mole" timeUnits="second" extentUnits="mole">
-45:     <listOfUnitDefinitions>
-45:       <unitDefinition id="per_second">
-45:         <listOfUnits>
-45:           <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
-45:         </listOfUnits>
-45:       </unitDefinition>
-45:     </listOfUnitDefinitions>
-45:     <listOfCompartments>
-45:       <compartment id="c1" spatialDimensions="3" size="1" units="litre" constant="true"/>
-45:     </listOfCompartments>
-45:     <listOfSpecies>
-45:       <species id="s1" compartment="c1" initialAmount="5" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-45:       <species id="s2" compartment="c1" initialAmount="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
-45:     </listOfSpecies>
-45:     <listOfParameters>
-45:       <parameter id="k" value="1" units="per_second" constant="true"/>
-45:     </listOfParameters>
-45:     <listOfReactions>
-45:       <reaction id="r1" reversible="false" fast="false">
-45:         <listOfReactants>
-45:           <speciesReference species="s1" constant="true"/>
-45:         </listOfReactants>
-45:         <listOfProducts>
-45:           <speciesReference species="s2" constant="true"/>
-45:         </listOfProducts>
-45:         <kineticLaw>
-45:           <math xmlns="http://www.w3.org/1998/Math/MathML">
-45:             <apply>
-45:               <times/>
-45:               <ci> k </ci>
-45:               <ci> s1 </ci>
-45:               <ci> c1 </ci>
-45:             </apply>
-45:           </math>
-45:         </kineticLaw>
-45:       </reaction>
-45:     </listOfReactions>
-45:   </model>
-45: </sbml>
-45: 
- 45/175 Test  #45: test_python_createSimpleModel .................   Passed    0.22 sec
+45: [OK] Echoed C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml to echoSBML.out.xml
+ 45/174 Test  #45: test_python_echoSBML ..........................   Passed    0.22 sec
 test 46
-        Start  46: test_python_echoSBML
+        Start  46: test_python_evaluateCustomMath
 
-46: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/echoSBML.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "echoSBML.out.xml"
+46: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/evaluateCustomMath.py" "2*3+4" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 46: Environment variables: 
 46:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 46: Test timeout computed to be: 3000
-46: [OK] Echoed C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml to echoSBML.out.xml
- 46/175 Test  #46: test_python_echoSBML ..........................   Passed    0.23 sec
+46: 2*3+4 = 10.0
+ 46/174 Test  #46: test_python_evaluateCustomMath ................   Passed    0.23 sec
 test 47
-        Start  47: test_python_evaluateCustomMath
+        Start  47: test_python_getAllElementsWithNotes
 
-47: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/evaluateCustomMath.py" "2*3+4" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+47: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/getAllElementsWithNotes.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 47: Environment variables: 
 47:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 47: Test timeout computed to be: 3000
-47: 2*3+4 = 10.0
- 47/175 Test  #47: test_python_evaluateCustomMath ................   Passed    0.28 sec
+47: 
+47:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+47:       read time (ms): 0.0
+47:     searching ......:
+47:     search time (ms): 0.0
+47:  elements with notes: 0
+ 47/174 Test  #47: test_python_getAllElementsWithNotes ...........   Passed    0.23 sec
 test 48
-        Start  48: test_python_getAllElementsWithNotes
+        Start  48: test_python_inlineInitialAssignments
 
-48: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/getAllElementsWithNotes.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+48: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/inlineInitialAssignments.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "inlineInitialAssignments.out.xml"
 48: Environment variables: 
 48:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 48: Test timeout computed to be: 3000
-48: 
-48:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-48:       read time (ms): 0.0
-48:     searching ......:
-48:     search time (ms): 0.0
-48:  elements with notes: 0
- 48/175 Test  #48: test_python_getAllElementsWithNotes ...........   Passed    0.31 sec
+ 48/174 Test  #48: test_python_inlineInitialAssignments ..........   Passed    0.23 sec
 test 49
-        Start  49: test_python_inlineInitialAssignments
+        Start  49: test_python_printAnnotation
 
-49: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/inlineInitialAssignments.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "inlineInitialAssignments.out.xml"
+49: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/printAnnotation.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 49: Environment variables: 
 49:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 49: Test timeout computed to be: 3000
- 49/175 Test  #49: test_python_inlineInitialAssignments ..........   Passed    0.25 sec
+49: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+49: 
+ 49/174 Test  #49: test_python_printAnnotation ...................   Passed    0.23 sec
 test 50
-        Start  50: test_python_printAnnotation
+        Start  50: test_python_printMath
 
-50: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/printAnnotation.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+50: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/printMath.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 50: Environment variables: 
 50:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 50: Test timeout computed to be: 3000
-50: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+50: ()
+50: Reaction 1, formula: comp * (kon * E * S - koff * ES)
 50: 
- 50/175 Test  #50: test_python_printAnnotation ...................   Passed    0.23 sec
+50: Reaction 2, formula: comp * kcat * ES
+50: 
+50: ()
+50: ()
+ 50/174 Test  #50: test_python_printMath .........................   Passed    0.23 sec
 test 51
-        Start  51: test_python_printMath
+        Start  51: test_python_printRegisteredPackages
 
-51: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/printMath.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+51: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/printRegisteredPackages.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "printRegisteredPackages.out.xml"
 51: Environment variables: 
 51:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 51: Test timeout computed to be: 3000
-51: ()
-51: Reaction 1, formula: comp * (kon * E * S - koff * ES)
+51: This version of LibSBML: 5.17.2 includes: 
 51: 
-51: Reaction 2, formula: comp * kcat * ES
+51: 	comp
+51: 	fbc
+51: 	groups
+51: 	layout
+51: 	render
+51: 	l3v2extendedmath
+51: 	multi
+51: 	qual
 51: 
-51: ()
-51: ()
- 51/175 Test  #51: test_python_printMath .........................   Passed    0.23 sec
+51: 
+ 51/174 Test  #51: test_python_printRegisteredPackages ...........   Passed    0.22 sec
 test 52
-        Start  52: test_python_printRegisteredPackages
+        Start  52: test_python_printSBML
 
-52: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/printRegisteredPackages.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "printRegisteredPackages.out.xml"
+52: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/printSBML.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 52: Environment variables: 
 52:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 52: Test timeout computed to be: 3000
-52: This version of LibSBML: 5.17.2 includes: 
 52: 
-52: 	comp
-52: 	fbc
-52: 	groups
-52: 	layout
-52: 	render
-52: 	l3v2extendedmath
-52: 	multi
-52: 	qual
+52: File: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml (Level 3, version 1)
+52:                  id: (empty)
+52: functionDefinitions: 0
+52:     unitDefinitions: 2
+52:    compartmentTypes: 0
+52:         specieTypes: 0
+52:        compartments: 1
+52:             species: 4
+52:          parameters: 0
+52:  initialAssignments: 0
+52:               rules: 0
+52:         constraints: 0
+52:           reactions: 2
+52:              events: 0
 52: 
 52: 
- 52/175 Test  #52: test_python_printRegisteredPackages ...........   Passed    0.23 sec
+ 52/174 Test  #52: test_python_printSBML .........................   Passed    0.22 sec
 test 53
-        Start  53: test_python_printSBML
+        Start  53: test_python_printsupported
 
-53: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/printSBML.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+53: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/printsupported.py"
 53: Environment variables: 
 53:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 53: Test timeout computed to be: 3000
-53: 
-53: File: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml (Level 3, version 1)
-53:                  id: (empty)
-53: functionDefinitions: 0
-53:     unitDefinitions: 2
-53:    compartmentTypes: 0
-53:         specieTypes: 0
-53:        compartments: 1
-53:             species: 4
-53:          parameters: 0
-53:  initialAssignments: 0
-53:               rules: 0
-53:         constraints: 0
-53:           reactions: 2
-53:              events: 0
-53: 
-53: 
- 53/175 Test  #53: test_python_printSBML .........................   Passed    0.25 sec
+53: Supported by LibSBML 5.17.2
+53: ()
+53: 	SBML Level: 1 Version: 1
+53: 	SBML Level: 1 Version: 2
+53: 	SBML Level: 2 Version: 1
+53: 	SBML Level: 2 Version: 2
+53: 	SBML Level: 2 Version: 3
+53: 	SBML Level: 2 Version: 4
+53: 	SBML Level: 2 Version: 5
+53: 	SBML Level: 3 Version: 1
+53: 	SBML Level: 3 Version: 2
+53: ()
+ 53/174 Test  #53: test_python_printsupported ....................   Passed    0.22 sec
 test 54
-        Start  54: test_python_printsupported
+        Start  54: test_python_printUnits
 
-54: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/printsupported.py"
+54: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/printUnits.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 54: Environment variables: 
 54:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 54: Test timeout computed to be: 3000
-54: Supported by LibSBML 5.17.2
-54: ()
-54: 	SBML Level: 1 Version: 1
-54: 	SBML Level: 1 Version: 2
-54: 	SBML Level: 2 Version: 1
-54: 	SBML Level: 2 Version: 2
-54: 	SBML Level: 2 Version: 3
-54: 	SBML Level: 2 Version: 4
-54: 	SBML Level: 2 Version: 5
-54: 	SBML Level: 3 Version: 1
-54: 	SBML Level: 3 Version: 2
-54: ()
- 54/175 Test  #54: test_python_printsupported ....................   Passed    0.22 sec
+54: Species 0: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+54: Species 1: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+54: Species 2: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+54: Species 3: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+54: Compartment 0: litre (exponent = 1, multiplier = 1, scale = 0)
+54: Reaction 0: 
+54: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
+54:         undeclared units: no
+54: Reaction 1: 
+54: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
+54:         undeclared units: no
+ 54/174 Test  #54: test_python_printUnits ........................   Passed    0.23 sec
 test 55
-        Start  55: test_python_printUnits
+        Start  55: test_python_promoteParameters
 
-55: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/printUnits.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+55: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/promoteParameters.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "promoteParameters.out.xml"
 55: Environment variables: 
 55:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 55: Test timeout computed to be: 3000
-55: Species 0: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-55: Species 1: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-55: Species 2: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-55: Species 3: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-55: Compartment 0: litre (exponent = 1, multiplier = 1, scale = 0)
-55: Reaction 0: 
-55: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
-55:         undeclared units: no
-55: Reaction 1: 
-55: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
-55:         undeclared units: no
- 55/175 Test  #55: test_python_printUnits ........................   Passed    0.23 sec
+55: [OK] wrote promoteParameters.out.xml
+ 55/174 Test  #55: test_python_promoteParameters .................   Passed    0.23 sec
 test 56
-        Start  56: test_python_promoteParameters
+        Start  56: test_python_readSBML
 
-56: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/promoteParameters.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "promoteParameters.out.xml"
+56: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/readSBML.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 56: Environment variables: 
 56:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 56: Test timeout computed to be: 3000
-56: [OK] wrote promoteParameters.out.xml
- 56/175 Test  #56: test_python_promoteParameters .................   Passed    0.22 sec
+56: ()
+56:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+56:            file size: 4021
+56:       read time (ms): 0.00297216494083
+56:  validation error(s): 0
+56: ()
+ 56/174 Test  #56: test_python_readSBML ..........................   Passed    0.23 sec
 test 57
-        Start  57: test_python_readSBML
+        Start  57: test_python_replaceOneFD
 
-57: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/readSBML.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+57: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/replaceOneFD.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/functiondef.xml" "f" "reaction_1" "replaceOneFD.out.xml"
 57: Environment variables: 
 57:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 57: Test timeout computed to be: 3000
-57: ()
-57:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-57:            file size: 4021
-57:       read time (ms): 0.00321514889465
-57:  validation error(s): 0
-57: ()
- 57/175 Test  #57: test_python_readSBML ..........................   Passed    0.23 sec
+ 57/174 Test  #57: test_python_replaceOneFD ......................   Passed    0.23 sec
 test 58
-        Start  58: test_python_replaceOneFD
+        Start  58: test_python_setIdFromNames
 
-58: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/replaceOneFD.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/functiondef.xml" "f" "reaction_1" "replaceOneFD.out.xml"
+58: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/setIdFromNames.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "setIdFromNames.out.xml"
 58: Environment variables: 
 58:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 58: Test timeout computed to be: 3000
- 58/175 Test  #58: test_python_replaceOneFD ......................   Passed    0.23 sec
+58: 
+58:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+58:       read time (ms): 0.0
+58:     rename time (ms): 0.0
+58:      write time (ms): 0.0
+58: 
+ 58/174 Test  #58: test_python_setIdFromNames ....................   Passed    0.22 sec
 test 59
-        Start  59: test_python_setIdFromNames
+        Start  59: test_python_unsetAnnotation
 
-59: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/setIdFromNames.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "setIdFromNames.out.xml"
+59: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/unsetAnnotation.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetAnnotation.out.xml"
 59: Environment variables: 
 59:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 59: Test timeout computed to be: 3000
-59: 
-59:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-59:       read time (ms): 0.0
-59:     rename time (ms): 0.0
-59:      write time (ms): 0.0
-59: 
- 59/175 Test  #59: test_python_setIdFromNames ....................   Passed    0.25 sec
+ 59/174 Test  #59: test_python_unsetAnnotation ...................   Passed    0.23 sec
 test 60
-        Start  60: test_python_unsetAnnotation
+        Start  60: test_python_unsetNotes
 
-60: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/unsetAnnotation.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetAnnotation.out.xml"
+60: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/unsetNotes.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetNotes.out.xml"
 60: Environment variables: 
 60:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 60: Test timeout computed to be: 3000
- 60/175 Test  #60: test_python_unsetAnnotation ...................   Passed    0.23 sec
+ 60/174 Test  #60: test_python_unsetNotes ........................   Passed    0.23 sec
 test 61
-        Start  61: test_python_unsetNotes
+        Start  61: test_python_validateSBML
 
-61: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/unsetNotes.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetNotes.out.xml"
+61: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/validateSBML.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 61: Environment variables: 
 61:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 61: Test timeout computed to be: 3000
- 61/175 Test  #61: test_python_unsetNotes ........................   Passed    0.23 sec
+61: ---------------------------------------------------------------------------
+61:                  filename : C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+61:          file size (byte) : 4021
+61:            read time (ms) : 0.000000
+61:         c-check time (ms) : 0.000000
+61:       validation error(s) : 0
+61:     (consistency error(s)): 0
+61:     validation warning(s) : 0
+61:   (consistency warning(s)): 0
+61: ---------------------------------------------------------------------------
+61: Validated 1 files, 1 valid files, 0 invalid files
+ 61/174 Test  #61: test_python_validateSBML ......................   Passed    0.23 sec
 test 62
-        Start  62: test_python_validateSBML
+        Start  62: test_python_stringInput
 
-62: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/validateSBML.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+62: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/stringInput.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 62: Environment variables: 
 62:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 62: Test timeout computed to be: 3000
-62: ---------------------------------------------------------------------------
-62:                  filename : C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-62:          file size (byte) : 4021
-62:            read time (ms) : 0.000000
-62:         c-check time (ms) : 0.000000
-62:       validation error(s) : 0
-62:     (consistency error(s)): 0
-62:     validation warning(s) : 0
-62:   (consistency warning(s)): 0
-62: ---------------------------------------------------------------------------
-62: Validated 1 files, 1 valid files, 0 invalid files
- 62/175 Test  #62: test_python_validateSBML ......................   Passed    0.23 sec
+62: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+62: 
+62: <type 'str'>
+62: <type 'str'>
+ 62/174 Test  #62: test_python_stringInput .......................   Passed    0.22 sec
 test 63
-        Start  63: test_python_stringInput
+        Start  63: test_python_stripPackage
 
-63: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/stringInput.py" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+63: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/stripPackage.py" "C:/Development/libsbml/examples/sample-models/fbc/fbc_example1.xml" "fbc" "stripPackage.out.xml"
 63: Environment variables: 
 63:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 63: Test timeout computed to be: 3000
-63: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-63: 
-63: <type 'str'>
-63: <type 'str'>
- 63/175 Test  #63: test_python_stringInput .......................   Passed    0.23 sec
+63: [OK] stripped package 'fbc' from C:/Development/libsbml/examples/sample-models/fbc/fbc_example1.xml to stripPackage.out.xml
+ 63/174 Test  #63: test_python_stripPackage ......................   Passed    0.25 sec
 test 64
-        Start  64: test_python_stripPackage
+        Start  64: test_python_fbc_fbc_example1
 
-64: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/stripPackage.py" "C:/Development/libsbml/examples/sample-models/fbc/fbc_example1.xml" "fbc" "stripPackage.out.xml"
+64: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/fbc/fbc_example1.py"
 64: Environment variables: 
 64:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 64: Test timeout computed to be: 3000
-64: [OK] stripped package 'fbc' from C:/Development/libsbml/examples/sample-models/fbc/fbc_example1.xml to stripPackage.out.xml
- 64/175 Test  #64: test_python_stripPackage ......................   Passed    0.22 sec
+ 64/174 Test  #64: test_python_fbc_fbc_example1 ..................   Passed    0.25 sec
 test 65
-        Start  65: test_python_fbc_fbc_example1
+        Start  65: test_python_groups_groups_example1
 
-65: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/fbc/fbc_example1.py"
+65: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/groups/groups_example1.py"
 65: Environment variables: 
 65:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 65: Test timeout computed to be: 3000
- 65/175 Test  #65: test_python_fbc_fbc_example1 ..................   Passed    0.20 sec
+ 65/174 Test  #65: test_python_groups_groups_example1 ............   Passed    0.23 sec
 test 66
-        Start  66: test_python_groups_groups_example1
+        Start  66: test_python_layout_example1_L3
 
-66: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/groups/groups_example1.py"
+66: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/layout/example1-L3.py"
 66: Environment variables: 
 66:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 66: Test timeout computed to be: 3000
- 66/175 Test  #66: test_python_groups_groups_example1 ............   Passed    0.23 sec
+ 66/174 Test  #66: test_python_layout_example1_L3 ................   Passed    0.25 sec
 test 67
-        Start  67: test_python_layout_example1_L3
+        Start  67: test_python_layout_example1
 
-67: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/layout/example1-L3.py"
+67: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/layout/example1.py"
 67: Environment variables: 
 67:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 67: Test timeout computed to be: 3000
- 67/175 Test  #67: test_python_layout_example1_L3 ................   Passed    0.23 sec
+ 67/174 Test  #67: test_python_layout_example1 ...................   Passed    0.25 sec
 test 68
-        Start  68: test_python_layout_example1
+        Start  68: test_python_multi_multi_example1
 
-68: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/layout/example1.py"
+68: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/multi/multi_example1.py"
 68: Environment variables: 
 68:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 68: Test timeout computed to be: 3000
- 68/175 Test  #68: test_python_layout_example1 ...................   Passed    0.27 sec
+ 68/174 Test  #68: test_python_multi_multi_example1 ..............   Passed    0.23 sec
 test 69
-        Start  69: test_python_multi_multi_example1
+        Start  69: test_python_multi_multi_example2
 
-69: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/multi/multi_example1.py"
+69: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/multi/multi_example2.py"
 69: Environment variables: 
 69:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 69: Test timeout computed to be: 3000
- 69/175 Test  #69: test_python_multi_multi_example1 ..............   Passed    0.31 sec
+ 69/174 Test  #69: test_python_multi_multi_example2 ..............   Passed    0.23 sec
 test 70
-        Start  70: test_python_multi_multi_example2
+        Start  70: test_python_multi_multi_example3
 
-70: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/multi/multi_example2.py"
+70: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/multi/multi_example3.py"
 70: Environment variables: 
 70:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 70: Test timeout computed to be: 3000
- 70/175 Test  #70: test_python_multi_multi_example2 ..............   Passed    0.23 sec
+ 70/174 Test  #70: test_python_multi_multi_example3 ..............   Passed    0.23 sec
 test 71
-        Start  71: test_python_multi_multi_example3
+        Start  71: test_python_multi_printMulti
 
-71: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/multi/multi_example3.py"
+71: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/multi/printMulti.py"
 71: Environment variables: 
 71:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 71: Test timeout computed to be: 3000
- 71/175 Test  #71: test_python_multi_multi_example3 ..............   Passed    0.23 sec
+71: usage: printMulti sbml-file
+ 71/174 Test  #71: test_python_multi_printMulti ..................   Passed    0.22 sec
 test 72
-        Start  72: test_python_multi_printMulti
+        Start  72: test_python_qual_qual_example1
 
-72: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/multi/printMulti.py"
+72: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/qual/qual_example1.py"
 72: Environment variables: 
 72:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
 72: Test timeout computed to be: 3000
-72: usage: printMulti sbml-file
- 72/175 Test  #72: test_python_multi_printMulti ..................   Passed    0.22 sec
+ 72/174 Test  #72: test_python_qual_qual_example1 ................   Passed    0.23 sec
 test 73
-        Start  73: test_python_qual_qual_example1
+        Start  73: test_c_addCVTerms
 
-73: Test command: C:\python32\Python27\python.exe "C:/Development/libsbml/examples/python/qual/qual_example1.py"
-73: Environment variables: 
-73:  PYTHONPATH=C:/Development/libsbml-32/src/bindings/python;C:/Development/libsbml-32/src/bindings/python/Release;
+73: Test command: C:\Development\libsbml-32\examples\c\Release\addCVTerms.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addCVTerms.out.xml"
 73: Test timeout computed to be: 3000
- 73/175 Test  #73: test_python_qual_qual_example1 ................   Passed    0.30 sec
+ 73/174 Test  #73: test_c_addCVTerms .............................   Passed    0.03 sec
 test 74
-        Start  74: test_c_addCVTerms
+        Start  74: test_c_addingEvidenceCodes_1
 
-74: Test command: C:\Development\libsbml-32\examples\c\Release\addCVTerms.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addCVTerms.out.xml"
+74: Test command: C:\Development\libsbml-32\examples\c\Release\addingEvidenceCodes_1.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_1.out.xml"
 74: Test timeout computed to be: 3000
- 74/175 Test  #74: test_c_addCVTerms .............................   Passed    0.11 sec
+ 74/174 Test  #74: test_c_addingEvidenceCodes_1 ..................   Passed    0.02 sec
 test 75
-        Start  75: test_c_addingEvidenceCodes_1
+        Start  75: test_c_addingEvidenceCodes_2
 
-75: Test command: C:\Development\libsbml-32\examples\c\Release\addingEvidenceCodes_1.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_1.out.xml"
+75: Test command: C:\Development\libsbml-32\examples\c\Release\addingEvidenceCodes_2.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_2.out.xml"
 75: Test timeout computed to be: 3000
- 75/175 Test  #75: test_c_addingEvidenceCodes_1 ..................   Passed    0.03 sec
+ 75/174 Test  #75: test_c_addingEvidenceCodes_2 ..................   Passed    0.05 sec
 test 76
-        Start  76: test_c_addingEvidenceCodes_2
+        Start  76: test_c_addModelHistory
 
-76: Test command: C:\Development\libsbml-32\examples\c\Release\addingEvidenceCodes_2.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_2.out.xml"
+76: Test command: C:\Development\libsbml-32\examples\c\Release\addModelHistory.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addModelHistory.out.xml"
 76: Test timeout computed to be: 3000
- 76/175 Test  #76: test_c_addingEvidenceCodes_2 ..................   Passed    0.02 sec
+76: Status for addCreator: succeeded
+76: Set created date:      succeeded
+76: Set modified date:     succeeded
+76: Set model history:     unknown
+ 76/174 Test  #76: test_c_addModelHistory ........................   Passed    0.03 sec
 test 77
-        Start  77: test_c_addModelHistory
+        Start  77: test_c_appendAnnotation
 
-77: Test command: C:\Development\libsbml-32\examples\c\Release\addModelHistory.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addModelHistory.out.xml"
+77: Test command: C:\Development\libsbml-32\examples\c\Release\appendAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "appendAnnotation.out.xml"
 77: Test timeout computed to be: 3000
-77: Status for addCreator: succeeded
-77: Set created date:      succeeded
-77: Set modified date:     succeeded
-77: Set model history:     unknown
- 77/175 Test  #77: test_c_addModelHistory ........................   Passed    0.02 sec
+ 77/174 Test  #77: test_c_appendAnnotation .......................   Passed    0.03 sec
 test 78
-        Start  78: test_c_appendAnnotation
+        Start  78: test_c_convertSBML
 
-78: Test command: C:\Development\libsbml-32\examples\c\Release\appendAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "appendAnnotation.out.xml"
+78: Test command: C:\Development\libsbml-32\examples\c\Release\convertSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "convertSBML.out.xml"
 78: Test timeout computed to be: 3000
- 78/175 Test  #78: test_c_appendAnnotation .......................   Passed    0.02 sec
+78: Attempting to convert model to SBML Level 3 Version 2.
+78: Conversion completed.
+ 78/174 Test  #78: test_c_convertSBML ............................   Passed    0.03 sec
 test 79
-        Start  79: test_c_convertSBML
+        Start  79: test_c_createExampleSBML
 
-79: Test command: C:\Development\libsbml-32\examples\c\Release\convertSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "convertSBML.out.xml"
+79: Test command: C:\Development\libsbml-32\examples\c\Release\createExampleSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "createExampleSBML.out.xml"
 79: Test timeout computed to be: 3000
-79: Attempting to convert model to SBML Level 3 Version 2.
-79: Conversion completed.
- 79/175 Test  #79: test_c_convertSBML ............................   Passed    0.12 sec
+79: Wrote file "enzymaticreaction.xml"
+79: Wrote file "units.xml"
+79: line 1: (99505 [Warning]) In situations where a mathematical expression contains literal numbers or parameters whose units have not been declared, it is not possible to verify accurately the consistency of the units in the expression. 
+79:  The units of the <kineticLaw> <math> expression 'f(S1) * compartmentOne / t' cannot be fully checked. Unit consistency reported as either no errors or further unit errors related to this object may not be accurate.
+79: 
+79: Notice: encountered 1 validation warning in model 'functionExample'.
+79: Wrote file "functiondef.xml"
+ 79/174 Test  #79: test_c_createExampleSBML ......................   Passed    0.08 sec
 test 80
-        Start  80: test_c_createExampleSBML
+        Start  80: test_c_drawMath
 
-80: Test command: C:\Development\libsbml-32\examples\c\Release\createExampleSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "createExampleSBML.out.xml"
+80: Test command: C:\Development\libsbml-32\examples\c\Release\drawMath.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "drawMath.out.xml"
 80: Test timeout computed to be: 3000
-80: Wrote file "enzymaticreaction.xml"
-80: Wrote file "units.xml"
-80: line 1: (99505 [Warning]) In situations where a mathematical expression contains literal numbers or parameters whose units have not been declared, it is not possible to verify accurately the consistency of the units in the expression. 
-80:  The units of the <kineticLaw> <math> expression 'f(S1) * compartmentOne / t' cannot be fully checked. Unit consistency reported as either no errors or further unit errors related to this object may not be accurate.
 80: 
-80: Notice: encountered 1 validation warning in model 'functionExample'.
-80: Wrote file "functiondef.xml"
- 80/175 Test  #80: test_c_createExampleSBML ......................   Passed    0.03 sec
+80: 
+ 80/174 Test  #80: test_c_drawMath ...............................   Passed    0.03 sec
 test 81
-        Start  81: test_c_drawMath
+        Start  81: test_c_echoSBML
 
-81: Test command: C:\Development\libsbml-32\examples\c\Release\drawMath.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "drawMath.out.xml"
+81: Test command: C:\Development\libsbml-32\examples\c\Release\echoSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "echoSBML.out.xml"
 81: Test timeout computed to be: 3000
-81: 
-81: 
- 81/175 Test  #81: test_c_drawMath ...............................   Passed    0.02 sec
+ 81/174 Test  #81: test_c_echoSBML ...............................   Passed    0.03 sec
 test 82
-        Start  82: test_c_echoSBML
+        Start  82: test_c_printAnnotation
 
-82: Test command: C:\Development\libsbml-32\examples\c\Release\echoSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "echoSBML.out.xml"
+82: Test command: C:\Development\libsbml-32\examples\c\Release\printAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 82: Test timeout computed to be: 3000
- 82/175 Test  #82: test_c_echoSBML ...............................   Passed    0.02 sec
+82: 
+82: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+82: 
+ 82/174 Test  #82: test_c_printAnnotation ........................   Passed    0.02 sec
 test 83
-        Start  83: test_c_printAnnotation
+        Start  83: test_c_printMath
 
-83: Test command: C:\Development\libsbml-32\examples\c\Release\printAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+83: Test command: C:\Development\libsbml-32\examples\c\Release\printMath.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 83: Test timeout computed to be: 3000
 83: 
-83: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+83: Reaction 1, formula: comp * (kon * E * S - koff * ES)
+83: Reaction 2, formula: comp * kcat * ES
 83: 
- 83/175 Test  #83: test_c_printAnnotation ........................   Passed    0.02 sec
+83: 
+ 83/174 Test  #83: test_c_printMath ..............................   Passed    0.02 sec
 test 84
-        Start  84: test_c_printMath
+        Start  84: test_c_printNotes
 
-84: Test command: C:\Development\libsbml-32\examples\c\Release\printMath.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+84: Test command: C:\Development\libsbml-32\examples\c\Release\printNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 84: Test timeout computed to be: 3000
 84: 
-84: Reaction 1, formula: comp * (kon * E * S - koff * ES)
-84: Reaction 2, formula: comp * kcat * ES
+84: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
 84: 
-84: 
- 84/175 Test  #84: test_c_printMath ..............................   Passed    0.02 sec
+ 84/174 Test  #84: test_c_printNotes .............................   Passed    0.03 sec
 test 85
-        Start  85: test_c_printNotes
+        Start  85: test_c_printRegisteredPackages
 
-85: Test command: C:\Development\libsbml-32\examples\c\Release\printNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+85: Test command: C:\Development\libsbml-32\examples\c\Release\printRegisteredPackages.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 85: Test timeout computed to be: 3000
+85: This version of LibSBML: 5.17.2 includes: 
+85: 	comp
+85: 	fbc
+85: 	groups
+85: 	layout
+85: 	render
+85: 	l3v2extendedmath
+85: 	multi
+85: 	qual
 85: 
-85: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-85: 
- 85/175 Test  #85: test_c_printNotes .............................   Passed    0.05 sec
+ 85/174 Test  #85: test_c_printRegisteredPackages ................   Passed    0.02 sec
 test 86
-        Start  86: test_c_printRegisteredPackages
+        Start  86: test_c_printSBML
 
-86: Test command: C:\Development\libsbml-32\examples\c\Release\printRegisteredPackages.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+86: Test command: C:\Development\libsbml-32\examples\c\Release\printSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 86: Test timeout computed to be: 3000
-86: This version of LibSBML: 5.17.2 includes: 
-86: 	comp
-86: 	fbc
-86: 	groups
-86: 	layout
-86: 	render
-86: 	l3v2extendedmath
-86: 	multi
-86: 	qual
 86: 
- 86/175 Test  #86: test_c_printRegisteredPackages ................   Passed    0.00 sec
+86: File: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml (Level 3, version 1)
+86:            model id: (empty)
+86: functionDefinitions: 0
+86:     unitDefinitions: 2
+86:    compartmentTypes: 0
+86:         specieTypes: 0
+86:        compartments: 1
+86:             species: 4
+86:          parameters: 0
+86:  initialAssignments: 0
+86:               rules: 0
+86:         constraints: 0
+86:           reactions: 2
+86:              events: 0
+86: 
+ 86/174 Test  #86: test_c_printSBML ..............................   Passed    0.03 sec
 test 87
-        Start  87: test_c_printSBML
+        Start  87: test_c_printSupported
 
-87: Test command: C:\Development\libsbml-32\examples\c\Release\printSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+87: Test command: C:\Development\libsbml-32\examples\c\Release\printSupported.exe
 87: Test timeout computed to be: 3000
+87: LibSBML: 5.17.2 supports: 
+87: 	SBML Level 1 Version: 1
+87: 	SBML Level 1 Version: 2
+87: 	SBML Level 2 Version: 1
+87: 	SBML Level 2 Version: 2
+87: 	SBML Level 2 Version: 3
+87: 	SBML Level 2 Version: 4
+87: 	SBML Level 2 Version: 5
+87: 	SBML Level 3 Version: 1
+87: 	SBML Level 3 Version: 2
 87: 
-87: File: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml (Level 3, version 1)
-87:            model id: (empty)
-87: functionDefinitions: 0
-87:     unitDefinitions: 2
-87:    compartmentTypes: 0
-87:         specieTypes: 0
-87:        compartments: 1
-87:             species: 4
-87:          parameters: 0
-87:  initialAssignments: 0
-87:               rules: 0
-87:         constraints: 0
-87:           reactions: 2
-87:              events: 0
+87: LibSBML is compiled against: 
+87: 	LibXML:      2.7.8
+87: 	Zlib:        1.2.3
+87: 	bzip2:       1.0.5, 10-Dec-2007
 87: 
- 87/175 Test  #87: test_c_printSBML ..............................   Passed    0.02 sec
+ 87/174 Test  #87: test_c_printSupported .........................   Passed    0.02 sec
 test 88
-        Start  88: test_c_printSupported
+        Start  88: test_c_printUnits
 
-88: Test command: C:\Development\libsbml-32\examples\c\Release\printSupported.exe
+88: Test command: C:\Development\libsbml-32\examples\c\Release\printUnits.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 88: Test timeout computed to be: 3000
-88: LibSBML: 5.17.2 supports: 
-88: 	SBML Level 1 Version: 1
-88: 	SBML Level 1 Version: 2
-88: 	SBML Level 2 Version: 1
-88: 	SBML Level 2 Version: 2
-88: 	SBML Level 2 Version: 3
-88: 	SBML Level 2 Version: 4
-88: 	SBML Level 2 Version: 5
-88: 	SBML Level 3 Version: 1
-88: 	SBML Level 3 Version: 2
-88: 
-88: LibSBML is compiled against: 
-88: 	LibXML:      2.7.8
-88: 	Zlib:        1.2.3
-88: 	bzip2:       1.0.5, 10-Dec-2007
-88: 
- 88/175 Test  #88: test_c_printSupported .........................   Passed    0.00 sec
+88: Species 0: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+88: Species 1: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+88: Species 2: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+88: Species 3: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+88: Compartment 0: litre (exponent = 1, multiplier = 1, scale = 0)
+88: Reaction 0: 
+88: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
+88:         undeclared units: no
+88: Reaction 1: 
+88: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
+88:         undeclared units: no
+ 88/174 Test  #88: test_c_printUnits .............................   Passed    0.03 sec
 test 89
-        Start  89: test_c_printUnits
+        Start  89: test_c_promoteParameters
 
-89: Test command: C:\Development\libsbml-32\examples\c\Release\printUnits.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+89: Test command: C:\Development\libsbml-32\examples\c\Release\promoteParameters.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "promoteParameters.out.xml"
 89: Test timeout computed to be: 3000
-89: Species 0: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-89: Species 1: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-89: Species 2: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-89: Species 3: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-89: Compartment 0: litre (exponent = 1, multiplier = 1, scale = 0)
-89: Reaction 0: 
-89: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
-89:         undeclared units: no
-89: Reaction 1: 
-89: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
-89:         undeclared units: no
- 89/175 Test  #89: test_c_printUnits .............................   Passed    0.02 sec
+ 89/174 Test  #89: test_c_promoteParameters ......................   Passed    0.03 sec
 test 90
-        Start  90: test_c_promoteParameters
+        Start  90: test_c_readSBML
 
-90: Test command: C:\Development\libsbml-32\examples\c\Release\promoteParameters.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "promoteParameters.out.xml"
+90: Test command: C:\Development\libsbml-32\examples\c\Release\readSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 90: Test timeout computed to be: 3000
- 90/175 Test  #90: test_c_promoteParameters ......................   Passed    0.02 sec
+90: 
+90:         filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+90:        file size: 4021
+90:   read time (ms): 0
+90:         error(s): 0
+90: 
+ 90/174 Test  #90: test_c_readSBML ...............................   Passed    0.02 sec
 test 91
-        Start  91: test_c_readSBML
+        Start  91: test_c_stripPackage
 
-91: Test command: C:\Development\libsbml-32\examples\c\Release\readSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+91: Test command: C:\Development\libsbml-32\examples\c\Release\stripPackage.exe "C:/Development/libsbml/examples/sample-models/fbc/fbc_example1.xml" "fbc" "stripPackage.out.xml"
 91: Test timeout computed to be: 3000
-91: 
-91:         filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-91:        file size: 4021
-91:   read time (ms): 0
-91:         error(s): 0
-91: 
- 91/175 Test  #91: test_c_readSBML ...............................   Passed    0.00 sec
+ 91/174 Test  #91: test_c_stripPackage ...........................   Passed    0.03 sec
 test 92
-        Start  92: test_c_stripPackage
+        Start  92: test_c_unsetAnnotation
 
-92: Test command: C:\Development\libsbml-32\examples\c\Release\stripPackage.exe "C:/Development/libsbml/examples/sample-models/fbc/fbc_example1.xml" "fbc" "stripPackage.out.xml"
+92: Test command: C:\Development\libsbml-32\examples\c\Release\unsetAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetAnnotation.out.xml"
 92: Test timeout computed to be: 3000
- 92/175 Test  #92: test_c_stripPackage ...........................   Passed    0.03 sec
+ 92/174 Test  #92: test_c_unsetAnnotation ........................   Passed    0.02 sec
 test 93
-        Start  93: test_c_unsetAnnotation
+        Start  93: test_c_unsetNotes
 
-93: Test command: C:\Development\libsbml-32\examples\c\Release\unsetAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetAnnotation.out.xml"
+93: Test command: C:\Development\libsbml-32\examples\c\Release\unsetNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetNotes.out.xml"
 93: Test timeout computed to be: 3000
- 93/175 Test  #93: test_c_unsetAnnotation ........................   Passed    0.06 sec
+ 93/174 Test  #93: test_c_unsetNotes .............................   Passed    0.03 sec
 test 94
-        Start  94: test_c_unsetNotes
+        Start  94: test_c_validateSBML
 
-94: Test command: C:\Development\libsbml-32\examples\c\Release\unsetNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetNotes.out.xml"
+94: Test command: C:\Development\libsbml-32\examples\c\Release\validateSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 94: Test timeout computed to be: 3000
- 94/175 Test  #94: test_c_unsetNotes .............................   Passed    0.02 sec
+94: 
+94:         filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+94:        file size: 4021
+94:   read time (ms): 16
+94:         error(s): 0
+94: 
+ 94/174 Test  #94: test_c_validateSBML ...........................   Passed    0.02 sec
 test 95
-        Start  95: test_c_validateSBML
+        Start  95: test_cxx_addCVTerms
 
-95: Test command: C:\Development\libsbml-32\examples\c\Release\validateSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+95: Test command: C:\Development\libsbml-32\examples\c++\Release\addCVTerms.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addCVTerms.out.xml"
 95: Test timeout computed to be: 3000
-95: 
-95:         filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-95:        file size: 4021
-95:   read time (ms): 16
-95:         error(s): 0
-95: 
- 95/175 Test  #95: test_c_validateSBML ...........................   Passed    0.03 sec
+ 95/174 Test  #95: test_cxx_addCVTerms ...........................   Passed    0.03 sec
 test 96
-        Start  96: test_cxx_addCVTerms
+        Start  96: test_cxx_addCustomValidator
 
-96: Test command: C:\Development\libsbml-32\examples\c++\Release\addCVTerms.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addCVTerms.out.xml"
+96: Test command: C:\Development\libsbml-32\examples\c++\Release\addCustomValidator.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 96: Test timeout computed to be: 3000
- 96/175 Test  #96: test_cxx_addCVTerms ...........................   Passed    0.02 sec
+ 96/174 Test  #96: test_cxx_addCustomValidator ...................   Passed    0.03 sec
 test 97
-        Start  97: test_cxx_addCustomValidator
+        Start  97: test_cxx_addingEvidenceCodes_1
 
-97: Test command: C:\Development\libsbml-32\examples\c++\Release\addCustomValidator.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+97: Test command: C:\Development\libsbml-32\examples\c++\Release\addingEvidenceCodes_1.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_1.out.xml"
 97: Test timeout computed to be: 3000
- 97/175 Test  #97: test_cxx_addCustomValidator ...................   Passed    0.09 sec
+ 97/174 Test  #97: test_cxx_addingEvidenceCodes_1 ................   Passed    0.03 sec
 test 98
-        Start  98: test_cxx_addingEvidenceCodes_1
+        Start  98: test_cxx_addingEvidenceCodes_2
 
-98: Test command: C:\Development\libsbml-32\examples\c++\Release\addingEvidenceCodes_1.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_1.out.xml"
+98: Test command: C:\Development\libsbml-32\examples\c++\Release\addingEvidenceCodes_2.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_2.out.xml"
 98: Test timeout computed to be: 3000
- 98/175 Test  #98: test_cxx_addingEvidenceCodes_1 ................   Passed    0.02 sec
+ 98/174 Test  #98: test_cxx_addingEvidenceCodes_2 ................   Passed    0.02 sec
 test 99
-        Start  99: test_cxx_addingEvidenceCodes_2
+        Start  99: test_cxx_addModelHistory
 
-99: Test command: C:\Development\libsbml-32\examples\c++\Release\addingEvidenceCodes_2.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_2.out.xml"
+99: Test command: C:\Development\libsbml-32\examples\c++\Release\addModelHistory.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addModelHistory.out.xml"
 99: Test timeout computed to be: 3000
- 99/175 Test  #99: test_cxx_addingEvidenceCodes_2 ................   Passed    0.02 sec
+99: Status for addCreator: succeeded
+99: Set created date:      succeeded
+99: Set modified date:     succeeded
+99: Set model history:     unknown
+ 99/174 Test  #99: test_cxx_addModelHistory ......................   Passed    0.02 sec
 test 100
-        Start 100: test_cxx_addModelHistory
+        Start 100: test_cxx_appendAnnotation
 
-100: Test command: C:\Development\libsbml-32\examples\c++\Release\addModelHistory.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addModelHistory.out.xml"
+100: Test command: C:\Development\libsbml-32\examples\c++\Release\appendAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "appendAnnotation.out.xml"
 100: Test timeout computed to be: 3000
-100: Status for addCreator: succeeded
-100: Set created date:      succeeded
-100: Set modified date:     succeeded
-100: Set model history:     unknown
-100/175 Test #100: test_cxx_addModelHistory ......................   Passed    0.02 sec
+100/174 Test #100: test_cxx_appendAnnotation .....................   Passed    0.03 sec
 test 101
-        Start 101: test_cxx_appendAnnotation
+        Start 101: test_cxx_callExternalValidator
 
-101: Test command: C:\Development\libsbml-32\examples\c++\Release\appendAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "appendAnnotation.out.xml"
+101: Test command: C:\Development\libsbml-32\examples\c++\Release\callExternalValidator.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "callExternalValidator.out.xml"
 101: Test timeout computed to be: 3000
-101/175 Test #101: test_cxx_appendAnnotation .....................   Passed    0.02 sec
+101/174 Test #101: test_cxx_callExternalValidator ................   Passed    0.03 sec
 test 102
-        Start 102: test_cxx_callExternalValidator
+        Start 102: test_cxx_convertSBML
 
-102: Test command: C:\Development\libsbml-32\examples\c++\Release\callExternalValidator.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "callExternalValidator.out.xml"
+102: Test command: C:\Development\libsbml-32\examples\c++\Release\convertSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "convertSBML.out.xml"
 102: Test timeout computed to be: 3000
-102/175 Test #102: test_cxx_callExternalValidator ................   Passed    0.02 sec
+102: Attempting to convert Level 3 Version 1 model to Level 3 Version 2.
+102: Conversion completed.
+102/174 Test #102: test_cxx_convertSBML ..........................   Passed    0.03 sec
 test 103
-        Start 103: test_cxx_convertSBML
+        Start 103: test_cxx_convertToL1V1
 
-103: Test command: C:\Development\libsbml-32\examples\c++\Release\convertSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "convertSBML.out.xml"
+103: Test command: C:\Development\libsbml-32\examples\c++\Release\convertToL1V1.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "convertToL1V1.out.xml"
 103: Test timeout computed to be: 3000
-103: Attempting to convert Level 3 Version 1 model to Level 3 Version 2.
 103: Conversion completed.
-103/175 Test #103: test_cxx_convertSBML ..........................   Passed    0.03 sec
+103/174 Test #103: test_cxx_convertToL1V1 ........................   Passed    0.03 sec
 test 104
-        Start 104: test_cxx_convertToL1V1
+        Start 104: test_cxx_createExampleSBML
 
-104: Test command: C:\Development\libsbml-32\examples\c++\Release\convertToL1V1.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "convertToL1V1.out.xml"
+104: Test command: C:\Development\libsbml-32\examples\c++\Release\createExampleSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "createExampleSBML.out.xml"
 104: Test timeout computed to be: 3000
-104: Conversion completed.
-104/175 Test #104: test_cxx_convertToL1V1 ........................   Passed    0.08 sec
+104: Wrote file "enzymaticreaction.xml"
+104: Wrote file "units.xml"
+104: 
+104: Notice: encountered 1 validation warning in model 'functionExample'.
+104: 
+104: line 1: (99505 [Warning]) In situations where a mathematical expression contains literal numbers or parameters whose units have not been declared, it is not possible to verify accurately the consistency of the units in the expression. 
+104:  The units of the <kineticLaw> <math> expression 'f(S1) * compartmentOne / t' cannot be fully checked. Unit consistency reported as either no errors or further unit errors related to this object may not be accurate.
+104: 
+104: Wrote file "functiondef.xml"
+104/174 Test #104: test_cxx_createExampleSBML ....................   Passed    0.03 sec
 test 105
-        Start 105: test_cxx_createExampleSBML
+        Start 105: test_cxx_echoSBML
 
-105: Test command: C:\Development\libsbml-32\examples\c++\Release\createExampleSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "createExampleSBML.out.xml"
+105: Test command: C:\Development\libsbml-32\examples\c++\Release\echoSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "echoSBML.out.xml"
 105: Test timeout computed to be: 3000
-105: Wrote file "enzymaticreaction.xml"
-105: Wrote file "units.xml"
-105: 
-105: Notice: encountered 1 validation warning in model 'functionExample'.
-105: 
-105: line 1: (99505 [Warning]) In situations where a mathematical expression contains literal numbers or parameters whose units have not been declared, it is not possible to verify accurately the consistency of the units in the expression. 
-105:  The units of the <kineticLaw> <math> expression 'f(S1) * compartmentOne / t' cannot be fully checked. Unit consistency reported as either no errors or further unit errors related to this object may not be accurate.
-105: 
-105: Wrote file "functiondef.xml"
-105/175 Test #105: test_cxx_createExampleSBML ....................   Passed    0.06 sec
+105/174 Test #105: test_cxx_echoSBML .............................   Passed    0.03 sec
 test 106
-        Start 106: test_cxx_echoSBML
+        Start 106: test_cxx_inferUnits
 
-106: Test command: C:\Development\libsbml-32\examples\c++\Release\echoSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "echoSBML.out.xml"
+106: Test command: C:\Development\libsbml-32\examples\c++\Release\inferUnits.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "inferUnits.out.xml"
 106: Test timeout computed to be: 3000
-106/175 Test #106: test_cxx_echoSBML .............................   Passed    0.03 sec
+106/174 Test #106: test_cxx_inferUnits ...........................   Passed    0.03 sec
 test 107
-        Start 107: test_cxx_inferUnits
+        Start 107: test_cxx_inlineFunctionDefintions
 
-107: Test command: C:\Development\libsbml-32\examples\c++\Release\inferUnits.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "inferUnits.out.xml"
+107: Test command: C:\Development\libsbml-32\examples\c++\Release\inlineFunctionDefintions.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "inlineFunctionDefintions.out.xml"
 107: Test timeout computed to be: 3000
-107/175 Test #107: test_cxx_inferUnits ...........................   Passed    0.05 sec
+107: Conversion completed.
+107/174 Test #107: test_cxx_inlineFunctionDefintions .............   Passed    0.03 sec
 test 108
-        Start 108: test_cxx_inlineFunctionDefintions
+        Start 108: test_cxx_convertReactions
 
-108: Test command: C:\Development\libsbml-32\examples\c++\Release\inlineFunctionDefintions.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "inlineFunctionDefintions.out.xml"
+108: Test command: C:\Development\libsbml-32\examples\c++\Release\convertReactions.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "convertReactions.out.xml"
 108: Test timeout computed to be: 3000
 108: Conversion completed.
-108/175 Test #108: test_cxx_inlineFunctionDefintions .............   Passed    0.02 sec
+108/174 Test #108: test_cxx_convertReactions .....................   Passed    0.03 sec
 test 109
-        Start 109: test_cxx_convertReactions
+        Start 109: test_cxx_getAllElementsWithNotes
 
-109: Test command: C:\Development\libsbml-32\examples\c++\Release\convertReactions.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "convertReactions.out.xml"
+109: Test command: C:\Development\libsbml-32\examples\c++\Release\getAllElementsWithNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 109: Test timeout computed to be: 3000
-109: Conversion completed.
-109/175 Test #109: test_cxx_convertReactions .....................   Passed    0.03 sec
+109: 
+109:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+109:       read time (ms): 0
+109:     searching ......:
+109:     search time (ms): 0
+109:  elements with notes: 0
+109/174 Test #109: test_cxx_getAllElementsWithNotes ..............   Passed    0.02 sec
 test 110
-        Start 110: test_cxx_getAllElementsWithNotes
+        Start 110: test_cxx_printAnnotation
 
-110: Test command: C:\Development\libsbml-32\examples\c++\Release\getAllElementsWithNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+110: Test command: C:\Development\libsbml-32\examples\c++\Release\printAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 110: Test timeout computed to be: 3000
 110: 
-110:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-110:       read time (ms): 15
-110:     searching ......:
-110:     search time (ms): 0
-110:  elements with notes: 0
-110/175 Test #110: test_cxx_getAllElementsWithNotes ..............   Passed    0.02 sec
+110: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+110: 
+110/174 Test #110: test_cxx_printAnnotation ......................   Passed    0.00 sec
 test 111
-        Start 111: test_cxx_printAnnotation
+        Start 111: test_cxx_printMath
 
-111: Test command: C:\Development\libsbml-32\examples\c++\Release\printAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+111: Test command: C:\Development\libsbml-32\examples\c++\Release\printMath.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 111: Test timeout computed to be: 3000
 111: 
-111: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+111: Reaction 1, formula: comp * (kon * E * S - koff * ES)
+111: Reaction 2, formula: comp * kcat * ES
 111: 
-111/175 Test #111: test_cxx_printAnnotation ......................   Passed    0.02 sec
+111: 
+111/174 Test #111: test_cxx_printMath ............................   Passed    0.02 sec
 test 112
-        Start 112: test_cxx_printMath
+        Start 112: test_cxx_printNotes
 
-112: Test command: C:\Development\libsbml-32\examples\c++\Release\printMath.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+112: Test command: C:\Development\libsbml-32\examples\c++\Release\printNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 112: Test timeout computed to be: 3000
 112: 
-112: Reaction 1, formula: comp * (kon * E * S - koff * ES)
-112: Reaction 2, formula: comp * kcat * ES
+112: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
 112: 
-112: 
-112/175 Test #112: test_cxx_printMath ............................   Passed    0.02 sec
+112/174 Test #112: test_cxx_printNotes ...........................   Passed    0.02 sec
 test 113
-        Start 113: test_cxx_printNotes
+        Start 113: test_cxx_printSBML
 
-113: Test command: C:\Development\libsbml-32\examples\c++\Release\printNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+113: Test command: C:\Development\libsbml-32\examples\c++\Release\printSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 113: Test timeout computed to be: 3000
 113: 
-113: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+113: File: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml (Level 3, version 1)
+113:                  id: (empty)
+113: functionDefinitions: 0
+113:     unitDefinitions: 2
+113:    compartmentTypes: 0
+113:         specieTypes: 0
+113:        compartments: 1
+113:             species: 4
+113:          parameters: 0
+113:  initialAssignments: 0
+113:               rules: 0
+113:         constraints: 0
+113:           reactions: 2
+113:              events: 0
 113: 
-113/175 Test #113: test_cxx_printNotes ...........................   Passed    0.05 sec
+113/174 Test #113: test_cxx_printSBML ............................   Passed    0.03 sec
 test 114
-        Start 114: test_cxx_printSBML
+        Start 114: test_cxx_printRegisteredPackages
 
-114: Test command: C:\Development\libsbml-32\examples\c++\Release\printSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+114: Test command: C:\Development\libsbml-32\examples\c++\Release\printRegisteredPackages.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "printRegisteredPackages.out.xml"
 114: Test timeout computed to be: 3000
+114: This version of LibSBML: 5.17.2 includes: 
+114: 	comp
+114: 	fbc
+114: 	groups
+114: 	layout
+114: 	render
+114: 	l3v2extendedmath
+114: 	multi
+114: 	qual
 114: 
-114: File: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml (Level 3, version 1)
-114:                  id: (empty)
-114: functionDefinitions: 0
-114:     unitDefinitions: 2
-114:    compartmentTypes: 0
-114:         specieTypes: 0
-114:        compartments: 1
-114:             species: 4
-114:          parameters: 0
-114:  initialAssignments: 0
-114:               rules: 0
-114:         constraints: 0
-114:           reactions: 2
-114:              events: 0
-114: 
-114/175 Test #114: test_cxx_printSBML ............................   Passed    0.02 sec
+114/174 Test #114: test_cxx_printRegisteredPackages ..............   Passed    0.02 sec
 test 115
-        Start 115: test_cxx_printRegisteredPackages
+        Start 115: test_cxx_printSupported
 
-115: Test command: C:\Development\libsbml-32\examples\c++\Release\printRegisteredPackages.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "printRegisteredPackages.out.xml"
+115: Test command: C:\Development\libsbml-32\examples\c++\Release\printSupported.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "printSupported.out.xml"
 115: Test timeout computed to be: 3000
-115: This version of LibSBML: 5.17.2 includes: 
-115: 	comp
-115: 	fbc
-115: 	groups
-115: 	layout
-115: 	render
-115: 	l3v2extendedmath
-115: 	multi
-115: 	qual
+115: LibSBML: 5.17.2 supports: 
+115: 	SBML Level 1 Version: 1
+115: 	SBML Level 1 Version: 2
+115: 	SBML Level 2 Version: 1
+115: 	SBML Level 2 Version: 2
+115: 	SBML Level 2 Version: 3
+115: 	SBML Level 2 Version: 4
+115: 	SBML Level 2 Version: 5
+115: 	SBML Level 3 Version: 1
+115: 	SBML Level 3 Version: 2
 115: 
-115/175 Test #115: test_cxx_printRegisteredPackages ..............   Passed    0.02 sec
+115: LibSBML is compiled against: 
+115: 	LibXML:     2.7.8
+115: 	Zlib:       1.2.3
+115: 	bzip2:      1.0.5, 10-Dec-2007
+115: 
+115/174 Test #115: test_cxx_printSupported .......................   Passed    0.02 sec
 test 116
-        Start 116: test_cxx_printSupported
+        Start 116: test_cxx_printUnits
 
-116: Test command: C:\Development\libsbml-32\examples\c++\Release\printSupported.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "printSupported.out.xml"
+116: Test command: C:\Development\libsbml-32\examples\c++\Release\printUnits.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 116: Test timeout computed to be: 3000
-116: LibSBML: 5.17.2 supports: 
-116: 	SBML Level 1 Version: 1
-116: 	SBML Level 1 Version: 2
-116: 	SBML Level 2 Version: 1
-116: 	SBML Level 2 Version: 2
-116: 	SBML Level 2 Version: 3
-116: 	SBML Level 2 Version: 4
-116: 	SBML Level 2 Version: 5
-116: 	SBML Level 3 Version: 1
-116: 	SBML Level 3 Version: 2
-116: 
-116: LibSBML is compiled against: 
-116: 	LibXML:     2.7.8
-116: 	Zlib:       1.2.3
-116: 	bzip2:      1.0.5, 10-Dec-2007
-116: 
-116/175 Test #116: test_cxx_printSupported .......................   Passed    0.08 sec
+116: Species 0: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+116: Species 1: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+116: Species 2: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+116: Species 3: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+116: Compartment 0: litre (exponent = 1, multiplier = 1, scale = 0)
+116: Reaction 0: 
+116: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
+116:         undeclared units: no
+116: Reaction 1: 
+116: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
+116:         undeclared units: no
+116/174 Test #116: test_cxx_printUnits ...........................   Passed    0.02 sec
 test 117
-        Start 117: test_cxx_printUnits
+        Start 117: test_cxx_promoteParameters
 
-117: Test command: C:\Development\libsbml-32\examples\c++\Release\printUnits.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+117: Test command: C:\Development\libsbml-32\examples\c++\Release\promoteParameters.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "promoteParameters.out.xml"
 117: Test timeout computed to be: 3000
-117: Species 0: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-117: Species 1: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-117: Species 2: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-117: Species 3: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-117: Compartment 0: litre (exponent = 1, multiplier = 1, scale = 0)
-117: Reaction 0: 
-117: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
-117:         undeclared units: no
-117: Reaction 1: 
-117: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
-117:         undeclared units: no
-117/175 Test #117: test_cxx_printUnits ...........................   Passed    0.03 sec
+117/174 Test #117: test_cxx_promoteParameters ....................   Passed    0.02 sec
 test 118
-        Start 118: test_cxx_promoteParameters
+        Start 118: test_cxx_readSBML
 
-118: Test command: C:\Development\libsbml-32\examples\c++\Release\promoteParameters.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "promoteParameters.out.xml"
+118: Test command: C:\Development\libsbml-32\examples\c++\Release\readSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 118: Test timeout computed to be: 3000
-118/175 Test #118: test_cxx_promoteParameters ....................   Passed    0.02 sec
+118: 
+118:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+118:            file size: 4021
+118:       read time (ms): 0
+118:  validation error(s): 0
+118: 
+118/174 Test #118: test_cxx_readSBML .............................   Passed    0.00 sec
 test 119
-        Start 119: test_cxx_readSBML
+        Start 119: test_cxx_renameSId
 
-119: Test command: C:\Development\libsbml-32\examples\c++\Release\readSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+119: Test command: C:\Development\libsbml-32\examples\c++\Release\renameSId.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "veq" "veqnew" "renameSId.out.xml"
 119: Test timeout computed to be: 3000
 119: 
 119:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
 119:            file size: 4021
-119:       read time (ms): 0
-119:  validation error(s): 0
+119:       read time (ms): 16
+119:             error(s): 0
 119: 
-119/175 Test #119: test_cxx_readSBML .............................   Passed    0.02 sec
+119/174 Test #119: test_cxx_renameSId ............................   Passed    0.02 sec
 test 120
-        Start 120: test_cxx_renameSId
+        Start 120: test_cxx_setIdFromNames
 
-120: Test command: C:\Development\libsbml-32\examples\c++\Release\renameSId.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "veq" "veqnew" "renameSId.out.xml"
+120: Test command: C:\Development\libsbml-32\examples\c++\Release\setIdFromNames.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "setIdFromNames.out.xml"
 120: Test timeout computed to be: 3000
 120: 
 120:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-120:            file size: 4021
 120:       read time (ms): 0
-120:             error(s): 0
+120:     rename time (ms): 0
+120:      write time (ms): 0
 120: 
-120/175 Test #120: test_cxx_renameSId ............................   Passed    0.03 sec
+120/174 Test #120: test_cxx_setIdFromNames .......................   Passed    0.02 sec
 test 121
-        Start 121: test_cxx_setIdFromNames
+        Start 121: test_cxx_setNamesFromIds
 
-121: Test command: C:\Development\libsbml-32\examples\c++\Release\setIdFromNames.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "setIdFromNames.out.xml"
+121: Test command: C:\Development\libsbml-32\examples\c++\Release\setNamesFromIds.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "setNamesFromIds.out.xml"
 121: Test timeout computed to be: 3000
 121: 
 121:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-121:       read time (ms): 15
+121:       read time (ms): 0
 121:     rename time (ms): 0
 121:      write time (ms): 0
 121: 
-121/175 Test #121: test_cxx_setIdFromNames .......................   Passed    0.02 sec
+121/174 Test #121: test_cxx_setNamesFromIds ......................   Passed    0.02 sec
 test 122
-        Start 122: test_cxx_setNamesFromIds
+        Start 122: test_cxx_stripPackage
 
-122: Test command: C:\Development\libsbml-32\examples\c++\Release\setNamesFromIds.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "setNamesFromIds.out.xml"
+122: Test command: C:\Development\libsbml-32\examples\c++\Release\stripPackage.exe "C:/Development/libsbml/examples/sample-models/fbc/fbc_example1.xml" "fbc" "stripPackage.out.xml"
 122: Test timeout computed to be: 3000
-122: 
-122:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-122:       read time (ms): 0
-122:     rename time (ms): 0
-122:      write time (ms): 0
-122: 
-122/175 Test #122: test_cxx_setNamesFromIds ......................   Passed    0.02 sec
+122/174 Test #122: test_cxx_stripPackage .........................   Passed    0.02 sec
 test 123
-        Start 123: test_cxx_stripPackage
+        Start 123: test_cxx_unsetAnnotation
 
-123: Test command: C:\Development\libsbml-32\examples\c++\Release\stripPackage.exe "C:/Development/libsbml/examples/sample-models/fbc/fbc_example1.xml" "fbc" "stripPackage.out.xml"
+123: Test command: C:\Development\libsbml-32\examples\c++\Release\unsetAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetAnnotation.out.xml"
 123: Test timeout computed to be: 3000
-123/175 Test #123: test_cxx_stripPackage .........................   Passed    0.06 sec
+123/174 Test #123: test_cxx_unsetAnnotation ......................   Passed    0.03 sec
 test 124
-        Start 124: test_cxx_unsetAnnotation
+        Start 124: test_cxx_unsetNotes
 
-124: Test command: C:\Development\libsbml-32\examples\c++\Release\unsetAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetAnnotation.out.xml"
+124: Test command: C:\Development\libsbml-32\examples\c++\Release\unsetNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetNotes.out.xml"
 124: Test timeout computed to be: 3000
-124/175 Test #124: test_cxx_unsetAnnotation ......................   Passed    0.02 sec
+124/174 Test #124: test_cxx_unsetNotes ...........................   Passed    0.02 sec
 test 125
-        Start 125: test_cxx_unsetNotes
+        Start 125: test_cxx_validateSBML
 
-125: Test command: C:\Development\libsbml-32\examples\c++\Release\unsetNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetNotes.out.xml"
+125: Test command: C:\Development\libsbml-32\examples\c++\Release\validateSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 125: Test timeout computed to be: 3000
-125/175 Test #125: test_cxx_unsetNotes ...........................   Passed    0.05 sec
+125:                  filename : C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+125:          file size (byte) : 4021
+125:            read time (ms) : 0
+125:         c-check time (ms) : 16
+125:       validation error(s) : 0
+125:     (consistency error(s)): 0
+125:     validation warning(s) : 0
+125:   (consistency warning(s)): 0
+125: ---------------------------------------------------------------------------
+125: Validated 1 files, 1 valid files, 0 invalid files
+125/174 Test #125: test_cxx_validateSBML .........................   Passed    0.03 sec
 test 126
-        Start 126: test_cxx_validateSBML
+        Start 126: test_cs_addCVTerms
 
-126: Test command: C:\Development\libsbml-32\examples\c++\Release\validateSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+126: Test command: C:\Development\libsbml-32\examples\csharp\addCVTerms.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addCVTerms.out.xml"
+126: Environment variables: 
+126:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
+126:  C:/Development/libsbml-32/src/bindings/csharp/Release
+126:  c:\Program Files\CMake\bin
+126:  C:\Program Files\CMake\bin
+126:  C:\Program Files\CMake\bin
+126:  C:\Windows\system32
+126:  C:\Windows
+126:  C:\Windows\System32\Wbem
+126:  C:\Windows\System32\WindowsPowerShell\v1.0
+126:  C:\ProgramData\chocolatey\bin
+126:  C:\Program Files\TortoiseHg
+126:  C:\Windows\system32\config\systemprofile\.dnx\bin
+126:  C:\Program Files\Microsoft DNX\Dnvm
+126:  C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit
+126:  C:\Program Files\Microsoft SQL Server\130\Tools\Binn
+126:  C:\Program Files (x86)\Skype\Phone
+126:  C:\Program Files\MATLAB\R2018a\runtime\win64
+126:  C:\Program Files\MATLAB\R2018a\bin
+126:  C:\Program Files\MATLAB\R2017a\runtime\win64
+126:  C:\Program Files\MATLAB\R2017a\bin
+126:  C:\Program Files\TortoiseGit\bin
+126:  C:\Program Files\TortoiseSVN\bin
+126:  C:\Program Files (x86)\AOMEI Backupper
+126:  C:\ProgramData\chocolatey\bin
+126:  C:\Program Files\Git\cmd
+126:  c:\Development\libsbml\dev\packages\create_archives\bin\
 126: Test timeout computed to be: 3000
-126:                  filename : C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-126:          file size (byte) : 4021
-126:            read time (ms) : 0
-126:         c-check time (ms) : 0
-126:       validation error(s) : 0
-126:     (consistency error(s)): 0
-126:     validation warning(s) : 0
-126:   (consistency warning(s)): 0
-126: ---------------------------------------------------------------------------
-126: Validated 1 files, 1 valid files, 0 invalid files
-126/175 Test #126: test_cxx_validateSBML .........................   Passed    0.02 sec
+126/174 Test #126: test_cs_addCVTerms ............................   Passed    0.08 sec
 test 127
-        Start 127: test_cs_addCVTerms
+        Start 127: test_cs_addingEvidenceCodes_1
 
-127: Test command: C:\Development\libsbml-32\examples\csharp\addCVTerms.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addCVTerms.out.xml"
+127: Test command: C:\Development\libsbml-32\examples\csharp\addingEvidenceCodes_1.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_1.out.xml"
 127: Environment variables: 
 127:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 127:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -1823,11 +1850,11 @@ test 127
 127:  C:\Program Files\Git\cmd
 127:  c:\Development\libsbml\dev\packages\create_archives\bin\
 127: Test timeout computed to be: 3000
-127/175 Test #127: test_cs_addCVTerms ............................   Passed    0.09 sec
+127/174 Test #127: test_cs_addingEvidenceCodes_1 .................   Passed    0.09 sec
 test 128
-        Start 128: test_cs_addingEvidenceCodes_1
+        Start 128: test_cs_addingEvidenceCodes_2
 
-128: Test command: C:\Development\libsbml-32\examples\csharp\addingEvidenceCodes_1.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_1.out.xml"
+128: Test command: C:\Development\libsbml-32\examples\csharp\addingEvidenceCodes_2.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_2.out.xml"
 128: Environment variables: 
 128:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 128:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -1856,11 +1883,11 @@ test 128
 128:  C:\Program Files\Git\cmd
 128:  c:\Development\libsbml\dev\packages\create_archives\bin\
 128: Test timeout computed to be: 3000
-128/175 Test #128: test_cs_addingEvidenceCodes_1 .................   Passed    0.06 sec
+128/174 Test #128: test_cs_addingEvidenceCodes_2 .................   Passed    0.08 sec
 test 129
-        Start 129: test_cs_addingEvidenceCodes_2
+        Start 129: test_cs_addModelHistory
 
-129: Test command: C:\Development\libsbml-32\examples\csharp\addingEvidenceCodes_2.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_2.out.xml"
+129: Test command: C:\Development\libsbml-32\examples\csharp\addModelHistory.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addModelHistory.out.xml"
 129: Environment variables: 
 129:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 129:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -1889,11 +1916,15 @@ test 129
 129:  C:\Program Files\Git\cmd
 129:  c:\Development\libsbml\dev\packages\create_archives\bin\
 129: Test timeout computed to be: 3000
-129/175 Test #129: test_cs_addingEvidenceCodes_2 .................   Passed    0.14 sec
+129: Status for addCreator: succeeded
+129: Set created date:      succeeded
+129: Set modified date:     succeeded
+129: Set model history:     unknown
+129/174 Test #129: test_cs_addModelHistory .......................   Passed    0.08 sec
 test 130
-        Start 130: test_cs_addModelHistory
+        Start 130: test_cs_appendAnnotation
 
-130: Test command: C:\Development\libsbml-32\examples\csharp\addModelHistory.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addModelHistory.out.xml"
+130: Test command: C:\Development\libsbml-32\examples\csharp\appendAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "appendAnnotation.out.xml"
 130: Environment variables: 
 130:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 130:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -1922,15 +1953,11 @@ test 130
 130:  C:\Program Files\Git\cmd
 130:  c:\Development\libsbml\dev\packages\create_archives\bin\
 130: Test timeout computed to be: 3000
-130: Status for addCreator: succeeded
-130: Set created date:      succeeded
-130: Set modified date:     succeeded
-130: Set model history:     unknown
-130/175 Test #130: test_cs_addModelHistory .......................   Passed    0.06 sec
+130/174 Test #130: test_cs_appendAnnotation ......................   Passed    0.08 sec
 test 131
-        Start 131: test_cs_appendAnnotation
+        Start 131: test_cs_convertSBML
 
-131: Test command: C:\Development\libsbml-32\examples\csharp\appendAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "appendAnnotation.out.xml"
+131: Test command: C:\Development\libsbml-32\examples\csharp\convertSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "convertSBML.out.xml"
 131: Environment variables: 
 131:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 131:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -1959,11 +1986,13 @@ test 131
 131:  C:\Program Files\Git\cmd
 131:  c:\Development\libsbml\dev\packages\create_archives\bin\
 131: Test timeout computed to be: 3000
-131/175 Test #131: test_cs_appendAnnotation ......................   Passed    0.12 sec
+131: Attempting to convert Level 3 Version 1 model to Level 3 Version 2.
+131: Conversion completed.
+131/174 Test #131: test_cs_convertSBML ...........................   Passed    0.09 sec
 test 132
-        Start 132: test_cs_convertSBML
+        Start 132: test_cs_createExampleSBML
 
-132: Test command: C:\Development\libsbml-32\examples\csharp\convertSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "convertSBML.out.xml"
+132: Test command: C:\Development\libsbml-32\examples\csharp\createExampleSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "createExampleSBML.out.xml"
 132: Environment variables: 
 132:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 132:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -1992,13 +2021,22 @@ test 132
 132:  C:\Program Files\Git\cmd
 132:  c:\Development\libsbml\dev\packages\create_archives\bin\
 132: Test timeout computed to be: 3000
-132: Attempting to convert Level 3 Version 1 model to Level 3 Version 2.
-132: Conversion completed.
-132/175 Test #132: test_cs_convertSBML ...........................   Passed    0.06 sec
+132: Wrote file "enzymaticreaction.xml"
+132: Wrote file "units.xml"
+132: 
+132: 
+132: Notice: encountered 1 validation warning in model 'functionExample'.
+132: 
+132: line 1: (99505 [Warning]) In situations where a mathematical expression contains literal numbers or parameters whose units have not been declared, it is not possible to verify accurately the consistency of the units in the expression. 
+132:  The units of the <kineticLaw> <math> expression 'f(S1) * compartmentOne / t' cannot be fully checked. Unit consistency reported as either no errors or further unit errors related to this object may not be accurate.
+132: 
+132: 
+132: Wrote file "functiondef.xml"
+132/174 Test #132: test_cs_createExampleSBML .....................   Passed    0.14 sec
 test 133
-        Start 133: test_cs_createExampleSBML
+        Start 133: test_cs_echoSBML
 
-133: Test command: C:\Development\libsbml-32\examples\csharp\createExampleSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "createExampleSBML.out.xml"
+133: Test command: C:\Development\libsbml-32\examples\csharp\echoSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "echoSBML.out.xml"
 133: Environment variables: 
 133:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 133:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2027,22 +2065,12 @@ test 133
 133:  C:\Program Files\Git\cmd
 133:  c:\Development\libsbml\dev\packages\create_archives\bin\
 133: Test timeout computed to be: 3000
-133: Wrote file "enzymaticreaction.xml"
-133: Wrote file "units.xml"
-133: 
-133: 
-133: Notice: encountered 1 validation warning in model 'functionExample'.
-133: 
-133: line 1: (99505 [Warning]) In situations where a mathematical expression contains literal numbers or parameters whose units have not been declared, it is not possible to verify accurately the consistency of the units in the expression. 
-133:  The units of the <kineticLaw> <math> expression 'f(S1) * compartmentOne / t' cannot be fully checked. Unit consistency reported as either no errors or further unit errors related to this object may not be accurate.
-133: 
-133: 
-133: Wrote file "functiondef.xml"
-133/175 Test #133: test_cs_createExampleSBML .....................   Passed    0.12 sec
+133: [OK] Echoed C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml to echoSBML.out.xml
+133/174 Test #133: test_cs_echoSBML ..............................   Passed    0.08 sec
 test 134
-        Start 134: test_cs_echoSBML
+        Start 134: test_cs_GetAllElementsWithNotes
 
-134: Test command: C:\Development\libsbml-32\examples\csharp\echoSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "echoSBML.out.xml"
+134: Test command: C:\Development\libsbml-32\examples\csharp\GetAllElementsWithNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 134: Environment variables: 
 134:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 134:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2071,12 +2099,19 @@ test 134
 134:  C:\Program Files\Git\cmd
 134:  c:\Development\libsbml\dev\packages\create_archives\bin\
 134: Test timeout computed to be: 3000
-134: [OK] Echoed C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml to echoSBML.out.xml
-134/175 Test #134: test_cs_echoSBML ..............................   Passed    0.06 sec
+134: 
+134:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+134:       read time (ms): 15.6
+134:     searching ......:
+134:     search time (ms): 0
+134: 
+134:  elements with notes: 0
+134: 
+134/174 Test #134: test_cs_GetAllElementsWithNotes ...............   Passed    0.08 sec
 test 135
-        Start 135: test_cs_GetAllElementsWithNotes
+        Start 135: test_cs_printAnnotation
 
-135: Test command: C:\Development\libsbml-32\examples\csharp\GetAllElementsWithNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+135: Test command: C:\Development\libsbml-32\examples\csharp\printAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 135: Environment variables: 
 135:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 135:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2106,18 +2141,13 @@ test 135
 135:  c:\Development\libsbml\dev\packages\create_archives\bin\
 135: Test timeout computed to be: 3000
 135: 
-135:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-135:       read time (ms): 15.6001
-135:     searching ......:
-135:     search time (ms): 0
+135: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
 135: 
-135:  elements with notes: 0
-135: 
-135/175 Test #135: test_cs_GetAllElementsWithNotes ...............   Passed    0.06 sec
+135/174 Test #135: test_cs_printAnnotation .......................   Passed    0.09 sec
 test 136
-        Start 136: test_cs_printAnnotation
+        Start 136: test_cs_printMath
 
-136: Test command: C:\Development\libsbml-32\examples\csharp\printAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+136: Test command: C:\Development\libsbml-32\examples\csharp\printMath.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 136: Environment variables: 
 136:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 136:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2147,13 +2177,15 @@ test 136
 136:  c:\Development\libsbml\dev\packages\create_archives\bin\
 136: Test timeout computed to be: 3000
 136: 
-136: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+136: Reaction 1, formula: comp * (kon * E * S - koff * ES)
+136: Reaction 2, formula: comp * kcat * ES
 136: 
-136/175 Test #136: test_cs_printAnnotation .......................   Passed    0.09 sec
+136: 
+136/174 Test #136: test_cs_printMath .............................   Passed    0.08 sec
 test 137
-        Start 137: test_cs_printMath
+        Start 137: test_cs_printNotes
 
-137: Test command: C:\Development\libsbml-32\examples\csharp\printMath.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+137: Test command: C:\Development\libsbml-32\examples\csharp\printNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 137: Environment variables: 
 137:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 137:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2183,15 +2215,13 @@ test 137
 137:  c:\Development\libsbml\dev\packages\create_archives\bin\
 137: Test timeout computed to be: 3000
 137: 
-137: Reaction 1, formula: comp * (kon * E * S - koff * ES)
-137: Reaction 2, formula: comp * kcat * ES
+137: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
 137: 
-137: 
-137/175 Test #137: test_cs_printMath .............................   Passed    0.12 sec
+137/174 Test #137: test_cs_printNotes ............................   Passed    0.08 sec
 test 138
-        Start 138: test_cs_printNotes
+        Start 138: test_cs_printRegisteredPackages
 
-138: Test command: C:\Development\libsbml-32\examples\csharp\printNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+138: Test command: C:\Development\libsbml-32\examples\csharp\printRegisteredPackages.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "printRegisteredPackages.out.xml"
 138: Environment variables: 
 138:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 138:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2220,14 +2250,21 @@ test 138
 138:  C:\Program Files\Git\cmd
 138:  c:\Development\libsbml\dev\packages\create_archives\bin\
 138: Test timeout computed to be: 3000
+138: This version of LibSBML: 5.17.2 includes: 
+138: 	comp
+138: 	fbc
+138: 	groups
+138: 	layout
+138: 	render
+138: 	l3v2extendedmath
+138: 	multi
+138: 	qual
 138: 
-138: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-138: 
-138/175 Test #138: test_cs_printNotes ............................   Passed    0.06 sec
+138/174 Test #138: test_cs_printRegisteredPackages ...............   Passed    0.06 sec
 test 139
-        Start 139: test_cs_printRegisteredPackages
+        Start 139: test_cs_printSBML
 
-139: Test command: C:\Development\libsbml-32\examples\csharp\printRegisteredPackages.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "printRegisteredPackages.out.xml"
+139: Test command: C:\Development\libsbml-32\examples\csharp\printSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 139: Environment variables: 
 139:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 139:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2256,21 +2293,27 @@ test 139
 139:  C:\Program Files\Git\cmd
 139:  c:\Development\libsbml\dev\packages\create_archives\bin\
 139: Test timeout computed to be: 3000
-139: This version of LibSBML: 5.17.2 includes: 
-139: 	comp
-139: 	fbc
-139: 	groups
-139: 	layout
-139: 	render
-139: 	l3v2extendedmath
-139: 	multi
-139: 	qual
 139: 
-139/175 Test #139: test_cs_printRegisteredPackages ...............   Passed    0.30 sec
+139: File: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml (Level 3, version 1)
+139:                  id: (empty)
+139: functionDefinitions: 0
+139:     unitDefinitions: 2
+139:    compartmentTypes: 0
+139:         specieTypes: 0
+139:        compartments: 1
+139:             species: 4
+139:          parameters: 0
+139:  initialAssignments: 0
+139:               rules: 0
+139:         constraints: 0
+139:           reactions: 2
+139:              events: 0
+139: 
+139/174 Test #139: test_cs_printSBML .............................   Passed    0.08 sec
 test 140
-        Start 140: test_cs_printSBML
+        Start 140: test_cs_printsupported
 
-140: Test command: C:\Development\libsbml-32\examples\csharp\printSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+140: Test command: C:\Development\libsbml-32\examples\csharp\printsupported.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "printsupported.out.xml"
 140: Environment variables: 
 140:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 140:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2299,27 +2342,23 @@ test 140
 140:  C:\Program Files\Git\cmd
 140:  c:\Development\libsbml\dev\packages\create_archives\bin\
 140: Test timeout computed to be: 3000
+140: Supported by LibSBML 5.17.2
 140: 
-140: File: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml (Level 3, version 1)
-140:                  id: (empty)
-140: functionDefinitions: 0
-140:     unitDefinitions: 2
-140:    compartmentTypes: 0
-140:         specieTypes: 0
-140:        compartments: 1
-140:             species: 4
-140:          parameters: 0
-140:  initialAssignments: 0
-140:               rules: 0
-140:         constraints: 0
-140:           reactions: 2
-140:              events: 0
+140: 	SBML Level: 1 Version: 1
+140: 	SBML Level: 1 Version: 2
+140: 	SBML Level: 2 Version: 1
+140: 	SBML Level: 2 Version: 2
+140: 	SBML Level: 2 Version: 3
+140: 	SBML Level: 2 Version: 4
+140: 	SBML Level: 2 Version: 5
+140: 	SBML Level: 3 Version: 1
+140: 	SBML Level: 3 Version: 2
 140: 
-140/175 Test #140: test_cs_printSBML .............................   Passed    0.08 sec
+140/174 Test #140: test_cs_printsupported ........................   Passed    0.09 sec
 test 141
-        Start 141: test_cs_printsupported
+        Start 141: test_cs_printUnits
 
-141: Test command: C:\Development\libsbml-32\examples\csharp\printsupported.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "printsupported.out.xml"
+141: Test command: C:\Development\libsbml-32\examples\csharp\printUnits.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 141: Environment variables: 
 141:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 141:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2348,23 +2387,26 @@ test 141
 141:  C:\Program Files\Git\cmd
 141:  c:\Development\libsbml\dev\packages\create_archives\bin\
 141: Test timeout computed to be: 3000
-141: Supported by LibSBML 5.17.2
+141: Species 0: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+141: Species 1: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+141: Species 2: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+141: Species 3: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
+141: Compartment 0: litre (exponent = 1, multiplier = 1, scale = 0)
+141: Reaction 0: 
+141: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
+141:         undeclared units: 
+141: no
 141: 
-141: 	SBML Level: 1 Version: 1
-141: 	SBML Level: 1 Version: 2
-141: 	SBML Level: 2 Version: 1
-141: 	SBML Level: 2 Version: 2
-141: 	SBML Level: 2 Version: 3
-141: 	SBML Level: 2 Version: 4
-141: 	SBML Level: 2 Version: 5
-141: 	SBML Level: 3 Version: 1
-141: 	SBML Level: 3 Version: 2
+141: Reaction 1: 
+141: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
+141:         undeclared units: 
+141: no
 141: 
-141/175 Test #141: test_cs_printsupported ........................   Passed    0.14 sec
+141/174 Test #141: test_cs_printUnits ............................   Passed    0.09 sec
 test 142
-        Start 142: test_cs_printUnits
+        Start 142: test_cs_promoteParameters
 
-142: Test command: C:\Development\libsbml-32\examples\csharp\printUnits.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+142: Test command: C:\Development\libsbml-32\examples\csharp\promoteParameters.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "promoteParameters.out.xml"
 142: Environment variables: 
 142:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 142:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2393,26 +2435,12 @@ test 142
 142:  C:\Program Files\Git\cmd
 142:  c:\Development\libsbml\dev\packages\create_archives\bin\
 142: Test timeout computed to be: 3000
-142: Species 0: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-142: Species 1: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-142: Species 2: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-142: Species 3: mole (exponent = 1, multiplier = 1, scale = 0), litre (exponent = -1, multiplier = 1, scale = 0)
-142: Compartment 0: litre (exponent = 1, multiplier = 1, scale = 0)
-142: Reaction 0: 
-142: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
-142:         undeclared units: 
-142: no
-142: 
-142: Reaction 1: 
-142: Kinetic Law: second (exponent = -1, multiplier = 1, scale = 0), mole (exponent = 1, multiplier = 1, scale = 0)
-142:         undeclared units: 
-142: no
-142: 
-142/175 Test #142: test_cs_printUnits ............................   Passed    0.06 sec
+142: [OK] promoted paramters from C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml and wrote to promoteParameters.out.xml
+142/174 Test #142: test_cs_promoteParameters .....................   Passed    0.08 sec
 test 143
-        Start 143: test_cs_promoteParameters
+        Start 143: test_cs_readSBML
 
-143: Test command: C:\Development\libsbml-32\examples\csharp\promoteParameters.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "promoteParameters.out.xml"
+143: Test command: C:\Development\libsbml-32\examples\csharp\readSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 143: Environment variables: 
 143:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 143:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2441,12 +2469,17 @@ test 143
 143:  C:\Program Files\Git\cmd
 143:  c:\Development\libsbml\dev\packages\create_archives\bin\
 143: Test timeout computed to be: 3000
-143: [OK] promoted paramters from C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml and wrote to promoteParameters.out.xml
-143/175 Test #143: test_cs_promoteParameters .....................   Passed    0.08 sec
+143: 
+143:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+143:            file size: 4021
+143:       read time (ms): 156000
+143:  validation error(s): 0
+143: 
+143/174 Test #143: test_cs_readSBML ..............................   Passed    0.08 sec
 test 144
-        Start 144: test_cs_readSBML
+        Start 144: test_cs_stripPackage
 
-144: Test command: C:\Development\libsbml-32\examples\csharp\readSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+144: Test command: C:\Development\libsbml-32\examples\csharp\stripPackage.exe "C:/Development/libsbml/examples/sample-models/fbc/fbc_example1.xml" "fbc" "stripPackage.out.xml"
 144: Environment variables: 
 144:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 144:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2475,17 +2508,12 @@ test 144
 144:  C:\Program Files\Git\cmd
 144:  c:\Development\libsbml\dev\packages\create_archives\bin\
 144: Test timeout computed to be: 3000
-144: 
-144:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-144:            file size: 4021
-144:       read time (ms): 0
-144:  validation error(s): 0
-144: 
-144/175 Test #144: test_cs_readSBML ..............................   Passed    0.06 sec
+144: [OK] Stripped package 'fbc' from C:/Development/libsbml/examples/sample-models/fbc/fbc_example1.xml and wrote to stripPackage.out.xml
+144/174 Test #144: test_cs_stripPackage ..........................   Passed    0.08 sec
 test 145
-        Start 145: test_cs_stripPackage
+        Start 145: test_cs_SetIdFromNames
 
-145: Test command: C:\Development\libsbml-32\examples\csharp\stripPackage.exe "C:/Development/libsbml/examples/sample-models/fbc/fbc_example1.xml" "fbc" "stripPackage.out.xml"
+145: Test command: C:\Development\libsbml-32\examples\csharp\SetIdFromNames.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "SetIdFromNames.out.xml"
 145: Environment variables: 
 145:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 145:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2514,12 +2542,17 @@ test 145
 145:  C:\Program Files\Git\cmd
 145:  c:\Development\libsbml\dev\packages\create_archives\bin\
 145: Test timeout computed to be: 3000
-145: [OK] Stripped package 'fbc' from C:/Development/libsbml/examples/sample-models/fbc/fbc_example1.xml and wrote to stripPackage.out.xml
-145/175 Test #145: test_cs_stripPackage ..........................   Passed    0.08 sec
+145: 
+145:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+145:       read time (ms): 15.6
+145:     rename time (ms): 0
+145:      write time (ms): 0
+145: 
+145/174 Test #145: test_cs_SetIdFromNames ........................   Passed    0.08 sec
 test 146
-        Start 146: test_cs_SetIdFromNames
+        Start 146: test_cs_unsetAnnotation
 
-146: Test command: C:\Development\libsbml-32\examples\csharp\SetIdFromNames.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "SetIdFromNames.out.xml"
+146: Test command: C:\Development\libsbml-32\examples\csharp\unsetAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetAnnotation.out.xml"
 146: Environment variables: 
 146:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 146:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2548,17 +2581,11 @@ test 146
 146:  C:\Program Files\Git\cmd
 146:  c:\Development\libsbml\dev\packages\create_archives\bin\
 146: Test timeout computed to be: 3000
-146: 
-146:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-146:       read time (ms): 15.6
-146:     rename time (ms): 0
-146:      write time (ms): 15.6
-146: 
-146/175 Test #146: test_cs_SetIdFromNames ........................   Passed    0.06 sec
+146/174 Test #146: test_cs_unsetAnnotation .......................   Passed    0.09 sec
 test 147
-        Start 147: test_cs_unsetAnnotation
+        Start 147: test_cs_unsetNotes
 
-147: Test command: C:\Development\libsbml-32\examples\csharp\unsetAnnotation.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetAnnotation.out.xml"
+147: Test command: C:\Development\libsbml-32\examples\csharp\unsetNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetNotes.out.xml"
 147: Environment variables: 
 147:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 147:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2587,11 +2614,11 @@ test 147
 147:  C:\Program Files\Git\cmd
 147:  c:\Development\libsbml\dev\packages\create_archives\bin\
 147: Test timeout computed to be: 3000
-147/175 Test #147: test_cs_unsetAnnotation .......................   Passed    0.09 sec
+147/174 Test #147: test_cs_unsetNotes ............................   Passed    0.09 sec
 test 148
-        Start 148: test_cs_unsetNotes
+        Start 148: test_cs_validateSBML
 
-148: Test command: C:\Development\libsbml-32\examples\csharp\unsetNotes.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetNotes.out.xml"
+148: Test command: C:\Development\libsbml-32\examples\csharp\validateSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 148: Environment variables: 
 148:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 148:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2620,11 +2647,22 @@ test 148
 148:  C:\Program Files\Git\cmd
 148:  c:\Development\libsbml\dev\packages\create_archives\bin\
 148: Test timeout computed to be: 3000
-148/175 Test #148: test_cs_unsetNotes ............................   Passed    0.06 sec
+148: ---------------------------------------------------------------------------
+148:                filename : C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+148:        file size (byte) : 4021
+148:          read time (ms) : 0
+148:       c-check time (ms) : 0
+148:     validation error(s) : 0
+148:   (consistency error(s)): 0
+148:   validation warning(s) : 0
+148: (consistency warning(s)): 0
+148: ---------------------------------------------------------------------------
+148: Validated 1 files, 1 valid files, 0 invalid files.
+148/174 Test #148: test_cs_validateSBML ..........................   Passed    0.08 sec
 test 149
-        Start 149: test_cs_validateSBML
+        Start 149: test_cs_evaluateCustomMath
 
-149: Test command: C:\Development\libsbml-32\examples\csharp\validateSBML.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+149: Test command: C:\Development\libsbml-32\examples\csharp\evaluateCustomMath.exe "2*3+4" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 149: Environment variables: 
 149:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 149:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2653,22 +2691,12 @@ test 149
 149:  C:\Program Files\Git\cmd
 149:  c:\Development\libsbml\dev\packages\create_archives\bin\
 149: Test timeout computed to be: 3000
-149: ---------------------------------------------------------------------------
-149:                filename : C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-149:        file size (byte) : 4021
-149:          read time (ms) : 15.6001
-149:       c-check time (ms) : 0
-149:     validation error(s) : 0
-149:   (consistency error(s)): 0
-149:   validation warning(s) : 0
-149: (consistency warning(s)): 0
-149: ---------------------------------------------------------------------------
-149: Validated 1 files, 1 valid files, 0 invalid files.
-149/175 Test #149: test_cs_validateSBML ..........................   Passed    0.08 sec
+149: 2*3+4 = 10
+149/174 Test #149: test_cs_evaluateCustomMath ....................   Passed    0.08 sec
 test 150
-        Start 150: test_cs_evaluateCustomMath
+        Start 150: test_cs_inlineInitialAssignments
 
-150: Test command: C:\Development\libsbml-32\examples\csharp\evaluateCustomMath.exe "2*3+4" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+150: Test command: C:\Development\libsbml-32\examples\csharp\inlineInitialAssignments.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "inlineInitialAssignments.out.xml"
 150: Environment variables: 
 150:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 150:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2697,12 +2725,11 @@ test 150
 150:  C:\Program Files\Git\cmd
 150:  c:\Development\libsbml\dev\packages\create_archives\bin\
 150: Test timeout computed to be: 3000
-150: 2*3+4 = 10
-150/175 Test #150: test_cs_evaluateCustomMath ....................   Passed    0.05 sec
+150/174 Test #150: test_cs_inlineInitialAssignments ..............   Passed    0.09 sec
 test 151
-        Start 151: test_cs_inlineInitialAssignments
+        Start 151: test_cs_replaceOneFD
 
-151: Test command: C:\Development\libsbml-32\examples\csharp\inlineInitialAssignments.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "inlineInitialAssignments.out.xml"
+151: Test command: C:\Development\libsbml-32\examples\csharp\replaceOneFD.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/functiondef.xml" "f" "reaction_1" "replaceOneFD.out.xml"
 151: Environment variables: 
 151:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
 151:  C:/Development/libsbml-32/src/bindings/csharp/Release
@@ -2731,286 +2758,429 @@ test 151
 151:  C:\Program Files\Git\cmd
 151:  c:\Development\libsbml\dev\packages\create_archives\bin\
 151: Test timeout computed to be: 3000
-151/175 Test #151: test_cs_inlineInitialAssignments ..............   Passed    0.08 sec
+151/174 Test #151: test_cs_replaceOneFD ..........................   Passed    0.08 sec
 test 152
-        Start 152: test_cs_replaceOneFD
+        Start 152: test_java_addCVTerms
 
-152: Test command: C:\Development\libsbml-32\examples\csharp\replaceOneFD.exe "C:/Development/libsbml/examples/sample-models/from-spec/level-3/functiondef.xml" "f" "reaction_1" "replaceOneFD.out.xml"
-152: Environment variables: 
-152:  PATH=C:/Development/libsbml-32/src/bindings/csharp/Release
-152:  C:/Development/libsbml-32/src/bindings/csharp/Release
-152:  c:\Program Files\CMake\bin
-152:  C:\Program Files\CMake\bin
-152:  C:\Program Files\CMake\bin
-152:  C:\Windows\system32
-152:  C:\Windows
-152:  C:\Windows\System32\Wbem
-152:  C:\Windows\System32\WindowsPowerShell\v1.0
-152:  C:\ProgramData\chocolatey\bin
-152:  C:\Program Files\TortoiseHg
-152:  C:\Windows\system32\config\systemprofile\.dnx\bin
-152:  C:\Program Files\Microsoft DNX\Dnvm
-152:  C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit
-152:  C:\Program Files\Microsoft SQL Server\130\Tools\Binn
-152:  C:\Program Files (x86)\Skype\Phone
-152:  C:\Program Files\MATLAB\R2018a\runtime\win64
-152:  C:\Program Files\MATLAB\R2018a\bin
-152:  C:\Program Files\MATLAB\R2017a\runtime\win64
-152:  C:\Program Files\MATLAB\R2017a\bin
-152:  C:\Program Files\TortoiseGit\bin
-152:  C:\Program Files\TortoiseSVN\bin
-152:  C:\Program Files (x86)\AOMEI Backupper
-152:  C:\ProgramData\chocolatey\bin
-152:  C:\Program Files\Git\cmd
-152:  c:\Development\libsbml\dev\packages\create_archives\bin\
+152: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "addCVTerms" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addCVTerms.out.xml"
 152: Test timeout computed to be: 3000
-152/175 Test #152: test_cs_replaceOneFD ..........................   Passed    0.06 sec
+152/174 Test #152: test_java_addCVTerms ..........................   Passed    0.14 sec
 test 153
-        Start 153: test_java_addCVTerms
+        Start 153: test_java_addingEvidenceCodes_1
 
-153: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "addCVTerms" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addCVTerms.out.xml"
+153: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "addingEvidenceCodes_1" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_1.out.xml"
 153: Test timeout computed to be: 3000
-153/175 Test #153: test_java_addCVTerms ..........................   Passed    0.16 sec
+153/174 Test #153: test_java_addingEvidenceCodes_1 ...............   Passed    0.14 sec
 test 154
-        Start 154: test_java_addingEvidenceCodes_1
+        Start 154: test_java_addingEvidenceCodes_2
 
-154: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "addingEvidenceCodes_1" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_1.out.xml"
+154: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "addingEvidenceCodes_2" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_2.out.xml"
 154: Test timeout computed to be: 3000
-154/175 Test #154: test_java_addingEvidenceCodes_1 ...............   Passed    0.16 sec
+154/174 Test #154: test_java_addingEvidenceCodes_2 ...............   Passed    0.16 sec
 test 155
-        Start 155: test_java_addingEvidenceCodes_2
+        Start 155: test_java_addModelHistory
 
-155: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "addingEvidenceCodes_2" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addingEvidenceCodes_2.out.xml"
+155: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "addModelHistory" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addModelHistory.out.xml"
 155: Test timeout computed to be: 3000
-155/175 Test #155: test_java_addingEvidenceCodes_2 ...............   Passed    0.17 sec
+155/174 Test #155: test_java_addModelHistory .....................   Passed    0.16 sec
 test 156
-        Start 156: test_java_addModelHistory
+        Start 156: test_java_appendAnnotation
 
-156: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "addModelHistory" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "addModelHistory.out.xml"
+156: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "appendAnnotation" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "appendAnnotation.out.xml"
 156: Test timeout computed to be: 3000
-156/175 Test #156: test_java_addModelHistory .....................   Passed    0.17 sec
+156/174 Test #156: test_java_appendAnnotation ....................   Passed    0.16 sec
 test 157
-        Start 157: test_java_appendAnnotation
+        Start 157: test_java_createExampleSBML
 
-157: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "appendAnnotation" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "appendAnnotation.out.xml"
+157: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "createExampleSBML" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "createExampleSBML.out.xml"
 157: Test timeout computed to be: 3000
-157/175 Test #157: test_java_appendAnnotation ....................   Passed    0.16 sec
+157: Wrote file "enzymaticreaction.xml"
+157: Wrote file "units.xml"
+157: 
+157: 
+157: Notice: encountered 1 validation warning in model 'functionExample'.
+157: 
+157: line 1: (99505 [Warning]) In situations where a mathematical expression contains literal numbers or parameters whose units have not been declared, it is not possible to verify accurately the consistency of the units in the expression. 
+157:  The units of the <kineticLaw> <math> expression 'f(S1) * compartmentOne / t' cannot be fully checked. Unit consistency reported as either no errors or further unit errors related to this object may not be accurate.
+157: 
+157: 
+157: Wrote file "functiondef.xml"
+157/174 Test #157: test_java_createExampleSBML ...................   Passed    0.19 sec
 test 158
-        Start 158: test_java_createExampleSBML
+        Start 158: test_java_echoSBML
 
-158: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "createExampleSBML" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "createExampleSBML.out.xml"
+158: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "echoSBML" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "echoSBML.out.xml"
 158: Test timeout computed to be: 3000
-158: Wrote file "enzymaticreaction.xml"
-158: Wrote file "units.xml"
-158: 
-158: 
-158: Notice: encountered 1 validation warning in model 'functionExample'.
-158: 
-158: line 1: (99505 [Warning]) In situations where a mathematical expression contains literal numbers or parameters whose units have not been declared, it is not possible to verify accurately the consistency of the units in the expression. 
-158:  The units of the <kineticLaw> <math> expression 'f(S1) * compartmentOne / t' cannot be fully checked. Unit consistency reported as either no errors or further unit errors related to this object may not be accurate.
-158: 
-158: 
-158: Wrote file "functiondef.xml"
-158/175 Test #158: test_java_createExampleSBML ...................   Passed    0.19 sec
+158/174 Test #158: test_java_echoSBML ............................   Passed    0.16 sec
 test 159
-        Start 159: test_java_echoSBML
+        Start 159: test_java_evaluateCustomMath
 
-159: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "echoSBML" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "echoSBML.out.xml"
+159: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "evaluateCustomMath" "2*3+4" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 159: Test timeout computed to be: 3000
-159/175 Test #159: test_java_echoSBML ............................   Passed    0.19 sec
+159: 2*3+4 = 10.0
+159/174 Test #159: test_java_evaluateCustomMath ..................   Passed    0.14 sec
 test 160
-        Start 160: test_java_evaluateCustomMath
+        Start 160: test_java_getAllElementsWithNotes
 
-160: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "evaluateCustomMath" "2*3+4" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+160: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "getAllElementsWithNotes" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 160: Test timeout computed to be: 3000
-160: 2*3+4 = 10.0
-160/175 Test #160: test_java_evaluateCustomMath ..................   Passed    0.14 sec
+160: Using libSBML : 5.17.2
+160: 
+160:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+160:       read time (ms): 0
+160:     searching ......:
+160:   seaching took (ms): 0
+160:  elements with notes: 0
+160/174 Test #160: test_java_getAllElementsWithNotes .............   Passed    0.16 sec
 test 161
-        Start 161: test_java_getAllElementsWithNotes
+        Start 161: test_java_inlineInitialAssignments
 
-161: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "getAllElementsWithNotes" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+161: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "inlineInitialAssignments" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "inlineInitialAssignments.out.xml"
 161: Test timeout computed to be: 3000
-161: Using libSBML : 5.17.2
-161: 
-161:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-161:       read time (ms): 4
-161:     searching ......:
-161:   seaching took (ms): 1
-161:  elements with notes: 0
-161/175 Test #161: test_java_getAllElementsWithNotes .............   Passed    0.16 sec
+161/174 Test #161: test_java_inlineInitialAssignments ............   Passed    0.16 sec
 test 162
-        Start 162: test_java_inlineInitialAssignments
+        Start 162: test_java_printAnnotation
 
-162: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "inlineInitialAssignments" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "inlineInitialAssignments.out.xml"
+162: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "printAnnotation" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 162: Test timeout computed to be: 3000
-162/175 Test #162: test_java_inlineInitialAssignments ............   Passed    0.13 sec
+162: 
+162: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+162: 
+162/174 Test #162: test_java_printAnnotation .....................   Passed    0.16 sec
 test 163
-        Start 163: test_java_printAnnotation
+        Start 163: test_java_printMath
 
-163: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "printAnnotation" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+163: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "printMath" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 163: Test timeout computed to be: 3000
+163: File: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml (Level 3, version 1)
+163: Reaction 1, formula: comp * (kon * E * S - koff * ES)
 163: 
-163: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+163: Reaction 2, formula: comp * kcat * ES
 163: 
-163/175 Test #163: test_java_printAnnotation .....................   Passed    0.14 sec
+163/174 Test #163: test_java_printMath ...........................   Passed    0.16 sec
 test 164
-        Start 164: test_java_printMath
+        Start 164: test_java_printNotes
 
-164: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "printMath" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+164: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "printNotes" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 164: Test timeout computed to be: 3000
-164: File: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml (Level 3, version 1)
-164: Reaction 1, formula: comp * (kon * E * S - koff * ES)
 164: 
-164: Reaction 2, formula: comp * kcat * ES
+164: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
 164: 
-164/175 Test #164: test_java_printMath ...........................   Passed    0.15 sec
+164/174 Test #164: test_java_printNotes ..........................   Passed    0.17 sec
 test 165
-        Start 165: test_java_printNotes
+        Start 165: test_java_printRegisteredPackages
 
-165: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "printNotes" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+165: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "printRegisteredPackages"
 165: Test timeout computed to be: 3000
+165: This version of LibSBML: 5.17.2 includes: 
+165: 	comp
+165: 	fbc
+165: 	groups
+165: 	layout
+165: 	render
+165: 	l3v2extendedmath
+165: 	multi
+165: 	qual
 165: 
-165: filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-165: 
-165/175 Test #165: test_java_printNotes ..........................   Passed    0.13 sec
+165/174 Test #165: test_java_printRegisteredPackages .............   Passed    0.16 sec
 test 166
-        Start 166: test_java_printRegisteredPackages
+        Start 166: test_java_printSBML
 
-166: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "printRegisteredPackages"
+166: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "printSBML" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 166: Test timeout computed to be: 3000
-166: This version of LibSBML: 5.17.2 includes: 
-166: 	comp
-166: 	fbc
-166: 	groups
-166: 	layout
-166: 	render
-166: 	l3v2extendedmath
-166: 	multi
-166: 	qual
+166: File: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml (Level 3, version 1)
 166: 
-166/175 Test #166: test_java_printRegisteredPackages .............   Passed    0.13 sec
+166:   model id: (empty)
+166: functionDefinitions: 0
+166:     unitDefinitions: 2
+166:        compartments: 1
+166:             species: 4
+166:          parameters: 0
+166:           reactions: 2
+166:               rules: 0
+166:              events: 0
+166/174 Test #166: test_java_printSBML ...........................   Passed    0.16 sec
 test 167
-        Start 167: test_java_printSBML
+        Start 167: test_java_printsupported
 
-167: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "printSBML" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+167: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "printsupported"
 167: Test timeout computed to be: 3000
-167: File: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml (Level 3, version 1)
+167: Supported by LibSBML 5.17.2
 167: 
-167:   model id: (empty)
-167: functionDefinitions: 0
-167:     unitDefinitions: 2
-167:        compartments: 1
-167:             species: 4
-167:          parameters: 0
-167:           reactions: 2
-167:               rules: 0
-167:              events: 0
-167/175 Test #167: test_java_printSBML ...........................   Passed    0.14 sec
+167: 	SBML Level: 1 Version: 1
+167: 	SBML Level: 1 Version: 2
+167: 	SBML Level: 2 Version: 1
+167: 	SBML Level: 2 Version: 2
+167: 	SBML Level: 2 Version: 3
+167: 	SBML Level: 2 Version: 4
+167: 	SBML Level: 2 Version: 5
+167: 	SBML Level: 3 Version: 1
+167: 	SBML Level: 3 Version: 2
+167: 
+167/174 Test #167: test_java_printsupported ......................   Passed    0.16 sec
 test 168
-        Start 168: test_java_printsupported
+        Start 168: test_java_printUnits
 
-168: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "printsupported"
+168: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "printUnits" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 168: Test timeout computed to be: 3000
-168: Supported by LibSBML 5.17.2
+168: Compartment #1 --
+168:   id in model: comp
+168: litre(exponent = 1)
 168: 
-168: 	SBML Level: 1 Version: 1
-168: 	SBML Level: 1 Version: 2
-168: 	SBML Level: 2 Version: 1
-168: 	SBML Level: 2 Version: 2
-168: 	SBML Level: 2 Version: 3
-168: 	SBML Level: 2 Version: 4
-168: 	SBML Level: 2 Version: 5
-168: 	SBML Level: 3 Version: 1
-168: 	SBML Level: 3 Version: 2
+168: Species #1 --
+168:   id in model: E
+168: mole(exponent = 1), litre(exponent = -1)
 168: 
-168/175 Test #168: test_java_printsupported ......................   Passed    0.14 sec
+168: Species #2 --
+168:   id in model: S
+168: mole(exponent = 1), litre(exponent = -1)
+168: 
+168: Species #3 --
+168:   id in model: P
+168: mole(exponent = 1), litre(exponent = -1)
+168: 
+168: Species #4 --
+168:   id in model: ES
+168: mole(exponent = 1), litre(exponent = -1)
+168: 
+168: Reaction #1 --
+168:   id in model: veq
+168: second(exponent = -1), mole(exponent = 1)
+168: 
+168:  undeclared parameters?: no
+168: 
+168: Reaction #2 --
+168:   id in model: vcat
+168: second(exponent = -1), mole(exponent = 1)
+168: 
+168:  undeclared parameters?: no
+168: 
+168/174 Test #168: test_java_printUnits ..........................   Passed    0.17 sec
 test 169
-        Start 169: test_java_printUnits
+        Start 169: test_java_promoteParameters
 
-169: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "printUnits" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+169: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "promoteParameters" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "promoteParameters.out.xml"
 169: Test timeout computed to be: 3000
-169: Compartment #1 --
-169:   id in model: comp
-169: litre(exponent = 1)
-169: 
-169: Species #1 --
-169:   id in model: E
-169: mole(exponent = 1), litre(exponent = -1)
-169: 
-169: Species #2 --
-169:   id in model: S
-169: mole(exponent = 1), litre(exponent = -1)
-169: 
-169: Species #3 --
-169:   id in model: P
-169: mole(exponent = 1), litre(exponent = -1)
-169: 
-169: Species #4 --
-169:   id in model: ES
-169: mole(exponent = 1), litre(exponent = -1)
-169: 
-169: Reaction #1 --
-169:   id in model: veq
-169: second(exponent = -1), mole(exponent = 1)
-169: 
-169:  undeclared parameters?: no
-169: 
-169: Reaction #2 --
-169:   id in model: vcat
-169: second(exponent = -1), mole(exponent = 1)
-169: 
-169:  undeclared parameters?: no
-169: 
-169/175 Test #169: test_java_printUnits ..........................   Passed    0.16 sec
+169/174 Test #169: test_java_promoteParameters ...................   Passed    0.16 sec
 test 170
-        Start 170: test_java_promoteParameters
+        Start 170: test_java_readSBML
 
-170: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "promoteParameters" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "promoteParameters.out.xml"
+170: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "readSBML" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
 170: Test timeout computed to be: 3000
-170/175 Test #170: test_java_promoteParameters ...................   Passed    0.16 sec
+170:         filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+170:        file size: 4021
+170:   read time (ms): 0
+170:         error(s): 0
+170/174 Test #170: test_java_readSBML ............................   Passed    0.14 sec
 test 171
-        Start 171: test_java_readSBML
+        Start 171: test_java_replaceOneFD
 
-171: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "readSBML" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml"
+171: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "replaceOneFD" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/functiondef.xml" "f" "reaction_1" "replaceOneFD.out.xml"
 171: Test timeout computed to be: 3000
-171:         filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-171:        file size: 4021
-171:   read time (ms): 4
-171:         error(s): 0
-171/175 Test #171: test_java_readSBML ............................   Passed    0.15 sec
+171/174 Test #171: test_java_replaceOneFD ........................   Passed    0.16 sec
 test 172
-        Start 172: test_java_replaceOneFD
+        Start 172: test_java_setIdFromNames
 
-172: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "replaceOneFD" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/functiondef.xml" "f" "reaction_1" "replaceOneFD.out.xml"
+172: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "setIdFromNames" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "setIdFromNames.out.xml"
 172: Test timeout computed to be: 3000
-172/175 Test #172: test_java_replaceOneFD ........................   Passed    0.15 sec
+172: Using libSBML : 5.17.2
+172: 
+172:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
+172:       read time (ms): 0
+172:     rename time (ms): 0
+172:      write time (ms): 0
+172: 
+172/174 Test #172: test_java_setIdFromNames ......................   Passed    0.16 sec
 test 173
-        Start 173: test_java_setIdFromNames
+        Start 173: test_java_stripPackage
 
-173: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "setIdFromNames" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "setIdFromNames.out.xml"
+173: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "stripPackage" "C:/Development/libsbml/examples/sample-models/fbc/fbc_example1.xml" "fbc" "stripPackage.out.xml"
 173: Test timeout computed to be: 3000
-173: Using libSBML : 5.17.2
-173: 
-173:             filename: C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml
-173:       read time (ms): 4
-173:     rename time (ms): 1
-173:      write time (ms): 2
-173: 
-173/175 Test #173: test_java_setIdFromNames ......................   Passed    0.16 sec
+173/174 Test #173: test_java_stripPackage ........................   Passed    0.16 sec
 test 174
-        Start 174: test_java_stripPackage
+        Start 174: test_java_unsetAnnotation
 
-174: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "stripPackage" "C:/Development/libsbml/examples/sample-models/fbc/fbc_example1.xml" "fbc" "stripPackage.out.xml"
+174: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "unsetAnnotation" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetAnnotation.out.xml"
 174: Test timeout computed to be: 3000
-174/175 Test #174: test_java_stripPackage ........................   Passed    0.16 sec
-test 175
-        Start 175: test_java_unsetAnnotation
+174/174 Test #174: test_java_unsetAnnotation .....................   Passed    0.19 sec
 
-175: Test command: C:\tools\java\x86\jdk1.7.0_05\bin\java.exe "-cp" ".;C:\Development\libsbml-32\examples\java\..\..\src\bindings\java\libsbmlj.jar;" "-Djava.library.path=C:/Development/libsbml-32/src/bindings/java/Release" "unsetAnnotation" "C:/Development/libsbml/examples/sample-models/from-spec/level-3/enzymekinetics.xml" "unsetAnnotation.out.xml"
-175: Test timeout computed to be: 3000
-175/175 Test #175: test_java_unsetAnnotation .....................   Passed    0.16 sec
+The following tests passed:
+	test_comp_extensions_run
+	test_comp_sbase_run
+	test_comp_util_run
+	test_comp_validator_run
+	test_sbml_package_fbc_run
+	test_fbc_validator_run
+	test_extension_package_groups_run
+	test_groups_validator_run
+	test_l3v2extendedmath_validator_run
+	test_extension_package_l3v2extendedmath_run
+	test_sbml_package_layout_run
+	test_layout_validator_run
+	test_sbml_package_multi_run
+	test_multi_validator_run
+	test_extension_package_qual_run
+	test_sbml_package_qual_run
+	test_qual_validator_run
+	test_sbml_package_render_run
+	test_render_validator_run
+	test_sbml_annotation_run
+	test_sbml_conversion_run
+	test_sbml_extension_run
+	test_sbml_math_run
+	test_sbml_sbml_run
+	test_sbml_units_run
+	test_sbml_util_run
+	test_sbml_validator_run
+	test_sbml_xml_run
+	test_csharp_bindings
+	test_csharp_bindings_full
+	test_java_binding
+	test_java_printversion
+	test_perl_binding
+	test_python_binding
+	test_python_printversion
+	test_python_addCVTerms
+	test_python_addingEvidenceCodes_1
+	test_python_addingEvidenceCodes_2
+	test_python_addModelHistory
+	test_python_append_to_note
+	test_python_appendAnnotation
+	test_python_convertSBML
+	test_python_createExampleSBML
+	test_python_createSimpleModel
+	test_python_echoSBML
+	test_python_evaluateCustomMath
+	test_python_getAllElementsWithNotes
+	test_python_inlineInitialAssignments
+	test_python_printAnnotation
+	test_python_printMath
+	test_python_printRegisteredPackages
+	test_python_printSBML
+	test_python_printsupported
+	test_python_printUnits
+	test_python_promoteParameters
+	test_python_readSBML
+	test_python_replaceOneFD
+	test_python_setIdFromNames
+	test_python_unsetAnnotation
+	test_python_unsetNotes
+	test_python_validateSBML
+	test_python_stringInput
+	test_python_stripPackage
+	test_python_fbc_fbc_example1
+	test_python_groups_groups_example1
+	test_python_layout_example1_L3
+	test_python_layout_example1
+	test_python_multi_multi_example1
+	test_python_multi_multi_example2
+	test_python_multi_multi_example3
+	test_python_multi_printMulti
+	test_python_qual_qual_example1
+	test_c_addCVTerms
+	test_c_addingEvidenceCodes_1
+	test_c_addingEvidenceCodes_2
+	test_c_addModelHistory
+	test_c_appendAnnotation
+	test_c_convertSBML
+	test_c_createExampleSBML
+	test_c_drawMath
+	test_c_echoSBML
+	test_c_printAnnotation
+	test_c_printMath
+	test_c_printNotes
+	test_c_printRegisteredPackages
+	test_c_printSBML
+	test_c_printSupported
+	test_c_printUnits
+	test_c_promoteParameters
+	test_c_readSBML
+	test_c_stripPackage
+	test_c_unsetAnnotation
+	test_c_unsetNotes
+	test_c_validateSBML
+	test_cxx_addCVTerms
+	test_cxx_addCustomValidator
+	test_cxx_addingEvidenceCodes_1
+	test_cxx_addingEvidenceCodes_2
+	test_cxx_addModelHistory
+	test_cxx_appendAnnotation
+	test_cxx_callExternalValidator
+	test_cxx_convertSBML
+	test_cxx_convertToL1V1
+	test_cxx_createExampleSBML
+	test_cxx_echoSBML
+	test_cxx_inferUnits
+	test_cxx_inlineFunctionDefintions
+	test_cxx_convertReactions
+	test_cxx_getAllElementsWithNotes
+	test_cxx_printAnnotation
+	test_cxx_printMath
+	test_cxx_printNotes
+	test_cxx_printSBML
+	test_cxx_printRegisteredPackages
+	test_cxx_printSupported
+	test_cxx_printUnits
+	test_cxx_promoteParameters
+	test_cxx_readSBML
+	test_cxx_renameSId
+	test_cxx_setIdFromNames
+	test_cxx_setNamesFromIds
+	test_cxx_stripPackage
+	test_cxx_unsetAnnotation
+	test_cxx_unsetNotes
+	test_cxx_validateSBML
+	test_cs_addCVTerms
+	test_cs_addingEvidenceCodes_1
+	test_cs_addingEvidenceCodes_2
+	test_cs_addModelHistory
+	test_cs_appendAnnotation
+	test_cs_convertSBML
+	test_cs_createExampleSBML
+	test_cs_echoSBML
+	test_cs_GetAllElementsWithNotes
+	test_cs_printAnnotation
+	test_cs_printMath
+	test_cs_printNotes
+	test_cs_printRegisteredPackages
+	test_cs_printSBML
+	test_cs_printsupported
+	test_cs_printUnits
+	test_cs_promoteParameters
+	test_cs_readSBML
+	test_cs_stripPackage
+	test_cs_SetIdFromNames
+	test_cs_unsetAnnotation
+	test_cs_unsetNotes
+	test_cs_validateSBML
+	test_cs_evaluateCustomMath
+	test_cs_inlineInitialAssignments
+	test_cs_replaceOneFD
+	test_java_addCVTerms
+	test_java_addingEvidenceCodes_1
+	test_java_addingEvidenceCodes_2
+	test_java_addModelHistory
+	test_java_appendAnnotation
+	test_java_createExampleSBML
+	test_java_echoSBML
+	test_java_evaluateCustomMath
+	test_java_getAllElementsWithNotes
+	test_java_inlineInitialAssignments
+	test_java_printAnnotation
+	test_java_printMath
+	test_java_printNotes
+	test_java_printRegisteredPackages
+	test_java_printSBML
+	test_java_printsupported
+	test_java_printUnits
+	test_java_promoteParameters
+	test_java_readSBML
+	test_java_replaceOneFD
+	test_java_setIdFromNames
+	test_java_stripPackage
+	test_java_unsetAnnotation
 
-100% tests passed, 0 tests failed out of 175
+100% tests passed, 0 tests failed out of 174
 
-Total Test time (real) =  53.78 sec
-Finished Tests: Sun 12/02/2018 14:05:03.21 
+Total Test time (real) =  55.63 sec
+Finished Tests: Mon 12/03/2018  3:23:04.93 
