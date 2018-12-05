@@ -44,7 +44,7 @@ set(PACKAGE_VERSION "${LIBSBML_VERSION_MAJOR}.${LIBSBML_VERSION_MINOR}.${LIBSBML
 # version hack if required for PyPI (bgoli)
 # set(PACKAGE_VERSION2 "5.15.3${LIBSBML_VERSION_RELEASE}")
 
-set (VERSIONS 2.6 2.7 3.0 3.1 3.2 3.3 3.4 3.5 3.6 3.7)
+set (VERSIONS 2.6 2.7 3.0 3.1 3.2 3.3 3.4 3.5 3.6)
 
 foreach(version ${VERSIONS})
   # version hack if required for PyPI (bgoli)

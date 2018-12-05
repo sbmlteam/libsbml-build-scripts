@@ -1,5 +1,5 @@
 ## @file    setup.py
-## @brief   Python distutils code for libSBML Python module (including dependencies)
+## @brief   Python distutils code for libSBML Python module
 ## @author  Michael Hucka
 ## @author  Ben Bornstein
 ## @author  Ben Kovitz
@@ -25,43 +25,17 @@
 ## and also available online as http://sbml.org/software/libsbml/license.html
 ##----------------------------------------------------------------------- -->*/
 
-import glob
-import os
-import sys
-import shutil
 import platform
-from distutils.sysconfig import get_config_vars
 
-current_dir = os.path.dirname(os.path.realpath(__file__))
+# figure out whether this is a 64bit or 32 bit installation
+basepath = '../../../win64/'
 
-# we need to switch the __init__.py file based on the python version
-# as python 3 uses a different syntax for metaclasses
-if sys.version_info >= (3,0):
-  # this is python 3.x
-  if (os.path.exists('./libsbml/__init__.py')):
-    os.remove('./libsbml/__init__.py')
-  shutil.copyfile('./script/libsbml3.py', './libsbml/__init__.py')
-else:
-  # this is an older python
-  if (os.path.exists('./libsbml/__init__.py')):
-    os.remove('./libsbml/__init__.py')
-  shutil.copyfile('./script/libsbml2.py', './libsbml/__init__.py')
-
-
-cfiles = []
-definitions = []
-packages = []
-current_os = ''
-inc_dirs = []
-basepath = ''
-libs = []
-lib_dirs = []
 try:
   from setuptools import setup, Extension, Command
 except ImportError:
   from distutils.core import setup, Extension
 
-setup(name             = "${NAME}", 
+setup(name             = "libsbml-experimental", 
       version          = "${PACKAGE_VERSION}",
       description      = "LibSBML Python API",
       long_description = ("LibSBML is a library for reading, writing and "+
@@ -74,30 +48,20 @@ setup(name             = "${NAME}",
       author           = "SBML Team",
       author_email     = "libsbml-team@googlegroups.com",
       url              = "http://sbml.org",
-      packages         = ["libsbml"],
+	  packages         = ["libsbml"],
       package_dir      = {'libsbml': 'libsbml'},
-      #data_files       = [('lib/site-packages', ['libsbml.pth'])],
-      ext_package      = "libsbml",
+      data_files       = [#('Lib/site-packages/libsbml', [basepath + 'bin/libsbml.dll']), 
+						 ('Lib/site-packages', ['libsbml.pth'])],
+	  ext_package      = "libsbml",
       ext_modules      = [Extension("_libsbml", 
-                            sources = cfiles,
-                            define_macros =  definitions 
-							  +  [(current_os, None), 
-                              ('USE_EXPAT', None),
-                              ('USE_ZLIB', None),
-                              ('USE_BZ2', None)
-                              ] 
-							  + packages,
-                            include_dirs = inc_dirs +
-							  [                              
-                              basepath + "/", 
-                              basepath + "/sbml", 
-                              basepath + "/sbml/compress", 
-                              basepath + "/sbml/validator/constraints", 
-                              basepath + "/sbml/packages/comp/validator", 
-                              basepath + "/sbml/packages/comp/validator/constraints", 
-                              "."],
-                            libraries = libs,
-                            library_dirs = lib_dirs
-                            )
+							sources = [ "libsbml_wrap.cpp"],
+							define_macros =  [('WIN32', None), 
+								('USE_LAYOUT', None),
+								('LIBSBML_EXPORTS', None)],
+							include_dirs = [basepath + "include", 
+								basepath + "include/sbml", "."],
+							libraries = ["libsbml"],
+							library_dirs = [basepath + "lib"]
+						    )
                          ]
 )

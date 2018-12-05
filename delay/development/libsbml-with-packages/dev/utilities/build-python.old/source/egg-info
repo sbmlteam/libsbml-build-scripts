@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
-Name: python-libsbml-experimental
-Version: 5.17.2
+Name: ${NAME}
+Version: ${PACKAGE_VERSION}
 Summary: LibSBML Python API
 Home-page: http://sbml.org
 Author: SBML Team

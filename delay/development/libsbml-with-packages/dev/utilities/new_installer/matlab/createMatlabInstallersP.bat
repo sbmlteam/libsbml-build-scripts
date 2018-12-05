@@ -8,7 +8,7 @@ REM
 SET MATLAB_INST_DIR=%~dp0
 
 SET LIBSBML_ROOT=c:\Development\libsbml-with-packages
-SET DEPENDENCIES_32_BIT=c:\Development\dependencies\32bit
+SET DEPENDENCIES_32_BIT=c:\Development\dependencies\x86\release-static
 SET MATLAB_INSTALLER_DIR=%MATLAB_INST_DIR%\Output
 cd /d %MATLAB_INST_DIR%
 
