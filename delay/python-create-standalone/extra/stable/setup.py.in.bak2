@@ -4,7 +4,7 @@
 ## @author  Ben Bornstein
 ## @author  Ben Kovitz
 ## @author  Frank Bergmann (fbergman@caltech.edu)
-## 
+##
 ##<!---------------------------------------------------------------------------
 ## This file is part of libSBML.  Please visit http://sbml.org for more
 ## information about SBML, and the latest version of libSBML.
@@ -17,7 +17,7 @@
 ## Copyright 2005-2010 California Institute of Technology.
 ## Copyright 2002-2005 California Institute of Technology and
 ##                     Japan Science and Technology Corporation.
-## 
+##
 ## This library is free software; you can redistribute it and/or modify it
 ## under the terms of the GNU Lesser General Public License as published by
 ## the Free Software Foundation.  A copy of the license agreement is provided
@@ -66,9 +66,12 @@ packages = [
   ('USE_COMP', None),
   ('USE_QUAL', None),
   ('USE_FBC', None),
-  ('USE_LAYOUT', None)
+  ('USE_LAYOUT', None),
+  ('USE_GROUPS', None),
+  ('USE_MULTI', None),
+  ('USE_RENDER', None)
 ]
-if platform.system() == 'Darwin': 
+if platform.system() == 'Darwin':
   current_os = 'DARWIN'
 elif platform.system() == 'Windows':
   current_os = 'WIN32'
@@ -83,7 +86,7 @@ definitions = definitions  + [
   ('HAVE_MEMMOVE', None),
   ('_LIB', None)
   ]
-  
+
 
 cfiles = [ basepath + 'libsbml_wrap.cpp' ]
 
@@ -95,9 +98,16 @@ for root, dirs, files in os.walk(basepath + 'sbml'):
     if file.endswith('.c') or file.endswith('.cpp'):
       cfiles.append(os.path.join(root, file))
 
-from distutils.core import setup, Extension
+try:
+  from setuptools import setup, Extension, Command
+except ImportError:
+  from distutils.core import setup, Extension
+#try:
+#  import distutils.command.bdist_conda
+#except:
+#  pass
 
-setup(name             = "python-libsbml", 
+setup(name             = "python-libsbml",
       version          = "${LIBSBML_VERSION}",
       description      = "LibSBML Python API",
       long_description = ("LibSBML is a library for reading, writing and "+
@@ -114,23 +124,23 @@ setup(name             = "python-libsbml",
       package_dir      = {'libsbml': 'libsbml'},
       #data_files       = [('lib/site-packages', ['libsbml.pth'])],
       ext_package      = "libsbml",
-      ext_modules      = [Extension("_libsbml", 
+      ext_modules      = [Extension("_libsbml",
                             sources = cfiles,
-                            define_macros =  definitions 
-							  +  [(current_os, None), 
+                            define_macros =  definitions
+							  +  [(current_os, None),
                               ('USE_EXPAT', None),
                               ('USE_ZLIB', None),
                               ('USE_BZ2', None)
-                              ] 
+                              ]
 							  + packages,
                             include_dirs = inc_dirs +
-							  [                              
-                              basepath + "/", 
-                              basepath + "/sbml", 
-                              basepath + "/sbml/compress", 
-                              basepath + "/sbml/validator/constraints", 
-                              basepath + "/sbml/packages/comp/validator", 
-                              basepath + "/sbml/packages/comp/validator/constraints", 
+							  [
+                              basepath + "/",
+                              basepath + "/sbml",
+                              basepath + "/sbml/compress",
+                              basepath + "/sbml/validator/constraints",
+                              basepath + "/sbml/packages/comp/validator",
+                              basepath + "/sbml/packages/comp/validator/constraints",
                               "."],
                             libraries = libs,
                             library_dirs = lib_dirs

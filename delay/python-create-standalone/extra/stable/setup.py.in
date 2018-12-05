@@ -9,7 +9,7 @@
 ## This file is part of libSBML.  Please visit http://sbml.org for more
 ## information about SBML, and the latest version of libSBML.
 ##
-## Copyright (C) 2013-2016 jointly by the following organizations:
+## Copyright (C) 2013-2018 jointly by the following organizations:
 ##     1. California Institute of Technology, Pasadena, CA, USA
 ##     2. EMBL European Bioinformatics Institute (EMBL-EBI), Hinxton, UK
 ##     3. University of Heidelberg, Heidelberg, Germany
@@ -66,7 +66,11 @@ packages = [
   ('USE_COMP', None),
   ('USE_QUAL', None),
   ('USE_FBC', None),
-  ('USE_LAYOUT', None)
+  ('USE_LAYOUT', None),
+  ('USE_GROUPS', None),
+  ('USE_MULTI', None),
+  ('USE_RENDER', None),
+  ('USE_L3V2EXTENDEDMATH', None)
 ]
 if platform.system() == 'Darwin':
   current_os = 'DARWIN'
@@ -95,10 +99,16 @@ for root, dirs, files in os.walk(basepath + 'sbml'):
     if file.endswith('.c') or file.endswith('.cpp'):
       cfiles.append(os.path.join(root, file))
 
-try:
-  from setuptools import setup, Extension
-except:
-  from distutils.core import setup, Extension
+from distutils.core import setup, Extension
+
+#try:
+#  from setuptools import setup, Extension, Command
+#except ImportError:
+#  from distutils.core import setup, Extension
+#try:
+#  import distutils.command.bdist_conda
+#except:
+#  pass
 
 setup(name             = "python-libsbml",
       version          = "${LIBSBML_VERSION}",
@@ -111,7 +121,7 @@ setup(name             = "python-libsbml",
                           "about SBML, please see http://sbml.org."),
       license          = "LGPL",
       author           = "SBML Team",
-      author_email     = "libsbml-team@caltech.edu",
+      author_email     = "libsbml-team@googlegroups.com",
       url              = "http://sbml.org",
       packages         = ["libsbml"],
       package_dir      = {'libsbml': 'libsbml'},

@@ -31,47 +31,47 @@
 #
 ###############################################################################
 
-# checking arguments 
+# checking arguments
 
 
-# collect extra files 
-file (GLOB DEPENDENCY_FILES 
+# collect extra files
+file (GLOB DEPENDENCY_FILES
   ${SRC_DIR}/extra/*.c
   ${SRC_DIR}/extra/*.h
   )
 
-# copy files 
-#file(
-#    COPY ${DEPENDENCY_FILES}  
-#    DESTINATION ${SRC_DIR}/python-libsbml-${LIBSBML_VERSION}/base/
-#) 
-# copy files 
+# copy files
 file(
-    COPY ${DEPENDENCY_FILES}  
-    DESTINATION ${SRC_DIR}/python-libsbml-experimental-${LIBSBML_VERSION}/base/
-) 
+    COPY ${DEPENDENCY_FILES}
+    DESTINATION ${SRC_DIR}/python-libsbml-${LIBSBML_VERSION}/base/
+)
+# copy files
+#file(
+    #COPY ${DEPENDENCY_FILES}
+    #DESTINATION ${SRC_DIR}/python-libsbml-experimental-${LIBSBML_VERSION}/base/
+#)
 
-# collect expat files 
-file (GLOB EXPAT_FILES 
+# collect expat files
+file (GLOB EXPAT_FILES
   ${SRC_DIR}/extra/xml/*.cpp
   ${SRC_DIR}/extra/xml/*.h
   )
 
-# copy files 
-#file(
-#    COPY ${EXPAT_FILES}
-#    DESTINATION ${SRC_DIR}/python-libsbml-${LIBSBML_VERSION}/base/sbml/xml/
-#) 
-# copy files 
+# copy files
 file(
     COPY ${EXPAT_FILES}
-    DESTINATION ${SRC_DIR}/python-libsbml-experimental-${LIBSBML_VERSION}/base/sbml/xml/
-) 
-  
-# collext libxml files 
+    DESTINATION ${SRC_DIR}/python-libsbml-${LIBSBML_VERSION}/base/sbml/xml/
+)
+# copy files
+#file(
+    #COPY ${EXPAT_FILES}
+    #DESTINATION ${SRC_DIR}/python-libsbml-experimental-${LIBSBML_VERSION}/base/sbml/xml/
+#)
+
+# collext libxml files
 file (GLOB LIBXML_FILES
-#  ${SRC_DIR}/python-libsbml-${LIBSBML_VERSION}/base/sbml/xml/LibXML*
-  ${SRC_DIR}/python-libsbml-experimental-${LIBSBML_VERSION}/base/sbml/xml/LibXML*
+  ${SRC_DIR}/python-libsbml-${LIBSBML_VERSION}/base/sbml/xml/LibXML*
+#  ${SRC_DIR}/python-libsbml-experimental-${LIBSBML_VERSION}/base/sbml/xml/LibXML*
 )
 
 # remove libxml files
@@ -82,7 +82,7 @@ endif()
 
 
 #configure version in setup.py
-#configure_file(${SRC_DIR}/extra/stable/setup.py.in 
-#               ${SRC_DIR}/python-libsbml-${LIBSBML_VERSION}/setup.py)
-configure_file(${SRC_DIR}/extra/experimental/setup.py.in 
-               ${SRC_DIR}/python-libsbml-experimental-${LIBSBML_VERSION}/setup.py)
+configure_file(${SRC_DIR}/extra/stable/setup.py.in
+               ${SRC_DIR}/python-libsbml-${LIBSBML_VERSION}/setup.py)
+#configure_file(${SRC_DIR}/extra/experimental/setup.py.in
+               #${SRC_DIR}/python-libsbml-experimental-${LIBSBML_VERSION}/setup.py)
