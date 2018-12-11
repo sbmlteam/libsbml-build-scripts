@@ -452,7 +452,7 @@ public:
    *
    * @param cx x value of the center point 
    *
-   * @copydetails doc_returns_success_code
+   * @copydetails doc_returns_one_success_code
    * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
    */
   int setCX(const RelAbsVector& cx);
@@ -463,7 +463,7 @@ public:
    *
    * @param cy y value of the center point 
    *
-   * @copydetails doc_returns_success_code
+   * @copydetails doc_returns_one_success_code
    * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
    */
   int setCY(const RelAbsVector& cy);
@@ -474,7 +474,7 @@ public:
    *
    * @param cz z value of the center point 
    *
-   * @copydetails doc_returns_success_code
+   * @copydetails doc_returns_one_success_code
    * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
    */
   int setCZ(const RelAbsVector& cz);
@@ -485,7 +485,7 @@ public:
    *
    * @param rx radius along the x axis
    *
-   * @copydetails doc_returns_success_code
+   * @copydetails doc_returns_one_success_code
    * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
    */
   int setRX(const RelAbsVector& rx);
@@ -496,7 +496,7 @@ public:
    *
    * @param ry radius along the y axis
    *
-   * @copydetails doc_returns_success_code
+   * @copydetails doc_returns_one_success_code
    * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
    */
   int setRY(const RelAbsVector& ry);
@@ -534,7 +534,7 @@ public:
   /**
    * Unsets the value of the "cx" element of this Ellipse.
    *
-   * @copydetails doc_returns_success_code
+   * @copydetails doc_returns_one_success_code
    * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
    */
   int unsetCX();
@@ -543,7 +543,7 @@ public:
   /**
    * Unsets the value of the "cy" element of this Ellipse.
    *
-   * @copydetails doc_returns_success_code
+   * @copydetails doc_returns_one_success_code
    * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
    */
   int unsetCY();
@@ -552,7 +552,7 @@ public:
   /**
    * Unsets the value of the "cz" element of this Ellipse.
    *
-   * @copydetails doc_returns_success_code
+   * @copydetails doc_returns_one_success_code
    * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
    */
   int unsetCZ();
@@ -561,7 +561,7 @@ public:
   /**
    * Unsets the value of the "rx" element of this Ellipse.
    *
-   * @copydetails doc_returns_success_code
+   * @copydetails doc_returns_one_success_code
    * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
    */
   int unsetRX();
@@ -570,7 +570,7 @@ public:
   /**
    * Unsets the value of the "ry" element of this Ellipse.
    *
-   * @copydetails doc_returns_success_code
+   * @copydetails doc_returns_one_success_code
    * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
    */
   int unsetRY();
@@ -710,7 +710,7 @@ BEGIN_C_DECLS
  *
  * @copydetails doc_note_setting_lv_pkg
  *
- * @copydetails doc_returned_owned_pointer
+ * @copydetails doc_warning_returns_owned_pointer
  *
  * @memberof Ellipse_t
  */
@@ -728,7 +728,7 @@ Ellipse_create(unsigned int level,
  *
  * @return a (deep) copy of this Ellipse_t object.
  *
- * @copydetails doc_returned_owned_pointer
+ * @copydetails doc_warning_returns_owned_pointer
  *
  * @memberof Ellipse_t
  */
@@ -965,7 +965,7 @@ Ellipse_isSetRY(const Ellipse_t * e);
  *
  * @param e the Ellipse_t structure.
  *
- * @param cx RelAbsVector&_t* value of the "cx" element to be set.
+ * @param cx RelAbsVector&_t value of the "cx" element to be set.
  *
  * @copydetails doc_returns_success_code
  * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}

@@ -48,8 +48,8 @@
  * part can be omitted, in which case it defaults to @c FF.
  *
  * Examples of valid values strings are @c "#000000" and @c "#000000FF" for
- * fully opaque black, and @c "#FF000010" for an almost completly transparent
- * red.
+ * fully opaque black, and @c "#FF000010" for an almost completely
+ * transparent red.
  *
  * Internally, the RGBA components are stored as integer values in the range
  * of 0 to 255 and most methods in the implementation of the libSBML
@@ -91,8 +91,10 @@ protected:
   unsigned char mGreen;
   unsigned char mBlue;
   unsigned char mAlpha;
-  static const std::string ELEMENT_NAME;
   std::string mValue;
+
+  static const std::string ELEMENT_NAME;
+
 
   /** @endcond */
 
@@ -204,7 +206,7 @@ public:
   ColorDefinition(RenderPkgNamespaces* renderns, const std::string& id,unsigned char r,unsigned char g,unsigned char b,unsigned char a=255);
 #endif // OMIT_DEPRECATED
 
-  /*
+  /**
    * Copy constructor for ColorDefinition.
    *
    * @param orig the ColorDefinition instance to copy.
@@ -840,7 +842,7 @@ BEGIN_C_DECLS
  *
  * @copydetails doc_note_setting_lv_pkg
  *
- * @copydetails doc_returned_owned_pointer
+ * @copydetails doc_warning_returns_owned_pointer
  *
  * @memberof ColorDefinition_t
  */
@@ -858,7 +860,7 @@ ColorDefinition_create(unsigned int level,
  *
  * @return a (deep) copy of this ColorDefinition_t object.
  *
- * @copydetails doc_returned_owned_pointer
+ * @copydetails doc_warning_returns_owned_pointer
  *
  * @memberof ColorDefinition_t
  */
@@ -887,7 +889,7 @@ ColorDefinition_free(ColorDefinition_t* cd);
  * @return the value of the "id" attribute of this ColorDefinition_t as a
  * pointer to a string.
  *
- * @copydetails doc_returned_owned_char
+ * @copydetails doc_warning_returns_owned_char
  *
  * @memberof ColorDefinition_t
  */
@@ -904,7 +906,7 @@ ColorDefinition_getId(const ColorDefinition_t * cd);
  * @return the value of the "name" attribute of this ColorDefinition_t as a
  * pointer to a string.
  *
- * @copydetails doc_returned_owned_char
+ * @copydetails doc_warning_returns_owned_char
  *
  * @memberof ColorDefinition_t
  */
@@ -921,7 +923,7 @@ ColorDefinition_getName(const ColorDefinition_t * cd);
  * @return the value of the "value" attribute of this ColorDefinition_t as a
  * pointer to a string.
  *
- * @copydetails doc_returned_owned_char
+ * @copydetails doc_warning_returns_owned_char
  *
  * @memberof ColorDefinition_t
  */

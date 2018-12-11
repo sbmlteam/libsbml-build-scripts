@@ -450,7 +450,7 @@ static const packageErrorTableEntry compErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY, 
     LIBSBML_SEV_ERROR,
     "The value of the 'comp:source' attribute on an <externalModelDefinition> "
-    "object must reference an SBML Level 3 Version 1 document.",
+    "object must reference an SBML Level 3 document.",
     { "L3V1 Comp V1 Section 3.3.2"
     }
   },
@@ -1185,7 +1185,7 @@ static const packageErrorTableEntry compErrorTable[] =
     "attributes: 'comp:portRef', 'comp:idRef', 'comp:unitRef' "
     "or 'comp:metaIdRef'. No other attributes from "
     "the HierarchicalModel Composition namespace are permitted on a "
-    "<replacedElement> object.",
+    "<replacedBy> object.",
     { "L3V1 Comp V1 Section 3.6.4"
     }
   },

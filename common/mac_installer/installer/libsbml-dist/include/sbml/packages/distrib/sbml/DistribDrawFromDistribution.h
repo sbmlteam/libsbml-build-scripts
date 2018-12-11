@@ -51,7 +51,7 @@
 #include <string>
 
 
-#include <sbml/SBase.h>
+#include <sbml/packages/distrib/sbml/DistribBase.h>
 #include <sbml/packages/distrib/extension/DistribExtension.h>
 #include <sbml/packages/distrib/sbml/DistribDistribution.h>
 #include <sbml/packages/distrib/sbml/ListOfDistribInputs.h>
@@ -60,7 +60,7 @@
 LIBSBML_CPP_NAMESPACE_BEGIN
 
 
-class LIBSBML_EXTERN DistribDrawFromDistribution : public SBase
+class LIBSBML_EXTERN DistribDrawFromDistribution : public DistribBase
 {
 protected:
 
@@ -141,99 +141,6 @@ public:
    * Destructor for DistribDrawFromDistribution.
    */
   virtual ~DistribDrawFromDistribution();
-
-
-  /**
-   * Returns the value of the "id" attribute of this
-   * DistribDrawFromDistribution.
-   *
-   * @return the value of the "id" attribute of this
-   * DistribDrawFromDistribution as a string.
-   */
-  virtual const std::string& getId() const;
-
-
-  /**
-   * Returns the value of the "name" attribute of this
-   * DistribDrawFromDistribution.
-   *
-   * @return the value of the "name" attribute of this
-   * DistribDrawFromDistribution as a string.
-   */
-  virtual const std::string& getName() const;
-
-
-  /**
-   * Predicate returning @c true if this DistribDrawFromDistribution's "id"
-   * attribute is set.
-   *
-   * @return @c true if this DistribDrawFromDistribution's "id" attribute has
-   * been set, otherwise @c false is returned.
-   */
-  virtual bool isSetId() const;
-
-
-  /**
-   * Predicate returning @c true if this DistribDrawFromDistribution's "name"
-   * attribute is set.
-   *
-   * @return @c true if this DistribDrawFromDistribution's "name" attribute has
-   * been set, otherwise @c false is returned.
-   */
-  virtual bool isSetName() const;
-
-
-  /**
-   * Sets the value of the "id" attribute of this DistribDrawFromDistribution.
-   *
-   * @param id std::string& value of the "id" attribute to be set.
-   *
-   * @copydetails doc_returns_success_code
-   * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
-   * @li @sbmlconstant{LIBSBML_INVALID_ATTRIBUTE_VALUE,
-   * OperationReturnValues_t}
-   *
-   * Calling this function with @p id = @c NULL or an empty string is
-   * equivalent to calling unsetId().
-   */
-  virtual int setId(const std::string& id);
-
-
-  /**
-   * Sets the value of the "name" attribute of this
-   * DistribDrawFromDistribution.
-   *
-   * @param name std::string& value of the "name" attribute to be set.
-   *
-   * @copydetails doc_returns_one_success_code
-   * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
-   *
-   * Calling this function with @p name = @c NULL or an empty string is
-   * equivalent to calling unsetName().
-   */
-  virtual int setName(const std::string& name);
-
-
-  /**
-   * Unsets the value of the "id" attribute of this
-   * DistribDrawFromDistribution.
-   *
-   * @copydetails doc_returns_success_code
-   * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
-   * @li @sbmlconstant{LIBSBML_OPERATION_FAILED, OperationReturnValues_t}
-   */
-  virtual int unsetId();
-
-
-  /**
-   * Unsets the value of the "name" attribute of this
-   * DistribDrawFromDistribution.
-   *
-   * @copydetails doc_returns_success_code
-   * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
-   * @li @sbmlconstant{LIBSBML_OPERATION_FAILED, OperationReturnValues_t}
-   */
-  virtual int unsetName();
 
 
   /**
@@ -554,6 +461,7 @@ public:
    * @see createDistribInput()
    * @see getDistribInput(const std::string& sid)
    * @see getDistribInput(unsigned int n)
+   * @see getDistribInputByIndex(unsigned int n)
    * @see getNumDistribInputs()
    * @see removeDistribInput(const std::string& sid)
    * @see removeDistribInput(unsigned int n)
@@ -572,6 +480,7 @@ public:
    * @see createDistribInput()
    * @see getDistribInput(const std::string& sid)
    * @see getDistribInput(unsigned int n)
+   * @see getDistribInputByIndex(unsigned int n)
    * @see getNumDistribInputs()
    * @see removeDistribInput(const std::string& sid)
    * @see removeDistribInput(unsigned int n)
@@ -593,6 +502,7 @@ public:
    * @see addDistribInput(const DistribInput* object)
    * @see createDistribInput()
    * @see getDistribInput(const std::string& sid)
+   * @see getDistribInputByIndex(unsigned int n)
    * @see getNumDistribInputs()
    * @see removeDistribInput(const std::string& sid)
    * @see removeDistribInput(unsigned int n)
@@ -614,6 +524,7 @@ public:
    * @see addDistribInput(const DistribInput* object)
    * @see createDistribInput()
    * @see getDistribInput(const std::string& sid)
+   * @see getDistribInputByIndex(unsigned int n)
    * @see getNumDistribInputs()
    * @see removeDistribInput(const std::string& sid)
    * @see removeDistribInput(unsigned int n)
@@ -637,6 +548,7 @@ public:
    * @see addDistribInput(const DistribInput* object)
    * @see createDistribInput()
    * @see getDistribInput(unsigned int n)
+   * @see getDistribInputByIndex(unsigned int n)
    * @see getNumDistribInputs()
    * @see removeDistribInput(const std::string& sid)
    * @see removeDistribInput(unsigned int n)
@@ -660,11 +572,54 @@ public:
    * @see addDistribInput(const DistribInput* object)
    * @see createDistribInput()
    * @see getDistribInput(unsigned int n)
+   * @see getDistribInputByIndex(unsigned int n)
    * @see getNumDistribInputs()
    * @see removeDistribInput(const std::string& sid)
    * @see removeDistribInput(unsigned int n)
    */
   const DistribInput* getDistribInput(const std::string& sid) const;
+
+
+  /**
+   * Get a DistribInput from the DistribDrawFromDistribution.
+   *
+   * @param n an unsigned int representing the "index" attribute
+   * value of the DistribInput to retrieve.
+   *
+   * @return the DistribInput in the ListOfDistribInputs with the
+   * given "index" value.
+   *
+   * @copydetails doc_returned_unowned_pointer
+   *
+   * @see addDistribInput(const DistribInput* object)
+   * @see createDistribInput()
+   * @see getDistribInput(const std::string& sid)
+   * @see getNumDistribInputs()
+   * @see removeDistribInput(const std::string& sid)
+   * @see removeDistribInput(unsigned int n)
+   */
+  DistribInput* getDistribInputByIndex(unsigned int n);
+
+
+  /**
+   * Get a DistribInput from the DistribDrawFromDistribution.
+   *
+   * @param n an unsigned int representing the "index" attribute
+   * value of the DistribInput to retrieve.
+   *
+   * @return the DistribInput in the ListOfDistribInputs with the
+   * given "index" value.
+   *
+   * @copydetails doc_returned_unowned_pointer
+   *
+   * @see addDistribInput(const DistribInput* object)
+   * @see createDistribInput()
+   * @see getDistribInput(const std::string& sid)
+   * @see getNumDistribInputs()
+   * @see removeDistribInput(const std::string& sid)
+   * @see removeDistribInput(unsigned int n)
+   */
+  const DistribInput* getDistribInputByIndex(unsigned int n) const;
 
 
   /**
@@ -686,6 +641,7 @@ public:
    * @see createDistribInput()
    * @see getDistribInput(const std::string& sid)
    * @see getDistribInput(unsigned int n)
+   * @see getDistribInputByIndex(unsigned int n)
    * @see getNumDistribInputs()
    * @see removeDistribInput(const std::string& sid)
    * @see removeDistribInput(unsigned int n)
@@ -705,6 +661,7 @@ public:
    * @see createDistribInput()
    * @see getDistribInput(const std::string& sid)
    * @see getDistribInput(unsigned int n)
+   * @see getDistribInputByIndex(unsigned int n)
    * @see removeDistribInput(const std::string& sid)
    * @see removeDistribInput(unsigned int n)
    */
@@ -723,6 +680,7 @@ public:
    * @see addDistribInput(const DistribInput* object)
    * @see getDistribInput(const std::string& sid)
    * @see getDistribInput(unsigned int n)
+   * @see getDistribInputByIndex(unsigned int n)
    * @see getNumDistribInputs()
    * @see removeDistribInput(const std::string& sid)
    * @see removeDistribInput(unsigned int n)
@@ -746,6 +704,7 @@ public:
    * @see createDistribInput()
    * @see getDistribInput(const std::string& sid)
    * @see getDistribInput(unsigned int n)
+   * @see getDistribInputByIndex(unsigned int n)
    * @see getNumDistribInputs()
    * @see removeDistribInput(const std::string& sid)
    */
@@ -768,6 +727,7 @@ public:
    * @see createDistribInput()
    * @see getDistribInput(const std::string& sid)
    * @see getDistribInput(unsigned int n)
+   * @see getDistribInputByIndex(unsigned int n)
    * @see getNumDistribInputs()
    * @see removeDistribInput(unsigned int n)
    */
@@ -809,6 +769,20 @@ public:
    * DistribDrawFromDistribution have been set, otherwise @c false is returned.
    */
   virtual bool hasRequiredAttributes() const;
+
+
+  /**
+   * Predicate returning @c true if all the required elements for this
+   * DistribDrawFromDistribution object have been set.
+   *
+   * @return @c true to indicate that all the required elements of this
+   * DistribDrawFromDistribution have been set, otherwise @c false is returned.
+   *
+   *
+   * @note The required elements for the DistribDrawFromDistribution object
+   * are:
+   */
+  virtual bool hasRequiredElements() const;
 
 
 
@@ -1299,53 +1273,9 @@ protected:
   /** @cond doxygenLibsbmlInternal */
 
   /**
-   * Reads the expected attributes into the member data variables
-   */
-  virtual void readL3V1V1Attributes(const XMLAttributes& attributes);
-
-  /** @endcond */
-
-
-
-  /** @cond doxygenLibsbmlInternal */
-
-  /**
-   * Reads the expected attributes into the member data variables
-   */
-  virtual void readL3V2V1Attributes(const XMLAttributes& attributes);
-
-  /** @endcond */
-
-
-
-  /** @cond doxygenLibsbmlInternal */
-
-  /**
    * Writes the attributes to the stream
    */
   virtual void writeAttributes(XMLOutputStream& stream) const;
-
-  /** @endcond */
-
-
-
-  /** @cond doxygenLibsbmlInternal */
-
-  /**
-   * Writes the attributes to the stream
-   */
-  virtual void writeL3V1V1Attributes(XMLOutputStream& stream) const;
-
-  /** @endcond */
-
-
-
-  /** @cond doxygenLibsbmlInternal */
-
-  /**
-   * Writes the attributes to the stream
-   */
-  virtual void writeL3V2V1Attributes(XMLOutputStream& stream) const;
 
   /** @endcond */
 
@@ -1430,160 +1360,6 @@ DistribDrawFromDistribution_clone(const DistribDrawFromDistribution_t* ddfd);
 LIBSBML_EXTERN
 void
 DistribDrawFromDistribution_free(DistribDrawFromDistribution_t* ddfd);
-
-
-/**
- * Returns the value of the "id" attribute of this
- * DistribDrawFromDistribution_t.
- *
- * @param ddfd the DistribDrawFromDistribution_t structure whose id is sought.
- *
- * @return the value of the "id" attribute of this
- * DistribDrawFromDistribution_t as a pointer to a string.
- *
- * @copydetails doc_returned_owned_char
- *
- * @memberof DistribDrawFromDistribution_t
- */
-LIBSBML_EXTERN
-char *
-DistribDrawFromDistribution_getId(const DistribDrawFromDistribution_t * ddfd);
-
-
-/**
- * Returns the value of the "name" attribute of this
- * DistribDrawFromDistribution_t.
- *
- * @param ddfd the DistribDrawFromDistribution_t structure whose name is
- * sought.
- *
- * @return the value of the "name" attribute of this
- * DistribDrawFromDistribution_t as a pointer to a string.
- *
- * @copydetails doc_returned_owned_char
- *
- * @memberof DistribDrawFromDistribution_t
- */
-LIBSBML_EXTERN
-char *
-DistribDrawFromDistribution_getName(const DistribDrawFromDistribution_t *
-  ddfd);
-
-
-/**
- * Predicate returning @c 1 (true) if this DistribDrawFromDistribution_t's "id"
- * attribute is set.
- *
- * @param ddfd the DistribDrawFromDistribution_t structure.
- *
- * @return @c 1 (true) if this DistribDrawFromDistribution_t's "id" attribute
- * has been set, otherwise @c 0 (false) is returned.
- *
- * @memberof DistribDrawFromDistribution_t
- */
-LIBSBML_EXTERN
-int
-DistribDrawFromDistribution_isSetId(const DistribDrawFromDistribution_t *
-  ddfd);
-
-
-/**
- * Predicate returning @c 1 (true) if this DistribDrawFromDistribution_t's
- * "name" attribute is set.
- *
- * @param ddfd the DistribDrawFromDistribution_t structure.
- *
- * @return @c 1 (true) if this DistribDrawFromDistribution_t's "name" attribute
- * has been set, otherwise @c 0 (false) is returned.
- *
- * @memberof DistribDrawFromDistribution_t
- */
-LIBSBML_EXTERN
-int
-DistribDrawFromDistribution_isSetName(const DistribDrawFromDistribution_t *
-  ddfd);
-
-
-/**
- * Sets the value of the "id" attribute of this DistribDrawFromDistribution_t.
- *
- * @param ddfd the DistribDrawFromDistribution_t structure.
- *
- * @param id const char * value of the "id" attribute to be set.
- *
- * @copydetails doc_returns_success_code
- * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
- * @li @sbmlconstant{LIBSBML_INVALID_ATTRIBUTE_VALUE, OperationReturnValues_t}
- * @li @sbmlconstant{LIBSBML_INVALID_OBJECT, OperationReturnValues_t}
- *
- * Calling this function with @p id = @c NULL or an empty string is equivalent
- * to calling DistribDrawFromDistribution_unsetId().
- *
- * @memberof DistribDrawFromDistribution_t
- */
-LIBSBML_EXTERN
-int
-DistribDrawFromDistribution_setId(DistribDrawFromDistribution_t * ddfd,
-                                  const char * id);
-
-
-/**
- * Sets the value of the "name" attribute of this
- * DistribDrawFromDistribution_t.
- *
- * @param ddfd the DistribDrawFromDistribution_t structure.
- *
- * @param name const char * value of the "name" attribute to be set.
- *
- * @copydetails doc_returns_success_code
- * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
- * @li @sbmlconstant{LIBSBML_INVALID_OBJECT, OperationReturnValues_t}
- *
- * Calling this function with @p name = @c NULL or an empty string is
- * equivalent to calling DistribDrawFromDistribution_unsetName().
- *
- * @memberof DistribDrawFromDistribution_t
- */
-LIBSBML_EXTERN
-int
-DistribDrawFromDistribution_setName(DistribDrawFromDistribution_t * ddfd,
-                                    const char * name);
-
-
-/**
- * Unsets the value of the "id" attribute of this
- * DistribDrawFromDistribution_t.
- *
- * @param ddfd the DistribDrawFromDistribution_t structure.
- *
- * @copydetails doc_returns_success_code
- * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
- * @li @sbmlconstant{LIBSBML_OPERATION_FAILED, OperationReturnValues_t}
- * @li @sbmlconstant{LIBSBML_INVALID_OBJECT, OperationReturnValues_t}
- *
- * @memberof DistribDrawFromDistribution_t
- */
-LIBSBML_EXTERN
-int
-DistribDrawFromDistribution_unsetId(DistribDrawFromDistribution_t * ddfd);
-
-
-/**
- * Unsets the value of the "name" attribute of this
- * DistribDrawFromDistribution_t.
- *
- * @param ddfd the DistribDrawFromDistribution_t structure.
- *
- * @copydetails doc_returns_success_code
- * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
- * @li @sbmlconstant{LIBSBML_OPERATION_FAILED, OperationReturnValues_t}
- * @li @sbmlconstant{LIBSBML_INVALID_OBJECT, OperationReturnValues_t}
- *
- * @memberof DistribDrawFromDistribution_t
- */
-LIBSBML_EXTERN
-int
-DistribDrawFromDistribution_unsetName(DistribDrawFromDistribution_t * ddfd);
 
 
 /**
@@ -2319,6 +2095,28 @@ DistribDrawFromDistribution_removeDistribInputById(
 LIBSBML_EXTERN
 int
 DistribDrawFromDistribution_hasRequiredAttributes(const
+  DistribDrawFromDistribution_t * ddfd);
+
+
+/**
+ * Predicate returning @c 1 (true) if all the required elements for this
+ * DistribDrawFromDistribution_t object have been set.
+ *
+ * @param ddfd the DistribDrawFromDistribution_t structure.
+ *
+ * @return @c 1 (true) to indicate that all the required elements of this
+ * DistribDrawFromDistribution_t have been set, otherwise @c 0 (false) is
+ * returned.
+ *
+ *
+ * @note The required elements for the DistribDrawFromDistribution_t object
+ * are:
+ *
+ * @memberof DistribDrawFromDistribution_t
+ */
+LIBSBML_EXTERN
+int
+DistribDrawFromDistribution_hasRequiredElements(const
   DistribDrawFromDistribution_t * ddfd);
 
 

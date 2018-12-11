@@ -47,7 +47,7 @@ cd $BUILD_DIR
 # fi
 
 # upgrade anaconda 
-#conda update -y --prefix $ANACONDA_DIR anaconda
+conda update -y --prefix $ANACONDA_DIR anaconda
 conda install -y conda-build 
 
 # grab the latest package from PyPi 

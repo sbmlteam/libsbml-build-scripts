@@ -257,6 +257,7 @@ delete_file_or_dir lib/libsbml.5.14.0.dylib
 delete_file_or_dir lib/libsbml-5.15.0.dylib
 delete_file_or_dir lib/libsbml-5.16.0.dylib
 delete_file_or_dir lib/libsbml-5.17.0.dylib
+delete_file_or_dir lib/libsbml-5.17.2.dylib
 
 
 delete_file_or_dir lib/libsbml.a
@@ -358,6 +359,7 @@ delete_file_or_dir lib/python2.7/site-packages/libsbml-5.14.0-py2.7.egg-info
 delete_file_or_dir lib/python2.7/site-packages/libsbml-5.15.0-py2.7.egg-info
 delete_file_or_dir lib/python2.7/site-packages/libsbml-5.16.0-py2.7.egg-info
 delete_file_or_dir lib/python2.7/site-packages/libsbml-5.17.0-py2.7.egg-info
+delete_file_or_dir lib/python2.7/site-packages/libsbml-5.17.2-py2.7.egg-info
 
 delete_file_or_dir lib/python2.7/site-packages/libsbml.pth
 delete_file_or_dir lib/python2.7/site-packages/libsbml
@@ -387,6 +389,7 @@ delete_file_or_dir lib/python2.6/site-packages/libsbml-5.14.0-py2.6.egg-info
 delete_file_or_dir lib/python2.6/site-packages/libsbml-5.15.0-py2.6.egg-info
 delete_file_or_dir lib/python2.6/site-packages/libsbml-5.16.0-py2.6.egg-info
 delete_file_or_dir lib/python2.6/site-packages/libsbml-5.17.0-py2.6.egg-info
+delete_file_or_dir lib/python2.6/site-packages/libsbml-5.17.2-py2.6.egg-info
 
 delete_file_or_dir lib/python2.6/site-packages/libsbml.pth
 delete_file_or_dir lib/python2.6/site-packages/libsbml
@@ -443,6 +446,7 @@ delete_file_or_dir lib/libsbml.5.14.0.dylib
 delete_file_or_dir lib/libsbml.5.15.0.dylib
 delete_file_or_dir lib/libsbml.5.16.0.dylib
 delete_file_or_dir lib/libsbml.5.17.0.dylib
+delete_file_or_dir lib/libsbml.5.17.22dylib
 
 delete_file_or_dir lib/libSBML.so
 delete_file_or_dir lib/perl5/site_perl/5.12.4/darwin-thread-multi-2level/auto/libSBML

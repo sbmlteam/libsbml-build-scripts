@@ -86,7 +86,7 @@ static const packageErrorTableEntry distribErrorTable[] =
   // 1510301
   { DistribDuplicateComponentId,
     "Duplicate 'id' attribute value",
-    LIBSBML_CAT_GENERAL_CONSISTENCY,
+    LIBSBML_CAT_IDENTIFIER_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "(Extends validation rule #10301 in the SBML Level 3 Core specification. TO "
     "DO list scope of ids)",
@@ -97,10 +97,58 @@ static const packageErrorTableEntry distribErrorTable[] =
   // 1510302
   { DistribIdSyntaxRule,
     "Invalid SId syntax",
-    LIBSBML_CAT_GENERAL_CONSISTENCY,
+    LIBSBML_CAT_IDENTIFIER_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "The value of a 'distrib:id' must conform to the syntax of the <sbml> data "
     "type 'SId'",
+    { "L3V1 Distrib V1 Section"
+    }
+  },
+
+  // 1510303
+  { DistribIdL3v1NamespaceRule,
+    "No 'id' attributes allowed in 'distrib' objects in SBML L3v1.",
+    LIBSBML_CAT_IDENTIFIER_CONSISTENCY,
+    LIBSBML_SEV_ERROR,
+    "The attribute 'id' on any distrib object in an SBML Level 3 Version 1 "
+    "document may not be used: one must use the DistribBase attribute "
+    "'distrib:id' instead.",
+    { "L3V1 Distrib V1 Section"
+    }
+  },
+
+  // 1510304
+  { DistribNameL3v1NamespaceRule,
+    "No 'name' attributes allowed in 'distrib' objects in SBML L3v1.",
+    LIBSBML_CAT_IDENTIFIER_CONSISTENCY,
+    LIBSBML_SEV_ERROR,
+    "The attribute 'name' on any distrib object in an SBML Level 3 Version 1 "
+    "document may not be used: one must use the DistribBase attribute "
+    "'distrib:name' instead.",
+    { "L3V1 Distrib V1 Section"
+    }
+  },
+
+  // 1510305
+  { DistribIdL3v2NamespaceRule,
+    "No 'distrib:id' attributes allowed in 'distrib' objects in SBML L3v2.",
+    LIBSBML_CAT_IDENTIFIER_CONSISTENCY,
+    LIBSBML_SEV_ERROR,
+    "The attribute 'distrib:id' on any distrib object in an SBML Level 3 Version 2 "
+    "document may not be used: one must use the core SBase attribute "
+    "'id' instead.",
+    { "L3V1 Distrib V1 Section"
+    }
+  },
+
+  // 1510306
+  { DistribNameL3v2NamespaceRule,
+    "No 'distrib:name' attributes allowed in 'distrib' objects in SBML L3v2.",
+    LIBSBML_CAT_IDENTIFIER_CONSISTENCY,
+    LIBSBML_SEV_ERROR,
+    "The attribute 'distrib:name' on any distrib object in an SBML Level 3 Version 2 "
+    "document may not be used: one must use the core SBase attribute "
+    "'name' instead.",
     { "L3V1 Distrib V1 Section"
     }
   },
@@ -195,7 +243,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribDrawFromDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribDrawFromDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -239,7 +287,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     }
   },
 
-  // 1520409
+  // 1520408
   { DistribDistribDrawFromDistributionLODistribInputsAllowedCoreAttributes,
     "Core attributes allowed on <listOfDistribInputs>.",
     LIBSBML_CAT_GENERAL_CONSISTENCY,
@@ -247,6 +295,19 @@ static const packageErrorTableEntry distribErrorTable[] =
     "A <listOfDistribInputs> object may have the optional SBML Level 3 Core "
     "attributes 'metaid' and 'sboTerm'. No other attributes from the SBML Level "
     "3 Core namespaces are permitted on a <listOfDistribInputs> object.",
+    { "L3V1 Distrib V1 Section"
+    }
+  },
+
+  // 1520409
+  { DistribDistribDrawFromDistributionLODistribInputsAllowedAttributes,
+    "Attributes allowed on <listOfDistribInputs>.",
+    LIBSBML_CAT_GENERAL_CONSISTENCY,
+    LIBSBML_SEV_ERROR,
+    "A <listOfDistribInputs> object may have the optional attributes "
+    "'distrib:id' and 'distrib:name'. No other "
+    "attributes from the SBML Level 3 Distributions namespaces are permitted on "
+    "a <listOfDistribInputs> object. ",
     { "L3V1 Distrib V1 Section"
     }
   },
@@ -280,8 +341,9 @@ static const packageErrorTableEntry distribErrorTable[] =
     "Attributes allowed on <distribInput>.",
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
-    "A <distribInput> object may have the optional attributes 'distrib:id', "
-    "'distrib:name', 'distrib:index', 'distrib:id', 'distrib:name' and "
+    "A <distribInput> object must have the attribute 'distrib:id' (in level 3 "
+    "version 1) or 'id' (in level 3 version 2+), and may have the optional "
+    "attributes 'distrib:name' and "
     "'distrib:index'. No other attributes from the SBML Level 3 Distributions "
     "namespaces are permitted on a <distribInput> object. ",
     { "L3V1 Distrib V1 Section"
@@ -418,7 +480,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribContinuousUnivariateDistribution> object may have the optional "
-    "attributes 'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. "
+    "attributes 'distrib:id' and 'distrib:name'. "
     "No other attributes from the SBML Level 3 Distributions namespaces are "
     "permitted on a <distribContinuousUnivariateDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -483,7 +545,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribDiscreteUnivariateDistribution> object may have the optional "
-    "attributes 'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. "
+    "attributes 'distrib:id' and 'distrib:name'. "
     "No other attributes from the SBML Level 3 Distributions namespaces are "
     "permitted on a <distribDiscreteUnivariateDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -571,8 +633,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribUncertValue> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:value', 'distrib:var', "
-    "'distrib:units', 'distrib:id', 'distrib:name', 'distrib:value', "
+    "'distrib:id', 'distrib:name', 'distrib:value', "
     "'distrib:var' and 'distrib:units'. No other attributes from the SBML Level "
     "3 Distributions namespaces are permitted on a <distribUncertValue> object. "
     "",
@@ -656,8 +717,8 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribUncertBound> object must have the required attributes "
-    "'distrib:inclusive' and 'distrib:inclusive', and may have the optional "
-    "attributes 'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. "
+    "'distrib:inclusive', and may have the optional "
+    "attributes 'distrib:id' and 'distrib:name'. "
     "No other attributes from the SBML Level 3 Distributions namespaces are "
     "permitted on a <distribUncertBound> object. ",
     { "L3V1 Distrib V1 Section"
@@ -718,8 +779,8 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribExternalDistribution> object must have the required attributes "
-    "'distrib:definitionURL' and 'distrib:definitionURL', and may have the "
-    "optional attributes 'distrib:id', 'distrib:name', 'distrib:id' and "
+    "'distrib:definitionURL', and may have the "
+    "optional attributes 'distrib:id' and "
     "'distrib:name'. No other attributes from the SBML Level 3 Distributions "
     "namespaces are permitted on a <distribExternalDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -775,7 +836,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     }
   },
 
-  // 1521411
+  // 1521410
   {
     DistribDistribExternalDistributionLODistribExternalParametersAllowedCoreAttributes,
     "Core attributes allowed on <listOfDistribExternalParameters>.",
@@ -785,6 +846,20 @@ static const packageErrorTableEntry distribErrorTable[] =
     "Level 3 Core attributes 'metaid' and 'sboTerm'. No other attributes from "
     "the SBML Level 3 Core namespaces are permitted on a "
     "<listOfDistribExternalParameters> object.",
+    { "L3V1 Distrib V1 Section"
+    }
+  },
+
+  // 1521411
+  {
+    DistribDistribExternalDistributionLODistribExternalParametersAllowedAttributes,
+    "Attributes allowed on <listOfDistribExternalParameters>.",
+    LIBSBML_CAT_GENERAL_CONSISTENCY,
+    LIBSBML_SEV_ERROR,
+    "A <listOfDistribExternalParameters> object may have the optional "
+    "attributes 'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. "
+    "No other attributes from the SBML Level 3 Distributions namespaces are "
+    "permitted on a <listOfDistribExternalParameters> object. ",
     { "L3V1 Distrib V1 Section"
     }
   },
@@ -819,8 +894,8 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribExternalParameter> object must have the required attributes "
-    "'distrib:definitionURL' and 'distrib:definitionURL', and may have the "
-    "optional attributes 'distrib:id', 'distrib:name', 'distrib:id' and "
+    "'distrib:definitionURL', and may have the "
+    "optional attributes 'distrib:id' and "
     "'distrib:name'. No other attributes from the SBML Level 3 Distributions "
     "namespaces are permitted on a <distribExternalParameter> object. ",
     { "L3V1 Distrib V1 Section"
@@ -876,7 +951,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     }
   },
 
-  // 1521511
+  // 1521510
   {
     DistribDistribExternalParameterLODistribExternalParametersAllowedCoreAttributes,
     "Core attributes allowed on <listOfDistribExternalParameters>.",
@@ -886,6 +961,20 @@ static const packageErrorTableEntry distribErrorTable[] =
     "Level 3 Core attributes 'metaid' and 'sboTerm'. No other attributes from "
     "the SBML Level 3 Core namespaces are permitted on a "
     "<listOfDistribExternalParameters> object.",
+    { "L3V1 Distrib V1 Section"
+    }
+  },
+
+  // 1521511
+  {
+    DistribDistribExternalParameterLODistribExternalParametersAllowedAttributes,
+    "Attributes allowed on <listOfDistribExternalParameters>.",
+    LIBSBML_CAT_GENERAL_CONSISTENCY,
+    LIBSBML_SEV_ERROR,
+    "A <listOfDistribExternalParameters> object may have the optional "
+    "attributes 'distrib:id', 'distrib:name''. "
+    "No other attributes from the SBML Level 3 Distributions namespaces are "
+    "permitted on a <listOfDistribExternalParameters> object. ",
     { "L3V1 Distrib V1 Section"
     }
   },
@@ -920,7 +1009,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribNormalDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribNormalDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -984,7 +1073,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribUniformDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribUniformDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -1050,7 +1139,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribCategoricalDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribCategoricalDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -1106,6 +1195,20 @@ static const packageErrorTableEntry distribErrorTable[] =
     }
   },
 
+  // 1521809
+  { DistribDistribCategoricalDistributionLODistribCategoriesAllowedAttributes,
+    "Attributes allowed on <listOfDistribCategories>.",
+    LIBSBML_CAT_GENERAL_CONSISTENCY,
+    LIBSBML_SEV_ERROR,
+    "A <listOfDistribCategories> object may have the optional attributes "
+    "'distrib:id', 'distrib:name'. No other "
+    "attributes from the SBML Level 3 Distributions namespaces are permitted on "
+    "a <listOfDistribCategories> object. ",
+    { "L3V1 Distrib V1 Section"
+    }
+  },
+
+
   // 1521810
   {
     DistribDistribCategoricalDistributionLODistribCategoriesAllowedCoreAttributes,
@@ -1148,8 +1251,8 @@ static const packageErrorTableEntry distribErrorTable[] =
     "Attributes allowed on <distribCategory>.",
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
-    "A <distribCategory> object may have the optional attributes 'distrib:id', "
-    "'distrib:name', 'distrib:rank', 'distrib:id', 'distrib:name' and "
+    "A <distribCategory> object may have the optional attributes "
+    "'distrib:id', 'distrib:name' and "
     "'distrib:rank'. No other attributes from the SBML Level 3 Distributions "
     "namespaces are permitted on a <distribCategory> object. ",
     { "L3V1 Distrib V1 Section"
@@ -1224,7 +1327,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribBernoulliDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribBernoulliDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -1285,7 +1388,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribBetaDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribBetaDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -1349,7 +1452,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribBinomialDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribBinomialDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -1411,7 +1514,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribCauchyDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribCauchyDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -1475,7 +1578,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribChiSquareDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribChiSquareDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -1538,7 +1641,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribExponentialDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribExponentialDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -1599,7 +1702,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribFDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribFDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -1661,7 +1764,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribGammaDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribGammaDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -1725,7 +1828,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribGeometricDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribGeometricDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -1788,7 +1891,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribHypergeometricDistribution> object may have the optional "
-    "attributes 'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. "
+    "attributes 'distrib:id' and 'distrib:name'. "
     "No other attributes from the SBML Level 3 Distributions namespaces are "
     "permitted on a <distribHypergeometricDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -1853,7 +1956,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribInverseGammaDistribution> object may have the optional "
-    "attributes 'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. "
+    "attributes 'distrib:id' and 'distrib:name'. "
     "No other attributes from the SBML Level 3 Distributions namespaces are "
     "permitted on a <distribInverseGammaDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -1915,7 +2018,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribLaPlaceDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribLaPlaceDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -1979,7 +2082,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribLogNormalDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribLogNormalDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -2043,7 +2146,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribLogisticDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribLogisticDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -2107,7 +2210,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribNegativeBinomialDistribution> object may have the optional "
-    "attributes 'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. "
+    "attributes 'distrib:id' and 'distrib:name'. "
     "No other attributes from the SBML Level 3 Distributions namespaces are "
     "permitted on a <distribNegativeBinomialDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -2169,7 +2272,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribParetoDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribParetoDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -2231,7 +2334,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribPoissonDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribPoissonDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -2294,7 +2397,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribRayleighDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribRayleighDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -2357,7 +2460,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribStudentTDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribStudentTDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -2420,7 +2523,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribWeibullDistribution> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribWeibullDistribution> object. ",
     { "L3V1 Distrib V1 Section"
@@ -2482,7 +2585,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribUncertainty> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribUncertainty> object. ",
     { "L3V1 Distrib V1 Section"
@@ -2544,7 +2647,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribUncertStatistics> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:id' and 'distrib:name'. No other "
+    "'distrib:id' and 'distrib:name'. No other "
     "attributes from the SBML Level 3 Distributions namespaces are permitted on "
     "a <distribUncertStatistics> object. ",
     { "L3V1 Distrib V1 Section"
@@ -2641,8 +2744,7 @@ static const packageErrorTableEntry distribErrorTable[] =
     LIBSBML_CAT_GENERAL_CONSISTENCY,
     LIBSBML_SEV_ERROR,
     "A <distribUncertStatisticSpan> object may have the optional attributes "
-    "'distrib:id', 'distrib:name', 'distrib:varLower', 'distrib:valueLower', "
-    "'distrib:varUpper', 'distrib:valueUpper', 'distrib:id', 'distrib:name', "
+    "'distrib:id', 'distrib:name', "
     "'distrib:varLower', 'distrib:valueLower', 'distrib:varUpper' and "
     "'distrib:valueUpper'. No other attributes from the SBML Level 3 "
     "Distributions namespaces are permitted on a <distribUncertStatisticSpan> "

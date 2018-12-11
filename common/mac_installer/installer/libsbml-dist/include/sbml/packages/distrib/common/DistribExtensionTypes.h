@@ -82,6 +82,9 @@
 #include <sbml/packages/distrib/sbml/DistribUncertainty.h>
 #include <sbml/packages/distrib/sbml/DistribUncertStatistics.h>
 #include <sbml/packages/distrib/sbml/DistribUncertStatisticSpan.h>
+#include <sbml/packages/distrib/sbml/DistribBase.h>
+
+#include <sbml/packages/distrib/extension/DistribASTPlugin.h>
 
 
 #endif /* !DistribExtensionTypes_H__ */

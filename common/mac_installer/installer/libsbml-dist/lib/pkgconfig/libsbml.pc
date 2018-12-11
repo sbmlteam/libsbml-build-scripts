@@ -1,7 +1,7 @@
 Name: libSBML
 Description: A library for reading/writing/manipulating SBML
 URL: http://sbml.org/Software/libSBML
-Version: 5.17.0
+Version: 5.17.2
 
 prefix=/Users/frank/gitrepo/libsbml-build-scripts/common/mac_installer/installer/libsbml-dist
 libdir=/Users/frank/gitrepo/libsbml-build-scripts/common/mac_installer/installer/libsbml-dist/lib

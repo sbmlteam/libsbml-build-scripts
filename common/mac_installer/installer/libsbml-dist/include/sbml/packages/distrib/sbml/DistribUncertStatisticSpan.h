@@ -50,14 +50,14 @@
 #include <string>
 
 
-#include <sbml/SBase.h>
+#include <sbml/packages/distrib/sbml/DistribBase.h>
 #include <sbml/packages/distrib/extension/DistribExtension.h>
 
 
 LIBSBML_CPP_NAMESPACE_BEGIN
 
 
-class LIBSBML_EXTERN DistribUncertStatisticSpan : public SBase
+class LIBSBML_EXTERN DistribUncertStatisticSpan : public DistribBase
 {
 protected:
 
@@ -144,26 +144,6 @@ public:
 
 
   /**
-   * Returns the value of the "id" attribute of this
-   * DistribUncertStatisticSpan.
-   *
-   * @return the value of the "id" attribute of this DistribUncertStatisticSpan
-   * as a string.
-   */
-  virtual const std::string& getId() const;
-
-
-  /**
-   * Returns the value of the "name" attribute of this
-   * DistribUncertStatisticSpan.
-   *
-   * @return the value of the "name" attribute of this
-   * DistribUncertStatisticSpan as a string.
-   */
-  virtual const std::string& getName() const;
-
-
-  /**
    * Returns the value of the "varLower" attribute of this
    * DistribUncertStatisticSpan.
    *
@@ -204,26 +184,6 @@ public:
 
 
   /**
-   * Predicate returning @c true if this DistribUncertStatisticSpan's "id"
-   * attribute is set.
-   *
-   * @return @c true if this DistribUncertStatisticSpan's "id" attribute has
-   * been set, otherwise @c false is returned.
-   */
-  virtual bool isSetId() const;
-
-
-  /**
-   * Predicate returning @c true if this DistribUncertStatisticSpan's "name"
-   * attribute is set.
-   *
-   * @return @c true if this DistribUncertStatisticSpan's "name" attribute has
-   * been set, otherwise @c false is returned.
-   */
-  virtual bool isSetName() const;
-
-
-  /**
    * Predicate returning @c true if this DistribUncertStatisticSpan's
    * "varLower" attribute is set.
    *
@@ -261,36 +221,6 @@ public:
    * attribute has been set, otherwise @c false is returned.
    */
   bool isSetValueUpper() const;
-
-
-  /**
-   * Sets the value of the "id" attribute of this DistribUncertStatisticSpan.
-   *
-   * @param id std::string& value of the "id" attribute to be set.
-   *
-   * @copydetails doc_returns_success_code
-   * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
-   * @li @sbmlconstant{LIBSBML_INVALID_ATTRIBUTE_VALUE,
-   * OperationReturnValues_t}
-   *
-   * Calling this function with @p id = @c NULL or an empty string is
-   * equivalent to calling unsetId().
-   */
-  virtual int setId(const std::string& id);
-
-
-  /**
-   * Sets the value of the "name" attribute of this DistribUncertStatisticSpan.
-   *
-   * @param name std::string& value of the "name" attribute to be set.
-   *
-   * @copydetails doc_returns_one_success_code
-   * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
-   *
-   * Calling this function with @p name = @c NULL or an empty string is
-   * equivalent to calling unsetName().
-   */
-  virtual int setName(const std::string& name);
 
 
   /**
@@ -347,27 +277,6 @@ public:
    * OperationReturnValues_t}
    */
   int setValueUpper(double valueUpper);
-
-
-  /**
-   * Unsets the value of the "id" attribute of this DistribUncertStatisticSpan.
-   *
-   * @copydetails doc_returns_success_code
-   * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
-   * @li @sbmlconstant{LIBSBML_OPERATION_FAILED, OperationReturnValues_t}
-   */
-  virtual int unsetId();
-
-
-  /**
-   * Unsets the value of the "name" attribute of this
-   * DistribUncertStatisticSpan.
-   *
-   * @copydetails doc_returns_success_code
-   * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
-   * @li @sbmlconstant{LIBSBML_OPERATION_FAILED, OperationReturnValues_t}
-   */
-  virtual int unsetName();
 
 
   /**
@@ -772,6 +681,17 @@ protected:
   /** @cond doxygenLibsbmlInternal */
 
   /**
+   * Creates a new object from the next XMLToken on the XMLInputStream
+   */
+  virtual SBase* createObject(XMLInputStream& stream);
+
+  /** @endcond */
+
+
+
+  /** @cond doxygenLibsbmlInternal */
+
+  /**
    * Adds the expected attributes for this element
    */
   virtual void addExpectedAttributes(ExpectedAttributes& attributes);
@@ -797,7 +717,7 @@ protected:
   /**
    * Reads the expected attributes into the member data variables
    */
-  virtual void readL3V1V1Attributes(const XMLAttributes& attributes);
+  void readL3V1V1Attributes(const XMLAttributes& attributes);
 
   /** @endcond */
 
@@ -808,7 +728,7 @@ protected:
   /**
    * Reads the expected attributes into the member data variables
    */
-  virtual void readL3V2V1Attributes(const XMLAttributes& attributes);
+  void readL3V2V1Attributes(const XMLAttributes& attributes);
 
   /** @endcond */
 
@@ -830,7 +750,7 @@ protected:
   /**
    * Writes the attributes to the stream
    */
-  virtual void writeL3V1V1Attributes(XMLOutputStream& stream) const;
+  void writeL3V1V1Attributes(XMLOutputStream& stream) const;
 
   /** @endcond */
 
@@ -841,7 +761,7 @@ protected:
   /**
    * Writes the attributes to the stream
    */
-  virtual void writeL3V2V1Attributes(XMLOutputStream& stream) const;
+  void writeL3V2V1Attributes(XMLOutputStream& stream) const;
 
   /** @endcond */
 
@@ -928,42 +848,6 @@ DistribUncertStatisticSpan_free(DistribUncertStatisticSpan_t* duss);
 
 
 /**
- * Returns the value of the "id" attribute of this
- * DistribUncertStatisticSpan_t.
- *
- * @param duss the DistribUncertStatisticSpan_t structure whose id is sought.
- *
- * @return the value of the "id" attribute of this DistribUncertStatisticSpan_t
- * as a pointer to a string.
- *
- * @copydetails doc_returned_owned_char
- *
- * @memberof DistribUncertStatisticSpan_t
- */
-LIBSBML_EXTERN
-char *
-DistribUncertStatisticSpan_getId(const DistribUncertStatisticSpan_t * duss);
-
-
-/**
- * Returns the value of the "name" attribute of this
- * DistribUncertStatisticSpan_t.
- *
- * @param duss the DistribUncertStatisticSpan_t structure whose name is sought.
- *
- * @return the value of the "name" attribute of this
- * DistribUncertStatisticSpan_t as a pointer to a string.
- *
- * @copydetails doc_returned_owned_char
- *
- * @memberof DistribUncertStatisticSpan_t
- */
-LIBSBML_EXTERN
-char *
-DistribUncertStatisticSpan_getName(const DistribUncertStatisticSpan_t * duss);
-
-
-/**
  * Returns the value of the "varLower" attribute of this
  * DistribUncertStatisticSpan_t.
  *
@@ -1040,39 +924,6 @@ DistribUncertStatisticSpan_getValueUpper(const DistribUncertStatisticSpan_t *
 
 
 /**
- * Predicate returning @c 1 (true) if this DistribUncertStatisticSpan_t's "id"
- * attribute is set.
- *
- * @param duss the DistribUncertStatisticSpan_t structure.
- *
- * @return @c 1 (true) if this DistribUncertStatisticSpan_t's "id" attribute
- * has been set, otherwise @c 0 (false) is returned.
- *
- * @memberof DistribUncertStatisticSpan_t
- */
-LIBSBML_EXTERN
-int
-DistribUncertStatisticSpan_isSetId(const DistribUncertStatisticSpan_t * duss);
-
-
-/**
- * Predicate returning @c 1 (true) if this DistribUncertStatisticSpan_t's
- * "name" attribute is set.
- *
- * @param duss the DistribUncertStatisticSpan_t structure.
- *
- * @return @c 1 (true) if this DistribUncertStatisticSpan_t's "name" attribute
- * has been set, otherwise @c 0 (false) is returned.
- *
- * @memberof DistribUncertStatisticSpan_t
- */
-LIBSBML_EXTERN
-int
-DistribUncertStatisticSpan_isSetName(const DistribUncertStatisticSpan_t *
-  duss);
-
-
-/**
  * Predicate returning @c 1 (true) if this DistribUncertStatisticSpan_t's
  * "varLower" attribute is set.
  *
@@ -1138,51 +989,6 @@ LIBSBML_EXTERN
 int
 DistribUncertStatisticSpan_isSetValueUpper(const DistribUncertStatisticSpan_t *
   duss);
-
-
-/**
- * Sets the value of the "id" attribute of this DistribUncertStatisticSpan_t.
- *
- * @param duss the DistribUncertStatisticSpan_t structure.
- *
- * @param id const char * value of the "id" attribute to be set.
- *
- * @copydetails doc_returns_success_code
- * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
- * @li @sbmlconstant{LIBSBML_INVALID_ATTRIBUTE_VALUE, OperationReturnValues_t}
- * @li @sbmlconstant{LIBSBML_INVALID_OBJECT, OperationReturnValues_t}
- *
- * Calling this function with @p id = @c NULL or an empty string is equivalent
- * to calling DistribUncertStatisticSpan_unsetId().
- *
- * @memberof DistribUncertStatisticSpan_t
- */
-LIBSBML_EXTERN
-int
-DistribUncertStatisticSpan_setId(DistribUncertStatisticSpan_t * duss,
-                                 const char * id);
-
-
-/**
- * Sets the value of the "name" attribute of this DistribUncertStatisticSpan_t.
- *
- * @param duss the DistribUncertStatisticSpan_t structure.
- *
- * @param name const char * value of the "name" attribute to be set.
- *
- * @copydetails doc_returns_success_code
- * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
- * @li @sbmlconstant{LIBSBML_INVALID_OBJECT, OperationReturnValues_t}
- *
- * Calling this function with @p name = @c NULL or an empty string is
- * equivalent to calling DistribUncertStatisticSpan_unsetName().
- *
- * @memberof DistribUncertStatisticSpan_t
- */
-LIBSBML_EXTERN
-int
-DistribUncertStatisticSpan_setName(DistribUncertStatisticSpan_t * duss,
-                                   const char * name);
 
 
 /**
@@ -1267,41 +1073,6 @@ LIBSBML_EXTERN
 int
 DistribUncertStatisticSpan_setValueUpper(DistribUncertStatisticSpan_t * duss,
                                          double valueUpper);
-
-
-/**
- * Unsets the value of the "id" attribute of this DistribUncertStatisticSpan_t.
- *
- * @param duss the DistribUncertStatisticSpan_t structure.
- *
- * @copydetails doc_returns_success_code
- * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
- * @li @sbmlconstant{LIBSBML_OPERATION_FAILED, OperationReturnValues_t}
- * @li @sbmlconstant{LIBSBML_INVALID_OBJECT, OperationReturnValues_t}
- *
- * @memberof DistribUncertStatisticSpan_t
- */
-LIBSBML_EXTERN
-int
-DistribUncertStatisticSpan_unsetId(DistribUncertStatisticSpan_t * duss);
-
-
-/**
- * Unsets the value of the "name" attribute of this
- * DistribUncertStatisticSpan_t.
- *
- * @param duss the DistribUncertStatisticSpan_t structure.
- *
- * @copydetails doc_returns_success_code
- * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
- * @li @sbmlconstant{LIBSBML_OPERATION_FAILED, OperationReturnValues_t}
- * @li @sbmlconstant{LIBSBML_INVALID_OBJECT, OperationReturnValues_t}
- *
- * @memberof DistribUncertStatisticSpan_t
- */
-LIBSBML_EXTERN
-int
-DistribUncertStatisticSpan_unsetName(DistribUncertStatisticSpan_t * duss);
 
 
 /**

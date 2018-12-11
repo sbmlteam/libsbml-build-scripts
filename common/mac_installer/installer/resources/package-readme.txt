@@ -1,4 +1,4 @@
-This installer contains the core libSBML 5.17.0 library as well as the libSBML language interfaces for C#, Java, MATLAB, Perl, Python, and Ruby.  It uses the libxml2 XML parser library.
+This installer contains the core libSBML 5.17.2 library as well as the libSBML language interfaces for C#, Java, MATLAB, Perl, Python, and Ruby.  It uses the libxml2 XML parser library.
 
 The interface for Octave is currently not supplied in this installer. If you need the Octave interface, please compile it directly using the libSBML source code distribution.
 

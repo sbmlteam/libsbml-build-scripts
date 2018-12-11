@@ -50,7 +50,7 @@
 #include <string>
 
 
-#include <sbml/SBase.h>
+#include <sbml/packages/distrib/sbml/DistribBase.h>
 #include <sbml/packages/distrib/extension/DistribExtension.h>
 
 
@@ -83,7 +83,7 @@ class DistribCategoricalDistribution;
 class DistribMultivariateDistribution;
 class DistribExternalDistribution;
 
-class LIBSBML_EXTERN DistribDistribution : public SBase
+class LIBSBML_EXTERN DistribDistribution : public DistribBase
 {
 protected:
 
@@ -448,6 +448,16 @@ public:
   virtual int getTypeCode() const;
 
 
+  /**
+   * Predicate returning @c true if all the required attributes for this
+   * DistribDistribution object have been set.
+   *
+   * @return @c true to indicate that all the required attributes of this
+   * DistribDistribution have been set, otherwise @c false is returned.
+   */
+  virtual bool hasRequiredAttributes() const;
+
+
 
   /** @cond doxygenLibsbmlInternal */
 
@@ -747,6 +757,51 @@ public:
 
 protected:
 
+
+  /** @cond doxygenLibsbmlInternal */
+
+  /**
+   * Creates a new object from the next XMLToken on the XMLInputStream
+   */
+  virtual SBase* createObject(XMLInputStream& stream);
+
+  /** @endcond */
+
+
+
+  /** @cond doxygenLibsbmlInternal */
+
+  /**
+   * Adds the expected attributes for this element
+   */
+  virtual void addExpectedAttributes(ExpectedAttributes& attributes);
+
+  /** @endcond */
+
+
+
+  /** @cond doxygenLibsbmlInternal */
+
+  /**
+   * Reads the expected attributes into the member data variables
+   */
+  virtual void readAttributes(const XMLAttributes& attributes,
+                              const ExpectedAttributes& expectedAttributes);
+
+  /** @endcond */
+
+
+
+  /** @cond doxygenLibsbmlInternal */
+
+  /**
+   * Writes the attributes to the stream
+   */
+  virtual void writeAttributes(XMLOutputStream& stream) const;
+
+  /** @endcond */
+
+
 };
 
 
@@ -775,8 +830,8 @@ BEGIN_C_DECLS
 
 
 /**
- * Creates a new DistribBetaDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
+ * Creates a new DistribDistribution_t using the given SBML Level, Version and
+ * &ldquo;distrib&rdquo; package version.
  *
  * @param level an unsigned int, the SBML Level to assign to this
  * DistribDistribution_t.
@@ -795,649 +850,9 @@ BEGIN_C_DECLS
  */
 LIBSBML_EXTERN
 DistribDistribution_t *
-DistribDistribution_createDistribBetaDistribution(unsigned int level,
-                                                  unsigned int version,
-                                                  unsigned int pkgVersion);
-
-
-/**
- * Creates a new DistribCauchyDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribCauchyDistribution(unsigned int level,
-                                                    unsigned int version,
-                                                    unsigned int pkgVersion);
-
-
-/**
- * Creates a new DistribChiSquareDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribChiSquareDistribution(unsigned int level,
-                                                       unsigned int version,
-                                                       unsigned int
-                                                         pkgVersion);
-
-
-/**
- * Creates a new DistribExponentialDistribution (DistribDistribution_t) using
- * the given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribExponentialDistribution(unsigned int level,
-                                                         unsigned int version,
-                                                         unsigned int
-                                                           pkgVersion);
-
-
-/**
- * Creates a new DistribFDistribution (DistribDistribution_t) using the given
- * SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribFDistribution(unsigned int level,
-                                               unsigned int version,
-                                               unsigned int pkgVersion);
-
-
-/**
- * Creates a new DistribGammaDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribGammaDistribution(unsigned int level,
-                                                   unsigned int version,
-                                                   unsigned int pkgVersion);
-
-
-/**
- * Creates a new DistribInverseGammaDistribution (DistribDistribution_t) using
- * the given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribInverseGammaDistribution(unsigned int level,
-                                                          unsigned int version,
-                                                          unsigned int
-                                                            pkgVersion);
-
-
-/**
- * Creates a new DistribLaPlaceDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribLaPlaceDistribution(unsigned int level,
-                                                     unsigned int version,
-                                                     unsigned int pkgVersion);
-
-
-/**
- * Creates a new DistribLogNormalDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribLogNormalDistribution(unsigned int level,
-                                                       unsigned int version,
-                                                       unsigned int
-                                                         pkgVersion);
-
-
-/**
- * Creates a new DistribLogisticDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribLogisticDistribution(unsigned int level,
-                                                      unsigned int version,
-                                                      unsigned int pkgVersion);
-
-
-/**
- * Creates a new DistribNormalDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribNormalDistribution(unsigned int level,
-                                                    unsigned int version,
-                                                    unsigned int pkgVersion);
-
-
-/**
- * Creates a new DistribParetoDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribParetoDistribution(unsigned int level,
-                                                    unsigned int version,
-                                                    unsigned int pkgVersion);
-
-
-/**
- * Creates a new DistribRayleighDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribRayleighDistribution(unsigned int level,
-                                                      unsigned int version,
-                                                      unsigned int pkgVersion);
-
-
-/**
- * Creates a new DistribStudentTDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribStudentTDistribution(unsigned int level,
-                                                      unsigned int version,
-                                                      unsigned int pkgVersion);
-
-
-/**
- * Creates a new DistribUniformDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribUniformDistribution(unsigned int level,
-                                                     unsigned int version,
-                                                     unsigned int pkgVersion);
-
-
-/**
- * Creates a new DistribWeibullDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribWeibullDistribution(unsigned int level,
-                                                     unsigned int version,
-                                                     unsigned int pkgVersion);
-
-
-/**
- * Creates a new DistribBinomialDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribBinomialDistribution(unsigned int level,
-                                                      unsigned int version,
-                                                      unsigned int pkgVersion);
-
-
-/**
- * Creates a new DistribGeometricDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribGeometricDistribution(unsigned int level,
-                                                       unsigned int version,
-                                                       unsigned int
-                                                         pkgVersion);
-
-
-/**
- * Creates a new DistribHypergeometricDistribution (DistribDistribution_t)
- * using the given SBML Level, Version and &ldquo;distrib&rdquo; package
- * version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribHypergeometricDistribution(unsigned int level,
-                                                            unsigned int
-                                                              version,
-                                                            unsigned int
-                                                              pkgVersion);
-
-
-/**
- * Creates a new DistribNegativeBinomialDistribution (DistribDistribution_t)
- * using the given SBML Level, Version and &ldquo;distrib&rdquo; package
- * version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribNegativeBinomialDistribution(
-                                                              unsigned int
-                                                                level,
-                                                              unsigned int
-                                                                version,
-                                                              unsigned int
-                                                                pkgVersion);
-
-
-/**
- * Creates a new DistribPoissonDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribPoissonDistribution(unsigned int level,
-                                                     unsigned int version,
-                                                     unsigned int pkgVersion);
-
-
-/**
- * Creates a new DistribBernoulliDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribBernoulliDistribution(unsigned int level,
-                                                       unsigned int version,
-                                                       unsigned int
-                                                         pkgVersion);
-
-
-/**
- * Creates a new DistribCategoricalDistribution (DistribDistribution_t) using
- * the given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribCategoricalDistribution(unsigned int level,
-                                                         unsigned int version,
-                                                         unsigned int
-                                                           pkgVersion);
-
-
-/**
- * Creates a new DistribMultivariateDistribution (DistribDistribution_t) using
- * the given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribMultivariateDistribution(unsigned int level,
-                                                          unsigned int version,
-                                                          unsigned int
-                                                            pkgVersion);
-
-
-/**
- * Creates a new DistribExternalDistribution (DistribDistribution_t) using the
- * given SBML Level, Version and &ldquo;distrib&rdquo; package version.
- *
- * @param level an unsigned int, the SBML Level to assign to this
- * DistribDistribution_t.
- *
- * @param version an unsigned int, the SBML Version to assign to this
- * DistribDistribution_t.
- *
- * @param pkgVersion an unsigned int, the SBML Distrib Version to assign to
- * this DistribDistribution_t.
- *
- * @copydetails doc_note_setting_lv_pkg
- *
- * @copydetails doc_returned_owned_pointer
- *
- * @memberof DistribDistribution_t
- */
-LIBSBML_EXTERN
-DistribDistribution_t *
-DistribDistribution_createDistribExternalDistribution(unsigned int level,
-                                                      unsigned int version,
-                                                      unsigned int pkgVersion);
+DistribDistribution_create(unsigned int level,
+                           unsigned int version,
+                           unsigned int pkgVersion);
 
 
 /**
@@ -1890,6 +1305,22 @@ LIBSBML_EXTERN
 int
 DistribDistribution_isDistribExternalDistribution(const DistribDistribution_t *
   dd);
+
+
+/**
+ * Predicate returning @c 1 (true) if all the required attributes for this
+ * DistribDistribution_t object have been set.
+ *
+ * @param dd the DistribDistribution_t structure.
+ *
+ * @return @c 1 (true) to indicate that all the required attributes of this
+ * DistribDistribution_t have been set, otherwise @c 0 (false) is returned.
+ *
+ * @memberof DistribDistribution_t
+ */
+LIBSBML_EXTERN
+int
+DistribDistribution_hasRequiredAttributes(const DistribDistribution_t * dd);
 
 
 

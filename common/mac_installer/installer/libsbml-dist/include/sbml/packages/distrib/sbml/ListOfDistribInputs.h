@@ -60,6 +60,12 @@ LIBSBML_CPP_NAMESPACE_BEGIN
 
 class LIBSBML_EXTERN ListOfDistribInputs : public ListOf
 {
+protected:
+
+  /** @cond doxygenLibsbmlInternal */
+
+
+  /** @endcond */
 
 public:
 
@@ -127,6 +133,94 @@ public:
    * Destructor for ListOfDistribInputs.
    */
   virtual ~ListOfDistribInputs();
+
+
+  /**
+   * Returns the value of the "id" attribute of this ListOfDistribInputs.
+   *
+   * @return the value of the "id" attribute of this ListOfDistribInputs as a
+   * string.
+   */
+  virtual const std::string& getId() const;
+
+
+  /**
+   * Returns the value of the "name" attribute of this ListOfDistribInputs.
+   *
+   * @return the value of the "name" attribute of this ListOfDistribInputs as a
+   * string.
+   */
+  virtual const std::string& getName() const;
+
+
+  /**
+   * Predicate returning @c true if this ListOfDistribInputs's "id" attribute
+   * is set.
+   *
+   * @return @c true if this ListOfDistribInputs's "id" attribute has been set,
+   * otherwise @c false is returned.
+   */
+  virtual bool isSetId() const;
+
+
+  /**
+   * Predicate returning @c true if this ListOfDistribInputs's "name" attribute
+   * is set.
+   *
+   * @return @c true if this ListOfDistribInputs's "name" attribute has been
+   * set, otherwise @c false is returned.
+   */
+  virtual bool isSetName() const;
+
+
+  /**
+   * Sets the value of the "id" attribute of this ListOfDistribInputs.
+   *
+   * @param id std::string& value of the "id" attribute to be set.
+   *
+   * @copydetails doc_returns_success_code
+   * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
+   * @li @sbmlconstant{LIBSBML_INVALID_ATTRIBUTE_VALUE,
+   * OperationReturnValues_t}
+   *
+   * Calling this function with @p id = @c NULL or an empty string is
+   * equivalent to calling unsetId().
+   */
+  virtual int setId(const std::string& id);
+
+
+  /**
+   * Sets the value of the "name" attribute of this ListOfDistribInputs.
+   *
+   * @param name std::string& value of the "name" attribute to be set.
+   *
+   * @copydetails doc_returns_one_success_code
+   * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
+   *
+   * Calling this function with @p name = @c NULL or an empty string is
+   * equivalent to calling unsetName().
+   */
+  virtual int setName(const std::string& name);
+
+
+  /**
+   * Unsets the value of the "id" attribute of this ListOfDistribInputs.
+   *
+   * @copydetails doc_returns_success_code
+   * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
+   * @li @sbmlconstant{LIBSBML_OPERATION_FAILED, OperationReturnValues_t}
+   */
+  virtual int unsetId();
+
+
+  /**
+   * Unsets the value of the "name" attribute of this ListOfDistribInputs.
+   *
+   * @copydetails doc_returns_success_code
+   * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
+   * @li @sbmlconstant{LIBSBML_OPERATION_FAILED, OperationReturnValues_t}
+   */
+  virtual int unsetName();
 
 
   /**
@@ -209,6 +303,32 @@ public:
    * @see remove(unsigned int n)
    */
   virtual const DistribInput* get(const std::string& sid) const;
+
+
+  /**
+   * Get a DistribInput from the ListOfDistribInputs based on its 'index' attribute.
+   *
+   * @param n the value of the index attribute of the DistribInput to get.
+   *
+   * @return the DistribInput in this ListOfDistribInputs with the given index attribute, or NULL if no such element exists.
+   *
+   * @see get(unsigned int n)   *
+   * @see get(const std::string& sid)   *
+   */
+  virtual DistribInput* getByIndex(unsigned int n);
+
+
+  /**
+   * Get a DistribInput from the ListOfDistribInputs based on its 'index' attribute.
+   *
+   * @param n the value of the index attribute of the DistribInput to get.
+   *
+   * @return the DistribInput in this ListOfDistribInputs with the given index attribute, or NULL if no such element exists.
+   *
+   * @see get(unsigned int n)   *
+   * @see get(const std::string& sid)   *
+   */
+  virtual const DistribInput* getByIndex(unsigned int n) const;
 
 
   /**
@@ -318,9 +438,9 @@ public:
    * Returns the XML element name of this ListOfDistribInputs object.
    *
    * For ListOfDistribInputs, the XML element name is always
-   * @c "listOfInputs".
+   * @c "listOfDistribInputs".
    *
-   * @return the name of this element, i.e. @c "listOfInputs".
+   * @return the name of this element, i.e. @c "listOfDistribInputs".
    */
   virtual const std::string& getElementName() const;
 
@@ -356,6 +476,16 @@ public:
   virtual int getItemTypeCode() const;
 
 
+  /**
+   * Predicate returning @c true if all the required attributes for this
+   * ListOfDistribInputs object have been set.
+   *
+   * @return @c true to indicate that all the required attributes of this
+   * ListOfDistribInputs have been set, otherwise @c false is returned.
+   */
+  virtual bool hasRequiredAttributes() const;
+
+
 
 
   #ifndef SWIG
@@ -375,6 +505,84 @@ protected:
    * Creates a new DistribInput in this ListOfDistribInputs
    */
   virtual SBase* createObject(XMLInputStream& stream);
+
+  /** @endcond */
+
+
+
+  /** @cond doxygenLibsbmlInternal */
+
+  /**
+   * Adds the expected attributes for this element
+   */
+  virtual void addExpectedAttributes(ExpectedAttributes& attributes);
+
+  /** @endcond */
+
+
+
+  /** @cond doxygenLibsbmlInternal */
+
+  /**
+   * Reads the expected attributes into the member data variables
+   */
+  virtual void readAttributes(const XMLAttributes& attributes,
+                              const ExpectedAttributes& expectedAttributes);
+
+  /** @endcond */
+
+
+
+  /** @cond doxygenLibsbmlInternal */
+
+  /**
+   * Reads the expected attributes into the member data variables
+   */
+  void readL3V1V1Attributes(const XMLAttributes& attributes);
+
+  /** @endcond */
+
+
+
+  /** @cond doxygenLibsbmlInternal */
+
+  /**
+   * Reads the expected attributes into the member data variables
+   */
+  void readL3V2V1Attributes(const XMLAttributes& attributes);
+
+  /** @endcond */
+
+
+
+  /** @cond doxygenLibsbmlInternal */
+
+  /**
+   * Writes the attributes to the stream
+   */
+  virtual void writeAttributes(XMLOutputStream& stream) const;
+
+  /** @endcond */
+
+
+
+  /** @cond doxygenLibsbmlInternal */
+
+  /**
+   * Writes the attributes to the stream
+   */
+  void writeL3V1V1Attributes(XMLOutputStream& stream) const;
+
+  /** @endcond */
+
+
+
+  /** @cond doxygenLibsbmlInternal */
+
+  /**
+   * Writes the attributes to the stream
+   */
+  void writeL3V2V1Attributes(XMLOutputStream& stream) const;
 
   /** @endcond */
 
@@ -415,6 +623,147 @@ LIBSBML_CPP_NAMESPACE_BEGIN
 
 
 BEGIN_C_DECLS
+
+
+/**
+ * Returns the value of the "id" attribute of this ListOf_t.
+ *
+ * @param lo the ListOf_t structure whose id is sought.
+ *
+ * @return the value of the "id" attribute of this ListOf_t as a pointer to a
+ * string.
+ *
+ * @copydetails doc_returned_owned_char
+ *
+ * @memberof ListOfDistribInputs_t
+ */
+LIBSBML_EXTERN
+char *
+ListOfDistribInputs_getId(const ListOf_t * lo);
+
+
+/**
+ * Returns the value of the "name" attribute of this ListOf_t.
+ *
+ * @param lo the ListOf_t structure whose name is sought.
+ *
+ * @return the value of the "name" attribute of this ListOf_t as a pointer to a
+ * string.
+ *
+ * @copydetails doc_returned_owned_char
+ *
+ * @memberof ListOfDistribInputs_t
+ */
+LIBSBML_EXTERN
+char *
+ListOfDistribInputs_getName(const ListOf_t * lo);
+
+
+/**
+ * Predicate returning @c 1 (true) if this ListOf_t's "id" attribute is set.
+ *
+ * @param lo the ListOf_t structure.
+ *
+ * @return @c 1 (true) if this ListOf_t's "id" attribute has been set,
+ * otherwise @c 0 (false) is returned.
+ *
+ * @memberof ListOfDistribInputs_t
+ */
+LIBSBML_EXTERN
+int
+ListOfDistribInputs_isSetId(const ListOf_t * lo);
+
+
+/**
+ * Predicate returning @c 1 (true) if this ListOf_t's "name" attribute is set.
+ *
+ * @param lo the ListOf_t structure.
+ *
+ * @return @c 1 (true) if this ListOf_t's "name" attribute has been set,
+ * otherwise @c 0 (false) is returned.
+ *
+ * @memberof ListOfDistribInputs_t
+ */
+LIBSBML_EXTERN
+int
+ListOfDistribInputs_isSetName(const ListOf_t * lo);
+
+
+/**
+ * Sets the value of the "id" attribute of this ListOf_t.
+ *
+ * @param lo the ListOf_t structure.
+ *
+ * @param id const char * value of the "id" attribute to be set.
+ *
+ * @copydetails doc_returns_success_code
+ * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
+ * @li @sbmlconstant{LIBSBML_INVALID_ATTRIBUTE_VALUE, OperationReturnValues_t}
+ * @li @sbmlconstant{LIBSBML_INVALID_OBJECT, OperationReturnValues_t}
+ *
+ * Calling this function with @p id = @c NULL or an empty string is equivalent
+ * to calling ListOfDistribInputs_unsetId().
+ *
+ * @memberof ListOfDistribInputs_t
+ */
+LIBSBML_EXTERN
+int
+ListOfDistribInputs_setId(ListOf_t * lo, const char * id);
+
+
+/**
+ * Sets the value of the "name" attribute of this ListOf_t.
+ *
+ * @param lo the ListOf_t structure.
+ *
+ * @param name const char * value of the "name" attribute to be set.
+ *
+ * @copydetails doc_returns_success_code
+ * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
+ * @li @sbmlconstant{LIBSBML_INVALID_OBJECT, OperationReturnValues_t}
+ *
+ * Calling this function with @p name = @c NULL or an empty string is
+ * equivalent to calling ListOfDistribInputs_unsetName().
+ *
+ * @memberof ListOfDistribInputs_t
+ */
+LIBSBML_EXTERN
+int
+ListOfDistribInputs_setName(ListOf_t * lo, const char * name);
+
+
+/**
+ * Unsets the value of the "id" attribute of this ListOf_t.
+ *
+ * @param lo the ListOf_t structure.
+ *
+ * @copydetails doc_returns_success_code
+ * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
+ * @li @sbmlconstant{LIBSBML_OPERATION_FAILED, OperationReturnValues_t}
+ * @li @sbmlconstant{LIBSBML_INVALID_OBJECT, OperationReturnValues_t}
+ *
+ * @memberof ListOfDistribInputs_t
+ */
+LIBSBML_EXTERN
+int
+ListOfDistribInputs_unsetId(ListOf_t * lo);
+
+
+/**
+ * Unsets the value of the "name" attribute of this ListOf_t.
+ *
+ * @param lo the ListOf_t structure.
+ *
+ * @copydetails doc_returns_success_code
+ * @li @sbmlconstant{LIBSBML_OPERATION_SUCCESS, OperationReturnValues_t}
+ * @li @sbmlconstant{LIBSBML_OPERATION_FAILED, OperationReturnValues_t}
+ * @li @sbmlconstant{LIBSBML_INVALID_OBJECT, OperationReturnValues_t}
+ *
+ * @memberof ListOfDistribInputs_t
+ */
+LIBSBML_EXTERN
+int
+ListOfDistribInputs_unsetName(ListOf_t * lo);
 
 
 /**
