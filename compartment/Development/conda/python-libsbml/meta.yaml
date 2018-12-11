@@ -1,16 +1,16 @@
-{% set name = "python-libsbml-experimental" %}
-{% set version = "5.17.0" %}
+{% set name = "python-libsbml" %}
+{% set version = "5.17.2" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "261c84b639430d25dae74ffdf2323f6d64096e713d03c7d64aec797db45b238c" %}
+{% set hash_value = "3174b68588a395e9365fff9bcb19692d583525980bc21f33ccee9f3cd45cecfe" %}
 
 package:
   name: '{{ name|lower }}'
   version: '{{ version }}'
 
 source:
-  fn: 'python-libsbml_experimental-{{ version }}.{{ file_ext }}'
-  url: 'https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/python-libsbml_experimental-{{ version }}.{{ file_ext }}'
+  fn: '{{ name }}-{{ version }}.{{ file_ext }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ file_ext }}
   '{{ hash_type }}': '{{ hash_value }}'
 
 build:
