@@ -45,11 +45,11 @@ echo Starting new MATLAB installer build: %date% %time%
 echo Starting new Matlab Packaging: %date% %time% >> build_log.txt
 %BUILDTOOL_DIR%\LibSBMLBuild.exe -f %BUILDTOOL_DIR%\libsbml.setting -pm  >> build_log.txt
 
-echo Starting new R installer build: %date% %time%
+echo Starting new R installer build (disabled for now - Brett): %date% %time%
 
-cd /d %BUILDTOOL_DIR%
-echo Update R: %date% %time% >> build_log.txt
-call updateR.bat  >> build_log.txt
+:cd /d %BUILDTOOL_DIR%
+:echo Update R: %date% %time% >> build_log.txt
+:call updateR.bat  >> build_log.txt
 
 echo Running tests: %date% %time%
 
@@ -66,4 +66,4 @@ cd /d %BUILDTOOL_DIR%
 call updatelist.bat
 
 echo Completed build and tests: %date% %time%
-call copy_to_surfdrive.bat
+:call copy_to_surfdrive.bat

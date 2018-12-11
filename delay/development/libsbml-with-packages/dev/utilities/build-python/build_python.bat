@@ -30,10 +30,10 @@ if not exist %THIS_DIR%\dist mkdir %THIS_DIR%\dist
 call buildV.bat 2 6 BUILD
 call buildV.bat 2 6 INSTALLER
 
-: This is a hack to work around something that needs to be fixed
+: This is a hack to work around something
 call buildV.bat 2 6 BUILD
 call buildV.bat 2 6 INSTALLER
-: This is a hack to work around something that needs to be fixed
+: This is a hack to work around something
 
 call buildV.bat 2 7 BUILD 
 call buildV.bat 2 7 WHEEL
@@ -43,11 +43,11 @@ call buildV.bat 3 3 BUILD
 call buildV.bat 3 3 WHEEL
 call buildV.bat 3 3 INSTALLER
 
-: This is a hack to work around something that needs to be fixed
+: This is a hack to work around something
 call buildV.bat 3 3 BUILD
 call buildV.bat 3 3 WHEEL
 call buildV.bat 3 3 INSTALLER
-: This is a hack to work around something that needs to be fixed
+: This is a hack to work around something
 
 call buildV.bat 3 4 BUILD
 call buildV.bat 3 4 WHEEL
