@@ -1,5 +1,5 @@
 {% set name = "python-libsbml" %}
-{% set version = "5.17.0" %}
+{% set version = "5.17.2" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash_value = "3174b68588a395e9365fff9bcb19692d583525980bc21f33ccee9f3cd45cecfe" %}

@@ -13,10 +13,11 @@ Ubuntu 14.04.5 (64 bit)
 
 Nightly build
 
-Python wheels
+Python wheels using many_linux
 
-Python Anaconda package
+Python Anaconda package using /Development/build-conda.sh
 
 ------------
 
-For more information contact Sarah or Brett
+For more information look at Development.md or contact Sarah or Brett 2018.
+

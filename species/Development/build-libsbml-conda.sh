@@ -58,6 +58,7 @@ conda build --python 2.7 ${PACKAGE_NAME}
 conda build --python 3.3 ${PACKAGE_NAME}
 conda build --python 3.5 ${PACKAGE_NAME}
 conda build --python 3.6 ${PACKAGE_NAME}
+conda build --python 3.7 ${PACKAGE_NAME}
 
 FILES=`ls -l $ANACONDA_DIR/$DIR`
 echo "The build is done, you can now upload the files"
