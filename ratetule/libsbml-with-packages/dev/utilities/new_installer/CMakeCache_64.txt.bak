@@ -328,9 +328,6 @@ ENABLE_REQUIREDELEMENTS:BOOL=ON
 //Enable Spatial package
 ENABLE_SPATIAL:BOOL=ON
 
-// Enable l3v2 extended math
-ENABLE_L3V2EXTENDEDMATH:BOOL=ON
-
 //Use libxml XML parser
 WITH_LIBXML:BOOL=ON
 
