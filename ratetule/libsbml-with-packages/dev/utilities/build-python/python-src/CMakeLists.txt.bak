@@ -70,7 +70,6 @@ add_definitions(-DUSE_COMP
         -DUSE_REQUIREDELEMENTS
         -DUSE_SPATIAL
         -DUSE_RENDER
-        -DUSE_L3V2EXTENDEDMATH
 )
 
 
