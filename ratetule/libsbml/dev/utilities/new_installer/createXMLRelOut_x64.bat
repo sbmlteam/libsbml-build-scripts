@@ -8,7 +8,7 @@ SET INST_BASE_DIR=%~dp0
 SET LIBSBML_ROOT=c:\Development\libsbml
 SET DEPENDENCIES_32_BIT=c:\Development\dependencies\32bit
 SET MATLAB_INSTALLER_DIR=%INST_BASE_DIR%\matlab\Output
-SET VERSION=5.17.1
+SET VERSION=5.17.3
 
 REM the installation directory as created by a cmake installation
 SET INSTALL_DIR=c:\Development\libsbml-64-inst

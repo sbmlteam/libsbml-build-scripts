@@ -309,22 +309,22 @@ call "%WIN_INST_DIR%\testPython.bat" %PYTHON_36_64% %SOURCE_32%\build\lib.win-am
 :COPYONLY
 REM Copy binaries 
 
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py2.5.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py2.5-x86.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py2.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py2.6-x86.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py2.7.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py2.7-x86.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py3.2.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.2-x86.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py3.3.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.3-x86.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py3.4.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.4-x86.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py3.5.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.5-x86.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win32-py3.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.6-x86.exe"
+copy /y "%SOURCE_32%\dist\libsbml-5.17.3.win32-py2.5.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.3-win-py2.5-x86.exe"
+copy /y "%SOURCE_32%\dist\libsbml-5.17.3.win32-py2.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.3-win-py2.6-x86.exe"
+copy /y "%SOURCE_32%\dist\libsbml-5.17.3.win32-py2.7.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.3-win-py2.7-x86.exe"
+copy /y "%SOURCE_32%\dist\libsbml-5.17.3.win32-py3.2.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.3-win-py3.2-x86.exe"
+copy /y "%SOURCE_32%\dist\libsbml-5.17.3.win32-py3.3.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.3-win-py3.3-x86.exe"
+copy /y "%SOURCE_32%\dist\libsbml-5.17.3.win32-py3.4.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.3-win-py3.4-x86.exe"
+copy /y "%SOURCE_32%\dist\libsbml-5.17.3.win32-py3.5.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.3-win-py3.5-x86.exe"
+copy /y "%SOURCE_32%\dist\libsbml-5.17.3.win32-py3.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.3-win-py3.6-x86.exe"
 
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win-amd64-py2.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py2.6-amd64.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win-amd64-py2.7.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py2.7-amd64.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win-amd64-py3.2.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.2-amd64.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win-amd64-py3.3.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.3-amd64.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win-amd64-py3.4.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.4-amd64.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win-amd64-py3.5.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.5-amd64.exe"
-copy /y "%SOURCE_32%\dist\libsbml-5.17.1.win-amd64-py3.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.1-win-py3.6-amd64.exe"
+copy /y "%SOURCE_32%\dist\libsbml-5.17.3.win-amd64-py2.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.3-win-py2.6-amd64.exe"
+copy /y "%SOURCE_32%\dist\libsbml-5.17.3.win-amd64-py2.7.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.3-win-py2.7-amd64.exe"
+copy /y "%SOURCE_32%\dist\libsbml-5.17.3.win-amd64-py3.2.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.3-win-py3.2-amd64.exe"
+copy /y "%SOURCE_32%\dist\libsbml-5.17.3.win-amd64-py3.3.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.3-win-py3.3-amd64.exe"
+copy /y "%SOURCE_32%\dist\libsbml-5.17.3.win-amd64-py3.4.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.3-win-py3.4-amd64.exe"
+copy /y "%SOURCE_32%\dist\libsbml-5.17.3.win-amd64-py3.5.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.3-win-py3.5-amd64.exe"
+copy /y "%SOURCE_32%\dist\libsbml-5.17.3.win-amd64-py3.6.exe" "c:\inetpub\wwwroot\Files\libSBML-5.17.3-win-py3.6-amd64.exe"
 
 
 goto ALL_DONE
