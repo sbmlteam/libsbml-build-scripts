@@ -41,6 +41,19 @@ class CMakeReplacements(object):
     ubuntu_check_config = {'disabled' : 'WITH_CHECK:BOOL=OFF',
                            'enabled' : 'WITH_CHECK:BOOL=ON'
                            }
+    libsbml_xml_parsers = {'expat' : {'enabled' : 'WITH_EXPAT:BOOL=ON',
+                                      'disabled' : 'WITH_EXPAT:BOOL=OFF'
+                                      },
+                           'xml2' :  {'enabled' :  'WITH_LIBXML:BOOL=ON',
+                                      'disabled' : 'WITH_LIBXML:BOOL=OFF'
+                                      },
+                           'xerces' : {'enabled' :  'WITH_XERCES:BOOL=ON',
+                                       'disabled' : 'WITH_XERCES:BOOL=OFF'
+                                      }
+                          }
+    libsbml_examples = {'enabled' : 'WITH_EXAMPLES:BOOL=ON',
+                         'disabled' : 'WITH_EXAMPLES:BOOL=OFF'}
+                          
 
 
     

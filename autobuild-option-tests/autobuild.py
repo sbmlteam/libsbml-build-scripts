@@ -5,18 +5,25 @@ cdir = os.path.dirname(os.path.abspath(os.sys.argv[0]))
 from cmakerelib import CMakeReplacements
 rbase = CMakeReplacements()
 
-# configure test environment
+## configure test environment
 libsbml_src_path = '/home/sbml/development/sf_libsbml'
 base_file = 'ubuntu-1604-ninja-base-CMakeCache.txt' # default for Ubuntu
 
-# setup simple option templates (should always contain ['base'] and ['base', 'check'] to include tests
-test_options = [['base']]
-test_options = [['base', 'check']]
-test_options = [['base'], ['base', 'packages'], ['base','check'], ['base','check', 'packages']]
-
-# Setup cmake generator
+## Setup cmake generator
 cmake_generator = 'Ninja' # default for Ubuntu
 # cmake_generator = 'Unix Makefiles'
+
+# setup option templates
+test_options = [[]] # base only
+
+## test configurations
+# test_options = [[], ['packages'], ['check'], ['examples'], ['expat'], ['xerces']] # individual options
+# test_options = test_options + [['packages', 'check', 'examples', 'expat']] # all options combined
+
+# we insert the base option
+tmp = [opt.insert(0, 'base') for opt in test_options]
+
+print(test_options)
 
 if cmake_generator == 'Unix Makefiles':
     cmake_generator_make = rbase.cmake_generator_opts['Unix Makefiles']['cmake_generator_make']
@@ -68,12 +75,37 @@ for conopts in test_options:
             if rbase.ubuntu_check_config['disabled'] in outlin:
                 outlin = outlin.replace(rbase.ubuntu_check_config['disabled'], rbase.ubuntu_check_config['enabled'])
 
+        # enable expat, the default is lxml2
+        if 'expat' in conopts:
+            if rbase.libsbml_xml_parsers['xml2']['enabled'] in outlin:
+                outlin = outlin.replace(rbase.libsbml_xml_parsers['xml2']['enabled'], rbase.libsbml_xml_parsers['xml2']['disabled'])
+            if rbase.libsbml_xml_parsers['xerces']['enabled'] in outlin:
+                outlin = outlin.replace(rbase.libsbml_xml_parsers['xerces']['enabled'], rbase.libsbml_xml_parsers['xerces']['disabled'])
+            if rbase.libsbml_xml_parsers['expat']['disabled'] in outlin:
+                outlin = outlin.replace(rbase.libsbml_xml_parsers['expat']['disabled'], rbase.libsbml_xml_parsers['expat']['enabled'])
+
+        # enable xerced, the default is lxml2
+        if 'xerces' in conopts:
+            if rbase.libsbml_xml_parsers['xml2']['enabled'] in outlin:
+                outlin = outlin.replace(rbase.libsbml_xml_parsers['xml2']['enabled'], rbase.libsbml_xml_parsers['xml2']['disabled'])
+            if rbase.libsbml_xml_parsers['expat']['enabled'] in outlin:
+                outlin = outlin.replace(rbase.libsbml_xml_parsers['expat']['enabled'], rbase.libsbml_xml_parsers['expat']['disabled'])
+            if rbase.libsbml_xml_parsers['xerces']['disabled'] in outlin:
+                outlin = outlin.replace(rbase.libsbml_xml_parsers['xerces']['disabled'], rbase.libsbml_xml_parsers['xerces']['enabled'])
+
         # additional build options
+        # enable packages
         if 'packages' in conopts:
             for p in rbase.libsbml_packages_disabled:
                 pval = rbase.libsbml_packages_disabled[p]
                 if pval in outlin:
                     outlin = outlin.replace(pval, pval.replace('BOOL=OFF', 'BOOL=ON'))
+        # enable examples
+        if 'examples' in conopts:
+            if rbase.libsbml_examples['disabled'] in outlin:
+                outlin = outlin.replace(rbase.libsbml_examples['disabled'], rbase.libsbml_examples['enabled'])
+
+
         Fout.write(outlin)
     Fin.close()
     Fout.close()

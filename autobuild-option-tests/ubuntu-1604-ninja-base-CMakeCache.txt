@@ -371,6 +371,9 @@ WITH_EXAMPLES:BOOL=OFF
 //Use the Expat XML parser library.
 WITH_EXPAT:BOOL=OFF
 
+//Use the Xerces XML parser library.
+WITH_XERCES:BOOL=OFF
+
 //Generate the Java language interface for libSBML.
 WITH_JAVA:BOOL=OFF
 
