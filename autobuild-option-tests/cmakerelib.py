@@ -28,19 +28,19 @@ class CMakeReplacements(object):
     cmake_generator_opts = {'Unix Makefiles' : {'cmake_generator_make' : '/usr/bin/make'}}
     cmake_src_config = ['LIBSBML_ROOT_SOURCE_DIR:PATH=', 'libsbml_SOURCE_DIR:STATIC=',\
         'CMAKE_HOME_DIRECTORY:INTERNAL=']
+    
     cmake_template_src_paths = None
-    libsbml_packages_enable = None
-    libsbml_packages_disable = None
+    libsbml_packages_enabled = None
+    libsbml_packages_disabled = None
 
     def __init__(self):
         self.cmake_template_src_paths = {p : self.template_libsbml_source_path for p in self.cmake_src_config}
-
-        self.libsbml_packages_enable =  {p : 'ENABLE_{}:BOOL=ON'.format(p) for p in\
-             self.package_names}
-        self.libsbml_packages_disable =  {p : 'ENABLE_{}:BOOL=OFF'.format(p) for p in\
-             self.package_names if p != 'L3V2EXTENDEDMATH'}
+        self.libsbml_packages_enabled =  {p : 'ENABLE_{}:BOOL=ON'.format(p) for p in self.package_names}
+        self.libsbml_packages_disabled =  {p : 'ENABLE_{}:BOOL=OFF'.format(p) for p in self.package_names if p != 'L3V2EXTENDEDMATH'}
     
-
+    ubuntu_check_config = {'disabled' : 'WITH_CHECK:BOOL=OFF',
+                           'enabled' : 'WITH_CHECK:BOOL=ON'
+                           }
 
 
     
