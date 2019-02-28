@@ -18,11 +18,11 @@ cmake_generator = 'Ninja' # default for Ubuntu
 
 # setup option templates
 test_options = [[]] # base only
-xml_options = [None, 'expat', 'xerces']
+xml_options = ['xml2', 'expat', 'xerces']
 config_options = ['packages', 'check', 'examples', 'strict', 'cpp_ns']
 
 ## test configurations
-test_all_combinations = False # overrides all, use with care
+test_all_combinations = True # overrides all, use with care
 # test_options = [a for a in xml_options if a is not None] + config_options # all individual options
 
 if test_all_combinations:
@@ -36,7 +36,7 @@ if test_all_combinations:
 
     for xml in xml_options:
         out1 = copy.deepcopy(test_options)
-        if xml is not None:
+        if xml in ['expat', 'xerces']:
             [x.insert(0, xml) for x in out1]
         out += out1
     test_options = out
@@ -61,7 +61,7 @@ if cmake_generator == 'Unix Makefiles':
 else:
     cmake_generator_make = None
 
-
+cmake_builds = []
 for conopts in test_options:
     # configures the base paths and files in the new cmake build directory
     base_split = base_file.split('-')
@@ -72,6 +72,7 @@ for conopts in test_options:
     else:
         base_dir = base_dir.replace('-ninja-', '-{}-'.format(cmake_generator.replace(' ', '-').lower()))
     rbase.cmake_install_path = base_dir + '-install'
+    cmake_builds.append(base_dir)
 
     if os.path.exists(base_dir):
         shutil.rmtree(base_dir)
@@ -165,6 +166,15 @@ for conopts in test_options:
     Fin.close()
     Fout.close()
     os.remove(new_cache_template)
+
+Fout = open(os.path.join(cdir, 'cmake_configure.sh'), 'w')
+for build in cmake_builds:
+    Fout.write('cmake {}\n'.format(build))
+Fout.write('\n')
+Fout.close()
+os.chmod(os.path.join(cdir, 'cmake_configure.sh'), 0o744)
+
+
     
     
 
