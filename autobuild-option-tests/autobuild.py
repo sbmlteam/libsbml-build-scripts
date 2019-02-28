@@ -1,4 +1,4 @@
-import os, sys, shutil, re
+import os, sys, shutil, re, itertools, copy
 cdir = os.path.dirname(os.path.abspath(os.sys.argv[0]))
 
 # import and instantiate custom cmake replacements
@@ -18,11 +18,34 @@ cmake_generator = 'Ninja' # default for Ubuntu
 
 # setup option templates
 test_options = [[]] # base only
-test_options = [['strict'], ['cpp_ns']]
+xml_options = [None, 'expat', 'xerces']
+config_options = ['packages', 'check', 'examples', 'strict', 'cpp_ns']
 
-## test configurations, all individual options
-# test_options = [[], ['packages'], ['check'], ['examples'], ['expat'], ['xerces'],\
-#  ['strict'], ['cpp_ns']] 
+## test configurations
+test_all_combinations = False # overrides all, use with care
+# test_options = [a for a in xml_options if a is not None] + config_options # all individual options
+
+if test_all_combinations:
+    test_options = []
+    for it in range(len(config_options)):
+        combis = [list(c) for c in itertools.combinations(config_options, it+1 )]
+        [c.sort() for c in combis]
+        test_options.extend(combis)
+
+    out = []
+
+    for xml in xml_options:
+        out1 = copy.deepcopy(test_options)
+        if xml is not None:
+            [x.insert(0, xml) for x in out1]
+        out += out1
+    test_options = out
+
+    for i in test_options:
+        print(i)
+    a = raw_input('Proceed and generate all combindations (y/n)?\n')
+    if a.lower() != 'y':
+        os.sys.exit()
 
 # we insert the base option
 tmp = [opt.insert(0, 'base') for opt in test_options]
@@ -37,6 +60,7 @@ if cmake_generator == 'Unix Makefiles':
     cmake_generator_make = rbase.cmake_generator_opts['Unix Makefiles']['cmake_generator_make']
 else:
     cmake_generator_make = None
+
 
 for conopts in test_options:
     # configures the base paths and files in the new cmake build directory
@@ -96,7 +120,6 @@ for conopts in test_options:
         if 'check' in conopts:
             if rbase.ubuntu_check_config['disabled'] in outlin:
                 outlin = outlin.replace(rbase.ubuntu_check_config['disabled'], rbase.ubuntu_check_config['enabled'])
-
         # enable expat, the default is lxml2
         if 'expat' in conopts:
             if rbase.libsbml_xml_parsers['xml2']['enabled'] in outlin:
@@ -105,8 +128,7 @@ for conopts in test_options:
                 outlin = outlin.replace(rbase.libsbml_xml_parsers['xerces']['enabled'], rbase.libsbml_xml_parsers['xerces']['disabled'])
             if rbase.libsbml_xml_parsers['expat']['disabled'] in outlin:
                 outlin = outlin.replace(rbase.libsbml_xml_parsers['expat']['disabled'], rbase.libsbml_xml_parsers['expat']['enabled'])
-
-        # enable xerced, the default is lxml2
+        # enable xerces, the default is lxml2
         if 'xerces' in conopts:
             if rbase.libsbml_xml_parsers['xml2']['enabled'] in outlin:
                 outlin = outlin.replace(rbase.libsbml_xml_parsers['xml2']['enabled'], rbase.libsbml_xml_parsers['xml2']['disabled'])
@@ -133,21 +155,17 @@ for conopts in test_options:
         # strict includes
         if 'strict' in conopts:
             if rbase.libsbml_use_strict_includes['disabled'] in outlin:
-                print(outlin)
                 outlin = outlin.replace(rbase.libsbml_use_strict_includes['disabled'], rbase.libsbml_use_strict_includes['enabled'])
-                print(outlin)
         # cpp namespace
         if 'cpp_ns' in conopts:
             if rbase.libsbml_cpp_namespace['disabled'] in outlin:
-                print(outlin)
                 outlin = outlin.replace(rbase.libsbml_cpp_namespace['disabled'], rbase.libsbml_cpp_namespace['enabled'])
-                print(outlin)
-
-
 
         Fout.write(outlin)
     Fin.close()
     Fout.close()
+    os.remove(new_cache_template)
+    
     
 
 

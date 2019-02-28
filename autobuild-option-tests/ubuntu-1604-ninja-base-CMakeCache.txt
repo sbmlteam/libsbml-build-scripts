@@ -282,6 +282,26 @@ ENABLE_QUAL:BOOL=OFF
 // package.
 ENABLE_RENDER:BOOL=OFF
 
+//Enable libSBML support for the SBML Level 3 Arrays ('arrays')
+// package.
+ENABLE_ARRAYS:BOOL=ON
+
+//Enable libSBML support for the SBML Level 3 Distrib ('distrib')
+// package.
+ENABLE_DISTRIB:BOOL=OFF
+
+//Enable libSBML support for the SBML Level 3 Dynamic Structures
+// ('dyn') package
+ENABLE_DYN:BOOL=OFF
+
+//Enable libSBML support for the SBML Level 3 Required Elements
+// ('req') package.
+ENABLE_REQUIREDELEMENTS:BOOL=OFF
+
+//Enable libSBML support for the SBML Level 3 Spatial Processes
+// ('spatial') package.
+ENABLE_SPATIAL:BOOL=OFF
+
 //Call exit(-1) in case of allocation or file error.
 EXIT_ON_ERROR:BOOL=OFF
 
