@@ -116,6 +116,7 @@ else:
 
 # log selected options
 Rlog.write('# MATRIX TEST\nTest run: {}\n'.format(time.strftime('%Y-%m-%d %H:%M:%S')))
+Rlog.write('Generator: {}\n'.format(cmake_generator))
 Rlog.write('\n# CONFIGURATION COMBINATIONS\n')
 for i in test_options:
     Rlog.write('  {}\n'.format(i))
