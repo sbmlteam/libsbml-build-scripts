@@ -1,5 +1,48 @@
-import os, sys, shutil, re, itertools, copy
+#!/usr/bin/env python
+#
+# @file    autobuild.py
+# @brief   automatic, configuration and testing of liSBML build options
+# @author  Brett G. Olivier
+#
+# <!--------------------------------------------------------------------------
+#
+# Copyright (c) 2013-2018 by the California Institute of Technology
+# (California, USA), the European Bioinformatics Institute (EMBL-EBI, UK)
+# and the University of Heidelberg (Germany), with support from the National
+# Institutes of Health (USA) under grant R01GM070923.  All rights reserved.
+#
+# Permission is hereby granted, free of charge, to any person obtaining a
+# copy of this software and associated documentation files (the "Software"),
+# to deal in the Software without restriction, including without limitation
+# the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Software, and to permit persons to whom the
+# Software is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+# DEALINGS IN THE SOFTWARE.
+#
+# Neither the name of the California Institute of Technology (Caltech), nor
+# of the European Bioinformatics Institute (EMBL-EBI), nor of the University
+# of Heidelberg, nor the names of any contributors, may be used to endorse
+# or promote products derived from this software without specific prior
+# written permission.
+# ------------------------------------------------------------------------ -->
+#
+
+import os, sys, shutil, re, time, itertools, copy, subprocess, threading, pprint
 cdir = os.path.dirname(os.path.abspath(os.sys.argv[0]))
+
+if os.sys.version_info[0] > 2:
+    def raw_input(txt):
+        return input(txt)
 
 # import and instantiate custom cmake replacements
 from cmakerelib import CMakeReplacements
@@ -12,24 +55,35 @@ base_file = 'ubuntu-1604-ninja-base-CMakeCache.txt' # default for Ubuntu
 ## configure for experimental
 configure_experimental = False
 
+## call cmake configure
+configure_with_cmake = True
+## try to build the successfully configured builds
+build_test_configurations = True
+## test configurations
+test_all_combinations = False # overrides all, use with care
+
 ## Setup cmake generator
 cmake_generator = 'Ninja' # default for Ubuntu
 # cmake_generator = 'Unix Makefiles'
 
 # setup option templates
-test_options = [[]] # base only
 xml_options = ['xml2', 'expat', 'xerces']
-config_options = ['packages', 'check', 'examples', 'strict', 'cpp_ns']
+fixed_options = ['check']
+combi_options = ['packages', 'examples', 'strict', 'cpp_ns']
 
-## test configurations
-test_all_combinations = True # overrides all, use with care
-# test_options = [a for a in xml_options if a is not None] + config_options # all individual options
+test_options = [[]] # base only
+test_options =  [['check'], ['check', 'packages'], ['check', 'examples'], ['check', 'strict'], ['check', 'cpp_ns']]
+
+# create output logger
+Rlog = open('result_log.md', 'w')
 
 if test_all_combinations:
     test_options = []
-    for it in range(len(config_options)):
-        combis = [list(c) for c in itertools.combinations(config_options, it+1 )]
+    for it in range(len(combi_options)):
+        combis = [list(c) for c in itertools.combinations(combi_options, it+1 )]
         [c.sort() for c in combis]
+        for opt in fixed_options:
+            combis = [[opt] + c for c in combis]
         test_options.extend(combis)
 
     out = []
@@ -41,9 +95,8 @@ if test_all_combinations:
         out += out1
     test_options = out
 
-    for i in test_options:
-        print(i)
-    a = raw_input('Proceed and generate all combindations (y/n)?\n')
+    print('\nAutogenerate created {} unique test combinations\n'.format(len(test_options)))
+    a = raw_input('Proceed and generate all combinations (y/n)?\n')
     if a.lower() != 'y':
         os.sys.exit()
 
@@ -60,6 +113,14 @@ if cmake_generator == 'Unix Makefiles':
     cmake_generator_make = rbase.cmake_generator_opts['Unix Makefiles']['cmake_generator_make']
 else:
     cmake_generator_make = None
+
+# log selected options
+Rlog.write('# MATRIX TEST\nTest run: {}\n'.format(time.strftime('%Y-%m-%d %H:%M:%S')))
+Rlog.write('\n# CONFIGURATION COMBINATIONS\n')
+for i in test_options:
+    Rlog.write('  {}\n'.format(i))
+
+START_TIME = time.time()
 
 cmake_builds = []
 for conopts in test_options:
@@ -167,15 +228,96 @@ for conopts in test_options:
     Fout.close()
     os.remove(new_cache_template)
 
-Fout = open(os.path.join(cdir, 'cmake_configure.sh'), 'w')
+CONFIG_TIME = time.time()
+
+# generate cmake configuration shell script
+Fout = open(os.path.join(cdir, 'configure_with_cmake.sh'), 'w')
 for build in cmake_builds:
     Fout.write('cmake {}\n'.format(build))
 Fout.write('\n')
 Fout.close()
-os.chmod(os.path.join(cdir, 'cmake_configure.sh'), 0o744)
+os.chmod(os.path.join(cdir, 'configure_with_cmake.sh'), 0o744)
 
+# parallel cmake congfiguration
+report_cmake_configure = {}
+report_cmake_configure_bad = {}
+if configure_with_cmake:
+    prprinter = pprint.PrettyPrinter()
+    def cmake_configure(build, rpt):
+        try:
+            rpt[build] = subprocess.check_call(['cmake', build])
+        except subprocess.CalledProcessError as err:
+            rpt[build] = err.returncode
+    process_pool = []
+    for build in cmake_builds:
+        process_pool.append(threading.Thread(target=cmake_configure, args=[build, report_cmake_configure]))
+    for p in process_pool:
+        p.start()
+    for p in process_pool:
+        p.join()
 
+    for a in list(report_cmake_configure.keys()):
+        if report_cmake_configure[a] != 0:
+            report_cmake_configure_bad[a] = report_cmake_configure.pop(a)
+
+    print('\n\nCMAKE CONFIGURARATION REPORT GOOD: {}\n'.format(len(report_cmake_configure)) + 37*'-')
+    prprinter.pprint(report_cmake_configure)
+    print('\nCMAKE CONFIGURARATION REPORT BAD: {}\n'.format(len(report_cmake_configure_bad)) + 36*'-')
+    prprinter.pprint(report_cmake_configure_bad)
+
+    # log build configurations
+    Rlog.write('\n# CMAKE CONFIGURARATION REPORT GOOD: {}\n'.format(len(report_cmake_configure)))
+    for i in report_cmake_configure:
+        Rlog.write('  {} {}\n'.format(i, report_cmake_configure[i]))
+    Rlog.write('\n# CMAKE CONFIGURARATION REPORT BAD: {}\n'.format(len(report_cmake_configure_bad)))
+    for i in report_cmake_configure_bad:
+        Rlog.write('  {} {}\n'.format(i, report_cmake_configure_bad[i]))
+
+CMAKE_TIME = time.time()
+
+if len(report_cmake_configure) == 0:
+    print('\n\nNO GOOD CONFIGURATIONS, NOTHING TO DO!')
+    Rlog.write('\nConfigure time: {}\n'.format(CONFIG_TIME - START_TIME))
+    Rlog.write('CMake time: {}\n\n'.format(CMAKE_TIME - CONFIG_TIME))
+    Rlog.close()
+    os.sys.exit(1)
     
+if build_test_configurations:
+    print('\nCMAKE could configure {} out of {} unique test combinations\n'.format(len(report_cmake_configure), len(test_options)))
+    a = raw_input('Proceed to build all combinations - this may take some time (y/n)?\n')
+    if a.lower() != 'y':
+        os.sys.exit()
+
+    report_build = {}
+    for cf in report_cmake_configure:
+        try:
+            os.chdir(cf)
+            if cmake_generator == 'Ninja':
+                report_build[cf] = subprocess.check_call(['ninja'])
+            elif cmake_generator == 'Unix Makefiles':
+                report_build[cf] = subprocess.check_call(['make'])
+        except subprocess.CalledProcessError as err:
+            report_build[cf] = err.returncode
+    os.chdir(cdir)
+
+    print('\nBUILD REPORT: {}\n'.format(len(report_build)) + 14*'-')
+    prprinter.pprint(report_build)
+
+    # log build report
+    Rlog.write('\n# BUILD REPORT: {}\n'.format(len(report_cmake_configure)))
+    for i in report_build:
+        Rlog.write('  {} {}\n'.format(i, report_build[i]))
+    
+END_TIME = time.time()
+
+# close log
+Rlog.write('\nConfigure time: {}\n'.format(CONFIG_TIME - START_TIME))
+Rlog.write('CMake time: {}\n'.format(CMAKE_TIME - CONFIG_TIME))
+Rlog.write('Build time: {}\n'.format(END_TIME - CMAKE_TIME))
+Rlog.write('Total time: {}\n\n'.format(END_TIME - START_TIME))
+Rlog.close()
+
+
     
 
 

@@ -284,7 +284,7 @@ ENABLE_RENDER:BOOL=OFF
 
 //Enable libSBML support for the SBML Level 3 Arrays ('arrays')
 // package.
-ENABLE_ARRAYS:BOOL=ON
+ENABLE_ARRAYS:BOOL=OFF
 
 //Enable libSBML support for the SBML Level 3 Distrib ('distrib')
 // package.
