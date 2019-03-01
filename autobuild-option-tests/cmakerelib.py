@@ -110,7 +110,3 @@ class CMakeReplacements(object):
 
     libsbml_cpp_namespace = {'enabled' : 'WITH_CPP_NAMESPACE:BOOL=ON',
                              'disabled' : 'WITH_CPP_NAMESPACE:BOOL=OFF'}
-    
-
-
-
