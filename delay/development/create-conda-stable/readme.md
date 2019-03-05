@@ -1,1 +1,1 @@
-This is not run directly but is probably needed by the \dev\utilities\python-build
+This is not run directly but may be needed by the \dev\utilities\python-build
