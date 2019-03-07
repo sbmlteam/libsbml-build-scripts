@@ -82,6 +82,7 @@ class CMakeReplacements(object):
     configure_experimental = None
     configure_with_cmake = None
     build_test_configurations = None
+    check_test_configurations = None
     test_all_combinations = None
     cmake_generator = None
     default_test_options = None
@@ -148,6 +149,8 @@ class CMakeReplacements(object):
         self.configure_experimental = self.config['options']['configure_experimental']
         self.configure_with_cmake = self.config['options']['configure_with_cmake']
         self.build_test_configurations = self.config['options']['build_test_configurations']
+        self.check_test_configurations = self.config['options']['check_test_configurations']
+        
         self.test_all_combinations = self.config['options']['test_all_combinations']
         self.cmake_generator = self.config['options']['cmake_generator']
         self.default_test_options = self.config['tests']['default']

@@ -1,6 +1,7 @@
 {
  "options": {
   "build_test_configurations": true,
+  "check_test_configurations": true,
   "cmake_generator": "Ninja",
   "configure_with_cmake": true,
   "configure_experimental": false,

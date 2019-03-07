@@ -58,9 +58,11 @@ test_options = rbase.config['tests']['default']
 # # call cmake configure
 # rbase.configure_with_cmake = True
 # # try to build the successfully configured builds
-# build_test_configurations = True
+# rbase.build_test_configurations = True
+# # try to test the successfully configured builds
+# rbase.check_test_configurations = True
 # # test configurations
-# rbase.test_all_combinations = False # overrides all, use with care
+# rbase.test_all_combinations = False # overrides all, use with care 
 # # Setup cmake generator
 # rbase.cmake_generator = 'Ninja' # default for Ubuntu
 # rbase.cmake_generator = 'Unix Makefiles'
@@ -70,12 +72,15 @@ xml_options = ['xml2', 'expat', 'xerces']
 fixed_options = ['check']
 combi_options = ['packages', 'examples', 'strict', 'cpp_ns']
 
-# test_options = [['check']] # base only
-# test_options = [['check']]
+test_options = [['check']] # base only
+# test_options = [['check'], ['check', 'examples']]
 # test_options =  [['check'], ['check', 'packages'], ['check', 'examples'], ['check', 'strict'], ['check', 'cpp_ns']]
 
-# create output logger
-Rlog = open('result_log.md', 'w')
+# create output logger and report folder
+report_path = os.path.join(cdir, 'reports', format(time.strftime('%Y-%m-%d-%H-%M')))
+if not os.path.exists(report_path):
+    os.makedirs(report_path)
+Rlog = open(os.path.join(report_path, 'result_log.md'), 'w')
 
 if rbase.test_all_combinations:
     test_options = []
@@ -283,13 +288,13 @@ if len(report_cmake_configure) == 0:
     Rlog.close()
     os.sys.exit(1)
     
+report_build = {}
 if rbase.build_test_configurations:
     print('\nCMAKE could configure {} out of {} unique test combinations\n'.format(len(report_cmake_configure), len(test_options)))
-    a = raw_input('Proceed to build all combinations - this may take some time (y/n)?\n')
-    if a.lower() != 'y':
-        os.sys.exit()
+    # a = raw_input('Proceed to build all combinations - this may take some time (y/n)?\n')
+    # if a.lower() != 'y':
+    #     os.sys.exit()
 
-    report_build = {}
     for cf in report_cmake_configure:
         try:
             os.chdir(cf)
@@ -310,6 +315,45 @@ if rbase.build_test_configurations:
         Rlog.write('  {} {}\n'.format(i, report_build[i]))
 
 BUILD_TIME = time.time()
+
+report_check = {}
+if rbase.check_test_configurations:
+    def cmake_test(bld, rpt, rptpath):
+        try:
+            print(bld)
+            print(rpt)
+            print(rptpath)
+            rpt[bld] = subprocess.check_call(['ctest', '--output-on-failure', '--output-log', '{}'.format(rptpath)])
+        except subprocess.CalledProcessError as err:
+            rpt[bld] = err.returncode
+
+    process_pool = []
+    for cf in report_build:
+        os.chdir(cf)
+        rpt_path = os.path.join(report_path, os.path.split(cf)[-1]+'.log')
+        process_pool.append(threading.Thread(target=cmake_test, args=[cf, report_check, rpt_path]))
+    for p in process_pool:
+        p.start()
+    for p in process_pool:
+        p.join()
+    
+    # for cf in report_build:
+    #     try:
+    #         os.chdir(cf)
+    #         rpt_path = os.path.join(report_path, os.path.split(cf)[-1]+'.log')
+    #         report_check[cf] = subprocess.check_call(['ctest', '--output-on-failure', '--output-log', '{}'.format(rpt_path)])
+    #     except subprocess.CalledProcessError as err:
+    #         report_check[cf] = err.returncode
+    
+    os.chdir(cdir)
+    
+    print('\nCHECK REPORT: {}\n'.format(len(report_check)) + 14*'-')
+    prprinter.pprint(report_check)
+
+    # log build report
+    Rlog.write('\n# CHECK REPORT: {}\n'.format(len(report_check)))
+    for i in report_check:
+        Rlog.write('  {} {}\n'.format(i, report_check[i]))
 
 END_TIME = time.time()
 
