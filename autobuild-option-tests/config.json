@@ -1,0 +1,20 @@
+{
+ "options": {
+  "build_test_configurations": true,
+  "cmake_generator": "Ninja",
+  "configure_with_cmake": true,
+  "configure_experimental": false,
+  "test_all_combinations": false
+ },
+ "paths": {
+  "libsbml_exp_src_path": "/home/sbml/development/sf_libsbml_experimental",
+  "libsbml_src_path": "/home/sbml/development/sf_libsbml",
+  "template_libsbml_source_path": "/home/sbml/development/sf_libsbml",
+  "base_file": "ubuntu-1604-ninja-base-CMakeCache.txt"
+ },
+ "tests": {
+  "default": [
+   ["check"]
+  ]
+ }
+}

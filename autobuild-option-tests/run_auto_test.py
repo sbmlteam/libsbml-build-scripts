@@ -40,44 +40,44 @@
 import os, sys, shutil, re, time, itertools, copy, subprocess, threading, pprint
 cdir = os.path.dirname(os.path.abspath(os.sys.argv[0]))
 
+# import cmake replacements
+from autotestdata import CMakeReplacements
+
 if os.sys.version_info[0] > 2:
     def raw_input(txt):
         return input(txt)
 
-# import and instantiate custom cmake replacements
-from cmakerelib import CMakeReplacements
-rbase = CMakeReplacements()
+# instantiate configuration data
+config_file = 'config.json'
+rbase = CMakeReplacements(config_file)
+test_options = rbase.config['tests']['default']
 
-## configure test environment
+## overide defaults (for debugging purposes)
+# # configure for experimental
+# rbase.configure_experimental = False
+# # call cmake configure
+# rbase.configure_with_cmake = True
+# # try to build the successfully configured builds
+# build_test_configurations = True
+# # test configurations
+# rbase.test_all_combinations = False # overrides all, use with care
+# # Setup cmake generator
+# rbase.cmake_generator = 'Ninja' # default for Ubuntu
+# rbase.cmake_generator = 'Unix Makefiles'
 
-base_file = 'ubuntu-1604-ninja-base-CMakeCache.txt' # default for Ubuntu
-
-## configure for experimental
-configure_experimental = False
-
-## call cmake configure
-configure_with_cmake = True
-## try to build the successfully configured builds
-build_test_configurations = True
-## test configurations
-test_all_combinations = False # overrides all, use with care
-
-## Setup cmake generator
-cmake_generator = 'Ninja' # default for Ubuntu
-# cmake_generator = 'Unix Makefiles'
-
-# setup option templates
+# setup option templates for "test_all_combinations"
 xml_options = ['xml2', 'expat', 'xerces']
 fixed_options = ['check']
 combi_options = ['packages', 'examples', 'strict', 'cpp_ns']
 
-test_options = [[]] # base only
-test_options =  [['check'], ['check', 'packages'], ['check', 'examples'], ['check', 'strict'], ['check', 'cpp_ns']]
+# test_options = [['check']] # base only
+# test_options = [['check']]
+# test_options =  [['check'], ['check', 'packages'], ['check', 'examples'], ['check', 'strict'], ['check', 'cpp_ns']]
 
 # create output logger
 Rlog = open('result_log.md', 'w')
 
-if test_all_combinations:
+if rbase.test_all_combinations:
     test_options = []
     for it in range(len(combi_options)):
         combis = [list(c) for c in itertools.combinations(combi_options, it+1 )]
@@ -106,17 +106,17 @@ tmp = [opt.insert(0, 'base') for opt in test_options]
 print(test_options)
 
 libsbml_src_path = rbase.libsbml_src_path
-if configure_experimental:
+if rbase.configure_experimental:
     libsbml_src_path = rbase.libsbml_exp_src_path
 
-if cmake_generator == 'Unix Makefiles':
+if rbase.cmake_generator == 'Unix Makefiles':
     cmake_generator_make = rbase.cmake_generator_opts['Unix Makefiles']['cmake_generator_make']
 else:
     cmake_generator_make = None
 
 # log selected options
 Rlog.write('# MATRIX TEST\nTest run: {}\n'.format(time.strftime('%Y-%m-%d %H:%M:%S')))
-Rlog.write('Generator: {}\n'.format(cmake_generator))
+Rlog.write('Generator: {}\n'.format(rbase.cmake_generator))
 Rlog.write('\n# CONFIGURATION COMBINATIONS\n')
 for i in test_options:
     Rlog.write('  {}\n'.format(i))
@@ -126,13 +126,13 @@ START_TIME = time.time()
 cmake_builds = []
 for conopts in test_options:
     # configures the base paths and files in the new cmake build directory
-    base_split = base_file.split('-')
+    base_split = rbase.base_file.split('-')
     new_opts = '-'.join(conopts)
     base_dir = os.path.join(cdir, '-'.join(base_split[:-2]) + '-{}'.format(new_opts), )
-    if configure_experimental:
-        base_dir = base_dir.replace('-ninja-', '-exp-{}-'.format(cmake_generator.replace(' ', '-').lower()))
+    if rbase.configure_experimental:
+        base_dir = base_dir.replace('-ninja-', '-exp-{}-'.format(rbase.cmake_generator.replace(' ', '-').lower()))
     else:
-        base_dir = base_dir.replace('-ninja-', '-{}-'.format(cmake_generator.replace(' ', '-').lower()))
+        base_dir = base_dir.replace('-ninja-', '-{}-'.format(rbase.cmake_generator.replace(' ', '-').lower()))
     rbase.cmake_install_path = base_dir + '-install'
     cmake_builds.append(base_dir)
 
@@ -142,27 +142,27 @@ for conopts in test_options:
     
     new_cache_file = os.path.join(base_dir, 'CMakeCache.txt')
     new_cache_template = new_cache_file + '.template'
-    shutil.copyfile(os.path.join(cdir, base_file), new_cache_template)
+    shutil.copyfile(os.path.join(cdir, rbase.base_file), new_cache_template)
     
     output = []
     Fin = open(new_cache_template, 'r')
     Fout = open(new_cache_file, 'w')
     for l in Fin:
         # set the cmake build folders
-        if cmake_generator == 'Ninja':
-            if configure_experimental:
+        if rbase.cmake_generator == 'Ninja':
+            if rbase.configure_experimental:
                 outlin = l.replace('-ninja-', '-exp-ninja-')
             else:
                 outlin = l
         else:
-            if configure_experimental:
-                outlin = l.replace('-ninja-', '-exp-{}-'.format(cmake_generator.replace(' ', '-').lower()))
+            if rbase.configure_experimental:
+                outlin = l.replace('-ninja-', '-exp-{}-'.format(rbase.cmake_generator.replace(' ', '-').lower()))
             else:
-                outlin = l.replace('-ninja-', '-{}-'.format(cmake_generator.replace(' ', '-').lower()))
+                outlin = l.replace('-ninja-', '-{}-'.format(rbase.cmake_generator.replace(' ', '-').lower()))
         # configure cmake generator specific options
-        if cmake_generator == "Unix Makefiles":
+        if rbase.cmake_generator == "Unix Makefiles":
             if 'CMAKE_GENERATOR:INTERNAL' in outlin:
-                outlin = outlin.replace('Ninja', cmake_generator)
+                outlin = outlin.replace('Ninja', rbase.cmake_generator)
             elif 'CMAKE_MAKE_PROGRAM:FILEPATH' in outlin:
                 outlin = outlin.replace('=/usr/bin/ninja', '={}'.format(cmake_generator_make))
         # configure cmake build paths
@@ -203,7 +203,7 @@ for conopts in test_options:
         # additional build options
         # enable packages
         if 'packages' in conopts:
-            if configure_experimental:
+            if rbase.configure_experimental:
                 pkgs = rbase.libsbml_packages_exp_disabled
             else:
                 pkgs = rbase.libsbml_packages_disabled
@@ -231,18 +231,18 @@ for conopts in test_options:
 
 CONFIG_TIME = time.time()
 
-# generate cmake configuration shell script
-Fout = open(os.path.join(cdir, 'configure_with_cmake.sh'), 'w')
-for build in cmake_builds:
-    Fout.write('cmake {}\n'.format(build))
-Fout.write('\n')
-Fout.close()
-os.chmod(os.path.join(cdir, 'configure_with_cmake.sh'), 0o744)
+# # generate cmake configuration shell script
+# Fout = open(os.path.join(cdir, 'configure_with_cmake.sh'), 'w')
+# for build in cmake_builds:
+#     Fout.write('cmake {}\n'.format(build))
+# Fout.write('\n')
+# Fout.close()
+# os.chmod(os.path.join(cdir, 'configure_with_cmake.sh'), 0o744)
 
 # parallel cmake congfiguration
 report_cmake_configure = {}
 report_cmake_configure_bad = {}
-if configure_with_cmake:
+if rbase.configure_with_cmake:
     prprinter = pprint.PrettyPrinter()
     def cmake_configure(build, rpt):
         try:
@@ -283,7 +283,7 @@ if len(report_cmake_configure) == 0:
     Rlog.close()
     os.sys.exit(1)
     
-if build_test_configurations:
+if rbase.build_test_configurations:
     print('\nCMAKE could configure {} out of {} unique test combinations\n'.format(len(report_cmake_configure), len(test_options)))
     a = raw_input('Proceed to build all combinations - this may take some time (y/n)?\n')
     if a.lower() != 'y':
@@ -293,9 +293,9 @@ if build_test_configurations:
     for cf in report_cmake_configure:
         try:
             os.chdir(cf)
-            if cmake_generator == 'Ninja':
+            if rbase.cmake_generator == 'Ninja':
                 report_build[cf] = subprocess.check_call(['ninja'])
-            elif cmake_generator == 'Unix Makefiles':
+            elif rbase.cmake_generator == 'Unix Makefiles':
                 report_build[cf] = subprocess.check_call(['make'])
         except subprocess.CalledProcessError as err:
             report_build[cf] = err.returncode
@@ -308,14 +308,17 @@ if build_test_configurations:
     Rlog.write('\n# BUILD REPORT: {}\n'.format(len(report_cmake_configure)))
     for i in report_build:
         Rlog.write('  {} {}\n'.format(i, report_build[i]))
-    
+
+BUILD_TIME = time.time()
+
 END_TIME = time.time()
 
 # close log
-Rlog.write('\nConfigure time: {}\n'.format(CONFIG_TIME - START_TIME))
-Rlog.write('CMake time: {}\n'.format(CMAKE_TIME - CONFIG_TIME))
-Rlog.write('Build time: {}\n'.format(END_TIME - CMAKE_TIME))
-Rlog.write('Total time: {}\n\n'.format(END_TIME - START_TIME))
+Rlog.write('\nConfig time: {:03.1f} s\n'.format((CONFIG_TIME - START_TIME)))
+Rlog.write('CMake time: {:03.1f} m\n'.format((CMAKE_TIME - CONFIG_TIME)/60.0))
+Rlog.write('Build time: {:03.1f} m\n'.format((BUILD_TIME - CMAKE_TIME)/60.0))
+Rlog.write('Test time: {:03.1f} m\n'.format((END_TIME - BUILD_TIME)/60.0))
+Rlog.write('Total time: {:03.1f} m\n\n'.format((END_TIME - START_TIME)/60.0))
 Rlog.close()
 
 

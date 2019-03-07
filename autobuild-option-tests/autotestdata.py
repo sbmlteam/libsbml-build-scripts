@@ -37,7 +37,7 @@
 # ------------------------------------------------------------------------ -->
 #
 
-import re
+import os, re, json
 
 # package switches
 
@@ -63,9 +63,9 @@ class CMakeReplacements(object):
     """
     package_names = ['COMP', 'FBC', 'GROUPS', 'L3V2EXTENDEDMATH', 'LAYOUT', 'MULTI', 'QUAL', 'RENDER']
     package_names_exp = package_names + ['ARRAYS', 'DISTRIB','DYN','REQUIREDELEMENTS', 'SPATIAL']
-    template_libsbml_source_path = '/home/sbml/development/sf_libsbml'
-    libsbml_src_path = '/home/sbml/development/sf_libsbml'
-    libsbml_exp_src_path = '/home/sbml/development/sf_libsbml_experimental'
+    template_libsbml_source_path = None
+    libsbml_src_path = None
+    libsbml_exp_src_path = None
 
     cmake_generator_opts = {'Unix Makefiles' : {'cmake_generator_make' : '/usr/bin/make'}}
     cmake_src_config = ['LIBSBML_ROOT_SOURCE_DIR:PATH=', 'libsbml_SOURCE_DIR:STATIC=',\
@@ -75,17 +75,29 @@ class CMakeReplacements(object):
     libsbml_packages_disabled = None
     libsbml_packages_exp_enabled = None
     libsbml_packages_exp_disabled = None
+
     cmake_template_src_paths = None
     cmake_install_path = None
+    
+    configure_experimental = None
+    configure_with_cmake = None
+    build_test_configurations = None
+    test_all_combinations = None
+    cmake_generator = None
+    default_test_options = None
+    base_file = None
+    config = None
 
+    def __init__(self, filepath):
+        """
+        Create a test data object initialised with a configuration dictionary
+        loaded from a json formatted configuration file.
 
-    def __init__(self):
-        self.cmake_template_src_paths = {p : self.template_libsbml_source_path for p in self.cmake_src_config}
-        self.libsbml_packages_enabled =  {p : 'ENABLE_{}:BOOL=ON'.format(p) for p in self.package_names}
-        self.libsbml_packages_disabled =  {p : 'ENABLE_{}:BOOL=OFF'.format(p) for p in self.package_names if p != 'L3V2EXTENDEDMATH'}
-        self.libsbml_packages_exp_enabled =  {p : 'ENABLE_{}:BOOL=ON'.format(p) for p in self.package_names_exp}
-        self.libsbml_packages_exp_disabled =  {p : 'ENABLE_{}:BOOL=OFF'.format(p) for p in self.package_names_exp if p != 'L3V2EXTENDEDMATH'}
+        - *filepath* a string that refers to a file containing a python dictionary of configuration options
 
+        """
+        self.load_json_to_config(filepath)
+        self.load_options_from_config()
 
     ubuntu_check_config = {'disabled' : 'WITH_CHECK:BOOL=OFF',
                            'enabled' : 'WITH_CHECK:BOOL=ON'}
@@ -110,3 +122,38 @@ class CMakeReplacements(object):
 
     libsbml_cpp_namespace = {'enabled' : 'WITH_CPP_NAMESPACE:BOOL=ON',
                              'disabled' : 'WITH_CPP_NAMESPACE:BOOL=OFF'}
+
+    def load_json_to_config(self, filepath):
+        """
+        Load a configuration file and decode
+
+        - *filepath* a file path
+
+        """
+        assert os.path.exists(filepath), '\n{} is not a file'.format(filepath)
+        with open(filepath, 'r') as Fcfg:
+            self.config = json.load(Fcfg)
+        Fcfg.close()
+
+    def load_options_from_config(self):
+        """
+        Configures options attributes from a loaded config file.
+        
+        """
+        self.libsbml_exp_src_path = self.config['paths']['libsbml_exp_src_path']
+        self.libsbml_src_path = self.config['paths']['libsbml_src_path']
+        self.template_libsbml_source_path = self.config['paths']['template_libsbml_source_path']
+        self.base_file = self.config['paths']['base_file']
+
+        self.configure_experimental = self.config['options']['configure_experimental']
+        self.configure_with_cmake = self.config['options']['configure_with_cmake']
+        self.build_test_configurations = self.config['options']['build_test_configurations']
+        self.test_all_combinations = self.config['options']['test_all_combinations']
+        self.cmake_generator = self.config['options']['cmake_generator']
+        self.default_test_options = self.config['tests']['default']
+
+        self.cmake_template_src_paths = {p : self.template_libsbml_source_path for p in self.cmake_src_config}
+        self.libsbml_packages_enabled =  {p : 'ENABLE_{}:BOOL=ON'.format(p) for p in self.package_names}
+        self.libsbml_packages_disabled =  {p : 'ENABLE_{}:BOOL=OFF'.format(p) for p in self.package_names if p != 'L3V2EXTENDEDMATH'}
+        self.libsbml_packages_exp_enabled =  {p : 'ENABLE_{}:BOOL=ON'.format(p) for p in self.package_names_exp}
+        self.libsbml_packages_exp_disabled =  {p : 'ENABLE_{}:BOOL=OFF'.format(p) for p in self.package_names_exp if p != 'L3V2EXTENDEDMATH'}
