@@ -1,0 +1,284 @@
+[HANDLER_OUTPUT] 
+Test project /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/ubuntu-1604-ninja-base-check-examples-packages
+
+      Start  1: test_sbml_package_multi_run
+ 1/81 Test  #1: test_sbml_package_multi_run ...................   Passed    0.28 sec
+      Start  2: test_multi_validator_run
+ 2/81 Test  #2: test_multi_validator_run ......................   Passed    0.54 sec
+      Start  3: test_sbml_package_render_run
+ 3/81 Test  #3: test_sbml_package_render_run ..................   Passed    5.32 sec
+      Start  4: test_render_validator_run
+ 4/81 Test  #4: test_render_validator_run .....................   Passed    0.66 sec
+      Start  5: test_extension_package_qual_run
+ 5/81 Test  #5: test_extension_package_qual_run ...............   Passed    0.29 sec
+      Start  6: test_sbml_package_qual_run
+ 6/81 Test  #6: test_sbml_package_qual_run ....................   Passed    1.28 sec
+      Start  7: test_qual_validator_run
+ 7/81 Test  #7: test_qual_validator_run .......................   Passed    0.82 sec
+      Start  8: test_comp_extensions_run
+ 8/81 Test  #8: test_comp_extensions_run ......................   Passed    2.21 sec
+      Start  9: test_comp_sbase_run
+ 9/81 Test  #9: test_comp_sbase_run ...........................   Passed    1.03 sec
+      Start 10: test_comp_util_run
+10/81 Test #10: test_comp_util_run ............................   Passed   24.78 sec
+      Start 11: test_comp_validator_run
+11/81 Test #11: test_comp_validator_run .......................   Passed    2.98 sec
+      Start 12: test_extension_package_groups_run
+12/81 Test #12: test_extension_package_groups_run .............   Passed    0.76 sec
+      Start 13: test_groups_validator_run
+13/81 Test #13: test_groups_validator_run .....................   Passed    0.28 sec
+      Start 14: test_sbml_package_fbc_run
+14/81 Test #14: test_sbml_package_fbc_run .....................   Passed    0.88 sec
+      Start 15: test_fbc_validator_run
+15/81 Test #15: test_fbc_validator_run ........................   Passed    1.02 sec
+      Start 16: test_l3v2extendedmath_validator_run
+16/81 Test #16: test_l3v2extendedmath_validator_run ...........   Passed    0.02 sec
+      Start 17: test_extension_package_l3v2extendedmath_run
+17/81 Test #17: test_extension_package_l3v2extendedmath_run ...   Passed    0.20 sec
+      Start 18: test_sbml_package_layout_run
+18/81 Test #18: test_sbml_package_layout_run ..................   Passed    3.89 sec
+      Start 19: test_layout_validator_run
+19/81 Test #19: test_layout_validator_run .....................   Passed    3.54 sec
+      Start 20: test_sbml_annotation_run
+20/81 Test #20: test_sbml_annotation_run ......................   Passed    3.17 sec
+      Start 21: test_sbml_conversion_run
+21/81 Test #21: test_sbml_conversion_run ......................   Passed    3.20 sec
+      Start 22: test_sbml_extension_run
+22/81 Test #22: test_sbml_extension_run .......................   Passed    0.37 sec
+      Start 23: test_sbml_math_run
+23/81 Test #23: test_sbml_math_run ............................   Passed    0.56 sec
+      Start 24: test_sbml_sbml_run
+24/81 Test #24: test_sbml_sbml_run ............................***Failed   19.59 sec
+Running suite(s): ReadSBML
+ SBMLValidator API
+ RenameIDs
+ RemoveFromParent
+ GetMultipleObjects
+ WriteSBML
+ WriteL3SBML
+ WriteL3V2SBML
+ AlgebraicRule
+ AssignmentRule
+ Compartment
+ L3_Compartment
+ Compartment_newSetters
+ CompartmentType
+ CompartmentType_newSetters
+ CompartmentVolumeRule
+ Constraint
+ Constraint_newSetters
+ Delay
+ Event
+ L3_Event
+ Event_newSetters
+ EventAssignment
+ EventAssignment_newSetters
+ FunctionDefinition
+ FunctionDefinition_newSetters
+ InitialAssignment
+ InitialAssignment_newSetters
+ KineticLaw
+ KineticLaw_newSetters
+ L3_KineticLaw
+ ListOf
+ Model
+ L3_Model
+ Model_newSetters
+ ModifierSpeciesReference
+ Parameter
+ L3_Parameter
+ L3_LocalParameter
+ Parameter_newSetters
+ ParameterRule
+ Priority
+ RateRule
+ Reaction
+ L3_Reaction
+ Reaction_newSetters
+ Rule
+ Rule_newSetters
+ SBase
+ SBase_newSetters
+ Species
+ L3_Species
+ Species_newSetters
+ SpeciesReference
+ L3_SpeciesReference
+ SpeciesReference_newSetters
+ SpeciesConcentrationRule
+ SpeciesType
+ SpeciesType_newSetters
+ StoichiometryMath
+ Trigger
+ L3Trigger
+ Unit
+ L3_Unit
+ Unit_newSetters
+ UnitDefinition
+ UnitDefinition_newSetters
+ UnitKind
+ CopyAndClone
+ SBMLConvert
+ SBMLConvertStrict
+ SBMLConvertFromL3V2
+ SBMLDocument
+ SBMLError
+ test-data/l1v1-branch.xml
+ test-data/l1v1-units.xml
+ test-data/l1v1-rules.xml
+ test-data/l1v1-minimal.xml
+ test-data/l2v1-assignment.xml
+ test-data/l2v2-newComponents.xml
+ test-data/l2v3-all.xml
+ test-data/l2v4-new.xml
+ test-data/l3v1-new.xml
+ test-data/l2v5-all.xml
+ test-data/l3v2-all.xml
+ test-data/l3v2-no-model.xml
+ test-data/l3v2-empty-lo-1.xml
+ test-data/l3v2-empty-lo-2.xml
+ test-data/l3v2-empty-math.xml
+ test-data/l3v2-empty-event.xml
+ test-data/l3v2-empty-event2.xml
+ ConsistencyChecks
+ ParentObject
+ AncestorObject
+ InternalConsistencyChecks
+ HasReqdAtt
+ HasReqdElements
+ SBMLNamespaces
+ SyntaxChecker
+ SBMLConstructorException
+ SBMLTransforms
+ GetMultipleObjects
+ LevelCompatibility
+ SBaseIdName
+ Generic Attribute Functions
+99%: Checks: 1730, Failures: 2, Errors: 0
+/home/libsbml/development/sf_libsbml/src/sbml/test/TestReadFromFileL2V5.cpp:594:F:test-data/l2v5-all.xml:test_echo_l2v5_all:0: Assertion 'strcmp(doc, out) == 0' failed
+/home/libsbml/development/sf_libsbml/src/sbml/test/TestReadFromFileL3V2_2.cpp:332:F:test-data/l3v2-empty-lo-1.xml:test_echo_l3v2_empty_lo_3:0: Assertion 'm != NULL' failed
+
+      Start 25: test_sbml_units_run
+25/81 Test #25: test_sbml_units_run ...........................   Passed    6.27 sec
+      Start 26: test_sbml_util_run
+26/81 Test #26: test_sbml_util_run ............................   Passed    1.13 sec
+      Start 27: test_sbml_validator_run
+27/81 Test #27: test_sbml_validator_run .......................   Passed   33.09 sec
+      Start 28: test_sbml_xml_run
+28/81 Test #28: test_sbml_xml_run .............................   Passed    1.49 sec
+      Start 29: test_c_addCVTerms
+29/81 Test #29: test_c_addCVTerms .............................   Passed    0.01 sec
+      Start 30: test_c_addingEvidenceCodes_1
+30/81 Test #30: test_c_addingEvidenceCodes_1 ..................   Passed    0.02 sec
+      Start 31: test_c_addingEvidenceCodes_2
+31/81 Test #31: test_c_addingEvidenceCodes_2 ..................   Passed    0.04 sec
+      Start 32: test_c_addModelHistory
+32/81 Test #32: test_c_addModelHistory ........................   Passed    0.03 sec
+      Start 33: test_c_appendAnnotation
+33/81 Test #33: test_c_appendAnnotation .......................   Passed    0.04 sec
+      Start 34: test_c_convertSBML
+34/81 Test #34: test_c_convertSBML ............................   Passed    0.06 sec
+      Start 35: test_c_createExampleSBML
+35/81 Test #35: test_c_createExampleSBML ......................   Passed    0.08 sec
+      Start 36: test_c_drawMath
+36/81 Test #36: test_c_drawMath ...............................   Passed    0.03 sec
+      Start 37: test_c_echoSBML
+37/81 Test #37: test_c_echoSBML ...............................   Passed    0.02 sec
+      Start 38: test_c_printAnnotation
+38/81 Test #38: test_c_printAnnotation ........................   Passed    0.02 sec
+      Start 39: test_c_printMath
+39/81 Test #39: test_c_printMath ..............................   Passed    0.03 sec
+      Start 40: test_c_printNotes
+40/81 Test #40: test_c_printNotes .............................   Passed    0.02 sec
+      Start 41: test_c_printRegisteredPackages
+41/81 Test #41: test_c_printRegisteredPackages ................   Passed    0.01 sec
+      Start 42: test_c_printSBML
+42/81 Test #42: test_c_printSBML ..............................   Passed    0.02 sec
+      Start 43: test_c_printSupported
+43/81 Test #43: test_c_printSupported .........................   Passed    0.01 sec
+      Start 44: test_c_printUnits
+44/81 Test #44: test_c_printUnits .............................   Passed    0.03 sec
+      Start 45: test_c_promoteParameters
+45/81 Test #45: test_c_promoteParameters ......................   Passed    0.01 sec
+      Start 46: test_c_readSBML
+46/81 Test #46: test_c_readSBML ...............................   Passed    0.01 sec
+      Start 47: test_c_stripPackage
+47/81 Test #47: test_c_stripPackage ...........................   Passed    0.03 sec
+      Start 48: test_c_unsetAnnotation
+48/81 Test #48: test_c_unsetAnnotation ........................   Passed    0.01 sec
+      Start 49: test_c_unsetNotes
+49/81 Test #49: test_c_unsetNotes .............................   Passed    0.02 sec
+      Start 50: test_c_validateSBML
+50/81 Test #50: test_c_validateSBML ...........................   Passed    0.02 sec
+      Start 51: test_cxx_addCVTerms
+51/81 Test #51: test_cxx_addCVTerms ...........................   Passed    0.01 sec
+      Start 52: test_cxx_addCustomValidator
+52/81 Test #52: test_cxx_addCustomValidator ...................   Passed    0.01 sec
+      Start 53: test_cxx_addingEvidenceCodes_1
+53/81 Test #53: test_cxx_addingEvidenceCodes_1 ................   Passed    0.03 sec
+      Start 54: test_cxx_addingEvidenceCodes_2
+54/81 Test #54: test_cxx_addingEvidenceCodes_2 ................   Passed    0.01 sec
+      Start 55: test_cxx_addModelHistory
+55/81 Test #55: test_cxx_addModelHistory ......................   Passed    0.01 sec
+      Start 56: test_cxx_appendAnnotation
+56/81 Test #56: test_cxx_appendAnnotation .....................   Passed    0.02 sec
+      Start 57: test_cxx_callExternalValidator
+57/81 Test #57: test_cxx_callExternalValidator ................   Passed    0.01 sec
+      Start 58: test_cxx_convertSBML
+58/81 Test #58: test_cxx_convertSBML ..........................   Passed    0.01 sec
+      Start 59: test_cxx_convertToL1V1
+59/81 Test #59: test_cxx_convertToL1V1 ........................   Passed    0.01 sec
+      Start 60: test_cxx_createExampleSBML
+60/81 Test #60: test_cxx_createExampleSBML ....................   Passed    0.02 sec
+      Start 61: test_cxx_echoSBML
+61/81 Test #61: test_cxx_echoSBML .............................   Passed    0.01 sec
+      Start 62: test_cxx_inferUnits
+62/81 Test #62: test_cxx_inferUnits ...........................   Passed    0.02 sec
+      Start 63: test_cxx_inlineFunctionDefintions
+63/81 Test #63: test_cxx_inlineFunctionDefintions .............   Passed    0.02 sec
+      Start 64: test_cxx_convertReactions
+64/81 Test #64: test_cxx_convertReactions .....................   Passed    0.05 sec
+      Start 65: test_cxx_getAllElementsWithNotes
+65/81 Test #65: test_cxx_getAllElementsWithNotes ..............   Passed    0.01 sec
+      Start 66: test_cxx_printAnnotation
+66/81 Test #66: test_cxx_printAnnotation ......................   Passed    0.01 sec
+      Start 67: test_cxx_printMath
+67/81 Test #67: test_cxx_printMath ............................   Passed    0.01 sec
+      Start 68: test_cxx_printNotes
+68/81 Test #68: test_cxx_printNotes ...........................   Passed    0.01 sec
+      Start 69: test_cxx_printSBML
+69/81 Test #69: test_cxx_printSBML ............................   Passed    0.01 sec
+      Start 70: test_cxx_printRegisteredPackages
+70/81 Test #70: test_cxx_printRegisteredPackages ..............   Passed    0.01 sec
+      Start 71: test_cxx_printSupported
+71/81 Test #71: test_cxx_printSupported .......................   Passed    0.01 sec
+      Start 72: test_cxx_printUnits
+72/81 Test #72: test_cxx_printUnits ...........................   Passed    0.01 sec
+      Start 73: test_cxx_promoteParameters
+73/81 Test #73: test_cxx_promoteParameters ....................   Passed    0.01 sec
+      Start 74: test_cxx_readSBML
+74/81 Test #74: test_cxx_readSBML .............................   Passed    0.01 sec
+      Start 75: test_cxx_renameSId
+75/81 Test #75: test_cxx_renameSId ............................   Passed    0.01 sec
+      Start 76: test_cxx_setIdFromNames
+76/81 Test #76: test_cxx_setIdFromNames .......................   Passed    0.01 sec
+      Start 77: test_cxx_setNamesFromIds
+77/81 Test #77: test_cxx_setNamesFromIds ......................   Passed    0.01 sec
+      Start 78: test_cxx_stripPackage
+78/81 Test #78: test_cxx_stripPackage .........................   Passed    0.02 sec
+      Start 79: test_cxx_unsetAnnotation
+79/81 Test #79: test_cxx_unsetAnnotation ......................   Passed    0.01 sec
+      Start 80: test_cxx_unsetNotes
+80/81 Test #80: test_cxx_unsetNotes ...........................   Passed    0.01 sec
+      Start 81: test_cxx_validateSBML
+81/81 Test #81: test_cxx_validateSBML .........................   Passed    0.01 sec
+
+99% tests passed, 1 tests failed out of 81
+
+Total Test time (real) = 120.89 sec
+
+The following tests FAILED:
+	 24 - test_sbml_sbml_run (Failed)
+[ERROR_MESSAGE] 
+Errors while running CTest
+
