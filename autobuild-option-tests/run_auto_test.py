@@ -389,7 +389,6 @@ if rbase.check_test_configurations:
         except subprocess.CalledProcessError as err:
             rpt[bld] = err.returncode
 
-    process_pool = []
     no_check_support = []
     print(report_build)
     for cf in report_build:
@@ -401,14 +400,12 @@ if rbase.check_test_configurations:
         print
         print('----')
         if 'check' in cf:
-            process_pool.append(threading.Thread(target=cmake_test, args=[cf, report_check, rpt_path]))
+            # ctest is not threadsafe so we run it in serial
+            t_proc = threading.Thread(target=cmake_test, args=[cf, report_check, rpt_path])
+            t_proc.start()
+            t_proc.join()
         else:
             no_check_support.append(cf)
-
-        # ctest is not threadsafe so we run it in serial
-        process_pool[-1].start()
-        process_pool[-1].join()
-
     os.chdir(cdir)
 
     for nc in no_check_support:
