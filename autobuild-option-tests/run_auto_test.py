@@ -68,12 +68,16 @@ test_options = rbase.config['tests']['default']
 # rbase.cmake_generator = 'Unix Makefiles'
 
 # setup option templates for "test_all_combinations"
+# packages is set up as a binary option
 xml_options = ['xml2', 'expat', 'xerces']
 fixed_options = ['check']
-combi_options = ['packages', 'examples', 'strict', 'cpp_ns']
+combi_options = ['examples', 'strict', 'cpp_ns']
+main_binding_options = ['csharp', 'java', 'perl', 'python', 'r']
 
 # test_options = [['check']] # base only
-test_options = [['check'], ['check', 'examples']]
+# test_options = [['check'], ['check', 'examples']]
+# test_options = [['xml2', 'check', 'csharp'], ['xml2', 'check', 'java'], ['xml2', 'check', 'perl'], ['xml2', 'check', 'python'], ['xml2', 'check', 'r']]
+test_options = [['expat', 'check', 'csharp'], ['xml2', 'check', 'examples','python', 'csharp']]
 # test_options =  [['check'], ['check', 'packages'], ['check', 'examples'], ['check', 'strict'], ['check', 'cpp_ns']]
 
 # create output logger and report folder
@@ -91,14 +95,34 @@ if rbase.test_all_combinations:
             combis = [[opt] + c for c in combis]
         test_options.extend(combis)
 
-    out = []
+    test_options_new = copy.deepcopy(test_options)
+    for bnd in main_binding_options:
+        out1 = copy.deepcopy(test_options)
+        if bnd in ['csharp', 'java', 'perl', 'python', 'r']:
+            [x.append(bnd) for x in out1]
+        test_options_new += out1
+    test_options = test_options_new
 
+    out = []
     for xml in xml_options:
         out1 = copy.deepcopy(test_options)
         if xml in ['xml2', 'expat', 'xerces']:
             [x.insert(0, xml) for x in out1]
         out += out1
     test_options = out
+
+    # do everything with or without packages
+    test_options_new = copy.deepcopy(test_options)
+    for gopt in ['packages']:
+        out1 = copy.deepcopy(test_options)
+        [x.insert(0, gopt) for x in out1]
+        test_options_new += out1
+
+    test_options = test_options_new
+
+
+
+    
 
     print('\nAutogenerate created {} unique test combinations\n'.format(len(test_options)))
     a = raw_input('Proceed and generate all combinations (y/n)?\n')
@@ -125,6 +149,9 @@ Rlog.write('Generator: {}\n'.format(rbase.cmake_generator))
 Rlog.write('\n# CONFIGURATION COMBINATIONS\n')
 for i in test_options:
     Rlog.write('  {}\n'.format(i))
+
+Rlog.close()
+Rlog = open(os.path.join(report_path, 'result_log.md'), 'a')
 
 START_TIME = time.time()
 
@@ -229,6 +256,12 @@ for conopts in test_options:
             if rbase.libsbml_cpp_namespace['disabled'] in outlin:
                 outlin = outlin.replace(rbase.libsbml_cpp_namespace['disabled'], rbase.libsbml_cpp_namespace['enabled'])
 
+        # add bindings:
+        for bnd in rbase.libsbml_bindings:
+            if bnd in conopts:
+                if rbase.libsbml_bindings[bnd]['disabled'] in outlin:
+                    outlin = outlin.replace(rbase.libsbml_bindings[bnd]['disabled'], rbase.libsbml_bindings[bnd]['enabled'])
+
         Fout.write(outlin)
     Fin.close()
     Fout.close()
@@ -245,8 +278,8 @@ CONFIG_TIME = time.time()
 # os.chmod(os.path.join(cdir, 'configure_with_cmake.sh'), 0o744)
 
 # parallel cmake congfiguration
-report_cmake_configure = {}
-report_cmake_configure_bad = {}
+output_cmake_configure = {}
+output_cmake_configure_bad = {}
 if rbase.configure_with_cmake:
     prprinter = pprint.PrettyPrinter()
     def cmake_configure(build, rpt):
@@ -256,50 +289,53 @@ if rbase.configure_with_cmake:
             rpt[build] = err.returncode
     process_pool = []
     for build in cmake_builds:
-        process_pool.append(threading.Thread(target=cmake_configure, args=[build, report_cmake_configure]))
+        process_pool.append(threading.Thread(target=cmake_configure, args=[build, output_cmake_configure]))
     for p in process_pool:
         p.start()
     for p in process_pool:
         p.join()
 
 
-    for a in list(report_cmake_configure.keys()):
-        if report_cmake_configure[a] != 0:
-            report_cmake_configure_bad[a] = report_cmake_configure.pop(a)
+    for a in list(output_cmake_configure.keys()):
+        if output_cmake_configure[a] != 0:
+            output_cmake_configure_bad[a] = output_cmake_configure.pop(a)
 
-    print('\n\nCMAKE CONFIGURARATION REPORT GOOD: {}\n'.format(len(report_cmake_configure)) + 37*'-')
-    prprinter.pprint(report_cmake_configure)
-    print('\nCMAKE CONFIGURARATION REPORT BAD: {}\n'.format(len(report_cmake_configure_bad)) + 36*'-')
-    prprinter.pprint(report_cmake_configure_bad)
+    print('\n\nCMAKE CONFIGURARATION REPORT GOOD: {}\n'.format(len(output_cmake_configure)) + 37*'-')
+    prprinter.pprint(output_cmake_configure)
+    print('\nCMAKE CONFIGURARATION REPORT BAD: {}\n'.format(len(output_cmake_configure_bad)) + 36*'-')
+    prprinter.pprint(output_cmake_configure_bad)
 
     # log build configurations
-    Rlog.write('\n# CMAKE CONFIGURARATION REPORT GOOD: {}\n'.format(len(report_cmake_configure)))
-    for i in report_cmake_configure:
-        Rlog.write('  {} {}\n'.format(i, report_cmake_configure[i]))
-    Rlog.write('\n# CMAKE CONFIGURARATION REPORT BAD: {}\n'.format(len(report_cmake_configure_bad)))
-    for i in report_cmake_configure_bad:
-        Rlog.write('  {} {}\n'.format(i, report_cmake_configure_bad[i]))
+    Rlog.write('\n# CMAKE CONFIGURARATION REPORT GOOD: {}\n'.format(len(output_cmake_configure)))
+    for i in output_cmake_configure:
+        Rlog.write('  {} {}\n'.format(i, output_cmake_configure[i]))
+    Rlog.write('\n# CMAKE CONFIGURARATION REPORT BAD: {}\n'.format(len(output_cmake_configure_bad)))
+    for i in output_cmake_configure_bad:
+        Rlog.write('  {} {}\n'.format(i, output_cmake_configure_bad[i]))
 
 CMAKE_TIME = time.time()
 
-if len(report_cmake_configure) == 0:
+if len(output_cmake_configure) == 0:
     print('\n\nNO GOOD CONFIGURATIONS, NOTHING TO DO!')
     Rlog.write('\nConfigure time: {}\n'.format(CONFIG_TIME - START_TIME))
     Rlog.write('CMake time: {}\n\n'.format(CMAKE_TIME - CONFIG_TIME))
     Rlog.close()
     os.sys.exit(1)
 
+Rlog.close()
+Rlog = open(os.path.join(report_path, 'result_log.md'), 'a')
+
 report_build = {}
-total_builds = len(report_cmake_configure)
+total_builds = len(output_cmake_configure)
 if rbase.build_test_configurations:
-    print('\nCMAKE could configure {} out of {} unique test combinations\n'.format(len(report_cmake_configure), len(test_options)))
+    print('\nCMAKE could configure {} out of {} unique test combinations\n'.format(len(output_cmake_configure), len(test_options)))
     # a = raw_input('Proceed to build all combinations - this may take some time (y/n)?\n')
     # if a.lower() != 'y':
     #     os.sys.exit()
 
     buildcnt = 1
-    for cf in report_cmake_configure:
-        print('Attempting build {} of {}.'.format(buildcnt, total_builds))
+    for cf in output_cmake_configure:
+        print('Build {} of {} ({}).'.format(buildcnt, total_builds, cf))
         buildcnt += 1
         try:
             os.chdir(cf)
@@ -315,9 +351,12 @@ if rbase.build_test_configurations:
     prprinter.pprint(report_build)
 
     # log build report
-    Rlog.write('\n# BUILD REPORT: {}\n'.format(len(report_cmake_configure)))
+    Rlog.write('\n# BUILD REPORT: {}\n'.format(len(output_cmake_configure)))
     for i in report_build:
         Rlog.write('  {} {}\n'.format(i, report_build[i]))
+
+Rlog.close()
+Rlog = open(os.path.join(report_path, 'result_log.md'), 'a')
 
 BUILD_TIME = time.time()
 

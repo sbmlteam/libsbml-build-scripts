@@ -124,6 +124,24 @@ class CMakeReplacements(object):
     libsbml_cpp_namespace = {'enabled' : 'WITH_CPP_NAMESPACE:BOOL=ON',
                              'disabled' : 'WITH_CPP_NAMESPACE:BOOL=OFF'}
 
+    libsbml_bindings = {'csharp' :  {'enabled' : 'WITH_CSHARP:BOOL=ON',
+                                    'disabled' : 'WITH_CSHARP:BOOL=OFF'
+                                    },
+                        'java' :    {'enabled' : 'WITH_JAVA:BOOL=ON',
+                                    'disabled' : 'WITH_JAVA:BOOL=OFF'
+                                    },
+                        'perl' :    {'enabled' : 'WITH_PERL:BOOL=ON',
+                                    'disabled' : 'WITH_PERL:BOOL=OFF'
+                                    },
+                        'python' :  {'enabled' : 'WITH_PYTHON:BOOL=ON',
+                                    'disabled' : 'WITH_PYTHON:BOOL=OFF'
+                                    },
+                        'r' :       {'enabled' : 'WITH_R:BOOL=ON',
+                                    'disabled' : 'WITH_R:BOOL=OFF'
+                                    }
+                        }
+
+
     def load_json_to_config(self, filepath):
         """
         Load a configuration file and decode
