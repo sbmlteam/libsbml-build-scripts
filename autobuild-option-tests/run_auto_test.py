@@ -72,8 +72,8 @@ xml_options = ['xml2', 'expat', 'xerces']
 fixed_options = ['check']
 combi_options = ['packages', 'examples', 'strict', 'cpp_ns']
 
-test_options = [['check']] # base only
-# test_options = [['check'], ['check', 'examples']]
+# test_options = [['check']] # base only
+test_options = [['check'], ['check', 'examples']]
 # test_options =  [['check'], ['check', 'packages'], ['check', 'examples'], ['check', 'strict'], ['check', 'cpp_ns']]
 
 # create output logger and report folder
@@ -95,7 +95,7 @@ if rbase.test_all_combinations:
 
     for xml in xml_options:
         out1 = copy.deepcopy(test_options)
-        if xml in ['expat', 'xerces']:
+        if xml in ['xml2', 'expat', 'xerces']:
             [x.insert(0, xml) for x in out1]
         out += out1
     test_options = out
@@ -197,7 +197,7 @@ for conopts in test_options:
             if rbase.libsbml_xml_parsers['expat']['disabled'] in outlin:
                 outlin = outlin.replace(rbase.libsbml_xml_parsers['expat']['disabled'], rbase.libsbml_xml_parsers['expat']['enabled'])
         # enable xerces, the default is lxml2
-        if 'xerces' in conopts:
+        elif 'xerces' in conopts:
             if rbase.libsbml_xml_parsers['xml2']['enabled'] in outlin:
                 outlin = outlin.replace(rbase.libsbml_xml_parsers['xml2']['enabled'], rbase.libsbml_xml_parsers['xml2']['disabled'])
             if rbase.libsbml_xml_parsers['expat']['enabled'] in outlin:
@@ -261,6 +261,7 @@ if rbase.configure_with_cmake:
         p.start()
     for p in process_pool:
         p.join()
+        
 
     for a in list(report_cmake_configure.keys()):
         if report_cmake_configure[a] != 0:
@@ -289,13 +290,17 @@ if len(report_cmake_configure) == 0:
     os.sys.exit(1)
     
 report_build = {}
+total_builds = len(rbase.build_test_configurations)
 if rbase.build_test_configurations:
     print('\nCMAKE could configure {} out of {} unique test combinations\n'.format(len(report_cmake_configure), len(test_options)))
     # a = raw_input('Proceed to build all combinations - this may take some time (y/n)?\n')
     # if a.lower() != 'y':
     #     os.sys.exit()
 
+    buildcnt = 1
     for cf in report_cmake_configure:
+        print('Attempting build {} of {}.'.format(buildcnt, total_builds))
+        buildcnt += 1
         try:
             os.chdir(cf)
             if rbase.cmake_generator == 'Ninja':
@@ -332,18 +337,12 @@ if rbase.check_test_configurations:
         os.chdir(cf)
         rpt_path = os.path.join(report_path, os.path.split(cf)[-1]+'.log')
         process_pool.append(threading.Thread(target=cmake_test, args=[cf, report_check, rpt_path]))
+    # ctest is not threadsafe so we run it in serial
     for p in process_pool:
         p.start()
-    for p in process_pool:
         p.join()
-    
-    # for cf in report_build:
-    #     try:
-    #         os.chdir(cf)
-    #         rpt_path = os.path.join(report_path, os.path.split(cf)[-1]+'.log')
-    #         report_check[cf] = subprocess.check_call(['ctest', '--output-on-failure', '--output-log', '{}'.format(rpt_path)])
-    #     except subprocess.CalledProcessError as err:
-    #         report_check[cf] = err.returncode
+    # for p in process_pool:
+    #     p.join()
     
     os.chdir(cdir)
     
