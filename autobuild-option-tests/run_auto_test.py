@@ -77,7 +77,8 @@ main_binding_options = ['csharp', 'java', 'perl', 'python', 'r']
 # test_options = [['check']] # base only
 # test_options = [['check'], ['check', 'examples']]
 # test_options = [['xml2', 'check', 'csharp'], ['xml2', 'check', 'java'], ['xml2', 'check', 'perl'], ['xml2', 'check', 'python'], ['xml2', 'check', 'r']]
-test_options = [['expat', 'check', 'csharp'], ['xml2', 'check', 'examples','python', 'csharp']]
+test_options = [['check','xml2','csharp'], ['check', 'expat', 'csharp'],\
+                ['check','xml2', 'examples', 'csharp'], ['check', 'expat', 'examples', 'csharp']]
 # test_options =  [['check'], ['check', 'packages'], ['check', 'examples'], ['check', 'strict'], ['check', 'cpp_ns']]
 
 # create output logger and report folder
@@ -119,10 +120,6 @@ if rbase.test_all_combinations:
         test_options_new += out1
 
     test_options = test_options_new
-
-
-
-    
 
     print('\nAutogenerate created {} unique test combinations\n'.format(len(test_options)))
     a = raw_input('Proceed and generate all combinations (y/n)?\n')
@@ -277,7 +274,7 @@ CONFIG_TIME = time.time()
 # Fout.close()
 # os.chmod(os.path.join(cdir, 'configure_with_cmake.sh'), 0o744)
 
-# parallel cmake congfiguration
+# parallel cmake configuration
 output_cmake_configure = {}
 output_cmake_configure_bad = {}
 if rbase.configure_with_cmake:
@@ -287,6 +284,8 @@ if rbase.configure_with_cmake:
             rpt[build] = subprocess.check_call(['cmake', build])
         except subprocess.CalledProcessError as err:
             rpt[build] = err.returncode
+
+    # raw parallel implimentation
     process_pool = []
     for build in cmake_builds:
         process_pool.append(threading.Thread(target=cmake_configure, args=[build, output_cmake_configure]))
@@ -295,6 +294,24 @@ if rbase.configure_with_cmake:
     for p in process_pool:
         p.join()
 
+    # # alternative batch parallel method
+    # process_pool = []
+    # tmp_pool = []
+    # max_thread_per_group = 50
+    # cntr = 0
+    # for build in cmake_builds:
+    #     tmp_pool.append(threading.Thread(target=cmake_configure, args=[build, output_cmake_configure]))
+    #     cntr += 1 
+    #     if cntr == max_thread_per_group:
+    #         process_pool.append(tmp_pool)
+    #         cntr = 0
+    #         tmp_pool = []
+
+    # for process_group in process_pool:
+    #     for p in process_group:
+    #         p.start()
+    #     for p in process_group:
+    #         p.join()
 
     for a in list(output_cmake_configure.keys()):
         if output_cmake_configure[a] != 0:
