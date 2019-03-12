@@ -62,7 +62,7 @@ test_options = rbase.config['tests']['default']
 # # try to test the successfully configured builds
 # rbase.check_test_configurations = True
 # # test configurations
-# rbase.test_all_combinations = False # overrides all, use with care 
+# rbase.test_all_combinations = False # overrides all, use with care
 # # Setup cmake generator
 # rbase.cmake_generator = 'Ninja' # default for Ubuntu
 # rbase.cmake_generator = 'Unix Makefiles'
@@ -144,11 +144,11 @@ for conopts in test_options:
     if os.path.exists(base_dir):
         shutil.rmtree(base_dir)
     os.mkdir(base_dir)
-    
+
     new_cache_file = os.path.join(base_dir, 'CMakeCache.txt')
     new_cache_template = new_cache_file + '.template'
     shutil.copyfile(os.path.join(cdir, rbase.base_file), new_cache_template)
-    
+
     output = []
     Fin = open(new_cache_template, 'r')
     Fout = open(new_cache_file, 'w')
@@ -261,7 +261,7 @@ if rbase.configure_with_cmake:
         p.start()
     for p in process_pool:
         p.join()
-        
+
 
     for a in list(report_cmake_configure.keys()):
         if report_cmake_configure[a] != 0:
@@ -288,9 +288,9 @@ if len(report_cmake_configure) == 0:
     Rlog.write('CMake time: {}\n\n'.format(CMAKE_TIME - CONFIG_TIME))
     Rlog.close()
     os.sys.exit(1)
-    
+
 report_build = {}
-total_builds = len(rbase.build_test_configurations)
+total_builds = len(report_cmake_configure)
 if rbase.build_test_configurations:
     print('\nCMAKE could configure {} out of {} unique test combinations\n'.format(len(report_cmake_configure), len(test_options)))
     # a = raw_input('Proceed to build all combinations - this may take some time (y/n)?\n')
@@ -343,9 +343,9 @@ if rbase.check_test_configurations:
         p.join()
     # for p in process_pool:
     #     p.join()
-    
+
     os.chdir(cdir)
-    
+
     print('\nCHECK REPORT: {}\n'.format(len(report_check)) + 14*'-')
     prprinter.pprint(report_check)
 
@@ -365,6 +365,6 @@ Rlog.write('Total time: {:03.1f} m\n\n'.format((END_TIME - START_TIME)/60.0))
 Rlog.close()
 
 
-    
+
 
 
