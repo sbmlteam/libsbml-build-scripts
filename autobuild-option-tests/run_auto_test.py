@@ -79,6 +79,7 @@ main_binding_options = ['csharp', 'java', 'perl', 'python', 'r']
 # test_options = [['xml2', 'check', 'csharp'], ['xml2', 'check', 'java'], ['xml2', 'check', 'perl'], ['xml2', 'check', 'python'], ['xml2', 'check', 'r']]
 test_options = [['check','xml2','csharp'], ['check', 'expat', 'csharp'],\
                 ['check','xml2', 'examples', 'csharp'], ['check', 'expat', 'examples', 'csharp']]
+test_options = [['xml2'], ['check', 'xml2', 'csharp'], ['check', 'xml2', 'python']]
 # test_options =  [['check'], ['check', 'packages'], ['check', 'examples'], ['check', 'strict'], ['check', 'cpp_ns']]
 
 # create output logger and report folder
@@ -257,7 +258,10 @@ for conopts in test_options:
         for bnd in rbase.libsbml_bindings:
             if bnd in conopts:
                 if rbase.libsbml_bindings[bnd]['disabled'] in outlin:
+                    print(conopts)
+                    print(outlin)
                     outlin = outlin.replace(rbase.libsbml_bindings[bnd]['disabled'], rbase.libsbml_bindings[bnd]['enabled'])
+                    print(outlin)
 
         Fout.write(outlin)
     Fin.close()
@@ -317,16 +321,16 @@ if rbase.configure_with_cmake:
         if output_cmake_configure[a] != 0:
             output_cmake_configure_bad[a] = output_cmake_configure.pop(a)
 
-    print('\n\nCMAKE CONFIGURARATION REPORT GOOD: {}\n'.format(len(output_cmake_configure)) + 37*'-')
+    print('\n\nCMAKE CONFIGURATION REPORT GOOD: {}\n'.format(len(output_cmake_configure)) + 37*'-')
     prprinter.pprint(output_cmake_configure)
-    print('\nCMAKE CONFIGURARATION REPORT BAD: {}\n'.format(len(output_cmake_configure_bad)) + 36*'-')
+    print('\nCMAKE CONFIGURATION REPORT BAD: {}\n'.format(len(output_cmake_configure_bad)) + 36*'-')
     prprinter.pprint(output_cmake_configure_bad)
 
     # log build configurations
-    Rlog.write('\n# CMAKE CONFIGURARATION REPORT GOOD: {}\n'.format(len(output_cmake_configure)))
+    Rlog.write('\n# CMAKE CONFIGURATION REPORT GOOD: {}\n'.format(len(output_cmake_configure)))
     for i in output_cmake_configure:
         Rlog.write('  {} {}\n'.format(i, output_cmake_configure[i]))
-    Rlog.write('\n# CMAKE CONFIGURARATION REPORT BAD: {}\n'.format(len(output_cmake_configure_bad)))
+    Rlog.write('\n# CMAKE CONFIGURATION REPORT BAD: {}\n'.format(len(output_cmake_configure_bad)))
     for i in output_cmake_configure_bad:
         Rlog.write('  {} {}\n'.format(i, output_cmake_configure_bad[i]))
 
@@ -381,26 +385,34 @@ report_check = {}
 if rbase.check_test_configurations:
     def cmake_test(bld, rpt, rptpath):
         try:
-            print(bld)
-            print(rpt)
-            print(rptpath)
             rpt[bld] = subprocess.check_call(['ctest', '--output-on-failure', '--output-log', '{}'.format(rptpath)])
         except subprocess.CalledProcessError as err:
             rpt[bld] = err.returncode
 
     process_pool = []
+    no_check_support = []
+    print(report_build)
     for cf in report_build:
+        print('----')
+        print(cf)
         os.chdir(cf)
+        print(os.getcwd())
         rpt_path = os.path.join(report_path, os.path.split(cf)[-1]+'.log')
-        process_pool.append(threading.Thread(target=cmake_test, args=[cf, report_check, rpt_path]))
-    # ctest is not threadsafe so we run it in serial
-    for p in process_pool:
-        p.start()
-        p.join()
-    # for p in process_pool:
-    #     p.join()
+        print
+        print('----')
+        if 'check' in cf:
+            process_pool.append(threading.Thread(target=cmake_test, args=[cf, report_check, rpt_path]))
+        else:
+            no_check_support.append(cf)
+
+        # ctest is not threadsafe so we run it in serial
+        process_pool[-1].start()
+        process_pool[-1].join()
 
     os.chdir(cdir)
+
+    for nc in no_check_support:
+        report_check[nc] = 1
 
     print('\nCHECK REPORT: {}\n'.format(len(report_check)) + 14*'-')
     prprinter.pprint(report_check)
