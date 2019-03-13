@@ -1,0 +1,247 @@
+[HANDLER_OUTPUT] 
+Test project /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-packages-xml2-check-examples-python
+
+        Start   1: test_sbml_package_multi_run
+  1/120 Test   #1: test_sbml_package_multi_run ...................   Passed    0.15 sec
+        Start   2: test_multi_validator_run
+  2/120 Test   #2: test_multi_validator_run ......................   Passed    0.17 sec
+        Start   3: test_sbml_package_render_run
+  3/120 Test   #3: test_sbml_package_render_run ..................   Passed    0.80 sec
+        Start   4: test_render_validator_run
+  4/120 Test   #4: test_render_validator_run .....................   Passed    0.22 sec
+        Start   5: test_extension_package_qual_run
+  5/120 Test   #5: test_extension_package_qual_run ...............   Passed    0.14 sec
+        Start   6: test_sbml_package_qual_run
+  6/120 Test   #6: test_sbml_package_qual_run ....................   Passed    0.21 sec
+        Start   7: test_qual_validator_run
+  7/120 Test   #7: test_qual_validator_run .......................   Passed    0.23 sec
+        Start   8: test_comp_extensions_run
+  8/120 Test   #8: test_comp_extensions_run ......................   Passed    0.40 sec
+        Start   9: test_comp_sbase_run
+  9/120 Test   #9: test_comp_sbase_run ...........................   Passed    0.24 sec
+        Start  10: test_comp_util_run
+ 10/120 Test  #10: test_comp_util_run ............................   Passed    3.11 sec
+        Start  11: test_comp_validator_run
+ 11/120 Test  #11: test_comp_validator_run .......................   Passed    0.52 sec
+        Start  12: test_extension_package_groups_run
+ 12/120 Test  #12: test_extension_package_groups_run .............   Passed    0.19 sec
+        Start  13: test_groups_validator_run
+ 13/120 Test  #13: test_groups_validator_run .....................   Passed    0.13 sec
+        Start  14: test_sbml_package_fbc_run
+ 14/120 Test  #14: test_sbml_package_fbc_run .....................   Passed    0.21 sec
+        Start  15: test_fbc_validator_run
+ 15/120 Test  #15: test_fbc_validator_run ........................   Passed    0.35 sec
+        Start  16: test_l3v2extendedmath_validator_run
+ 16/120 Test  #16: test_l3v2extendedmath_validator_run ...........   Passed    0.10 sec
+        Start  17: test_extension_package_l3v2extendedmath_run
+ 17/120 Test  #17: test_extension_package_l3v2extendedmath_run ...   Passed    0.15 sec
+        Start  18: test_sbml_package_layout_run
+ 18/120 Test  #18: test_sbml_package_layout_run ..................   Passed    0.52 sec
+        Start  19: test_layout_validator_run
+ 19/120 Test  #19: test_layout_validator_run .....................   Passed    0.59 sec
+        Start  20: test_sbml_annotation_run
+ 20/120 Test  #20: test_sbml_annotation_run ......................   Passed    0.48 sec
+        Start  21: test_sbml_conversion_run
+ 21/120 Test  #21: test_sbml_conversion_run ......................   Passed    0.63 sec
+        Start  22: test_sbml_extension_run
+ 22/120 Test  #22: test_sbml_extension_run .......................   Passed    0.15 sec
+        Start  23: test_sbml_math_run
+ 23/120 Test  #23: test_sbml_math_run ............................   Passed    0.19 sec
+        Start  24: test_sbml_sbml_run
+ 24/120 Test  #24: test_sbml_sbml_run ............................   Passed    2.51 sec
+        Start  25: test_sbml_units_run
+ 25/120 Test  #25: test_sbml_units_run ...........................   Passed    0.89 sec
+        Start  26: test_sbml_util_run
+ 26/120 Test  #26: test_sbml_util_run ............................   Passed    0.05 sec
+        Start  27: test_sbml_validator_run
+ 27/120 Test  #27: test_sbml_validator_run .......................   Passed    4.21 sec
+        Start  28: test_sbml_xml_run
+ 28/120 Test  #28: test_sbml_xml_run .............................   Passed    0.25 sec
+        Start  29: test_python_binding
+ 29/120 Test  #29: test_python_binding ...........................   Passed    1.37 sec
+        Start  30: test_python_printversion
+ 30/120 Test  #30: test_python_printversion ......................   Passed    0.15 sec
+        Start  31: test_python_addCVTerms
+ 31/120 Test  #31: test_python_addCVTerms ........................   Passed    0.17 sec
+        Start  32: test_python_addingEvidenceCodes_1
+ 32/120 Test  #32: test_python_addingEvidenceCodes_1 .............   Passed    0.16 sec
+        Start  33: test_python_addingEvidenceCodes_2
+ 33/120 Test  #33: test_python_addingEvidenceCodes_2 .............   Passed    0.16 sec
+        Start  34: test_python_addModelHistory
+ 34/120 Test  #34: test_python_addModelHistory ...................   Passed    0.16 sec
+        Start  35: test_python_append_to_note
+ 35/120 Test  #35: test_python_append_to_note ....................   Passed    0.16 sec
+        Start  36: test_python_appendAnnotation
+ 36/120 Test  #36: test_python_appendAnnotation ..................   Passed    0.18 sec
+        Start  37: test_python_convertSBML
+ 37/120 Test  #37: test_python_convertSBML .......................   Passed    0.17 sec
+        Start  38: test_python_createExampleSBML
+ 38/120 Test  #38: test_python_createExampleSBML .................   Passed    0.19 sec
+        Start  39: test_python_createSimpleModel
+ 39/120 Test  #39: test_python_createSimpleModel .................   Passed    0.16 sec
+        Start  40: test_python_echoSBML
+ 40/120 Test  #40: test_python_echoSBML ..........................   Passed    0.16 sec
+        Start  41: test_python_evaluateCustomMath
+ 41/120 Test  #41: test_python_evaluateCustomMath ................   Passed    0.15 sec
+        Start  42: test_python_getAllElementsWithNotes
+ 42/120 Test  #42: test_python_getAllElementsWithNotes ...........   Passed    0.16 sec
+        Start  43: test_python_inlineInitialAssignments
+ 43/120 Test  #43: test_python_inlineInitialAssignments ..........   Passed    0.17 sec
+        Start  44: test_python_printAnnotation
+ 44/120 Test  #44: test_python_printAnnotation ...................   Passed    0.16 sec
+        Start  45: test_python_printMath
+ 45/120 Test  #45: test_python_printMath .........................   Passed    0.16 sec
+        Start  46: test_python_printRegisteredPackages
+ 46/120 Test  #46: test_python_printRegisteredPackages ...........   Passed    0.16 sec
+        Start  47: test_python_printSBML
+ 47/120 Test  #47: test_python_printSBML .........................   Passed    0.16 sec
+        Start  48: test_python_printsupported
+ 48/120 Test  #48: test_python_printsupported ....................   Passed    0.15 sec
+        Start  49: test_python_printUnits
+ 49/120 Test  #49: test_python_printUnits ........................   Passed    0.15 sec
+        Start  50: test_python_promoteParameters
+ 50/120 Test  #50: test_python_promoteParameters .................   Passed    0.15 sec
+        Start  51: test_python_readSBML
+ 51/120 Test  #51: test_python_readSBML ..........................   Passed    0.16 sec
+        Start  52: test_python_replaceOneFD
+ 52/120 Test  #52: test_python_replaceOneFD ......................   Passed    0.15 sec
+        Start  53: test_python_setIdFromNames
+ 53/120 Test  #53: test_python_setIdFromNames ....................   Passed    0.16 sec
+        Start  54: test_python_unsetAnnotation
+ 54/120 Test  #54: test_python_unsetAnnotation ...................   Passed    0.16 sec
+        Start  55: test_python_unsetNotes
+ 55/120 Test  #55: test_python_unsetNotes ........................   Passed    0.16 sec
+        Start  56: test_python_validateSBML
+ 56/120 Test  #56: test_python_validateSBML ......................   Passed    0.16 sec
+        Start  57: test_python_stringInput
+ 57/120 Test  #57: test_python_stringInput .......................   Passed    0.16 sec
+        Start  58: test_python_stripPackage
+ 58/120 Test  #58: test_python_stripPackage ......................   Passed    0.16 sec
+        Start  59: test_python_fbc_fbc_example1
+ 59/120 Test  #59: test_python_fbc_fbc_example1 ..................   Passed    0.17 sec
+        Start  60: test_python_groups_groups_example1
+ 60/120 Test  #60: test_python_groups_groups_example1 ............   Passed    0.16 sec
+        Start  61: test_python_layout_example1_L3
+ 61/120 Test  #61: test_python_layout_example1_L3 ................   Passed    0.17 sec
+        Start  62: test_python_layout_example1
+ 62/120 Test  #62: test_python_layout_example1 ...................   Passed    0.17 sec
+        Start  63: test_python_multi_multi_example1
+ 63/120 Test  #63: test_python_multi_multi_example1 ..............   Passed    0.16 sec
+        Start  64: test_python_multi_multi_example2
+ 64/120 Test  #64: test_python_multi_multi_example2 ..............   Passed    0.16 sec
+        Start  65: test_python_multi_multi_example3
+ 65/120 Test  #65: test_python_multi_multi_example3 ..............   Passed    0.16 sec
+        Start  66: test_python_multi_printMulti
+ 66/120 Test  #66: test_python_multi_printMulti ..................   Passed    0.16 sec
+        Start  67: test_python_qual_qual_example1
+ 67/120 Test  #67: test_python_qual_qual_example1 ................   Passed    0.16 sec
+        Start  68: test_c_addCVTerms
+ 68/120 Test  #68: test_c_addCVTerms .............................   Passed    0.09 sec
+        Start  69: test_c_addingEvidenceCodes_1
+ 69/120 Test  #69: test_c_addingEvidenceCodes_1 ..................   Passed    0.10 sec
+        Start  70: test_c_addingEvidenceCodes_2
+ 70/120 Test  #70: test_c_addingEvidenceCodes_2 ..................   Passed    0.10 sec
+        Start  71: test_c_addModelHistory
+ 71/120 Test  #71: test_c_addModelHistory ........................   Passed    0.25 sec
+        Start  72: test_c_appendAnnotation
+ 72/120 Test  #72: test_c_appendAnnotation .......................   Passed    0.13 sec
+        Start  73: test_c_convertSBML
+ 73/120 Test  #73: test_c_convertSBML ............................   Passed    0.14 sec
+        Start  74: test_c_createExampleSBML
+ 74/120 Test  #74: test_c_createExampleSBML ......................   Passed    0.19 sec
+        Start  75: test_c_drawMath
+ 75/120 Test  #75: test_c_drawMath ...............................   Passed    0.08 sec
+        Start  76: test_c_echoSBML
+ 76/120 Test  #76: test_c_echoSBML ...............................   Passed    0.09 sec
+        Start  77: test_c_printAnnotation
+ 77/120 Test  #77: test_c_printAnnotation ........................   Passed    0.08 sec
+        Start  78: test_c_printMath
+ 78/120 Test  #78: test_c_printMath ..............................   Passed    0.09 sec
+        Start  79: test_c_printNotes
+ 79/120 Test  #79: test_c_printNotes .............................   Passed    0.08 sec
+        Start  80: test_c_printRegisteredPackages
+ 80/120 Test  #80: test_c_printRegisteredPackages ................   Passed    0.07 sec
+        Start  81: test_c_printSBML
+ 81/120 Test  #81: test_c_printSBML ..............................   Passed    0.09 sec
+        Start  82: test_c_printSupported
+ 82/120 Test  #82: test_c_printSupported .........................   Passed    0.08 sec
+        Start  83: test_c_printUnits
+ 83/120 Test  #83: test_c_printUnits .............................   Passed    0.09 sec
+        Start  84: test_c_promoteParameters
+ 84/120 Test  #84: test_c_promoteParameters ......................   Passed    0.14 sec
+        Start  85: test_c_readSBML
+ 85/120 Test  #85: test_c_readSBML ...............................   Passed    0.09 sec
+        Start  86: test_c_stripPackage
+ 86/120 Test  #86: test_c_stripPackage ...........................   Passed    0.10 sec
+        Start  87: test_c_unsetAnnotation
+ 87/120 Test  #87: test_c_unsetAnnotation ........................   Passed    0.11 sec
+        Start  88: test_c_unsetNotes
+ 88/120 Test  #88: test_c_unsetNotes .............................   Passed    0.12 sec
+        Start  89: test_c_validateSBML
+ 89/120 Test  #89: test_c_validateSBML ...........................   Passed    0.09 sec
+        Start  90: test_cxx_addCVTerms
+ 90/120 Test  #90: test_cxx_addCVTerms ...........................   Passed    0.13 sec
+        Start  91: test_cxx_addCustomValidator
+ 91/120 Test  #91: test_cxx_addCustomValidator ...................   Passed    0.12 sec
+        Start  92: test_cxx_addingEvidenceCodes_1
+ 92/120 Test  #92: test_cxx_addingEvidenceCodes_1 ................   Passed    0.09 sec
+        Start  93: test_cxx_addingEvidenceCodes_2
+ 93/120 Test  #93: test_cxx_addingEvidenceCodes_2 ................   Passed    0.10 sec
+        Start  94: test_cxx_addModelHistory
+ 94/120 Test  #94: test_cxx_addModelHistory ......................   Passed    0.11 sec
+        Start  95: test_cxx_appendAnnotation
+ 95/120 Test  #95: test_cxx_appendAnnotation .....................   Passed    0.09 sec
+        Start  96: test_cxx_callExternalValidator
+ 96/120 Test  #96: test_cxx_callExternalValidator ................   Passed    0.08 sec
+        Start  97: test_cxx_convertSBML
+ 97/120 Test  #97: test_cxx_convertSBML ..........................   Passed    0.12 sec
+        Start  98: test_cxx_convertToL1V1
+ 98/120 Test  #98: test_cxx_convertToL1V1 ........................   Passed    0.09 sec
+        Start  99: test_cxx_createExampleSBML
+ 99/120 Test  #99: test_cxx_createExampleSBML ....................   Passed    0.13 sec
+        Start 100: test_cxx_echoSBML
+100/120 Test #100: test_cxx_echoSBML .............................   Passed    0.08 sec
+        Start 101: test_cxx_inferUnits
+101/120 Test #101: test_cxx_inferUnits ...........................   Passed    0.12 sec
+        Start 102: test_cxx_inlineFunctionDefintions
+102/120 Test #102: test_cxx_inlineFunctionDefintions .............   Passed    0.12 sec
+        Start 103: test_cxx_convertReactions
+103/120 Test #103: test_cxx_convertReactions .....................   Passed    0.10 sec
+        Start 104: test_cxx_getAllElementsWithNotes
+104/120 Test #104: test_cxx_getAllElementsWithNotes ..............   Passed    0.12 sec
+        Start 105: test_cxx_printAnnotation
+105/120 Test #105: test_cxx_printAnnotation ......................   Passed    0.09 sec
+        Start 106: test_cxx_printMath
+106/120 Test #106: test_cxx_printMath ............................   Passed    0.09 sec
+        Start 107: test_cxx_printNotes
+107/120 Test #107: test_cxx_printNotes ...........................   Passed    0.08 sec
+        Start 108: test_cxx_printSBML
+108/120 Test #108: test_cxx_printSBML ............................   Passed    0.10 sec
+        Start 109: test_cxx_printRegisteredPackages
+109/120 Test #109: test_cxx_printRegisteredPackages ..............   Passed    0.07 sec
+        Start 110: test_cxx_printSupported
+110/120 Test #110: test_cxx_printSupported .......................   Passed    0.06 sec
+        Start 111: test_cxx_printUnits
+111/120 Test #111: test_cxx_printUnits ...........................   Passed    0.09 sec
+        Start 112: test_cxx_promoteParameters
+112/120 Test #112: test_cxx_promoteParameters ....................   Passed    0.10 sec
+        Start 113: test_cxx_readSBML
+113/120 Test #113: test_cxx_readSBML .............................   Passed    0.09 sec
+        Start 114: test_cxx_renameSId
+114/120 Test #114: test_cxx_renameSId ............................   Passed    0.12 sec
+        Start 115: test_cxx_setIdFromNames
+115/120 Test #115: test_cxx_setIdFromNames .......................   Passed    0.12 sec
+        Start 116: test_cxx_setNamesFromIds
+116/120 Test #116: test_cxx_setNamesFromIds ......................   Passed    0.09 sec
+        Start 117: test_cxx_stripPackage
+117/120 Test #117: test_cxx_stripPackage .........................   Passed    0.11 sec
+        Start 118: test_cxx_unsetAnnotation
+118/120 Test #118: test_cxx_unsetAnnotation ......................   Passed    0.08 sec
+        Start 119: test_cxx_unsetNotes
+119/120 Test #119: test_cxx_unsetNotes ...........................   Passed    0.09 sec
+        Start 120: test_cxx_validateSBML
+120/120 Test #120: test_cxx_validateSBML .........................   Passed    0.10 sec
+
+100% tests passed, 0 tests failed out of 120
+
+Total Test time (real) =  31.03 sec

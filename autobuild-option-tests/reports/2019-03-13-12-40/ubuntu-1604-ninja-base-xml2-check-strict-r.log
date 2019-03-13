@@ -1,0 +1,437 @@
+[HANDLER_OUTPUT] 
+Test project /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r
+
+      Start  1: test_l3v2extendedmath_validator_run
+Could not find executable /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/test_l3v2extendedmath_validator
+Looked in the following places:
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/test_l3v2extendedmath_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/test_l3v2extendedmath_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Release/test_l3v2extendedmath_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Release/test_l3v2extendedmath_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Debug/test_l3v2extendedmath_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Debug/test_l3v2extendedmath_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/MinSizeRel/test_l3v2extendedmath_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/MinSizeRel/test_l3v2extendedmath_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/RelWithDebInfo/test_l3v2extendedmath_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/RelWithDebInfo/test_l3v2extendedmath_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Deployment/test_l3v2extendedmath_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Deployment/test_l3v2extendedmath_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Development/test_l3v2extendedmath_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Development/test_l3v2extendedmath_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/test_l3v2extendedmath_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/test_l3v2extendedmath_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Release/test_l3v2extendedmath_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Release/test_l3v2extendedmath_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Debug/test_l3v2extendedmath_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Debug/test_l3v2extendedmath_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/MinSizeRel/test_l3v2extendedmath_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/MinSizeRel/test_l3v2extendedmath_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/RelWithDebInfo/test_l3v2extendedmath_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/RelWithDebInfo/test_l3v2extendedmath_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Deployment/test_l3v2extendedmath_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Deployment/test_l3v2extendedmath_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Development/test_l3v2extendedmath_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/Development/test_l3v2extendedmath_validator
+[ERROR_MESSAGE] 
+Unable to find executable: /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/validator/test/test_l3v2extendedmath_validator
+
+[HANDLER_OUTPUT] 
+ 1/
+12 Test  #1: test_l3v2extendedmath_validator_run ...........***Not Run   0.00 sec
+      Start  2: test_extension_package_l3v2extendedmath_run
+Could not find executable /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/test_extension_package_l3v2extendedmath
+Looked in the following places:
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/test_extension_package_l3v2extendedmath
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/test_extension_package_l3v2extendedmath
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Release/test_extension_package_l3v2extendedmath
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Release/test_extension_package_l3v2extendedmath
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Debug/test_extension_package_l3v2extendedmath
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Debug/test_extension_package_l3v2extendedmath
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/MinSizeRel/test_extension_package_l3v2extendedmath
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/MinSizeRel/test_extension_package_l3v2extendedmath
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/RelWithDebInfo/test_extension_package_l3v2extendedmath
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/RelWithDebInfo/test_extension_package_l3v2extendedmath
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Deployment/test_extension_package_l3v2extendedmath
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Deployment/test_extension_package_l3v2extendedmath
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Development/test_extension_package_l3v2extendedmath
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Development/test_extension_package_l3v2extendedmath
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/test_extension_package_l3v2extendedmath
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/test_extension_package_l3v2extendedmath
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Release/test_extension_package_l3v2extendedmath
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Release/test_extension_package_l3v2extendedmath
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Debug/test_extension_package_l3v2extendedmath
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Debug/test_extension_package_l3v2extendedmath
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/MinSizeRel/test_extension_package_l3v2extendedmath
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/MinSizeRel/test_extension_package_l3v2extendedmath
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/RelWithDebInfo/test_extension_package_l3v2extendedmath
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/RelWithDebInfo/test_extension_package_l3v2extendedmath
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Deployment/test_extension_package_l3v2extendedmath
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Deployment/test_extension_package_l3v2extendedmath
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Development/test_extension_package_l3v2extendedmath
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/Development/test_extension_package_l3v2extendedmath
+[ERROR_MESSAGE] 
+Unable to find executable: /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/packages/l3v2extendedmath/extension/test/test_extension_package_l3v2extendedmath
+
+[HANDLER_OUTPUT] 
+ 2/
+12 Test  #2: test_extension_package_l3v2extendedmath_run ...***Not Run   0.00 sec
+      Start  3: test_sbml_annotation_run
+Could not find executable /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/test_sbml_annotation
+Looked in the following places:
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/test_sbml_annotation
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/test_sbml_annotation
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Release/test_sbml_annotation
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Release/test_sbml_annotation
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Debug/test_sbml_annotation
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Debug/test_sbml_annotation
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/MinSizeRel/test_sbml_annotation
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/MinSizeRel/test_sbml_annotation
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/RelWithDebInfo/test_sbml_annotation
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/RelWithDebInfo/test_sbml_annotation
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Deployment/test_sbml_annotation
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Deployment/test_sbml_annotation
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Development/test_sbml_annotation
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Development/test_sbml_annotation
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/test_sbml_annotation
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/test_sbml_annotation
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Release/test_sbml_annotation
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Release/test_sbml_annotation
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Debug/test_sbml_annotation
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Debug/test_sbml_annotation
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/MinSizeRel/test_sbml_annotation
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/MinSizeRel/test_sbml_annotation
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/RelWithDebInfo/test_sbml_annotation
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/RelWithDebInfo/test_sbml_annotation
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Deployment/test_sbml_annotation
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Deployment/test_sbml_annotation
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Development/test_sbml_annotation
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/Development/test_sbml_annotation
+[ERROR_MESSAGE] 
+Unable to find executable: /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/annotation/test/test_sbml_annotation
+
+[HANDLER_OUTPUT] 
+ 3/
+12 Test  #3: test_sbml_annotation_run ......................***Not Run   0.00 sec
+      Start  4: test_sbml_conversion_run
+Could not find executable /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/test_sbml_conversion
+Looked in the following places:
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/test_sbml_conversion
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/test_sbml_conversion
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Release/test_sbml_conversion
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Release/test_sbml_conversion
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Debug/test_sbml_conversion
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Debug/test_sbml_conversion
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/MinSizeRel/test_sbml_conversion
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/MinSizeRel/test_sbml_conversion
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/RelWithDebInfo/test_sbml_conversion
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/RelWithDebInfo/test_sbml_conversion
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Deployment/test_sbml_conversion
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Deployment/test_sbml_conversion
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Development/test_sbml_conversion
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Development/test_sbml_conversion
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/test_sbml_conversion
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/test_sbml_conversion
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Release/test_sbml_conversion
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Release/test_sbml_conversion
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Debug/test_sbml_conversion
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Debug/test_sbml_conversion
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/MinSizeRel/test_sbml_conversion
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/MinSizeRel/test_sbml_conversion
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/RelWithDebInfo/test_sbml_conversion
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/RelWithDebInfo/test_sbml_conversion
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Deployment/test_sbml_conversion
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Deployment/test_sbml_conversion
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Development/test_sbml_conversion
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/Development/test_sbml_conversion
+[ERROR_MESSAGE] 
+Unable to find executable: /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/conversion/test/test_sbml_conversion
+
+[HANDLER_OUTPUT] 
+ 4/
+12 Test  #4: test_sbml_conversion_run ......................***Not Run   0.00 sec
+      Start  5: test_sbml_extension_run
+Could not find executable /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/test_sbml_extension
+Looked in the following places:
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/test_sbml_extension
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/test_sbml_extension
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Release/test_sbml_extension
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Release/test_sbml_extension
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Debug/test_sbml_extension
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Debug/test_sbml_extension
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/MinSizeRel/test_sbml_extension
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/MinSizeRel/test_sbml_extension
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/RelWithDebInfo/test_sbml_extension
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/RelWithDebInfo/test_sbml_extension
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Deployment/test_sbml_extension
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Deployment/test_sbml_extension
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Development/test_sbml_extension
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Development/test_sbml_extension
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/test_sbml_extension
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/test_sbml_extension
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Release/test_sbml_extension
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Release/test_sbml_extension
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Debug/test_sbml_extension
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Debug/test_sbml_extension
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/MinSizeRel/test_sbml_extension
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/MinSizeRel/test_sbml_extension
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/RelWithDebInfo/test_sbml_extension
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/RelWithDebInfo/test_sbml_extension
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Deployment/test_sbml_extension
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Deployment/test_sbml_extension
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Development/test_sbml_extension
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/Development/test_sbml_extension
+[ERROR_MESSAGE] 
+Unable to find executable: /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/extension/test/test_sbml_extension
+
+[HANDLER_OUTPUT] 
+ 5/
+12 Test  #5: test_sbml_extension_run .......................***Not Run   0.00 sec
+      Start  6: test_sbml_math_run
+Could not find executable /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/test_sbml_math
+Looked in the following places:
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/test_sbml_math
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/test_sbml_math
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Release/test_sbml_math
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Release/test_sbml_math
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Debug/test_sbml_math
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Debug/test_sbml_math
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/MinSizeRel/test_sbml_math
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/MinSizeRel/test_sbml_math
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/RelWithDebInfo/test_sbml_math
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/RelWithDebInfo/test_sbml_math
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Deployment/test_sbml_math
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Deployment/test_sbml_math
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Development/test_sbml_math
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Development/test_sbml_math
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/test_sbml_math
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/test_sbml_math
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Release/test_sbml_math
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Release/test_sbml_math
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Debug/test_sbml_math
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Debug/test_sbml_math
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/MinSizeRel/test_sbml_math
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/MinSizeRel/test_sbml_math
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/RelWithDebInfo/test_sbml_math
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/RelWithDebInfo/test_sbml_math
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Deployment/test_sbml_math
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Deployment/test_sbml_math
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Development/test_sbml_math
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/Development/test_sbml_math
+[ERROR_MESSAGE] 
+Unable to find executable: /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/math/test/test_sbml_math
+
+[HANDLER_OUTPUT] 
+ 6/
+12 Test  #6: test_sbml_math_run ............................***Not Run   0.00 sec
+      Start  7: test_sbml_sbml_run
+Could not find executable /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/test_sbml_sbml
+Looked in the following places:
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/test_sbml_sbml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/test_sbml_sbml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Release/test_sbml_sbml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Release/test_sbml_sbml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Debug/test_sbml_sbml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Debug/test_sbml_sbml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/MinSizeRel/test_sbml_sbml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/MinSizeRel/test_sbml_sbml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/RelWithDebInfo/test_sbml_sbml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/RelWithDebInfo/test_sbml_sbml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Deployment/test_sbml_sbml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Deployment/test_sbml_sbml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Development/test_sbml_sbml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Development/test_sbml_sbml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/test_sbml_sbml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/test_sbml_sbml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Release/test_sbml_sbml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Release/test_sbml_sbml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Debug/test_sbml_sbml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Debug/test_sbml_sbml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/MinSizeRel/test_sbml_sbml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/MinSizeRel/test_sbml_sbml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/RelWithDebInfo/test_sbml_sbml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/RelWithDebInfo/test_sbml_sbml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Deployment/test_sbml_sbml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Deployment/test_sbml_sbml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Development/test_sbml_sbml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/Development/test_sbml_sbml
+[ERROR_MESSAGE] 
+Unable to find executable: /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/test/test_sbml_sbml
+
+[HANDLER_OUTPUT] 
+ 7/
+12 Test  #7: test_sbml_sbml_run ............................***Not Run   0.00 sec
+      Start  8: test_sbml_units_run
+Could not find executable /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/test_sbml_units
+Looked in the following places:
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/test_sbml_units
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/test_sbml_units
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Release/test_sbml_units
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Release/test_sbml_units
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Debug/test_sbml_units
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Debug/test_sbml_units
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/MinSizeRel/test_sbml_units
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/MinSizeRel/test_sbml_units
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/RelWithDebInfo/test_sbml_units
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/RelWithDebInfo/test_sbml_units
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Deployment/test_sbml_units
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Deployment/test_sbml_units
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Development/test_sbml_units
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Development/test_sbml_units
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/test_sbml_units
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/test_sbml_units
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Release/test_sbml_units
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Release/test_sbml_units
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Debug/test_sbml_units
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Debug/test_sbml_units
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/MinSizeRel/test_sbml_units
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/MinSizeRel/test_sbml_units
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/RelWithDebInfo/test_sbml_units
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/RelWithDebInfo/test_sbml_units
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Deployment/test_sbml_units
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Deployment/test_sbml_units
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Development/test_sbml_units
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/Development/test_sbml_units
+[ERROR_MESSAGE] 
+Unable to find executable: /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/units/test/test_sbml_units
+
+[HANDLER_OUTPUT] 
+ 8/
+12 Test  #8: test_sbml_units_run ...........................***Not Run   0.00 sec
+      Start  9: test_sbml_util_run
+Could not find executable /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/test_sbml_util
+Looked in the following places:
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/test_sbml_util
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/test_sbml_util
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Release/test_sbml_util
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Release/test_sbml_util
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Debug/test_sbml_util
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Debug/test_sbml_util
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/MinSizeRel/test_sbml_util
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/MinSizeRel/test_sbml_util
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/RelWithDebInfo/test_sbml_util
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/RelWithDebInfo/test_sbml_util
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Deployment/test_sbml_util
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Deployment/test_sbml_util
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Development/test_sbml_util
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Development/test_sbml_util
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/test_sbml_util
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/test_sbml_util
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Release/test_sbml_util
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Release/test_sbml_util
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Debug/test_sbml_util
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Debug/test_sbml_util
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/MinSizeRel/test_sbml_util
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/MinSizeRel/test_sbml_util
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/RelWithDebInfo/test_sbml_util
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/RelWithDebInfo/test_sbml_util
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Deployment/test_sbml_util
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Deployment/test_sbml_util
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Development/test_sbml_util
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/Development/test_sbml_util
+[ERROR_MESSAGE] 
+Unable to find executable: /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/util/test/test_sbml_util
+
+[HANDLER_OUTPUT] 
+ 9/
+12 Test  #9: test_sbml_util_run ............................***Not Run   0.00 sec
+      Start 10: test_sbml_validator_run
+Could not find executable /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/test_sbml_validator
+Looked in the following places:
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/test_sbml_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/test_sbml_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Release/test_sbml_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Release/test_sbml_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Debug/test_sbml_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Debug/test_sbml_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/MinSizeRel/test_sbml_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/MinSizeRel/test_sbml_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/RelWithDebInfo/test_sbml_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/RelWithDebInfo/test_sbml_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Deployment/test_sbml_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Deployment/test_sbml_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Development/test_sbml_validator
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Development/test_sbml_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/test_sbml_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/test_sbml_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Release/test_sbml_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Release/test_sbml_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Debug/test_sbml_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Debug/test_sbml_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/MinSizeRel/test_sbml_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/MinSizeRel/test_sbml_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/RelWithDebInfo/test_sbml_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/RelWithDebInfo/test_sbml_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Deployment/test_sbml_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Deployment/test_sbml_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Development/test_sbml_validator
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/Development/test_sbml_validator
+[ERROR_MESSAGE] 
+Unable to find executable: /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/validator/test/test_sbml_validator
+
+[HANDLER_OUTPUT] 
+10/
+12 Test #10: test_sbml_validator_run .......................***Not Run   0.00 sec
+      Start 11: test_sbml_xml_run
+Could not find executable /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/test_sbml_xml
+Looked in the following places:
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/test_sbml_xml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/test_sbml_xml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Release/test_sbml_xml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Release/test_sbml_xml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Debug/test_sbml_xml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Debug/test_sbml_xml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/MinSizeRel/test_sbml_xml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/MinSizeRel/test_sbml_xml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/RelWithDebInfo/test_sbml_xml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/RelWithDebInfo/test_sbml_xml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Deployment/test_sbml_xml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Deployment/test_sbml_xml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Development/test_sbml_xml
+/home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Development/test_sbml_xml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/test_sbml_xml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/test_sbml_xml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Release/test_sbml_xml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Release/test_sbml_xml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Debug/test_sbml_xml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Debug/test_sbml_xml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/MinSizeRel/test_sbml_xml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/MinSizeRel/test_sbml_xml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/RelWithDebInfo/test_sbml_xml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/RelWithDebInfo/test_sbml_xml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Deployment/test_sbml_xml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Deployment/test_sbml_xml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Development/test_sbml_xml
+home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/Development/test_sbml_xml
+[ERROR_MESSAGE] 
+Unable to find executable: /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-r/src/sbml/xml/test/test_sbml_xml
+
+[HANDLER_OUTPUT] 
+11/
+12 Test #11: test_sbml_xml_run .............................***Not Run   0.00 sec
+      Start 12: test_r_binding
+12/12 Test #12: test_r_binding ................................***Failed  Required regular expression not found.Regex=[TRUE
+]  0.23 sec
+Error in library(libSBML) : there is no package called ‘libSBML’
+Execution halted
+
+
+0% tests passed, 12 tests failed out of 12
+
+Total Test time (real) =   0.29 sec
+
+The following tests FAILED:
+	  1 - test_l3v2extendedmath_validator_run (Not Run)
+	  2 - test_extension_package_l3v2extendedmath_run (Not Run)
+	  3 - test_sbml_annotation_run (Not Run)
+	  4 - test_sbml_conversion_run (Not Run)
+	  5 - test_sbml_extension_run (Not Run)
+	  6 - test_sbml_math_run (Not Run)
+	  7 - test_sbml_sbml_run (Not Run)
+	  8 - test_sbml_units_run (Not Run)
+	  9 - test_sbml_util_run (Not Run)
+	 10 - test_sbml_validator_run (Not Run)
+	 11 - test_sbml_xml_run (Not Run)
+	 12 - test_r_binding (Failed)
+[ERROR_MESSAGE] 
+Errors while running CTest
+
