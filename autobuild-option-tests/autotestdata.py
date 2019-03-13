@@ -46,7 +46,7 @@ class CMakeRegEx(object):
     Generates and stores regular expressions usefuls for manipulating cmake files
 
     """
-    
+
     package_names = ['COMP', 'FBC', 'GROUPS', 'L3V2EXTENDEDMATH', 'LAYOUT', 'MULTI', 'QUAL', 'RENDER']
     packages = {}
 
@@ -70,7 +70,7 @@ class CMakeReplacements(object):
     cmake_generator_opts = {'Unix Makefiles' : {'cmake_generator_make' : '/usr/bin/make'}}
     cmake_src_config = ['LIBSBML_ROOT_SOURCE_DIR:PATH=', 'libsbml_SOURCE_DIR:STATIC=',\
         'CMAKE_HOME_DIRECTORY:INTERNAL=']
-    
+
     libsbml_packages_enabled = None
     libsbml_packages_disabled = None
     libsbml_packages_exp_enabled = None
@@ -78,12 +78,13 @@ class CMakeReplacements(object):
 
     cmake_template_src_paths = None
     cmake_install_path = None
-    
+
     configure_experimental = None
     configure_with_cmake = None
     build_test_configurations = None
     check_test_configurations = None
     test_all_combinations = None
+    config_combination = None
     cmake_generator = None
     default_test_options = None
     base_file = None
@@ -115,9 +116,9 @@ class CMakeReplacements(object):
 
     libsbml_examples = {'enabled' : 'WITH_EXAMPLES:BOOL=ON',
                          'disabled' : 'WITH_EXAMPLES:BOOL=OFF'}
-    
+
     cmake_install_prefix = 'CMAKE_INSTALL_PREFIX:PATH=/usr/local'
-                          
+
     libsbml_use_strict_includes = {'enabled' : 'LIBSBML_USE_STRICT_INCLUDES:BOOL=ON',
                                    'disabled' : 'LIBSBML_USE_STRICT_INCLUDES:BOOL=OFF'}
 
@@ -157,7 +158,7 @@ class CMakeReplacements(object):
     def load_options_from_config(self):
         """
         Configures options attributes from a loaded config file.
-        
+
         """
         self.libsbml_exp_src_path = self.config['paths']['libsbml_exp_src_path']
         self.libsbml_src_path = self.config['paths']['libsbml_src_path']
@@ -168,8 +169,9 @@ class CMakeReplacements(object):
         self.configure_with_cmake = self.config['options']['configure_with_cmake']
         self.build_test_configurations = self.config['options']['build_test_configurations']
         self.check_test_configurations = self.config['options']['check_test_configurations']
-        
+
         self.test_all_combinations = self.config['options']['test_all_combinations']
+        self.config_combination = self.config['options']['config_combination']
         self.cmake_generator = self.config['options']['cmake_generator']
         self.default_test_options = self.config['tests']['default']
 

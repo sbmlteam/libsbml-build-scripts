@@ -5,7 +5,8 @@
   "cmake_generator": "Ninja",
   "configure_with_cmake": true,
   "configure_experimental": false,
-  "test_all_combinations": true
+  "test_all_combinations": false,
+  "config_combination" : "all_xml2"
  },
  "paths": {
   "libsbml_exp_src_path": "/home/sbml/development/sf_libsbml_experimental",
