@@ -80,7 +80,7 @@ main_binding_options = ['csharp', 'java', 'perl', 'python', 'r']
 # test_options = [['xml2', 'check', 'csharp'], ['xml2', 'check', 'java'], ['xml2', 'check', 'perl'], ['xml2', 'check', 'python'], ['xml2', 'check', 'r']]
 # test_options = [['check','xml2','csharp'], ['check', 'expat', 'csharp'],\
                 #['check','xml2', 'examples', 'csharp'], ['check', 'expat', 'examples', 'csharp']]
-test_options = [['xml2'], ['check', 'xml2', 'csharp'], ['check', 'xml2', 'python']]
+# test_options = [['xml2'], ['check', 'xml2', 'csharp'], ['check', 'xml2', 'python']]
 # test_options =  [['check'], ['check', 'packages'], ['check', 'examples'], ['check', 'strict'], ['check', 'cpp_ns']]
 
 # create output logger and report folder
@@ -165,7 +165,8 @@ for conopts in test_options:
     # configures the base paths and files in the new cmake build directory
     base_split = rbase.base_file.split('-')
     new_opts = '-'.join(conopts)
-    base_dir = os.path.join(cdir, '-'.join(base_split[:-2]) + '-{}'.format(new_opts), )
+    build_dir = os.path.join(cdir, 'BUILD')
+    base_dir = os.path.join(build_dir, '-'.join(base_split[:-2]) + '-{}'.format(new_opts), )
     if rbase.configure_experimental:
         base_dir = base_dir.replace('-ninja-', '-exp-{}-'.format(rbase.cmake_generator.replace(' ', '-').lower()))
     else:
@@ -175,7 +176,7 @@ for conopts in test_options:
 
     if os.path.exists(base_dir):
         shutil.rmtree(base_dir)
-    os.mkdir(base_dir)
+    os.makedirs(base_dir)
 
     new_cache_file = os.path.join(base_dir, 'CMakeCache.txt')
     new_cache_template = new_cache_file + '.template'
@@ -204,10 +205,10 @@ for conopts in test_options:
                 outlin = outlin.replace('=/usr/bin/ninja', '={}'.format(cmake_generator_make))
         # configure cmake build paths
         if '# For build in directory' in l:
-            outlin = outlin.replace('/home/sbml/development/autobuild-option-tests', cdir)
+            outlin = outlin.replace('/home/sbml/development/autobuild-option-tests', os.path.join(cdir, 'BUILD'))
             outlin = '{}'.format(outlin.replace('-base', '-{}'.format(new_opts)))
         elif '-base' in l:
-            outlin = outlin.replace('/home/sbml/development/autobuild-option-tests', cdir)
+            outlin = outlin.replace('/home/sbml/development/autobuild-option-tests', os.path.join(cdir, 'BUILD'))
             outlin = '{}'.format(outlin.replace('-base', '-{}'.format(new_opts)))
         # sets the install path
         if rbase.cmake_install_prefix in l:
@@ -265,11 +266,7 @@ for conopts in test_options:
         for bnd in rbase.libsbml_bindings:
             if bnd in conopts:
                 if rbase.libsbml_bindings[bnd]['disabled'] in outlin:
-                    print(conopts)
-                    print(outlin)
                     outlin = outlin.replace(rbase.libsbml_bindings[bnd]['disabled'], rbase.libsbml_bindings[bnd]['enabled'])
-                    print(outlin)
-
         Fout.write(outlin)
     Fin.close()
     Fout.close()
