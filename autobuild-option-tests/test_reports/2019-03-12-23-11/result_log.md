@@ -516,5 +516,14 @@ Generator: Ninja
   /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/ubuntu-1604-ninja-base-packages-xml2-check-examples-strict-java 1
   /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/ubuntu-1604-ninja-base-packages-xml2-check-cpp_ns-examples-strict-python 1
   /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/ubuntu-1604-ninja-base-expat-check-cpp_ns-examples-java 0
-  /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/ubuntu-1604-ninja-base-expat-check-examples-strict-java 1
-  /hom
+  /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/ubuntu-1604-ninja-base-expat-check-examples-strict-java 0
+
+# CHECK REPORT: 2
+  /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/ubuntu-1604-ninja-base-expat-check-cpp_ns-examples-java 0
+  /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/ubuntu-1604-ninja-base-expat-check-examples-strict-java 8
+
+Config time: 0.0 s
+CMake time: 0.1 m
+Build time: 13.5 m
+Test time: 0.7 m
+Total time: 14.3 m

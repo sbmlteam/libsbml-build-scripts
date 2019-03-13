@@ -180,3 +180,31 @@ class CMakeReplacements(object):
         self.libsbml_packages_disabled =  {p : 'ENABLE_{}:BOOL=OFF'.format(p) for p in self.package_names if p != 'L3V2EXTENDEDMATH'}
         self.libsbml_packages_exp_enabled =  {p : 'ENABLE_{}:BOOL=ON'.format(p) for p in self.package_names_exp}
         self.libsbml_packages_exp_disabled =  {p : 'ENABLE_{}:BOOL=OFF'.format(p) for p in self.package_names_exp if p != 'L3V2EXTENDEDMATH'}
+
+
+
+
+
+
+
+def format_output_csv(config, head, status):
+    """
+    Format results for CSV output. Returns a linked list of data.
+
+     *config* the list of processed configuration options and results
+     *head* the header row
+     *status* the integer indicating the combination of options was successful
+
+    """
+    form = []
+    for opts in config:
+        row = []
+        for h in head:
+            if h == 'status':
+                row.append(status)
+            elif h in opts:
+                row.append('X')
+            else:
+                row.append('')
+        form.append(row)
+    return form
