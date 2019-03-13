@@ -40,8 +40,9 @@
 import os, sys, shutil, re, time, itertools, copy, subprocess, threading, pprint
 cdir = os.path.dirname(os.path.abspath(os.sys.argv[0]))
 
-# import cmake replacements
+# import cmake replacements and config combinations
 from autotestdata import CMakeReplacements
+import configcombinations
 
 if os.sys.version_info[0] > 2:
     def raw_input(txt):
@@ -50,7 +51,7 @@ if os.sys.version_info[0] > 2:
 # instantiate configuration data
 config_file = 'config.json'
 rbase = CMakeReplacements(config_file)
-test_options = rbase.config['tests']['default']
+test_options = None
 
 ## overide defaults (for debugging purposes)
 # # configure for experimental
@@ -77,8 +78,8 @@ main_binding_options = ['csharp', 'java', 'perl', 'python', 'r']
 # test_options = [['check']] # base only
 # test_options = [['check'], ['check', 'examples']]
 # test_options = [['xml2', 'check', 'csharp'], ['xml2', 'check', 'java'], ['xml2', 'check', 'perl'], ['xml2', 'check', 'python'], ['xml2', 'check', 'r']]
-test_options = [['check','xml2','csharp'], ['check', 'expat', 'csharp'],\
-                ['check','xml2', 'examples', 'csharp'], ['check', 'expat', 'examples', 'csharp']]
+# test_options = [['check','xml2','csharp'], ['check', 'expat', 'csharp'],\
+                #['check','xml2', 'examples', 'csharp'], ['check', 'expat', 'examples', 'csharp']]
 test_options = [['xml2'], ['check', 'xml2', 'csharp'], ['check', 'xml2', 'python']]
 # test_options =  [['check'], ['check', 'packages'], ['check', 'examples'], ['check', 'strict'], ['check', 'cpp_ns']]
 
@@ -126,9 +127,15 @@ if rbase.test_all_combinations:
     a = raw_input('Proceed and generate all combinations (y/n)?\n')
     if a.lower() != 'y':
         os.sys.exit()
+elif test_options is None and hasattr(configcombinations, rbase.config_combination):
+    print('\nUsing predefined configuration combination: {}'.format(rbase.config_combination))
+    test_options = getattr(configcombinations, rbase.config_combination)
+elif test_options is None:
+    print('\nNo test options defined, please define above, test_all_options or one defined in configcombination.py')
+    os.sys.exit(1)
 
-# we insert the base option
-tmp = [opt.insert(0, 'base') for opt in test_options]
+# we insert the base option if it is not already there
+tmp = [opt.insert(0, 'base') for opt in test_options if 'base' not in opt]
 
 print(test_options)
 
@@ -305,7 +312,7 @@ if rbase.configure_with_cmake:
     # cntr = 0
     # for build in cmake_builds:
     #     tmp_pool.append(threading.Thread(target=cmake_configure, args=[build, output_cmake_configure]))
-    #     cntr += 1 
+    #     cntr += 1
     #     if cntr == max_thread_per_group:
     #         process_pool.append(tmp_pool)
     #         cntr = 0
