@@ -142,6 +142,9 @@ class CMakeReplacements(object):
                                     }
                         }
 
+    create_python_source = {'enabled' : 'WITH_CREATE_PYTHON_SOURCE:BOOL=ON',
+                           'disabled' : 'WITH_CREATE_PYTHON_SOURCE:BOOL=OFF'
+                           }
 
     def load_json_to_config(self, filepath):
         """
