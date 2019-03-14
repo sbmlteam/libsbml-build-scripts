@@ -173,7 +173,8 @@ if HAVE_XLS:
     cf_header = workbook.add_format({'bold': True, 'align': 'center'})
     cf_normal = workbook.add_format({'bold': False, 'align': 'center'})
 
-with open(os.path.join(report_dir, 'report_configure.csv'), mode='w', newline='') as csv_file:
+
+with open(os.path.join(report_dir, 'report_configure.csv'), mode='w') as csv_file:
     csv_out = [header]
     [csv_out.append(h) for h in atd.format_output_csv(config_bad, header, 0)]
     [csv_out.append(h) for h in atd.format_output_csv(config_good, header, 1)]
@@ -193,7 +194,7 @@ with open(os.path.join(report_dir, 'report_configure.csv'), mode='w', newline=''
                 else:
                     config_sheet.write_string(r, c, csv_out[r][c], fmt)
 
-with open(os.path.join(report_dir, 'report_build.csv'), mode='w', newline='') as csv_file:
+with open(os.path.join(report_dir, 'report_build.csv'), mode='w') as csv_file:
     csv_out = [header]
     [csv_out.append(h) for h in atd.format_output_csv(build_bad, header, 0)]
     [csv_out.append(h) for h in atd.format_output_csv(build_good, header, 1)]
@@ -222,7 +223,7 @@ with open(os.path.join(report_dir, 'report_build.csv'), mode='w', newline='') as
 #print('good')
 #pprint.pprint(ctest_good_f)
 
-with open(os.path.join(report_dir, 'report_check.csv'), mode='w', newline='') as csv_file:
+with open(os.path.join(report_dir, 'report_check.csv'), mode='w') as csv_file:
     csv_out = [header]
     [csv_out.append(h) for h in atd.format_output_csv(ctest_bad, header, 0)]
     [csv_out.append(h) for h in atd.format_output_csv(ctest_good, header, 1)]

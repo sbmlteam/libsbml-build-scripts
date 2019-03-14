@@ -1,0 +1,87 @@
+[HANDLER_OUTPUT] 
+Test project /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-exp-ninja-base-packages-xml2-check-cpp_ns-perl
+
+      Start  1: test_sbml_package_multi_run
+ 1/40 Test  #1: test_sbml_package_multi_run ...................   Passed    0.19 sec
+      Start  2: test_multi_validator_run
+ 2/40 Test  #2: test_multi_validator_run ......................   Passed    0.22 sec
+      Start  3: test_extension_package_dyn_run
+ 3/40 Test  #3: test_extension_package_dyn_run ................   Passed    0.17 sec
+      Start  4: test_sbml_package_render_run
+ 4/40 Test  #4: test_sbml_package_render_run ..................   Passed    0.81 sec
+      Start  5: test_render_validator_run
+ 5/40 Test  #5: test_render_validator_run .....................   Passed    0.22 sec
+      Start  6: test_extension_package_qual_run
+ 6/40 Test  #6: test_extension_package_qual_run ...............   Passed    0.19 sec
+      Start  7: test_sbml_package_qual_run
+ 7/40 Test  #7: test_sbml_package_qual_run ....................   Passed    0.23 sec
+      Start  8: test_qual_validator_run
+ 8/40 Test  #8: test_qual_validator_run .......................   Passed    0.24 sec
+      Start  9: test_comp_extensions_run
+ 9/40 Test  #9: test_comp_extensions_run ......................   Passed    0.39 sec
+      Start 10: test_comp_sbase_run
+10/40 Test #10: test_comp_sbase_run ...........................   Passed    0.28 sec
+      Start 11: test_comp_util_run
+11/40 Test #11: test_comp_util_run ............................   Passed    3.19 sec
+      Start 12: test_comp_validator_run
+12/40 Test #12: test_comp_validator_run .......................   Passed    0.57 sec
+      Start 13: test_extension_package_arrays_run
+13/40 Test #13: test_extension_package_arrays_run .............   Passed    0.25 sec
+      Start 14: test_arrays_util_run
+14/40 Test #14: test_arrays_util_run ..........................   Passed    0.23 sec
+      Start 15: test_sbml_package_req_run
+15/40 Test #15: test_sbml_package_req_run .....................   Passed    0.22 sec
+      Start 16: test_extension_package_groups_run
+16/40 Test #16: test_extension_package_groups_run .............   Passed    0.18 sec
+      Start 17: test_groups_validator_run
+17/40 Test #17: test_groups_validator_run .....................   Passed    0.20 sec
+      Start 18: test_sbml_package_fbc_run
+18/40 Test #18: test_sbml_package_fbc_run .....................   Passed    0.28 sec
+      Start 19: test_fbc_validator_run
+19/40 Test #19: test_fbc_validator_run ........................   Passed    0.43 sec
+      Start 20: test_l3v2extendedmath_validator_run
+20/40 Test #20: test_l3v2extendedmath_validator_run ...........   Passed    0.13 sec
+      Start 21: test_extension_package_l3v2extendedmath_run
+21/40 Test #21: test_extension_package_l3v2extendedmath_run ...   Passed    0.22 sec
+      Start 22: test_extension_package_distrib_run
+22/40 Test #22: test_extension_package_distrib_run ............   Passed    0.21 sec
+      Start 23: test_sbml_package_distrib_run
+23/40 Test #23: test_sbml_package_distrib_run .................   Passed    0.23 sec
+      Start 24: test_distrib_util_run
+24/40 Test #24: test_distrib_util_run .........................   Passed    0.21 sec
+      Start 25: test_distrib_validator_run
+25/40 Test #25: test_distrib_validator_run ....................   Passed    0.10 sec
+      Start 26: test_sbml_package_layout_run
+26/40 Test #26: test_sbml_package_layout_run ..................   Passed    0.59 sec
+      Start 27: test_layout_validator_run
+27/40 Test #27: test_layout_validator_run .....................   Passed    0.67 sec
+      Start 28: test_sbml_package_spatial_run
+28/40 Test #28: test_sbml_package_spatial_run .................   Passed    0.25 sec
+      Start 29: test_sbml_objects_package_spatial
+29/40 Test #29: test_sbml_objects_package_spatial .............   Passed    0.14 sec
+      Start 30: test_spatial_validator_run
+30/40 Test #30: test_spatial_validator_run ....................   Passed    0.34 sec
+      Start 31: test_sbml_annotation_run
+31/40 Test #31: test_sbml_annotation_run ......................   Passed    0.50 sec
+      Start 32: test_sbml_conversion_run
+32/40 Test #32: test_sbml_conversion_run ......................   Passed    0.61 sec
+      Start 33: test_sbml_extension_run
+33/40 Test #33: test_sbml_extension_run .......................   Passed    0.19 sec
+      Start 34: test_sbml_math_run
+34/40 Test #34: test_sbml_math_run ............................   Passed    0.21 sec
+      Start 35: test_sbml_sbml_run
+35/40 Test #35: test_sbml_sbml_run ............................   Passed    2.72 sec
+      Start 36: test_sbml_units_run
+36/40 Test #36: test_sbml_units_run ...........................   Passed    0.94 sec
+      Start 37: test_sbml_util_run
+37/40 Test #37: test_sbml_util_run ............................   Passed    0.04 sec
+      Start 38: test_sbml_validator_run
+38/40 Test #38: test_sbml_validator_run .......................   Passed    4.68 sec
+      Start 39: test_sbml_xml_run
+39/40 Test #39: test_sbml_xml_run .............................   Passed    0.28 sec
+      Start 40: test_perl_binding
+40/40 Test #40: test_perl_binding .............................   Passed   10.09 sec
+
+100% tests passed, 0 tests failed out of 40
+
+Total Test time (real) =  32.20 sec
