@@ -75,7 +75,7 @@ fixed_options = ['check']
 combi_options = ['examples', 'strict', 'cpp_ns']
 main_binding_options = ['csharp', 'java', 'perl', 'python', 'r']
 
-# test_options = [['check']] # base only
+test_options = [['check']] # base only
 # test_options = [['check'], ['check', 'examples']]
 # test_options = [['xml2', 'check', 'csharp'], ['xml2', 'check', 'java'], ['xml2', 'check', 'perl'], ['xml2', 'check', 'python'], ['xml2', 'check', 'r']]
 # test_options = [['check','xml2','csharp'], ['check', 'expat', 'csharp'],\
@@ -84,10 +84,12 @@ main_binding_options = ['csharp', 'java', 'perl', 'python', 'r']
 # test_options =  [['check'], ['check', 'packages'], ['check', 'examples'], ['check', 'strict'], ['check', 'cpp_ns']]
 
 # create output logger and report folder
-report_path = os.path.join(cdir, 'reports', format(time.strftime('%Y-%m-%d-%H-%M')))
+report_time = time.strftime('%Y-%m-%d-%H-%M')
+report_path = os.path.join(cdir, 'reports', format(report_time))
 if not os.path.exists(report_path):
     os.makedirs(report_path)
-Rlog = open(os.path.join(report_path, 'result_log.md'), 'w')
+Rlog_name = 'result_log-({}).md'.format(report_time)
+Rlog = open(os.path.join(report_path, Rlog_name), 'w')
 
 if rbase.test_all_combinations:
     test_options = []
@@ -149,14 +151,15 @@ else:
     cmake_generator_make = None
 
 # log selected options
-Rlog.write('# MATRIX TEST\nTest run: {}\n'.format(time.strftime('%Y-%m-%d %H:%M:%S')))
+Rlog.write('# MATRIX TEST\nTest run: {}\n'.format(report_time))
 Rlog.write('Generator: {}\n'.format(rbase.cmake_generator))
+Rlog.write('libSBML source path: {}\n'.format(libsbml_src_path))
 Rlog.write('\n# CONFIGURATION COMBINATIONS\n')
 for i in test_options:
     Rlog.write('  {}\n'.format(i))
 
 Rlog.close()
-Rlog = open(os.path.join(report_path, 'result_log.md'), 'a')
+Rlog = open(os.path.join(report_path, Rlog_name), 'a')
 
 START_TIME = time.time()
 
@@ -348,7 +351,7 @@ if len(output_cmake_configure) == 0:
     os.sys.exit(1)
 
 Rlog.close()
-Rlog = open(os.path.join(report_path, 'result_log.md'), 'a')
+Rlog = open(os.path.join(report_path, Rlog_name), 'a')
 
 report_build = {}
 total_builds = len(output_cmake_configure)
@@ -381,7 +384,7 @@ if rbase.build_test_configurations:
         Rlog.write('  {} {}\n'.format(i, report_build[i]))
 
 Rlog.close()
-Rlog = open(os.path.join(report_path, 'result_log.md'), 'a')
+Rlog = open(os.path.join(report_path, Rlog_name), 'a')
 
 BUILD_TIME = time.time()
 
@@ -433,7 +436,6 @@ Rlog.write('Test time: {:03.1f} m\n'.format((END_TIME - BUILD_TIME)/60.0))
 Rlog.write('Total time: {:03.1f} m\n\n'.format((END_TIME - START_TIME)/60.0))
 Rlog.close()
 
+subprocess.check_call([os.path.join(cdir, 'parse_test_results.py'), os.path.join('reports', report_time, Rlog_name)])
 
-
-
-
+# python parse_test_results.py test_reports\\2019-03-12-23-11\\result_log.

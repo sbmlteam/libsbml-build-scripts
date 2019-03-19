@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 # @file    parse_test_results.py
 # @brief   automatic, configuration and testing of liSBML build options
@@ -141,7 +141,7 @@ for c in config_good:
     hraw.extend(c)
 header0 = list(set(hraw))
 header = []
-for item in ['examples', 'r', 'perl', 'java', 'csharp', 'python', 'packages', 'xerces','expat', 'xml2']:
+for item in ['check', 'examples', 'r', 'perl', 'java', 'csharp', 'python', 'packages', 'xerces','expat', 'xml2']:
     if item in header0:
         header.insert(0, header0.pop(header0.index(item)))
 if 'check' in header0:
@@ -166,7 +166,7 @@ del header0
 #print('Header: {}'.format(header))
 
 if HAVE_XLS:
-    workbook = xlsxwriter.Workbook(os.path.join(report_dir, 'matrix_report.xlsx'))
+    workbook = xlsxwriter.Workbook(report_path.replace('.md', '.xlsx'))
     config_sheet = workbook.add_worksheet('Configure')
     build_sheet = workbook.add_worksheet('Build')
     check_sheet = workbook.add_worksheet('Check')
