@@ -75,7 +75,7 @@ fixed_options = ['check']
 combi_options = ['examples', 'strict', 'cpp_ns']
 main_binding_options = ['csharp', 'java', 'perl', 'python', 'r']
 
-test_options = [['check']] # base only
+# test_options = [['check', 'expat', 'python'], ['check', 'xml2', 'csharp']] 
 # test_options = [['check'], ['check', 'examples']]
 # test_options = [['xml2', 'check', 'csharp'], ['xml2', 'check', 'java'], ['xml2', 'check', 'perl'], ['xml2', 'check', 'python'], ['xml2', 'check', 'r']]
 # test_options = [['check','xml2','csharp'], ['check', 'expat', 'csharp'],\
@@ -88,7 +88,10 @@ report_time = time.strftime('%Y-%m-%d-%H-%M')
 report_path = os.path.join(cdir, 'reports', format(report_time))
 if not os.path.exists(report_path):
     os.makedirs(report_path)
-Rlog_name = 'result_log-({}).md'.format(report_time)
+if rbase.configure_experimental:
+    Rlog_name = 'result_log-exp-({}).md'.format(report_time)
+else:
+    Rlog_name = 'result_log-({}).md'.format(report_time)
 Rlog = open(os.path.join(report_path, Rlog_name), 'w')
 
 if rbase.test_all_combinations:
@@ -436,6 +439,10 @@ Rlog.write('Test time: {:03.1f} m\n'.format((END_TIME - BUILD_TIME)/60.0))
 Rlog.write('Total time: {:03.1f} m\n\n'.format((END_TIME - START_TIME)/60.0))
 Rlog.close()
 
-subprocess.check_call([os.path.join(cdir, 'parse_test_results.py'), os.path.join('reports', report_time, Rlog_name)])
+try:
+    subprocess.check_call([os.path.join(cdir, 'parse_test_results.py'), os.path.join('reports', report_time, Rlog_name)])
+    print('Report generated.')
+except subprocess.CalledProcessError:
+    print('\nReport not generated, please manually create reports with parse_test_results.py')
 
 # python parse_test_results.py test_reports\\2019-03-12-23-11\\result_log.

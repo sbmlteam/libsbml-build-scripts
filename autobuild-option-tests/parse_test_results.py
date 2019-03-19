@@ -172,6 +172,7 @@ if HAVE_XLS:
     check_sheet = workbook.add_worksheet('Check')
     cf_header = workbook.add_format({'bold': True, 'align': 'center'})
     cf_normal = workbook.add_format({'bold': False, 'align': 'center'})
+    cf_error = workbook.add_format({'bold': False, 'align': 'center', 'color': 'red'})
 
 
 with open(os.path.join(report_dir, 'report_configure.csv'), mode='w') as csv_file:
@@ -182,8 +183,11 @@ with open(os.path.join(report_dir, 'report_configure.csv'), mode='w') as csv_fil
     csvwriter.writerows(csv_out)
     if HAVE_XLS:
         for r in range(len(csv_out)):
+            # formatting options
             if r == 0:
                 fmt = cf_header
+            elif csv_out[r][-1] == 0:
+                fmt = cf_error                
             else:
                 fmt = cf_normal
             for c in range(0, len(csv_out[0])):
@@ -202,8 +206,11 @@ with open(os.path.join(report_dir, 'report_build.csv'), mode='w') as csv_file:
     csvwriter.writerows(csv_out)
     if HAVE_XLS:
         for r in range(len(csv_out)):
+            # formatting options
             if r == 0:
                 fmt = cf_header
+            elif csv_out[r][-1] == 0:
+                fmt = cf_error                
             else:
                 fmt = cf_normal
             for c in range(0, len(csv_out[0])):
@@ -231,8 +238,11 @@ with open(os.path.join(report_dir, 'report_check.csv'), mode='w') as csv_file:
     csvwriter.writerows(csv_out)
     if HAVE_XLS:
         for r in range(len(csv_out)):
+            # formatting options
             if r == 0:
                 fmt = cf_header
+            elif csv_out[r][-1] == 0:
+                fmt = cf_error                
             else:
                 fmt = cf_normal
             for c in range(0, len(csv_out[0])):
