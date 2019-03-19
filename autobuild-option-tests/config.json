@@ -9,8 +9,8 @@
   "config_combination" : "all_xml2"
  },
  "paths": {
-  "libsbml_exp_src_path": "/home/sbml/development/sf_libsbml_experimental",
-  "libsbml_src_path": "/home/sbml/development/sf_libsbml",
+  "libsbml_exp_src_path": "/home/libsbml/development/sf_libsbml_experimental",
+  "libsbml_src_path": "/home/libsbml/development/sf_libsbml",
   "template_libsbml_source_path": "/home/sbml/development/sf_libsbml",
   "base_file": "ubuntu-1604-ninja-base-CMakeCache.txt"
  },
