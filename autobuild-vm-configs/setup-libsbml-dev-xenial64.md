@@ -10,9 +10,13 @@ If running on a VirtualBox VM this is a good time to install the guest extension
 Continue with more build tools and libSBML dependencies.
  
  sudo apt-get -y install python python-all-dev python3-all-dev python-xlsxwrite python3-xlsxwrite
+ 
  sudo apt-get -y install cmake cmake-gui p7zip swig check mc scite
+ 
  sudo apt-get -y install libxml2 libxml2-dev libxslt-dev zlib1g zlib1g-dev bzip2 libbz2-dev
+ 
  sudo apt-get -y install libexpat-dev libxerces-c-dev libcurl4-openssl-dev
+ 
  sudo apt-get -y install bzr p7zip mercurial ninja-build curl
  
 These following adds support for compiling libSBML bindings (Python, R, Java, Ruby, Perl)
