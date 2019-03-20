@@ -1,0 +1,61 @@
+[HANDLER_OUTPUT] 
+Test project /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-strict-csharp
+
+      Start  1: test_l3v2extendedmath_validator_run
+ 1/13 Test  #1: test_l3v2extendedmath_validator_run ...........   Passed    0.09 sec
+      Start  2: test_extension_package_l3v2extendedmath_run
+ 2/13 Test  #2: test_extension_package_l3v2extendedmath_run ...   Passed    0.11 sec
+      Start  3: test_sbml_annotation_run
+ 3/13 Test  #3: test_sbml_annotation_run ......................   Passed    0.59 sec
+      Start  4: test_sbml_conversion_run
+ 4/13 Test  #4: test_sbml_conversion_run ......................   Passed    0.53 sec
+      Start  5: test_sbml_extension_run
+ 5/13 Test  #5: test_sbml_extension_run .......................   Passed    0.13 sec
+      Start  6: test_sbml_math_run
+ 6/13 Test  #6: test_sbml_math_run ............................   Passed    0.75 sec
+      Start  7: test_sbml_sbml_run
+ 7/13 Test  #7: test_sbml_sbml_run ............................   Passed    2.26 sec
+      Start  8: test_sbml_units_run
+ 8/13 Test  #8: test_sbml_units_run ...........................   Passed    0.82 sec
+      Start  9: test_sbml_util_run
+ 9/13 Test  #9: test_sbml_util_run ............................   Passed    0.03 sec
+      Start 10: test_sbml_validator_run
+10/13 Test #10: test_sbml_validator_run .......................   Passed    3.62 sec
+      Start 11: test_sbml_xml_run
+11/13 Test #11: test_sbml_xml_run .............................   Passed    0.18 sec
+      Start 12: test_csharp_bindings
+12/13 Test #12: test_csharp_bindings ..........................   Passed    0.54 sec
+      Start 13: test_csharp_bindings_full
+13/13 Test #13: test_csharp_bindings_full .....................***Failed  Required regular expression not found.Regex=[failures 0
+]  1.22 sec
+LibSBML C# Testrunner
+=====================
+Running the tests with: 
+	Data Directory:   /home/libsbml/development/sf_libsbml/src/sbml/test/test-data
+
+...................................................<!-- Created by foo version bar on 2019-03-20 20:02 with libSBML version 5.17.3. -->
+......................................................................................................................................................................................................................................................................................................................E....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+
+Total Number of Tests 1830, failures 1
+
+
+Error in 'test_consistency_checks': 
+====================
+Exception of type 'LibSBMLCSTest.sbml.TestConsistencyChecks+AssertionError' was thrown.
+  at LibSBMLCSTest.sbml.TestConsistencyChecks.assertTrue (Boolean condition) <0x41023190 + 0x00047> in <filename unknown>:0 
+  at LibSBMLCSTest.sbml.TestConsistencyChecks.test_consistency_checks () <0x41022b70 + 0x003e7> in <filename unknown>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) <0x7f0b8fdab9e0 + 0x000a1> in <filename unknown>:0 
+
+
+
+
+92% tests passed, 1 tests failed out of 13
+
+Total Test time (real) =  11.00 sec
+
+The following tests FAILED:
+	 13 - test_csharp_bindings_full (Failed)
+[ERROR_MESSAGE] 
+Errors while running CTest
+

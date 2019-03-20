@@ -1,0 +1,29 @@
+[HANDLER_OUTPUT] 
+Test project /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-ninja-base-xml2-check-cpp_ns-strict
+
+      Start  1: test_l3v2extendedmath_validator_run
+ 1/11 Test  #1: test_l3v2extendedmath_validator_run ...........   Passed    0.07 sec
+      Start  2: test_extension_package_l3v2extendedmath_run
+ 2/11 Test  #2: test_extension_package_l3v2extendedmath_run ...   Passed    0.08 sec
+      Start  3: test_sbml_annotation_run
+ 3/11 Test  #3: test_sbml_annotation_run ......................   Passed    0.41 sec
+      Start  4: test_sbml_conversion_run
+ 4/11 Test  #4: test_sbml_conversion_run ......................   Passed    0.49 sec
+      Start  5: test_sbml_extension_run
+ 5/11 Test  #5: test_sbml_extension_run .......................   Passed    0.10 sec
+      Start  6: test_sbml_math_run
+ 6/11 Test  #6: test_sbml_math_run ............................   Passed    0.66 sec
+      Start  7: test_sbml_sbml_run
+ 7/11 Test  #7: test_sbml_sbml_run ............................   Passed    2.31 sec
+      Start  8: test_sbml_units_run
+ 8/11 Test  #8: test_sbml_units_run ...........................   Passed    0.74 sec
+      Start  9: test_sbml_util_run
+ 9/11 Test  #9: test_sbml_util_run ............................   Passed    0.03 sec
+      Start 10: test_sbml_validator_run
+10/11 Test #10: test_sbml_validator_run .......................   Passed    3.57 sec
+      Start 11: test_sbml_xml_run
+11/11 Test #11: test_sbml_xml_run .............................   Passed    0.17 sec
+
+100% tests passed, 0 tests failed out of 11
+
+Total Test time (real) =   8.70 sec
