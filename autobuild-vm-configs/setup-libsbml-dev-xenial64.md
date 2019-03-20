@@ -34,26 +34,32 @@ All building is assumed to take place in ~/development
 Checkout the libSBML build-scripts
 
  svn checkout https://svn.code.sf.net/p/sbml/code/trunk/libsbml sf_libsbml
+ 
  svn checkout https://svn.code.sf.net/p/sbml/code/branches/libsbml-experimental sf_libsbml_experimental
  
 Clone the libSBML build-scripts repository and checkout the automatic build configuration tools.
 
  git clone https://github.com/sbmlteam/libsbml-build-scripts.git
+ 
  cd libsbml-build-scripts
+ 
  git checkout auto-build-options
+ 
  cd autobuild-option-tests
 
 
 # Unresolved issues and bindings that need to be resolved
 
 Build and install node-v0.12.0.tar.gz with
- ./configure
+
+./configure
  make
  make test
  sudo make install
-  
-# sudo apt-get -y install libapache2-mod-php php php-dev
-# sudo apt-get -y install octave octave-pkg-dev
+
+
+ sudo apt-get -y install libapache2-mod-php php php-dev
+ sudo apt-get -y install octave octave-pkg-dev
 
 
 Package dependency issues, so unable to install completely::
