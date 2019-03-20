@@ -9,7 +9,7 @@ Start with a default install of Ubuntu 16.04.6 or newer and grab some build tool
 If running on a VirtualBox VM this is a good time to install the guest extensions.
 Continue with more build tools and libSBML dependencies.
  
- sudo apt-get -y install python python-all-dev python3-all-dev python-xlsxwrite python3-xlsxwrite
+ sudo apt-get -y install python python-all-dev python3-all-dev 
  
  sudo apt-get -y install cmake cmake-gui p7zip swig check mc scite
  
@@ -22,6 +22,15 @@ Continue with more build tools and libSBML dependencies.
 These following adds support for compiling libSBML bindings (Python, R, Java, Ruby, Perl)
  
  sudo apt-get -y install r-base default-jdk mono-complete ruby ruby-dev perl libperl-dev 
+
+These extra Python packages are rquired for fancy report generation and gneral python haappiness
+
+  sudo apt-get -y install ipython ipython3 python-pip python3-pip python-xlsxwriter python3-xlsxwriter
+  
+Install Visual Studio Code (optional)
+
+ https://code.visualstudio.com/docs/setup/linux
+
  
 ## Getting the libSBML source code and configuration files
 
