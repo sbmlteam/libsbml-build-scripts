@@ -58,6 +58,65 @@ except ImportError:
 
 import autotestdata as atd
 
+
+# MATRIX TEST
+if HAVE_XLS:
+    workbook = xlsxwriter.Workbook(report_path.replace('.md', '.xlsx'))
+    config_sheet = workbook.add_worksheet('Configure')
+    build_sheet = workbook.add_worksheet('Build')
+    check_sheet = workbook.add_worksheet('Check')
+    info_sheet = workbook.add_worksheet('Info')
+    cf_header = workbook.add_format({'bold': True, 'align': 'center'})
+    cf_normal = workbook.add_format({'bold': False, 'align': 'center'})
+    cf_error = workbook.add_format({'bold': False, 'align': 'center', 'color': 'red'})
+
+if HAVE_XLS:
+    info_sheet.write_string(3, 0, 'Experimental')
+    if '-exp-' in report_name:
+        info_sheet.write_string(3, 1, 'true')
+    else:
+        info_sheet.write_string(3, 1, 'false')
+    info_sheet.write_string(4, 0, 'Report')
+    info_sheet.write_string(4, 1, report_name)
+
+# INFO parse
+if HAVE_XLS:
+    Fidx =  open(report_path, 'r')
+    for l in Fidx:
+        if l.startswith('Test run:'):
+            k, v = l.split(':')
+            info_sheet.write_string(0, 0, k.strip())
+            info_sheet.write_string(0, 1, v.strip())
+        elif l.startswith('Generator:'):
+            k, v = l.split(':')
+            info_sheet.write_string(1, 0, k.strip())
+            info_sheet.write_string(1, 1, v.strip())
+        elif l.startswith('Config time:'):
+            k, v = l.split(':')
+            info_sheet.write_string(6, 0, k.strip())
+            info_sheet.write_string(6, 1, v.strip())
+        elif l.startswith('CMake time:'):
+            k, v = l.split(':')
+            info_sheet.write_string(7, 0, k.strip())
+            info_sheet.write_string(7, 1, v.strip())
+        elif l.startswith('Build time:'):
+            k, v = l.split(':')
+            info_sheet.write_string(8, 0, k.strip())
+            info_sheet.write_string(8, 1, v.strip())
+        elif l.startswith('Test time:'):
+            k, v = l.split(':')
+            info_sheet.write_string(9, 0, k.strip())
+            info_sheet.write_string(9, 1, v.strip())
+        elif l.startswith('Total time:'):
+            k, v = l.split(':')
+            info_sheet.write_string(10, 0, k.strip())
+            info_sheet.write_string(10, 1, v.strip())
+        elif l.startswith('Source:'):
+            k, v = l.split(':')
+            info_sheet.write_string(2, 0, k.strip())
+            info_sheet.write_string(2, 1, v.strip())
+    Fidx.close()
+
 # CMAKE parse
 Fidx =  open(report_path, 'r')
 configure_results = {}
@@ -164,16 +223,6 @@ del header0
 #print('CTest bad')
 #pprint.pprint(ctest_bad)
 #print('Header: {}'.format(header))
-
-if HAVE_XLS:
-    workbook = xlsxwriter.Workbook(report_path.replace('.md', '.xlsx'))
-    config_sheet = workbook.add_worksheet('Configure')
-    build_sheet = workbook.add_worksheet('Build')
-    check_sheet = workbook.add_worksheet('Check')
-    cf_header = workbook.add_format({'bold': True, 'align': 'center'})
-    cf_normal = workbook.add_format({'bold': False, 'align': 'center'})
-    cf_error = workbook.add_format({'bold': False, 'align': 'center', 'color': 'red'})
-
 
 with open(os.path.join(report_dir, 'report_configure.csv'), mode='w') as csv_file:
     csv_out = [header]

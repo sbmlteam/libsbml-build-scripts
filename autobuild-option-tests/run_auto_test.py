@@ -77,7 +77,7 @@ main_binding_options = ['csharp', 'java', 'perl', 'python', 'r']
 
 # test_options = [['check', 'expat', 'python'], ['check', 'xml2', 'csharp']] 
 # test_options = [['check'], ['check', 'examples']]
-# test_options = [['xml2', 'check', 'csharp'], ['xml2', 'check', 'java'], ['xml2', 'check', 'perl'], ['xml2', 'check', 'python'], ['xml2', 'check', 'r']]
+test_options = [['xml2', 'check', 'csharp'], ['xml2', 'check', 'java'], ['xml2', 'check', 'perl'], ['xml2', 'check', 'python'], ['xml2', 'check', 'r']]
 # test_options = [['check','xml2','csharp'], ['check', 'expat', 'csharp'],\
                 #['check','xml2', 'examples', 'csharp'], ['check', 'expat', 'examples', 'csharp']]
 # test_options = [['xml2'], ['check', 'xml2', 'csharp'], ['check', 'xml2', 'python']]
