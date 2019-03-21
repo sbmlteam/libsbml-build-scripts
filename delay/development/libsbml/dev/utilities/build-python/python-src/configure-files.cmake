@@ -59,7 +59,22 @@ file(GLOB PYTHON_FILES
     
 file(COPY ${PYTHON_FILES} DESTINATION ${CMAKE_CURRENT_SOURCE_DIR})
 file(COPY "${BUILD_DIR}/src/bindings/python/libsbml.py" DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/libsbml)
-file(RENAME "${CMAKE_CURRENT_SOURCE_DIR}/libsbml/libsbml.py" "${CMAKE_CURRENT_SOURCE_DIR}/libsbml/__init__.py")
+
+# Create Python2 and Python3 Python Interfaces
+file (MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/script)
+file(COPY "${BUILD_DIR}/src/bindings/python/libsbml.py" DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/script)
+file(RENAME "${CMAKE_CURRENT_SOURCE_DIR}/script/libsbml.py" "${CMAKE_CURRENT_SOURCE_DIR}/script/libsbml2.py")
+# generate a version compatible with python 3.x
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/script/libsbml2.py" init_script)
+string(REPLACE 
+  "class SBase(_object):"
+  "class SBase(_object, metaclass=AutoProperty):"
+  init3_script ${init_script}
+)
+file(WRITE ${CMAKE_CURRENT_SOURCE_DIR}/script/libsbml3.py ${init3_script}) 
+
+# we may need to put this back but it should be redundant
+# file(RENAME "${CMAKE_CURRENT_SOURCE_DIR}/libsbml/libsbml.py" "${CMAKE_CURRENT_SOURCE_DIR}/libsbml/__init__.py")
 
 file(GLOB SWIG_FILES 
     "${SRC_DIR}/src/bindings/swig/*.h"
