@@ -1,0 +1,117 @@
+[HANDLER_OUTPUT] 
+Test project /home/libsbml/development/libsbml-build-scripts/autobuild-option-tests/BUILD/ubuntu-1604-exp-ninja-base-packages-expat-check-cpp_ns-csharp
+
+      Start  1: test_comp_extensions_run
+ 1/41 Test  #1: test_comp_extensions_run ......................   Passed    0.50 sec
+      Start  2: test_comp_sbase_run
+ 2/41 Test  #2: test_comp_sbase_run ...........................   Passed    0.26 sec
+      Start  3: test_comp_util_run
+ 3/41 Test  #3: test_comp_util_run ............................   Passed    3.77 sec
+      Start  4: test_comp_validator_run
+ 4/41 Test  #4: test_comp_validator_run .......................   Passed    0.92 sec
+      Start  5: test_extension_package_qual_run
+ 5/41 Test  #5: test_extension_package_qual_run ...............   Passed    0.14 sec
+      Start  6: test_sbml_package_qual_run
+ 6/41 Test  #6: test_sbml_package_qual_run ....................   Passed    0.19 sec
+      Start  7: test_qual_validator_run
+ 7/41 Test  #7: test_qual_validator_run .......................   Passed    0.31 sec
+      Start  8: test_sbml_package_render_run
+ 8/41 Test  #8: test_sbml_package_render_run ..................   Passed    0.86 sec
+      Start  9: test_render_validator_run
+ 9/41 Test  #9: test_render_validator_run .....................   Passed    0.29 sec
+      Start 10: test_sbml_package_multi_run
+10/41 Test #10: test_sbml_package_multi_run ...................   Passed    0.20 sec
+      Start 11: test_multi_validator_run
+11/41 Test #11: test_multi_validator_run ......................   Passed    0.31 sec
+      Start 12: test_sbml_package_fbc_run
+12/41 Test #12: test_sbml_package_fbc_run .....................   Passed    0.28 sec
+      Start 13: test_fbc_validator_run
+13/41 Test #13: test_fbc_validator_run ........................   Passed    0.56 sec
+      Start 14: test_l3v2extendedmath_validator_run
+14/41 Test #14: test_l3v2extendedmath_validator_run ...........   Passed    0.13 sec
+      Start 15: test_extension_package_l3v2extendedmath_run
+15/41 Test #15: test_extension_package_l3v2extendedmath_run ...   Passed    0.12 sec
+      Start 16: test_sbml_package_spatial_run
+16/41 Test #16: test_sbml_package_spatial_run .................   Passed    0.31 sec
+      Start 17: test_sbml_objects_package_spatial
+17/41 Test #17: test_sbml_objects_package_spatial .............   Passed    0.15 sec
+      Start 18: test_spatial_validator_run
+18/41 Test #18: test_spatial_validator_run ....................   Passed    0.57 sec
+      Start 19: test_extension_package_dyn_run
+19/41 Test #19: test_extension_package_dyn_run ................   Passed    0.15 sec
+      Start 20: test_sbml_package_req_run
+20/41 Test #20: test_sbml_package_req_run .....................   Passed    0.17 sec
+      Start 21: test_sbml_package_layout_run
+21/41 Test #21: test_sbml_package_layout_run ..................   Passed    0.55 sec
+      Start 22: test_layout_validator_run
+22/41 Test #22: test_layout_validator_run .....................   Passed    1.01 sec
+      Start 23: test_extension_package_arrays_run
+23/41 Test #23: test_extension_package_arrays_run .............   Passed    0.23 sec
+      Start 24: test_arrays_util_run
+24/41 Test #24: test_arrays_util_run ..........................   Passed    0.31 sec
+      Start 25: test_extension_package_groups_run
+25/41 Test #25: test_extension_package_groups_run .............   Passed    0.19 sec
+      Start 26: test_groups_validator_run
+26/41 Test #26: test_groups_validator_run .....................   Passed    0.25 sec
+      Start 27: test_extension_package_distrib_run
+27/41 Test #27: test_extension_package_distrib_run ............   Passed    0.30 sec
+      Start 28: test_sbml_package_distrib_run
+28/41 Test #28: test_sbml_package_distrib_run .................   Passed    0.18 sec
+      Start 29: test_distrib_util_run
+29/41 Test #29: test_distrib_util_run .........................   Passed    0.29 sec
+      Start 30: test_distrib_validator_run
+30/41 Test #30: test_distrib_validator_run ....................   Passed    0.10 sec
+      Start 31: test_sbml_annotation_run
+31/41 Test #31: test_sbml_annotation_run ......................   Passed    0.53 sec
+      Start 32: test_sbml_conversion_run
+32/41 Test #32: test_sbml_conversion_run ......................   Passed    0.59 sec
+      Start 33: test_sbml_extension_run
+33/41 Test #33: test_sbml_extension_run .......................   Passed    0.16 sec
+      Start 34: test_sbml_math_run
+34/41 Test #34: test_sbml_math_run ............................   Passed    0.22 sec
+      Start 35: test_sbml_sbml_run
+35/41 Test #35: test_sbml_sbml_run ............................   Passed    2.48 sec
+      Start 36: test_sbml_units_run
+36/41 Test #36: test_sbml_units_run ...........................   Passed    0.96 sec
+      Start 37: test_sbml_util_run
+37/41 Test #37: test_sbml_util_run ............................   Passed    0.04 sec
+      Start 38: test_sbml_validator_run
+38/41 Test #38: test_sbml_validator_run .......................   Passed    4.40 sec
+      Start 39: test_sbml_xml_run
+39/41 Test #39: test_sbml_xml_run .............................   Passed    0.25 sec
+      Start 40: test_csharp_bindings
+40/41 Test #40: test_csharp_bindings ..........................   Passed    0.59 sec
+      Start 41: test_csharp_bindings_full
+41/41 Test #41: test_csharp_bindings_full .....................***Failed  Required regular expression not found.Regex=[failures 0
+]  1.22 sec
+LibSBML C# Testrunner
+=====================
+Running the tests with: 
+	Data Directory:   /home/libsbml/development/sf_libsbml_experimental/src/sbml/test/test-data
+
+...................................................<!-- Created by foo version bar on 2019-03-21 01:31 with libSBML version 5.17.3. -->
+......................................................................................................................................................................................................................................................................................................................E....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+
+Total Number of Tests 1830, failures 1
+
+
+Error in 'test_consistency_checks': 
+====================
+Exception of type 'LibSBMLCSTest.sbml.TestConsistencyChecks+AssertionError' was thrown.
+  at LibSBMLCSTest.sbml.TestConsistencyChecks.assertTrue (Boolean condition) <0x40af6190 + 0x00047> in <filename unknown>:0 
+  at LibSBMLCSTest.sbml.TestConsistencyChecks.test_consistency_checks () <0x40af5b70 + 0x003e7> in <filename unknown>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) <0x7fcb9b5ab9e0 + 0x000a1> in <filename unknown>:0 
+
+
+
+
+98% tests passed, 1 tests failed out of 41
+
+Total Test time (real) =  25.15 sec
+
+The following tests FAILED:
+	 41 - test_csharp_bindings_full (Failed)
+[ERROR_MESSAGE] 
+Errors while running CTest
+
