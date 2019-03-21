@@ -7,6 +7,10 @@
  * This file is part of libSBML.  Please visit http://sbml.org for more
  * information about SBML, and the latest version of libSBML.
  *
+ * Copyright (C) 2019 jointly by the following organizations:
+ *     1. California Institute of Technology, Pasadena, CA, USA
+ *     2. University of Heidelberg, Heidelberg, Germany
+ *
  * Copyright (C) 2013-2018 jointly by the following organizations:
  *     1. California Institute of Technology, Pasadena, CA, USA
  *     2. EMBL European Bioinformatics Institute (EMBL-EBI), Hinxton, UK
@@ -1902,7 +1906,7 @@ setValue(value, 0);
     ASTBasePlugin * getASTPlugin(ASTNodeType_t type);
 
   LIBSBML_EXTERN
-    ASTBasePlugin * getASTPlugin(const std::string& name, bool isCsymbol = false);
+    ASTBasePlugin * getASTPlugin(const std::string& name, bool isCsymbol = false, bool strCmpIsCaseSensitive = false);
 
   LIBSBML_EXTERN
     const ASTBasePlugin * getASTPlugin(const SBMLNamespaces * sbmlns) const;
@@ -1911,7 +1915,7 @@ setValue(value, 0);
     const ASTBasePlugin * getASTPlugin(ASTNodeType_t type) const;
 
   LIBSBML_EXTERN
-    const ASTBasePlugin * getASTPlugin(const std::string& name, bool isCsymbol = false) const;
+    const ASTBasePlugin * getASTPlugin(const std::string& name, bool isCsymbol = false, bool strCmpIsCaseSensitive = false) const;
 
 
   /** @cond doxygenLibsbmlInternal */

@@ -12,6 +12,10 @@
  * This file is part of libSBML.  Please visit http://sbml.org for more
  * information about SBML, and the latest version of libSBML.
  *
+ * Copyright (C) 2019 jointly by the following organizations:
+ *     1. California Institute of Technology, Pasadena, CA, USA
+ *     2. University of Heidelberg, Heidelberg, Germany
+ *
  * Copyright (C) 2013-2018 jointly by the following organizations:
  *     1. California Institute of Technology, Pasadena, CA, USA
  *     2. EMBL European Bioinformatics Institute (EMBL-EBI), Hinxton, UK
@@ -90,7 +94,7 @@ public:
   virtual ASTNodeType_t getASTNodeTypeForCSymbolURL(const std::string& url) const;
   virtual bool hasCorrectNamespace(SBMLNamespaces* namespaces) const;
   virtual bool defines(ASTNodeType_t type) const;
-  virtual bool defines(const std::string& name) const;
+  virtual bool defines(const std::string& name, bool strCmpIsCaseSensitive = false) const;
   virtual bool isFunction(ASTNodeType_t type) const;
   virtual bool isLogical(ASTNodeType_t type) const;
   virtual bool isMathMLNodeTag(const std::string& node) const;
@@ -432,7 +436,7 @@ protected:
   * caseless string comparison.  Return the type of the function, or @sbmlconstant{AST_UNKNOWN, ASTNodeType_t}
   * if nothing found.
   */
-  virtual ASTNodeType_t getPackageFunctionFor(const std::string& name) const;
+  virtual ASTNodeType_t getPackageFunctionFor(const std::string& name, bool strCmpIsCaseSensitive = false) const;
 
   /*-- data members --*/
 

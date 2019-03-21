@@ -1,0 +1,6 @@
+setup.py
+libsbml/__init__.py
+python_libsbml.egg-info/PKG-INFO
+python_libsbml.egg-info/SOURCES.txt
+python_libsbml.egg-info/dependency_links.txt
+python_libsbml.egg-info/top_level.txt
