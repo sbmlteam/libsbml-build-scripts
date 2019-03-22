@@ -56,7 +56,7 @@ except ImportError:
     HAVE_XLS = False
     xlsw = None
 
-import autotestdata as atd
+import templatetools as atd
 
 
 # MATRIX TEST
