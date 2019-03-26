@@ -75,7 +75,7 @@ fixed_options = ['check']
 combi_options = ['examples', 'strict', 'cpp_ns']
 main_binding_options = ['csharp', 'java', 'perl', 'python', 'r']
 
-# test_options = [['check', 'expat'], ['check', 'xml2'], ['check', 'xerces']]
+# test_options = [['check', 'csharp'], ['check', 'xml2'], ['xerces']]
 # test_options = [['check'], ['check', 'examples']]
 # test_options = [['xml2', 'check', 'csharp'], ['xml2', 'check', 'java'], ['xml2', 'check', 'perl'],\
                 # ['xml2', 'check', 'python'], ['xml2', 'check', 'r'], ['xml2', 'check', 'packages'],\
@@ -403,8 +403,10 @@ if rbase.build_test_configurations:
                 t_proc.join()
             else:
                 no_check_support.append(cf)
-        if rbase.disk_space_saver and report_check[cf] > 0:
-            print('Deleting successful test ({}): {}'.format(report_check[cf], cf))
+                report_check[cf] = 100
+
+        if rbase.disk_space_saver and report_check[cf] in [0, 100]:
+            print('Deleting successful/skipped test ({}): {}'.format(report_check[cf], cf))
             shutil.rmtree(cf)
 
 
@@ -424,8 +426,8 @@ BUILD_TIME = time.time()
 
 if rbase.check_test_configurations:
     print(report_build)
-    for nc in no_check_support:
-        report_check[nc] = 2
+    # for nc in no_check_support:
+    #     report_check[nc] = 2
 
     print('\nCHECK REPORT: {}\n'.format(len(report_check)) + 14*'-')
     prprinter.pprint(report_check)
@@ -450,5 +452,3 @@ try:
     print('Report generated.')
 except subprocess.CalledProcessError:
     print('\nReport not generated, please manually create reports with parse_test_results.py')
-
-# python parse_test_results.py test_reports\\2019-03-12-23-11\\result_log.

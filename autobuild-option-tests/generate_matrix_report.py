@@ -187,10 +187,13 @@ for r in build_results:
 # CTEST results
 ctest_bad = []
 ctest_good = []
+ctest_skipped = []
 for r in ctest_results:
     opts = r.split('-')
     if ctest_results[r] == 0:
         ctest_good.append(opts)
+    elif ctest_results[r] == 100:
+        ctest_skipped.append(opts)        
     else:
         ctest_bad.append(opts)
 
@@ -283,6 +286,7 @@ with open(os.path.join(report_dir, 'report_check.csv'), mode='w') as csv_file:
     csv_out = [header]
     [csv_out.append(h) for h in atd.format_output_csv(ctest_bad, header, 0)]
     [csv_out.append(h) for h in atd.format_output_csv(ctest_good, header, 1)]
+    [csv_out.append(h) for h in atd.format_output_csv(ctest_skipped, header, 2)]
     csvwriter = csv.writer(csv_file, dialect='excel', quoting=csv.QUOTE_NONNUMERIC)
     csvwriter.writerows(csv_out)
     if HAVE_XLS:
@@ -295,7 +299,7 @@ with open(os.path.join(report_dir, 'report_check.csv'), mode='w') as csv_file:
             else:
                 fmt = cf_normal
             for c in range(0, len(csv_out[0])):
-                if csv_out[r][c] == 0 or csv_out[r][c] == 1:
+                if csv_out[r][c] == 0 or csv_out[r][c] == 1 or csv_out[r][c] == 2:
                     check_sheet.write_number(r, c, csv_out[r][c], fmt)
                 elif csv_out[r][c] == '':
                     check_sheet.write_blank(r, c, None, fmt)
