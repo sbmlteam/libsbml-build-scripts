@@ -75,7 +75,7 @@ fixed_options = ['check']
 combi_options = ['examples', 'strict', 'cpp_ns']
 main_binding_options = ['csharp', 'java', 'perl', 'python', 'r']
 
-test_options = [['check', 'expat'], ['check', 'xml2'], ['check', 'xerces']] 
+# test_options = [['check', 'expat'], ['check', 'xml2'], ['check', 'xerces']] 
 # test_options = [['check'], ['check', 'examples']]
 # test_options = [['xml2', 'check', 'csharp'], ['xml2', 'check', 'java'], ['xml2', 'check', 'perl'],\
 		# ['xml2', 'check', 'python'], ['xml2', 'check', 'r'], ['xml2', 'check', 'packages'],\
