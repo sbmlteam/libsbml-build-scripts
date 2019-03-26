@@ -75,12 +75,12 @@ fixed_options = ['check']
 combi_options = ['examples', 'strict', 'cpp_ns']
 main_binding_options = ['csharp', 'java', 'perl', 'python', 'r']
 
-# test_options = [['check', 'expat'], ['check', 'xml2'], ['check', 'xerces']] 
+# test_options = [['check', 'expat'], ['check', 'xml2'], ['check', 'xerces']]
 # test_options = [['check'], ['check', 'examples']]
 # test_options = [['xml2', 'check', 'csharp'], ['xml2', 'check', 'java'], ['xml2', 'check', 'perl'],\
-		# ['xml2', 'check', 'python'], ['xml2', 'check', 'r'], ['xml2', 'check', 'packages'],\
-		# ['xml2', 'check', 'examples'], ['xml2', 'check', 'strict'], ['xml2', 'check', 'cpp_ns'],\
-		# ['expat','check'], ['xerces','check']]
+                # ['xml2', 'check', 'python'], ['xml2', 'check', 'r'], ['xml2', 'check', 'packages'],\
+                # ['xml2', 'check', 'examples'], ['xml2', 'check', 'strict'], ['xml2', 'check', 'cpp_ns'],\
+                # ['expat','check'], ['xerces','check']]
 # test_options = [['check','xml2','csharp'], ['check', 'expat', 'csharp'],\
                 #['check','xml2', 'examples', 'csharp'], ['check', 'expat', 'examples', 'csharp']]
 # test_options = [['xml2'], ['check', 'xml2', 'csharp'], ['check', 'xml2', 'python']]
@@ -360,12 +360,20 @@ Rlog.close()
 Rlog = open(os.path.join(report_path, Rlog_name), 'a')
 
 report_build = {}
+report_check = {}
+no_check_support = []
 total_builds = len(output_cmake_configure)
 if rbase.build_test_configurations:
     print('\nCMAKE could configure {} out of {} unique test combinations\n'.format(len(output_cmake_configure), len(test_options)))
     # a = raw_input('Proceed to build all combinations - this may take some time (y/n)?\n')
     # if a.lower() != 'y':
     #     os.sys.exit()
+
+    def cmake_test(bld, rpt, rptpath):
+        try:
+            rpt[bld] = subprocess.check_call(['ctest', '--output-on-failure', '--output-log', '{}'.format(rptpath)])
+        except subprocess.CalledProcessError as err:
+            rpt[bld] = err.returncode
 
     buildcnt = 1
     for cf in output_cmake_configure:
@@ -379,6 +387,27 @@ if rbase.build_test_configurations:
                 report_build[cf] = subprocess.check_call(['make'])
         except subprocess.CalledProcessError as err:
             report_build[cf] = err.returncode
+
+        if rbase.check_test_configurations:
+            print('----')
+            print(cf)
+            ##os.chdir(cf)
+            print(os.getcwd())
+            rpt_path = os.path.join(report_path, os.path.split(cf)[-1]+'.log')
+            print
+            print('----')
+            if 'check' in cf:
+                # ctest is not threadsafe so we run it in serial
+                t_proc = threading.Thread(target=cmake_test, args=[cf, report_check, rpt_path])
+                t_proc.start()
+                t_proc.join()
+            else:
+                no_check_support.append(cf)
+        if rbase.disk_space_saver and report_check[cf] > 0:
+            print('Deleting successful test ({}): {}'.format(report_check[cf], cf))
+            shutil.rmtree(cf)
+
+
     os.chdir(cdir)
 
     print('\nBUILD REPORT: {}\n'.format(len(report_build)) + 14*'-')
@@ -389,40 +418,14 @@ if rbase.build_test_configurations:
     for i in report_build:
         Rlog.write('  {} {}\n'.format(i, report_build[i]))
 
-Rlog.close()
-Rlog = open(os.path.join(report_path, Rlog_name), 'a')
-
 BUILD_TIME = time.time()
+#Rlog.close()
+#Rlog = open(os.path.join(report_path, Rlog_name), 'a')
 
-report_check = {}
 if rbase.check_test_configurations:
-    def cmake_test(bld, rpt, rptpath):
-        try:
-            rpt[bld] = subprocess.check_call(['ctest', '--output-on-failure', '--output-log', '{}'.format(rptpath)])
-        except subprocess.CalledProcessError as err:
-            rpt[bld] = err.returncode
-
-    no_check_support = []
     print(report_build)
-    for cf in report_build:
-        print('----')
-        print(cf)
-        os.chdir(cf)
-        print(os.getcwd())
-        rpt_path = os.path.join(report_path, os.path.split(cf)[-1]+'.log')
-        print
-        print('----')
-        if 'check' in cf:
-            # ctest is not threadsafe so we run it in serial
-            t_proc = threading.Thread(target=cmake_test, args=[cf, report_check, rpt_path])
-            t_proc.start()
-            t_proc.join()
-        else:
-            no_check_support.append(cf)
-    os.chdir(cdir)
-
     for nc in no_check_support:
-        report_check[nc] = 1
+        report_check[nc] = 2
 
     print('\nCHECK REPORT: {}\n'.format(len(report_check)) + 14*'-')
     prprinter.pprint(report_check)
