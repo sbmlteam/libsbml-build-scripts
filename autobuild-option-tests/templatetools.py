@@ -89,6 +89,8 @@ class CMakeReplacements(object):
     default_test_options = None
     base_file = None
     config = None
+    
+    disk_space_saver = True
 
     def __init__(self, filepath):
         """
