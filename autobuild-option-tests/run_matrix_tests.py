@@ -62,8 +62,10 @@ assert os.path.exists(config_file), '\n{} is not a file'.format(config_file)
 rbase = CMakeReplacements(config_file)
 
 print('Disk space saver enabled: {}'.format(rbase.disk_space_saver))
+print('Selected test combinations: {}'.format(rbase.config_combination))
 
 # os.sys.exit()
+time.sleep(2)
 
 test_options = None
 
