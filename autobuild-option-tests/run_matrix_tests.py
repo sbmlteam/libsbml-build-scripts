@@ -50,7 +50,21 @@ if os.sys.version_info[0] > 2:
 
 # instantiate configuration data
 config_file = 'config.json'
+try:
+    config_file = os.sys.argv[1]
+    assert os.path.exists(config_file), '\n{} is not a file'.format(config_file)
+    print('Using user configuration: {}'.format(config_file))
+except:
+    print('Using default configuration: {}'.format(config_file))
+
+assert os.path.exists(config_file), '\n{} is not a file'.format(config_file)
+
 rbase = CMakeReplacements(config_file)
+
+print('Disk space saver enabled: {}'.format(rbase.disk_space_saver))
+
+# os.sys.exit()
+
 test_options = None
 
 ## overide defaults (for debugging purposes)

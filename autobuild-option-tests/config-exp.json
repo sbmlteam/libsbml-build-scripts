@@ -5,7 +5,7 @@
   "disk_space_saver": true,
   "cmake_generator": "Ninja",
   "configure_with_cmake": true,
-  "configure_experimental": false,
+  "configure_experimental": true,
   "test_all_combinations": false,
   "config_combination" : "all_xml2"
  },

@@ -83,6 +83,7 @@ class CMakeReplacements(object):
     configure_with_cmake = None
     build_test_configurations = None
     check_test_configurations = None
+    disk_space_saver = None
     test_all_combinations = None
     config_combination = None
     cmake_generator = None
@@ -90,7 +91,7 @@ class CMakeReplacements(object):
     base_file = None
     config = None
     
-    disk_space_saver = True
+    
 
     def __init__(self, filepath):
         """
@@ -174,6 +175,7 @@ class CMakeReplacements(object):
         self.configure_with_cmake = self.config['options']['configure_with_cmake']
         self.build_test_configurations = self.config['options']['build_test_configurations']
         self.check_test_configurations = self.config['options']['check_test_configurations']
+        self.disk_space_saver = self.config['options']['disk_space_saver']
 
         self.test_all_combinations = self.config['options']['test_all_combinations']
         self.config_combination = self.config['options']['config_combination']
