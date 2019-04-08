@@ -44,6 +44,9 @@ cdir = os.path.dirname(os.path.abspath(os.sys.argv[0]))
 from templatetools import CMakeReplacements
 import testlib
 
+prprinter = pprint.PrettyPrinter()
+
+
 if os.sys.version_info[0] > 2:
     def raw_input(txt):
         return input(txt)
@@ -89,19 +92,17 @@ test_options = None
 xml_options = ['xml2', 'expat', 'xerces']
 fixed_options = ['check']
 combi_options = ['examples', 'strict', 'cpp_ns']
-main_binding_options = ['csharp', 'java', 'perl', 'python', 'r']
+main_binding_options = ['csharp', 'java', 'perl', 'python', 'r', 'ruby']
 
+# some useful predefined test sets (also in model config library)
+## base check
 # test_options = [['base', 'check']]
-# test_options = [['check', 'csharp'], ['check', 'xml2'], ['xerces']]
-# test_options = [['check'], ['check', 'examples']]
-# test_options = [['xml2', 'check', 'csharp'], ['xml2', 'check', 'java'], ['xml2', 'check', 'perl'],\
-                # ['xml2', 'check', 'python'], ['xml2', 'check', 'r'], ['xml2', 'check', 'packages'],\
-                # ['xml2', 'check', 'examples'], ['xml2', 'check', 'strict'], ['xml2', 'check', 'cpp_ns'],\
-                # ['expat','check'], ['xerces','check']]
-# test_options = [['check','xml2','csharp'], ['check', 'expat', 'csharp'],\
-                #['check','xml2', 'examples', 'csharp'], ['check', 'expat', 'examples', 'csharp']]
-# test_options = [['xml2'], ['check', 'xml2', 'csharp'], ['check', 'xml2', 'python']]
-# test_options =  [['check'], ['check', 'packages'], ['check', 'examples'], ['check', 'strict'], ['check', 'cpp_ns']]
+## fast check, all individual options
+# test_options = [['check', 'csharp'], ['check', 'java'], ['check', 'perl'],\
+                # ['check', 'python'], ['check', 'r'], ['check', 'ruby'],\
+                # ['check', 'packages'], ['check', 'examples'],\
+                # ['check', 'strict'], ['check', 'cpp_ns'],\
+                # ['check', 'expat'], ['check', 'xerces']]
 
 # create output logger and report folder
 report_time = time.strftime('%Y-%m-%d-%H-%M')
@@ -126,7 +127,7 @@ if rbase.test_all_combinations:
     test_options_new = copy.deepcopy(test_options)
     for bnd in main_binding_options:
         out1 = copy.deepcopy(test_options)
-        if bnd in ['csharp', 'java', 'perl', 'python', 'r']:
+        if bnd in ['csharp', 'java', 'perl', 'python', 'r', 'ruby']:
             [x.append(bnd) for x in out1]
         test_options_new += out1
     test_options = test_options_new
@@ -147,7 +148,9 @@ if rbase.test_all_combinations:
         test_options_new += out1
 
     test_options = test_options_new
-
+    
+    prprinter.pprint(test_options)
+    
     print('\nAutogenerate created {} unique test combinations\n'.format(len(test_options)))
     a = raw_input('Proceed and generate all combinations (y/n)?\n')
     if a.lower() != 'y':
@@ -177,6 +180,7 @@ else:
 Rlog.write('# MATRIX TEST\nTest run: {}\n'.format(report_time))
 Rlog.write('Generator: {}\n'.format(rbase.cmake_generator))
 Rlog.write('libSBML source path: {}\n'.format(libsbml_src_path))
+Rlog.write('CMake template: {}\n'.format(rbase.base_file))
 Rlog.write('\n# CONFIGURATION COMBINATIONS\n')
 for i in test_options:
     Rlog.write('  {}\n'.format(i))
@@ -245,8 +249,8 @@ for conopts in test_options:
                 outlin = outlin.replace(rbase.cmake_template_src_paths[o_], libsbml_src_path)
         # enable libCheck based unit testing
         if 'check' in conopts:
-            if rbase.ubuntu_check_config['disabled'] in outlin:
-                outlin = outlin.replace(rbase.ubuntu_check_config['disabled'], rbase.ubuntu_check_config['enabled'])
+            if rbase.libsbml_check_config['disabled'] in outlin:
+                outlin = outlin.replace(rbase.libsbml_check_config['disabled'], rbase.libsbml_check_config['enabled'])
         # enable expat, the default is lxml2
         if 'expat' in conopts:
             if rbase.libsbml_xml_parsers['xml2']['enabled'] in outlin:
@@ -312,7 +316,6 @@ CONFIG_TIME = time.time()
 output_cmake_configure = {}
 output_cmake_configure_bad = {}
 if rbase.configure_with_cmake:
-    prprinter = pprint.PrettyPrinter()
     def cmake_configure(build, rpt):
         try:
             rpt[build] = subprocess.check_call(['cmake', build])

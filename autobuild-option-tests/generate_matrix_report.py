@@ -115,6 +115,10 @@ if HAVE_XLS:
             k, v = l.split(':')
             info_sheet.write_string(2, 0, k.strip())
             info_sheet.write_string(2, 1, v.strip())
+        elif l.startswith('CMake template:'):
+            k, v = l.split(':')
+            info_sheet.write_string(5, 0, k.strip())
+            info_sheet.write_string(5, 1, v.strip())            
     Fidx.close()
 
 # CMAKE parse
@@ -203,7 +207,7 @@ for c in config_good:
     hraw.extend(c)
 header0 = list(set(hraw))
 header = []
-for item in ['check', 'examples', 'r', 'perl', 'java', 'csharp', 'python', 'packages', 'xerces','expat', 'xml2']:
+for item in ['check', 'examples', 'r', 'perl', 'java', 'csharp', 'python', 'ruby', 'packages', 'xerces','expat', 'xml2']:
     if item in header0:
         header.insert(0, header0.pop(header0.index(item)))
 if 'check' in header0:

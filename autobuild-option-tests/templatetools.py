@@ -104,7 +104,7 @@ class CMakeReplacements(object):
         self.load_json_to_config(filepath)
         self.load_options_from_config()
 
-    ubuntu_check_config = {'disabled' : 'WITH_CHECK:BOOL=OFF',
+    libsbml_check_config = {'disabled' : 'WITH_CHECK:BOOL=OFF',
                            'enabled' : 'WITH_CHECK:BOOL=ON'}
 
     libsbml_xml_parsers = {'expat' : {'enabled' : 'WITH_EXPAT:BOOL=ON',
@@ -142,8 +142,13 @@ class CMakeReplacements(object):
                                     },
                         'r' :       {'enabled' : 'WITH_R:BOOL=ON',
                                     'disabled' : 'WITH_R:BOOL=OFF'
+                                    },
+                        'ruby' :       {'enabled' : 'WITH_RUBY:BOOL=ON',
+                                    'disabled' : 'WITH_RUBY:BOOL=OFF'
                                     }
                         }
+                        
+                        
 
     create_python_source = {'enabled' : 'WITH_CREATE_PYTHON_SOURCE:BOOL=ON',
                            'disabled' : 'WITH_CREATE_PYTHON_SOURCE:BOOL=OFF'
