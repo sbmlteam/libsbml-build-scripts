@@ -67,7 +67,24 @@ rbase = CMakeReplacements(config_file)
 print('Disk space saver enabled: {}'.format(rbase.disk_space_saver))
 print('Selected test combinations: {}'.format(rbase.config_combination))
 
-# os.sys.exit()
+# update svn repository on run
+CLEAN_UPDATE_SVN = True
+
+if CLEAN_UPDATE_SVN:
+    try:
+        if rbase.configure_experimental:
+            print('Updating SVN repository: {}'.format(rbase.libsbml_exp_src_path))
+            res0 = subprocess.check_call(['svn', 'cleanup', rbase.libsbml_exp_src_path])
+            res0 = subprocess.check_call(['svn', 'update', rbase.libsbml_exp_src_path])
+        else:
+            print('Updating SVN repository: {}'.format(rbase.libsbml_src_path))
+            res0 = subprocess.check_call(['svn', 'cleanup', rbase.libsbml_src_path])
+            res0 = subprocess.check_call(['svn', 'update', rbase.libsbml_src_path])
+    except subprocess.CalledProcessError as err:
+        res0 = err.returncode
+        print('INFO: svn repository not updated.')
+
+os.sys.exit()
 time.sleep(2)
 
 test_options = None
@@ -97,12 +114,19 @@ main_binding_options = ['csharp', 'java', 'perl', 'python', 'r', 'ruby']
 # some useful predefined test sets (also in model config library)
 ## base check
 # test_options = [['base', 'check']]
-## fast check, all individual options
+## all individual options
 # test_options = [['check', 'csharp'], ['check', 'java'], ['check', 'perl'],\
                 # ['check', 'python'], ['check', 'r'], ['check', 'ruby'],\
                 # ['check', 'packages'], ['check', 'examples'],\
                 # ['check', 'strict'], ['check', 'cpp_ns'],\
                 # ['check', 'expat'], ['check', 'xerces']]
+## bindings only
+# test_options = [['check', 'csharp'], ['check', 'java'], ['check', 'perl'],\
+                # ['check', 'python'], ['check', 'r'], ['check', 'ruby']]
+### bindings + packages
+# test_options = [a.insert(1, 'packages') for a in test_options]
+
+
 
 # create output logger and report folder
 report_time = time.strftime('%Y-%m-%d-%H-%M')
