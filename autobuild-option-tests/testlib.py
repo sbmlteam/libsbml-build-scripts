@@ -29,6 +29,13 @@ all_combinations = [\
 
 """
 
+ind_bindings = [['check', 'csharp'], ['check', 'java'], ['check', 'perl'],\
+                ['check', 'python'], ['check', 'r'], ['check', 'ruby']]
+
+ind_bindings_packages = [['check', 'packages', 'csharp'], ['check', 'packages', 'java'],\
+    ['check', 'packages', 'perl'], ['check', 'packages', 'python'], ['check', 'packages', 'r'],\
+    ['check', 'packages', 'ruby']]
+
 ind_opts = [\
 ['check', 'csharp'], ['check', 'java'], ['check', 'perl'],  ['check', 'python'], ['check', 'r'], ['check', 'ruby'],\
 ['check', 'packages'], ['check', 'examples'], ['check', 'strict'], ['check', 'cpp_ns'], \

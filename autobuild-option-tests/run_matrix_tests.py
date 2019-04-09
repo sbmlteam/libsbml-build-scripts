@@ -73,18 +73,18 @@ CLEAN_UPDATE_SVN = True
 if CLEAN_UPDATE_SVN:
     try:
         if rbase.configure_experimental:
-            print('Updating SVN repository: {}'.format(rbase.libsbml_exp_src_path))
+            print('\nUpdating SVN repository: {}\n'.format(rbase.libsbml_exp_src_path))
             res0 = subprocess.check_call(['svn', 'cleanup', rbase.libsbml_exp_src_path])
             res0 = subprocess.check_call(['svn', 'update', rbase.libsbml_exp_src_path])
         else:
-            print('Updating SVN repository: {}'.format(rbase.libsbml_src_path))
+            print('\nUpdating SVN repository: {}\n'.format(rbase.libsbml_src_path))
             res0 = subprocess.check_call(['svn', 'cleanup', rbase.libsbml_src_path])
             res0 = subprocess.check_call(['svn', 'update', rbase.libsbml_src_path])
     except subprocess.CalledProcessError as err:
         res0 = err.returncode
         print('INFO: svn repository not updated.')
 
-os.sys.exit()
+# os.sys.exit()
 time.sleep(2)
 
 test_options = None
