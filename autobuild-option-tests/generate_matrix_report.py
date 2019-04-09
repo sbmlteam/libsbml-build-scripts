@@ -111,7 +111,7 @@ if HAVE_XLS:
             k, v = l.split(':')
             info_sheet.write_string(10, 0, k.strip())
             info_sheet.write_string(10, 1, v.strip())
-        elif l.startswith('Source:'):
+        elif l.startswith('libSBML source path:'):
             k, v = l.split(':')
             info_sheet.write_string(2, 0, k.strip())
             info_sheet.write_string(2, 1, v.strip())
