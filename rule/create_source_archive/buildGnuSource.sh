@@ -12,6 +12,8 @@ if [ ! -d $SOURCE_DIR ]
 then
   echo "this system is not setup for the gnu source build"
   exit 1
+else
+  echo "found src tree"
 fi
 
 if [ ! -d $OUT_DIR ] 
@@ -29,9 +31,10 @@ cd $SOURCE_DIR
 rm libsbml-*-src.*
 
 # update SVN
+echo "svn update"
 svn cleanup > $S_LOGFILE 2>&1
 svn update  >> $S_LOGFILE 2>&1
-
+echo "svn update finished"
 # configure build 
 ./configure --with-libxml=/usr --with-swig=/usr/local --with-csharp --with-ruby=/usr --with-perl=/usr --with-python --with-java=/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/ --with-check --enable-layout=no  --enable-l3v2extendedmath=yes > $C_LOGFILE  2>&1 
 
