@@ -16,9 +16,11 @@ Continue with more build tools and libSBML dependencies.
  
  
  sudo yum install -y libcurl libcurl-devel libxml2 libxml2-devel check check-devel bzip2 bzip2-devel
+
+ sudo dnf install -y libcurl-devel.x86_64 
  
  sudo yum install -y expat expat-devel xerces-c xerces-c-devel curl curl-devel
- 
+
  sudo yum install -y bzr p7zip ninja-build
  
 

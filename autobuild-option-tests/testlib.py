@@ -29,6 +29,20 @@ all_combinations = [\
 
 """
 
+fast_scan_r = [\
+['packages', 'xml2', 'check', 'examples'],
+['packages', 'expat', 'check', 'examples'],
+['packages', 'xerces', 'check', 'examples'],
+['packages', 'xml2', 'check', 'examples', 'r'],
+['packages', 'expat', 'check', 'examples', 'r'],
+['packages', 'xerces', 'check', 'examples', 'r'],
+['packages', 'xml2', 'check', 'strict', 'examples', 'r'],
+['packages', 'expat', 'check', 'strict', 'examples', 'r'],
+['packages', 'xerces', 'check', 'strict', 'examples', 'r'],
+['packages', 'xml2', 'check', 'cpp_ns', 'examples', 'r'],
+['packages', 'expat', 'check', 'cpp_ns', 'examples', 'r'],
+['packages', 'xerces', 'check', 'cpp_ns', 'examples', 'r'],
+
 fast_scan = [\
 ['packages', 'xml2', 'check', 'examples'],
 ['packages', 'expat', 'check', 'examples'],
