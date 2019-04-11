@@ -419,6 +419,9 @@ if rbase.build_test_configurations:
         except subprocess.CalledProcessError as err:
             rpt[bld] = err.returncode
 
+    # log build report
+    Rlog.write('\n# BUILD REPORT: {}\n'.format(len(output_cmake_configure)))
+
     buildcnt = 1
     for cf in output_cmake_configure:
         print('Build {} of {} ({}).'.format(buildcnt, total_builds, cf))
@@ -431,6 +434,10 @@ if rbase.build_test_configurations:
                 report_build[cf] = subprocess.check_call(['make'])
         except subprocess.CalledProcessError as err:
             report_build[cf] = err.returncode
+        
+        Rlog.write('  {} {}\n'.format(cf, report_build[cf]))
+        Rlog.flush()
+
 
         if rbase.check_test_configurations:
             print('----')
@@ -449,8 +456,10 @@ if rbase.build_test_configurations:
                 no_check_support.append(cf)
                 report_check[cf] = 100
 
-        if rbase.disk_space_saver and report_check[cf] in [0, 100]:
-            print('Deleting successful/skipped test ({}): {}'.format(report_check[cf], cf))
+
+        # if rbase.disk_space_saver and report_check[cf] in [0, 100]:
+        if rbase.disk_space_saver and report_build[cf] == 0:
+            print('Deleting successful build ({}): {}'.format(report_build[cf], cf))
             shutil.rmtree(cf)
 
 
@@ -459,10 +468,8 @@ if rbase.build_test_configurations:
     print('\nBUILD REPORT: {}\n'.format(len(report_build)) + 14*'-')
     prprinter.pprint(report_build)
 
-    # log build report
-    Rlog.write('\n# BUILD REPORT: {}\n'.format(len(output_cmake_configure)))
-    for i in report_build:
-        Rlog.write('  {} {}\n'.format(i, report_build[i]))
+    # for i in report_build:
+        # Rlog.write('  {} {}\n'.format(i, report_build[i]))
 
 BUILD_TIME = time.time()
 #Rlog.close()
