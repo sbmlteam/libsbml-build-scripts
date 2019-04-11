@@ -8,7 +8,7 @@ if "%~1"=="" GOTO NO_VERSION_NO
 SET THIS_VERSION=%1
 
 SET VM_SHARE_DIR=C:\vm-share
-SET SRC_ARCHIVE=C:\Dropbox\sbmlteam-libsbml-dist\%THIS_VERSION%\libSBML-%THIS_VERSION%-Source.tat.gz
+SET SRC_ARCHIVE=C:\Dropbox\sbmlteam-libsbml-dist\%THIS_VERSION%\libSBML-%THIS_VERSION%-Source.tar.gz
  
 cd VM_SHARE_DIR
 
