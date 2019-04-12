@@ -3,7 +3,6 @@ DIRECTORY=$(cd `dirname $0` && pwd)
 DEV_DIR=$HOME/Development
 DEP_DIR=$DEV_DIR/install_dependencies
 DEP_ARCHIVE=$DIRECTORY/libsbml_dependencies.zip
-SVN_REPO=https://svn.code.sf.net/p/sbml/code/trunk/libsbml
 TODAY=`date +%Y-%m-%d`
 VERSION=5.18.0
 
@@ -22,18 +21,6 @@ SYSTEM="$DIST ($FILE)"
 MATLAB_ROOT=$HOME/Desktop/unix
 
 cd $DEV_DIR
-
-# checkout 
-if [ ! -d "$DEV_DIR/libsbml" ]; then
-svn co $SVN_REPO --non-interactive
-fi
-
-# update 
-cd $DEV_DIR/libsbml
-svn cleanup
-svn update --non-interactive
-
-cd ..
 
 # check dependencies
 
