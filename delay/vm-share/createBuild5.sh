@@ -89,8 +89,8 @@ if grep -q Ubuntu /proc/version; then
   cp $C_LOGFILE $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-ubuntu-configure.txt
   cp $M_LOGFILE $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-ubuntu-make.txt
   cp $P_LOGFILE $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-ubuntu-package.txt
-  cp $C2_LOGFILE $DEST_DIR/$DIR/${VERSION-Linux-$FILE-ubuntu-check.txt
-  cp $VERSION-Linux.deb $DEST_DIR/$DIR/${VERSION}$-Linux-$FILE.deb
+  cp $C2_LOGFILE $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-ubuntu-check.txt
+  cp $VERSION-Linux.deb $DEST_DIR/$DIR/${VERSION}-Linux-$FILE.deb
   cp $VERSION-Linux.tar.gz $DEST_DIR/$DIR/${VERSION}-Linux-$FILE-binaries-ubuntu.tar.gz
 else
   echo ...copy rpm
