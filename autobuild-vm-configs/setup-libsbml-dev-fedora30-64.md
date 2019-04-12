@@ -5,44 +5,44 @@
 Start with a default install of Fedora 30 or newer and grab some build tools 
 
 ```
-sudo yum install -y kernel-headers kernel-devel 
-sudo yum install -y gcc make autoconf cmake cmake-gui gcc-c++ swig
-sudo yum install -y mc subversion git
+sudo dnf install -y kernel-headers kernel-devel 
+sudo dnf install -y gcc make autoconf cmake cmake-gui gcc-c++ swig
+sudo dnf install -y mc subversion git
 ```
 
 If running on a VirtualBox VM this is a good time to install the guest extensions. See [https://www.if-not-true-then-false.com/2010/install-virtualbox-guest-additions-on-fedora-centos-red-hat-rhel/] for details:
 
 ```
-dnf update kernel*
-mkdir /media/VirtualBoxGuestAdditions
-mount -r /dev/cdrom /media/VirtualBoxGuestAdditions
-dnf install gcc kernel-devel kernel-headers dkms make bzip2 perl
+sudo dnf update kernel*
+sudo mkdir /media/VirtualBoxGuestAdditions
+sudo mount -r /dev/cdrom /media/VirtualBoxGuestAdditions
+sudo dnf install gcc kernel-devel kernel-headers dkms make bzip2 perl
 KERN_DIR=/usr/src/kernels/`uname -r`/build
 export KERN_DIR
 cd /media/VirtualBoxGuestAdditions
-./VBoxLinuxAdditions.run
+sudo ./VBoxLinuxAdditions.run
 ```
 
 Continue with more build tools and libSBML dependencies. 
 
 ```
-sudo yum install -y libcurl libcurl-devel libxml2 libxml2-devel check check-devel bzip2 bzip2-devel
+sudo dnf install -y libcurl libcurl-devel libxml2 libxml2-devel check check-devel bzip2 bzip2-devel
 sudo dnf install -y libcurl-devel.x86_64 
-sudo yum install -y expat expat-devel xerces-c xerces-c-devel curl curl-devel
-sudo yum install -y bzr p7zip ninja-build
+sudo dnf install -y expat expat-devel xerces-c xerces-c-devel curl curl-devel
+sudo dnf install -y bzr p7zip ninja-build
 ``` 
  
 These following adds support for compiling libSBML bindings (Python, Perl, Java, Ruby, R, Mono)
 
 ```
-sudo yum install -y python-devel python3-devel perl perl-devel java-openjdk
-sudo yum install -y ruby ruby-devel R R-devel mono-core
+sudo dnf install -y python-devel python3-devel perl perl-devel java-openjdk
+sudo dnf install -y ruby ruby-devel R R-devel mono-core
 ```
  
 These extra Python packages are rquired for fancy report generation and gneral python haappiness
 
 ```
-sudo yum install -y ipython3 python-pip python3-pip python3-xlsxwriter
+sudo dnf install -y ipython3 python-pip python3-pip python3-xlsxwriter
 ```
 Install Visual Studio Code (optional)
 
@@ -75,38 +75,6 @@ git clone https://github.com/sbmlteam/libsbml-build-scripts.git
 cd libsbml-build-scripts
 git checkout auto-build-options
 cd autobuild-option-tests
-```
-
-# Unresolved issues and bindings that need to be resolved
-
-Build and install node-v0.12.0.tar.gz with
-
-```
-./configure
-make
-make test
-sudo make install
-```
-
-```
-sudo apt-get -y install libapache2-mod-php php php-dev
-sudo apt-get -y install octave octave-pkg-dev
-```
-
-Package dependency issues, so unable to install completely::
-
-```
-sudo apt-get -y install slurm slurm-wlm
-```
-
-### This should be done automagically by cmake configure
-
-If you use the distro check library as installed above then you also need to add the
-following to the cmake EXTRA_LIBS configuration::
-
-```
-(GCC)   EXTRA_LIBS: -lrt -lpthread -lsubunit
-(CLANG) EXTRA_LIBS: -lpthread -lsubunit -lrt 
 ```
 
 Brett G. Olivier, Amsterdam, The Netherlands 2019. This work is licensed under a Creative Commons Attribution 4.0 International License.
