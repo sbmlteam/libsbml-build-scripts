@@ -29,6 +29,51 @@ all_combinations = [\
 
 """
 
+faster_scan_xml2 = [\
+['packages', 'xml2', 'check', 'examples'],
+['packages', 'xml2', 'check', 'strict', 'examples'],
+['packages', 'xml2', 'check', 'cpp_ns', 'examples'],
+['packages', 'xml2', 'check', 'python'],
+['packages', 'xml2', 'check', 'cpp_ns', 'strict', 'examples', 'python'],
+['packages', 'xml2', 'check', 'perl'],
+['packages', 'xml2', 'check', 'cpp_ns', 'strict', 'examples', 'perl'],
+['packages', 'xml2', 'check', 'csharp'],
+['packages', 'xml2', 'check', 'cpp_ns', 'strict', 'examples', 'csharp'],
+['packages', 'xml2', 'check', 'r'],
+['packages', 'xml2', 'check', 'cpp_ns', 'strict', 'examples', 'r'],
+['packages', 'xml2', 'check', 'ruby'],
+['packages', 'xml2', 'check', 'cpp_ns', 'strict', 'examples', 'ruby']]
+
+
+faster_scan_expat = [\
+['packages', 'expat', 'check', 'examples'],
+['packages', 'expat', 'check', 'strict', 'examples'],
+['packages', 'expat', 'check', 'cpp_ns', 'examples'],
+['packages', 'expat', 'check', 'python'],
+['packages', 'expat', 'check', 'cpp_ns', 'strict', 'examples', 'python'],
+['packages', 'expat', 'check', 'perl'],
+['packages', 'expat', 'check', 'cpp_ns', 'strict', 'examples', 'perl'],
+['packages', 'expat', 'check', 'csharp'],
+['packages', 'expat', 'check', 'cpp_ns', 'strict', 'examples', 'csharp'],
+['packages', 'expat', 'check', 'r'],
+['packages', 'expat', 'check', 'cpp_ns', 'strict', 'examples', 'r'],
+['packages', 'expat', 'check', 'ruby'],
+['packages', 'expat', 'check', 'cpp_ns', 'strict', 'examples', 'ruby']]
+
+faster_scan_xerces = [\
+['packages', 'xerces', 'check', 'strict', 'examples'],
+['packages', 'xerces', 'check', 'cpp_ns', 'examples'],
+['packages', 'xerces', 'check', 'python'],
+['packages', 'xerces', 'check', 'cpp_ns', 'strict', 'examples', 'python'],
+['packages', 'xerces', 'check', 'perl'],
+['packages', 'xerces', 'check', 'cpp_ns', 'strict', 'examples', 'perl'],
+['packages', 'xerces', 'check', 'csharp'],
+['packages', 'xerces', 'check', 'cpp_ns', 'strict', 'examples', 'csharp'],
+['packages', 'xerces', 'check', 'r'],
+['packages', 'xerces', 'check', 'cpp_ns', 'strict', 'examples', 'r'],
+['packages', 'xerces', 'check', 'ruby'],
+['packages', 'xerces', 'check', 'cpp_ns', 'strict', 'examples', 'ruby']]
+
 fast_scan_xerces = [\
 ['xerces', 'check', 'examples'],
 ['xerces', 'check', 'strict', 'examples'],
