@@ -55,7 +55,7 @@ conda skeleton pypi ${PACKAGE_NAME}
 
 # build the different versions
 conda build --python 2.7 ${PACKAGE_NAME}
-conda build --python 3.3 ${PACKAGE_NAME}
+#conda build --python 3.3 ${PACKAGE_NAME}
 conda build --python 3.5 ${PACKAGE_NAME}
 conda build --python 3.6 ${PACKAGE_NAME}
 conda build --python 3.7 ${PACKAGE_NAME}
