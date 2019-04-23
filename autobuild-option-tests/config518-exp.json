@@ -5,13 +5,13 @@
   "disk_space_saver": true,
   "cmake_generator": "Ninja",
   "configure_with_cmake": true,
-  "configure_experimental": false,
+  "configure_experimental": true,
   "test_all_combinations": false,
-  "config_combination" : "all_xml2"
+  "config_combination" : "xml2_packages"
  },
  "paths": {
-  "libsbml_exp_src_path": "/home/libsbml/development/sf_libsbml_experimental",
-  "libsbml_src_path": "/home/libsbml/development/sf_libsbml",
+  "libsbml_exp_src_path": "/home/libsbml/development/libSBML-5.18.0-Source-exp",
+  "libsbml_src_path": "/home/libsbml/development/libSBML-5.18.0-Source",
   "template_libsbml_source_path": "/home/sbml/development/sf_libsbml",
   "base_file": "ubuntu-1904-ninja-base-CMakeCache.txt"
  },
