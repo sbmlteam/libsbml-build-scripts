@@ -23,7 +23,7 @@ These following adds support for compiling libSBML bindings (Python, R, Java, Ru
  
  sudo apt-get -y install r-base default-jdk mono-complete ruby ruby-dev perl libperl-dev 
 
-These extra Python packages are rquired for fancy report generation and gneral python haappiness
+These extra Python packages are required for fancy report generation and general python happiness
 
   sudo apt-get -y install ipython ipython3 python-pip python3-pip python-xlsxwriter python3-xlsxwriter
   

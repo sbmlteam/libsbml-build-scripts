@@ -1,15 +1,15 @@
-# Setting up an Ubuntu 19.04 64 bit build environment for libSBML
+# Setting up an Ubuntu 18.04 64 bit build environment for libSBML
 
 ## Setup build environment
 
-Start with a default install of Ubuntu 19.04 and grab some build tools 
+Start with a default install of Ubuntu 18.04 and grab some build tools 
 
  sudo apt -y install git subversion build-essential g++ gfortran
  
 If running on a VirtualBox VM this is a good time to install the guest extensions.
 Continue with more build tools and libSBML dependencies.
 
-# Setting up an Ubuntu 16.04 64 bit build environment for libSBML
+# Setting up an Ubuntu 18.04 64 bit build environment for libSBML
 
  sudo apt -y install python python-all-dev python3-all-dev 
  

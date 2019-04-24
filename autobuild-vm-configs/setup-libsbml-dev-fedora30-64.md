@@ -39,7 +39,7 @@ sudo dnf install -y python-devel python3-devel perl perl-devel java-openjdk
 sudo dnf install -y ruby ruby-devel R R-devel mono-core
 ```
  
-These extra Python packages are rquired for fancy report generation and gneral python haappiness
+These extra Python packages are required for fancy report generation and general python happiness
 
 ```
 sudo dnf install -y ipython3 python-pip python3-pip python3-xlsxwriter
