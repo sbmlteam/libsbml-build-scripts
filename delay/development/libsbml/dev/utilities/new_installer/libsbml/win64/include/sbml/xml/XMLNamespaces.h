@@ -151,7 +151,7 @@ public:
    *
    * @ifnot hasDefaultArgs @htmlinclude warn-default-args-in-docs.html @endif@~
    */
-  int add (const std::string& uri, const std::string& prefix = "");
+  int add (const std::string& uri, const std::string prefix = "");
 
 
   /**
@@ -205,13 +205,13 @@ public:
    * @return the index of the given declaration, or <code>-1</code> if not
    * present.
    */
-  int getIndex (const std::string uri) const;
+  int getIndex (const std::string& uri) const;
 
   /**
    * Tests whether the given uri is contained in this set of namespaces. 
    * 
    */
-  bool containsUri(const std::string uri) const;
+  bool containsUri(const std::string& uri) const;
 
   /**
    * Look up the index of an XML namespace declaration by @p prefix.
@@ -226,7 +226,7 @@ public:
    * @return the index of the given declaration, or <code>-1</code> if not
    * present.
    */
-  int getIndexByPrefix (const std::string prefix) const;
+  int getIndexByPrefix (const std::string& prefix) const;
 
 
   /**
@@ -320,7 +320,7 @@ public:
    * 
    * @see getURI()
    */
-  std::string getURI (const std::string& prefix = "") const;
+  std::string getURI (const std::string prefix = "") const;
 
 
   /**

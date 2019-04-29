@@ -107,4 +107,9 @@
    application in case of an allocation / file system error. */
 /* #undef EXIT_ON_ERROR */
 
+/* Define to specify that the legacy math implementation ought to be used. */
+/* This is no longer an option but in case other programs compiling against
+   libsbml have used the flag it is always on */
+/* #undef LIBSBML_USE_LEGACY_MATH */
+
 #include <sbml/common/libsbml-config-packages.h>

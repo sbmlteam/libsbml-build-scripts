@@ -616,6 +616,7 @@ typedef enum
 , InvalidFunctionDefReturnType          = 20305 /*!< A function's return type must be either a number or a Boolean. */
 , OneMathElementPerFunc                 = 20306 /*!< A FunctionDefinition object may contain one <code>&lt;math&gt;</code> element. */
 , AllowedAttributesOnFunc               = 20307 /*!< Invalid attribute found on the FunctionDefinition object. */
+, OnlyCiInsideBVar                      = 99304
 , InvalidUnitDefId                      = 20401 /*!< Invalid 'id' attribute value for a UnitDefinition object. */
 , InvalidSubstanceRedefinition          = 20402 /*!< Invalid redefinition of built-in type 'substance'. */
 , InvalidLengthRedefinition             = 20403 /*!< Invalid redefinition of built-in type 'length'. */
@@ -908,6 +909,7 @@ typedef enum
 , MultiplierNotValidAttribute           = 99924 /*!< Attribute 'multiplier' on Unit objects is not supported in SBML Level 1. */
 , OffsetNotValidAttribute               = 99925 /*!< Attribute 'offset' on Unit objects is only available in SBML Level 2 Version 1. */
 , L3SpatialDimensionsUnset              = 99926 /*!< No value given for 'spatialDimensions' attribute; assuming a value of 3. */
+, OperationInterrupted                  = 99950 /*!< Operation was interrupted by the user. */
 , UnknownCoreAttribute                  = 99994 /*!< Encountered an unknown attribute in the SBML Core namespace. */
 , UnknownPackageAttribute               = 99995 /*!< Encountered an unknown attribute in an SBML Level 3 package namespace. */
 , PackageConversionNotSupported         = 99996 /*!< Conversion of SBML Level 3 package constructs is not yet supported. */
@@ -1200,12 +1202,12 @@ public:
      const unsigned int errorId  = 0
    , const unsigned int level    = SBML_DEFAULT_LEVEL
    , const unsigned int version  = SBML_DEFAULT_VERSION
-   , const std::string& details  = ""
+   , const std::string details  = ""
    , const unsigned int line     = 0
    , const unsigned int column   = 0
    , const unsigned int severity = LIBSBML_SEV_ERROR
    , const unsigned int category = LIBSBML_CAT_SBML
-   , const std::string& package  = "core"
+   , const std::string package  = "core"
    , const unsigned int pkgVersion = 1
   );
 
