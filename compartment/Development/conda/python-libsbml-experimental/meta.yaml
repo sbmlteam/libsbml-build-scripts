@@ -1,8 +1,8 @@
 {% set name = "python-libsbml-experimental" %}
-{% set version = "5.18.0" %}
+{% set version = "5.18.1" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "af6b4c0d0b1fd17656276a78aacb02c6579ad37c24a094a39f255e602ff04794" %}
+{% set hash_value = "0d532219867a0bef09785f100dc272f96e516a2f512cb9b3219197bef31465af" %}
 
 package:
   name: '{{ name|lower }}'

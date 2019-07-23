@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml level="3" version="1" xmlns="http://www.sbml.org/sbml/level3/version1/core">
+  <model extentUnits="mole" timeUnits="second" id="model" metaid="my-model">
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+        <rdf:Description rdf:about="#iSB619">
+          <bqbiol:hasTaxon>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/taxonomy/158879" />
+            </rdf:Bag>
+          </bqbiol:hasTaxon>
+          <bqmodel:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/pubmed/15752426" />
+            </rdf:Bag>
+          </bqmodel:isDescribedBy>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
+     <listOfUnitDefinitions>
+       <unitDefinition id="per_second">
+          <listOfUnits>
+             <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
+          </listOfUnits>
+       </unitDefinition>
+       <unitDefinition id="litre_per_mole_second">
+          <listOfUnits>
+             <unit kind="mole"   exponent="-1" scale="0" multiplier="1"/>
+             <unit kind="litre"  exponent="1"  scale="0" multiplier="1"/>
+             <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
+          </listOfUnits>
+       </unitDefinition>
+     </listOfUnitDefinitions>
+     <listOfCompartments>
+       <compartment id="comp" size="1e-14" spatialDimensions="3" units="litre" constant="true"/>
+     </listOfCompartments>
+     <listOfSpecies>
+       <species compartment="comp" id="E"  initialAmount="5e-21" boundaryCondition="false"
+                hasOnlySubstanceUnits="false" substanceUnits="mole" constant="false"/>
+       <species compartment="comp" id="S"  initialAmount="1e-20" boundaryCondition="false"
+                hasOnlySubstanceUnits="false" substanceUnits="mole" constant="false"/>
+       <species compartment="comp" id="P"  initialAmount="0"     boundaryCondition="false"
+                hasOnlySubstanceUnits="false" substanceUnits="mole" constant="false"/>
+       <species compartment="comp" id="ES" initialAmount="0"     boundaryCondition="false"
+                hasOnlySubstanceUnits="false" substanceUnits="mole" constant="false"/>
+     </listOfSpecies>
+     <listOfReactions>
+       <reaction id="veq" reversible="true" fast="false">
+          <annotation>
+             <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+               <rdf:Description rdf:about="#meta_R_HXAND">
+                 <bqbiol:is>
+                   <rdf:Bag>
+                     <rdf:li rdf:resource="http://identifiers.org/bigg.reaction/HXAND"/>
+                     <rdf:li rdf:resource="http://identifiers.org/biocyc/META:RXN-7682"/>
+                     <rdf:li rdf:resource="http://identifiers.org/ec-code/1.17.1.4"/>
+                     <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01768"/>
+                     <rdf:li rdf:resource="http://identifiers.org/metanetx.reaction/MNXR100747"/>
+                     <rdf:li rdf:resource="http://identifiers.org/rhea/24670"/>
+                     <rdf:li rdf:resource="http://identifiers.org/rhea/24671"/>
+                     <rdf:li rdf:resource="http://identifiers.org/rhea/24672"/>
+                     <rdf:li rdf:resource="http://identifiers.org/rhea/24673"/>
+                   </rdf:Bag>
+                 </bqbiol:is>
+               </rdf:Description>
+             </rdf:RDF>
+          </annotation>
+         <listOfReactants>
+            <speciesReference species="E"  stoichiometry="1" constant="true"/>
+            <speciesReference species="S"  stoichiometry="1" constant="true"/>
+         </listOfReactants>
+         <listOfProducts>
+            <speciesReference species="ES" stoichiometry="1" constant="true"/>
+         </listOfProducts>
+         <kineticLaw>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                 <times/>
+                 <ci>comp</ci>
+                 <apply>
+                    <minus/>
+                    <apply>
+                      <times/>
+                      <ci>kon</ci>
+                      <ci>E</ci>
+                      <ci>S</ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci>koff</ci>
+                      <ci>ES</ci>
+                    </apply>
+                 </apply>
+              </apply>
+            </math>
+            <listOfLocalParameters>
+              <localParameter id="kon"  value="1000000" units="litre_per_mole_second"/>
+              <localParameter id="koff" value="0.2"     units="per_second"/>
+            </listOfLocalParameters>
+         </kineticLaw>
+       </reaction>
+       <reaction id="vcat" reversible="false" fast="false">
+          <listOfReactants>
+             <speciesReference species="ES" stoichiometry="1" constant="true"/>
+          </listOfReactants>
+          <listOfProducts>
+             <speciesReference species="E"  stoichiometry="1" constant="true"/>
+             <speciesReference species="P"  stoichiometry="1" constant="true"/>
+          </listOfProducts>
+          <kineticLaw>
+             <math xmlns="http://www.w3.org/1998/Math/MathML">
+               <apply>
+                  <times/>
+                  <ci>comp</ci>
+                  <ci>kcat</ci>
+                  <ci>ES</ci>
+               </apply>
+             </math>
+             <listOfLocalParameters>
+               <localParameter id="kcat" value="0.1" units="per_second"/>
+             </listOfLocalParameters>
+          </kineticLaw>
+       </reaction>
+     </listOfReactions>
+  </model>
+</sbml>
