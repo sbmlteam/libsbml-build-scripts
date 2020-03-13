@@ -65,6 +65,10 @@ call buildV.bat 3 7 BUILD
 call buildV.bat 3 7 WHEEL
 call buildV.bat 3 7 INSTALLER
 
+call buildV.bat 3 8 BUILD
+call buildV.bat 3 8 WHEEL
+call buildV.bat 3 8 INSTALLER
+
 :: move files
 move dist\*.whl %THIS_DIR%\dist
 move dist\*.exe %THIS_DIR%\dist
