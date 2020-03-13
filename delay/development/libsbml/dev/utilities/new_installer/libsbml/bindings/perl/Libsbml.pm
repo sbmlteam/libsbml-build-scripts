@@ -87,7 +87,7 @@ against a specific library.
 @param option the library to test against, this can be one of
 "expat", "libxml", "xerces-c", "bzip2", "zip"
 @return 0 in case the libSBML has not been compiled against 
-that library and non-zero otherwise (for libraries 
+that library and nonzero otherwise (for libraries 
 that define an integer version number that number will 
 be returned).
 @see getLibSBMLDependencyVersionOf(const char  option)
@@ -2938,7 +2938,7 @@ C<opydetails> doc_returns_success_code
 
 =item SBase::getURI
 
-Gets the namespace URI to which this element belongs to.
+Returns the namespace URI to which this element belongs to.
 For example, all elements that belong to SBML Level&nbsp;3 Version&nbsp;1 Core
 must would have the URI C<"http://www.sbml.org/sbml/level3/version1/core">;
 all elements that belong to Layout Extension Version 1 for SBML Level&nbsp;3
@@ -11712,16 +11712,6 @@ otherwise.
 @internal
 
 
-=item Compartment::isExplicitlySetSpatialDimensions
-
-@internal
-
-
-=item Compartment::isExplicitlySetConstant
-
-@internal
-
-
 =item ListOfCompartments::ListOfCompartments
 
 Creates a new ListOfCompartments object.
@@ -12866,21 +12856,6 @@ C<opydoc> doc_renameunitsidref_common
 @internal
 
 
-=item Species::isExplicitlySetBoundaryCondition
-
-@internal
-
-
-=item Species::isExplicitlySetConstant
-
-@internal
-
-
-=item Species::isExplicitlySetHasOnlySubsUnits
-
-@internal
-
-
 =item ListOfSpecies::ListOfSpecies
 
 Creates a new ListOfSpecies object.
@@ -13202,7 +13177,7 @@ C<opydetails> doc_get_name
 
 =item Parameter::getValue
 
-Gets the numerical value of this Parameter.
+Returns the numerical value of this Parameter.
 @return the value of the "value" attribute of this Parameter, as a
 number of type C<double>.
 @note B<It is crucial> that callers not blindly call
@@ -13220,7 +13195,7 @@ uninitialized data in a computer's memory location.
 
 =item Parameter::getUnits
 
-Gets the units defined for this Parameter.
+Returns the units defined for this Parameter.
 The value of an SBML parameter's "units" attribute establishes the
 unit of measurement associated with the parameter's value.
 @return the value of the "units" attribute of this Parameter, as a
@@ -13233,7 +13208,7 @@ C<opydetails> doc_note_unassigned_unit_are_not_a_default
 
 =item Parameter::getConstant
 
-Gets the value of the "constant" attribute of this Parameter instance.
+Returns the value of the "constant" attribute of this Parameter instance.
 @return C<true> if this Parameter is declared as being constant,
 C<false> otherwise.
 C<opydetails> doc_note_parameter_about_constant
@@ -13525,11 +13500,6 @@ I<not> descend into child elements.
 
 
 =item Parameter::writeAttributes
-
-@internal
-
-
-=item Parameter::isExplicitlySetConstant
 
 @internal
 
@@ -14718,8 +14688,7 @@ Creates and returns a deep copy of this Rule object.
 =item Rule::getFormula
 
 Returns the mathematical expression of this Rule in text-string form.
-The text string is produced by
-@if java <code><a href="libsbml.html#formulaToString(org.sbml.libsbml.ASTNode)">libsbml.formulaToString()</a></code>@else SBML_formulaToString()@endif; please consult
+The text string is produced by @sbmlfunction{formulaToString, ASTNode}; please consult
 the documentation for that function to find out more about the format
 of the text-string formula.
 @return the formula text string for this Rule.
@@ -14729,6 +14698,7 @@ higher Levels of SBML, it has been replaced with a subelement named
 underlying math expression and this method can be used for models
 of all Levels of SBML.
 @see getMath()
+@see @sbmlfunction{formulaToL3String, ASTNode}
 
 
 =item Rule::getMath
@@ -19945,11 +19915,6 @@ optional in SBML Level&nbsp;3 Version&nbsp;2+
 
 
 =item Event::writeAttributes
-
-@internal
-
-
-=item Event::isExplicitlySetUVFTT
 
 @internal
 
@@ -33930,10 +33895,9 @@ ASTNodeType_t</a></h3> @else <h3><a class="anchor"
 name="ASTNodeType_t">The set of possible ASTNode types</a></h3> @endif@~
 C<opydetails> doc_astnode_types
 <h3><a class="anchor" name="math-convert">Converting between ASTs and text strings</a></h3>
-The text-string form of mathematical formulas produced by @if clike SBML_formulaToString()@endif@if csharp SBML_formulaToString()@endif@if python libsbml.formulaToString()@endif@if java <code><a href="libsbml.html#formulaToString(org.sbml.libsbml.ASTNode)">libsbml.formulaToString()</a></code>@endif@~ and
-read by @if clike SBML_parseFormula()@endif@if csharp SBML_parseFormula()@endif@if python libsbml.parseFormula()@endif@if java <code><a href="libsbml.html#parseFormula(java.lang.String)">libsbml.parseFormula(String formula)</a></code>@endif@~
-and
-@if clike SBML_parseL3Formula()@endif@if csharp SBML_parseL3Formula()@endif@if python libsbml.parseL3Formula()@endif@if java <code><a href="libsbml.html#parseL3Formula(java.lang.String)">libsbml.parseL3Formula(String formula)</a></code>@endif@~
+The text-string form of mathematical formulas produced by 
+@sbmlfunction{formulaToString,ASTNode_t} and @sbmlfunction{formulaToL3String,ASTNode_t}, 
+and read by @sbmlfunction{parseFormula,String} and @sbmlfunction{parseL3Formula,String}
 are in a simple C-inspired infix notation.  A
 formula in this text-string form can be handed to a program that
 understands SBML mathematical expressions, or used as part
@@ -33985,15 +33949,15 @@ differences.  The following table summarizes the differences between the
 predefined functions in SBML Level&nbsp;1 and the MathML equivalents in
 SBML Levels&nbsp;2 and &nbsp;3:
 @htmlinclude math-functions.html
-C<opydetails> doc_warning_L1_math_string_syntax
-@if clike @see SBML_parseL3Formula()@endif@~
-@if csharp @see SBML_parseL3Formula()@endif@~
-@if python @see libsbml.parseL3Formula()@endif@~
-@if java @see <code><a href="libsbml.html#parseL3Formula(String formula)">libsbml.parseL3Formula(String formula)</a></code>@endif@~
-@if clike @see SBML_parseFormula()@endif@~
-@if csharp @see SBML_parseFormula()@endif@~
-@if python @see libsbml.parseFormula()@endif@~
-@if java @see <code><a href="libsbml.html#parseFormula(String formula)">libsbml.parseFormula(String formula)</a></code>@endif@~
+C<opydetails> doc_note_l3_parser_encouraged
+@see @sbmlfunction{parseL3Formula, String}
+@see @sbmlfunction{parseL3FormulaWithSettings, String\, L3ParserSettings}
+@see @sbmlfunction{parseL3FormulaWithModel, String\, Model}
+@see @sbmlfunction{parseFormula, String}
+@see @sbmlfunction{formulaToL3StringWithSettings, ASTNode\, L3ParserSettings}
+@see @sbmlfunction{formulaToL3String, ASTNode}
+@see @sbmlfunction{formulaToString, ASTNode}
+@see @sbmlfunction{getDefaultL3ParserSettings,}
 
 =over
 
@@ -34014,8 +33978,9 @@ code indicating the type of node to create.
 =item ASTNode::ASTNode
 
 Creates a new ASTNode from the given Token.  The resulting ASTNode
-will contain the same data as the Token.
-@param token the Token to add.
+will contain the same data as the C<token>.
+@param token the token to use as a starting point for creating the
+ASTNode object.
 
 
 =item ASTNode::ASTNode
@@ -34028,9 +33993,8 @@ Copy constructor; creates a deep copy of the given ASTNode.
 
 Frees the name of this ASTNode and sets it to C<NULL>.
 This operation is only applicable to ASTNode objects corresponding to
-operators, numbers, or @link ASTNodeType_t#AST_UNKNOWN AST_UNKNOWN@endlink.  This method has no effect on other types of
-nodes.
-
+operators, numbers, or @link ASTNodeType_t#AST_UNKNOWN AST_UNKNOWN@endlink.  This 
+method has no effect on other types of nodes.
 C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 @li @link OperationReturnValues_t#LIBSBML_UNEXPECTED_ATTRIBUTE LIBSBML_UNEXPECTED_ATTRIBUTE@endlink
@@ -34041,18 +34005,15 @@ C<opydetails> doc_returns_success_code
 Converts this ASTNode to a canonical form and returns C<true> if
 successful, C<false> otherwise.
 The rules determining the canonical form conversion are as follows:
-\n=over\n
-
-\n=item\n\nIf the node type is @link ASTNodeType_t#AST_NAME AST_NAME@endlink
+@li If the node type is @link ASTNodeType_t#AST_NAME AST_NAME@endlink
 and the node name matches C<"ExponentialE">, C<"Pi">, C<"True"> or @c
 "False" the node type is converted to the corresponding 
 C<AST_CONSTANT_><em><span class="placeholder">X</span></em> type.
-\n=item\n\nIf the node type is an @link ASTNodeType_t#AST_FUNCTION AST_FUNCTION@endlink and the node name matches an SBML (MathML) function name, logical operator name, or
-relational operator name, the node is converted to the corresponding
+@li If the node type is an @link ASTNodeType_t#AST_FUNCTION AST_FUNCTION@endlink 
+and the node name matches an SBML (MathML) function name, logical operator name,
+or relational operator name, the node is converted to the corresponding
 C<AST_FUNCTION_><em><span class="placeholder">X</span></em> or
 C<AST_LOGICAL_><em><span class="placeholder">X</span></em> type.
-\n=back\n
-
 SBML Level&nbsp;1 function names are searched first; thus, for
 example, canonicalizing C<log> will result in a node type of @link ASTNodeType_t#AST_FUNCTION_LN AST_FUNCTION_LN@endlink.  (See the SBML
 Level&nbsp;1 Version&nbsp;2 Specification, Appendix C.)
@@ -34070,13 +34031,16 @@ in structural changes are: C<log10>, C<sqr>, and C<sqrt>.
 
 Adds the given node as a child of this ASTNode.
 Child nodes are added in-order, from left to right.
-@param disownedChild the ASTNode instance to add
+@param disownedChild the ASTNode instance to add.
+@param inRead C<false> by default; may be set to C<true> when 
+reading XML where there may be a lambda function with no
+bvar arguments.
 C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_FAILED LIBSBML_OPERATION_FAILED@endlink
 C<opydetails> doc_warning_modifying_structure
 @see prependChild(ASTNode  disownedChild)
-@see replaceChild(unsigned int n, ASTNode  disownedChild)
+@see replaceChild(unsigned int n, ASTNode  disownedChild, bool delreplaced)
 @see insertChild(unsigned int n, ASTNode  disownedChild)
 @see removeChild(unsigned int n)
 @see isWellFormedASTNode()
@@ -34086,13 +34050,14 @@ C<opydetails> doc_warning_modifying_structure
 
 Adds the given node as a child of this ASTNode.  This method adds
 child nodes from right to left.
-@param disownedChild the ASTNode instance to add
+@param disownedChild the ASTNode instance to add.
+Will become a child of the parent node.
 C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_FAILED LIBSBML_OPERATION_FAILED@endlink
 C<opydetails> doc_warning_modifying_structure
 @see addChild(ASTNode  disownedChild)
-@see replaceChild(unsigned int n, ASTNode  disownedChild)
+@see replaceChild(unsigned int n, ASTNode  disownedChild, bool delreplaced)
 @see insertChild(unsigned int n, ASTNode  disownedChild)
 @see removeChild(unsigned int n)
 
@@ -34100,23 +34065,24 @@ C<opydetails> doc_warning_modifying_structure
 =item ASTNode::removeChild
 
 Removes the nth child of this ASTNode object.
-@param n unsigned int the index of the child to remove
+@param n unsigned int the index of the child to remove.
 C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 @li @link OperationReturnValues_t#LIBSBML_INDEX_EXCEEDS_SIZE LIBSBML_INDEX_EXCEEDS_SIZE@endlink
 C<opydetails> doc_warning_modifying_structure
 @see addChild(ASTNode  disownedChild)
 @see prependChild(ASTNode  disownedChild)
-@see replaceChild(unsigned int n, ASTNode  disownedChild)
+@see replaceChild(unsigned int n, ASTNode  disownedChild, bool delreplaced)
 @see insertChild(unsigned int n, ASTNode  disownedChild)
 
 
 =item ASTNode::replaceChild
 
 Replaces and optionally deletes the nth child of this ASTNode with the given ASTNode.
-@param n unsigned int the index of the child to replace
-@param disownedChild ASTNode to replace the nth child
-@param delreplaced boolean indicating whether to delete the replaced child.
+@param n unsigned int the index of the child to replace.
+@param disownedChild ASTNode to replace the nth child.
+Will become a child of the parent node.
+@param delreplaced Boolean indicating whether to delete the replaced child.
 C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 @li @link OperationReturnValues_t#LIBSBML_INDEX_EXCEEDS_SIZE LIBSBML_INDEX_EXCEEDS_SIZE@endlink
@@ -34132,8 +34098,8 @@ C<opydetails> doc_warning_modifying_structure
 
 Inserts the given ASTNode at point n in the list of children
 of this ASTNode.
-@param n unsigned int the index of the ASTNode being added
-@param disownedChild ASTNode to insert as the nth child
+@param n unsigned int the index of the ASTNode being added.
+@param disownedChild ASTNode to insert as the nth child.
 C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 @li @link OperationReturnValues_t#LIBSBML_INDEX_EXCEEDS_SIZE LIBSBML_INDEX_EXCEEDS_SIZE@endlink
@@ -34141,7 +34107,7 @@ C<opydetails> doc_returns_success_code
 C<opydetails> doc_warning_modifying_structure
 @see addChild(ASTNode  disownedChild)
 @see prependChild(ASTNode  disownedChild)
-@see replaceChild(unsigned int n, ASTNode  disownedChild)
+@see replaceChild(unsigned int n, ASTNode  disownedChild, bool delreplaced)
 @see removeChild(unsigned int n)
 
 
@@ -34154,8 +34120,8 @@ the returned ASTNode and is responsible for deleting it.
 
 =item ASTNode::getChild
 
-Gets a child of this node according to its index number.
-@param n the index of the child to get
+Returns the child at index n of this node.
+@param n the index of the child to get.
 @return the nth child of this ASTNode or C<NULL> if this node has no nth
 child (C<n &gt; >
 @if clike getNumChildren()@else ASTNode::getNumChildren()@endif@~
@@ -34167,18 +34133,18 @@ C<- 1>).
 
 =item ASTNode::getLeftChild
 
-Gets the left child of this node.
+Returns the left child of this node.
 @return the left child of this ASTNode.  This is equivalent to calling
 @if clike getChild()@else ASTNode::getChild(unsigned int)@endif@~
 with an argument of C<0>.
 @see getNumChildren()
-@see getChild()
+@see getChild(@if java unsigned int@endif)
 @see getRightChild()
 
 
 =item ASTNode::getRightChild
 
-Gets the right child of this node.
+Returns the right child of this node.
 @return the right child of this ASTNode, or C<NULL> if this node has no
 right child.  If
 @if clike getNumChildren()@else ASTNode::getNumChildren()@endif@~
@@ -34188,53 +34154,58 @@ getChild( getNumChildren() - 1 );
 @endverbatim
 @see getNumChildren()
 @see getLeftChild()
-@see getChild()
+@see getChild(@if java unsigned int@endif)
 
 
 =item ASTNode::getNumChildren
 
-Gets the number of children that this node has.
+Returns the number of children of this node.
 @return the number of children of this ASTNode, or 0 is this node has
 no children.
 
 
 =item ASTNode::addSemanticsAnnotation
 
-Adds the given XMLNode as a <em>semantic annotation</em> of this ASTNode.
+Adds the given XMLNode as a MathML C<&lt;semantics&gt;>
+element to this ASTNode.
 @htmlinclude about-semantic-annotations.html
 @param disownedAnnotation the annotation to add.
+Will become a child of the parent node.
 C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_FAILED LIBSBML_OPERATION_FAILED@endlink
-@note Although SBML permits the semantic annotation construct in
-MathML expressions, the truth is that this construct has so far (at
-this time of this writing, which is early 2011) seen very little use
-in SBML software.  The full implications of using semantic annotations
-are still poorly understood.  If you wish to use this construct, we
-urge you to discuss possible uses and applications on the SBML
-discussion lists, particularly <a target="_blank"
-href="http://sbml.org/Forums">sbml-discuss&#64;caltech.edu</a> and/or <a
-target="_blank"
-href="http://sbml.org/Forums">sbml-interoperability&#64;caltech.edu</a>.
+C<opydetails> doc_note_mathml_semantic_annotations_uncommon
+@see getNumSemanticsAnnotations()
+@see getSemanticsAnnotation(@if java unsigned int@endif)
 
 
 =item ASTNode::getNumSemanticsAnnotations
 
-Gets the number of <em>semantic annotation</em> elements inside this node.
+Returns the number of MathML C<&lt;semantics&gt;> element
+elements on this node.
 @htmlinclude about-semantic-annotations.html
 @return the number of annotations of this ASTNode.
-@see ASTNode::addSemanticsAnnotation(XMLNode  disownedAnnotation)
+C<opydetails> doc_note_mathml_semantic_annotations_uncommon
+@see addSemanticsAnnotation(@if java XMLNode@endif)
+@see getSemanticsAnnotation(@if java unsigned int@endif)
 
 
 =item ASTNode::getSemanticsAnnotation
 
-Gets the nth semantic annotation of this node.
+Returns the nth MathML C<&lt;semantics&gt;> element on this
+ASTNode.
+
 @htmlinclude about-semantic-annotations.html
-@return the nth annotation of this ASTNode, or C<NULL> if this node has
+@param n the index of the annotation to return.  Callers should
+use ASTNode::getNumSemanticsAnnotations() to first find out how
+many annotations there are.
+@return the nth annotation inside this ASTNode, or C<NULL> if this node has
 no nth annotation (C<n &gt;>
 @if clike getNumSemanticsAnnotations()@else ASTNode::getNumSemanticsAnnotations()@endif@~
 C<- 1>).
-@see ASTNode::addSemanticsAnnotation(XMLNode  disownedAnnotation)
+C<opydetails> doc_note_mathml_semantic_annotations_uncommon
+@see getNumSemanticsAnnotations()
+@see addSemanticsAnnotation(@if java XMLNode@endif)
 
 
 =item ASTNode::getListOfNodes
@@ -34242,19 +34213,19 @@ C<- 1>).
 Returns a list of nodes satisfying a given predicate.
 This performs a depth-first search of the tree rooted at this ASTNode
 object, and returns a List of nodes for which the given function
-C<predicate(node)> returns C<true> (non-zero).
+C<predicate(node)> returns C<true> (nonzero).
 For portability between different programming languages, the predicate
 is passed in as a pointer to a function.  @if clike The function
-definition must have the type @sbmlconstant{AST_PLUS, ASTNode.h::ASTNodePredicate
-ASTNodePredicate@endlink, which is defined as
+definition must have the type 
+@link ASTNode.h::ASTNodePredicate ASTNodePredicate@endlink, which is defined as
 @verbatim
 int ( ASTNodePredicate) (const ASTNode  node);
 @endverbatim
-where a return value of non-zero represents C<true> and zero
+where a return value of nonzero represents C<true> and zero
 represents C<false>. @endif
-@param predicate the predicate to use
+@param predicate the predicate to use.
 @return the list of nodes for which the predicate returned C<true>
-(non-zero).  The List returned is owned by the caller and should be
+(nonzero).  The List returned is owned by the caller and should be
 deleted after the caller is done using it.  The ASTNode objects in the
 list; however, are not owned by the caller (as they still belong to
 the tree itself), and therefore should not be deleted.
@@ -34271,7 +34242,7 @@ except that instead of creating a new List object, it uses the one
 passed in as argument C<lst>.  This method a depth-first search of the
 tree rooted at this ASTNode object, and adds to the list C<lst> the
 nodes for which the given function C<predicate(node)> returns
-C<true> (non-zero).
+C<true> (nonzero).
 For portability between different programming languages, the predicate
 is passed in as a pointer to a function.  The function definition must
 have the type @link ASTNode.h::ASTNodePredicate ASTNodePredicate
@@ -34279,16 +34250,16 @@ have the type @link ASTNode.h::ASTNodePredicate ASTNodePredicate
 @verbatim
 int ( ASTNodePredicate) (const ASTNode_t  node);
 @endverbatim
-where a return value of non-zero represents C<true> and zero
+where a return value of nonzero represents C<true> and zero
 represents C<false>.
 @param predicate the predicate to use.
 @param lst the List to which ASTNode objects should be added.
-@see getListOfNodes(ASTNodePredicate predicate) const
+@see getListOfNodes(@if java ASTNodePredicate@endif)
 
 
 =item ASTNode::getCharacter
 
-Gets the value of this node as a single character.
+Returns the value of this node as a single character.
 This function should be called only when
 @if clike getType()@else ASTNode::getType()@endif@~ returns
 @link ASTNodeType_t#AST_PLUS AST_PLUS@endlink,
@@ -34301,102 +34272,155 @@ This function should be called only when
 
 =item ASTNode::getId
 
-Gets the id of this ASTNode.
+Returns the MathML C<id> attribute value of this ASTNode.
 @return the MathML id of this ASTNode.
+@see isSetId()
+@see setId(const std::string& id)
+@see unsetId()
 
 
 =item ASTNode::getClass
 
-Gets the class of this ASTNode.
-@return the MathML class of this ASTNode.
+Returns the MathML C<class> attribute value of this ASTNode.
+@return the MathML class of this ASTNode, or an empty string if it does not exist.
+@see isSetClass()
+@see @if java setClassName(const std::string& id)@else setClass()@endif@~
+@see unsetClass()
 
 
 =item ASTNode::getStyle
 
-Gets the style of this ASTNode.
-@return the MathML style of this ASTNode.
+Returns the MathML C<style> attribute value of this ASTNode.
+@return the MathML style of this ASTNode, or an empty string if it does not exist.
+@see isSetStyle()
+@see setStyle(const std::string& id)
+@see unsetStyle()
 
 
 =item ASTNode::getInteger
 
-Gets the value of this node as an integer.
-This function should be called only when @if clike getType()@else
-ASTNode::getType()@endif@~ C<== @link ASTNodeType_t#AST_INTEGER AST_INTEGER@endlink>.
-@return the value of this ASTNode as a (C<long>) integer.
+Returns the value of this node as an integer.
+If this node type is @link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink, this
+method returns the value of the numerator.
+@return the value of this ASTNode as a (C<long>) integer if type @link ASTNodeType_t#AST_INTEGER AST_INTEGER@endlink; the numerator if type @link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink, and C<0> otherwise.
+@note This function should be called only when
+@if clike getType()@else ASTNode::getType()@endif@~ returns
+@link ASTNodeType_t#AST_INTEGER AST_INTEGER@endlink or
+@link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink.
+It will return C<0> if the node type is I<not> one of these, but since
+C<0> may be a valid value for integer, it is important to be sure that
+the node type is one of the expected types in order to understand if
+C<0> is the actual value.
+@see getNumerator()
+@see getDenominator()
 
 
 =item ASTNode::getName
 
-Gets the value of this node as a string.
+Returns the value of this node as a string.
 This function may be called on nodes that (1) are not operators, i.e.,
 nodes for which @if clike isOperator()@else
 ASTNode::isOperator()@endif@~ returns C<false>, and (2) are not numbers,
-i.e., @if clike isNumber()@else ASTNode::isNumber()@endif@~ returns @c
-false.
-
-@return the value of this ASTNode as a string.
+i.e., @if clike isNumber()@else ASTNode::isNumber()@endif@~ returns
+C<NULL>.
+@return the value of this ASTNode as a string, or C<NULL> if it is
+a node that does not have a name equivalent (e.g., if it is a number).
 
 
 =item ASTNode::getOperatorName
 
-Gets the value of this operator node as a string.  This function may be called
-on nodes that are operators, i.e., nodes for which
-@if clike isOperator()@else ASTNode::isOperator()@endif@~
-returns C<true>.
-@return the name of this operator ASTNode as a string (or NULL if not an operator).
+Returns the value of this operator node as a string.
+This function may be called on nodes that are operators, i.e., nodes for
+which @if clike isOperator()@else ASTNode::isOperator()@endif@~ returns
+C<true>.
+@return the name of this operator ASTNode as a string (or C<NULL> if not
+an operator).
 
 
 =item ASTNode::getNumerator
 
-Gets the value of the numerator of this node.  This function should be
-called only when
-@if clike getType()@else ASTNode::getType()@endif@~
-C<== @link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink>.
-@return the value of the numerator of this ASTNode.
+Returns the value of the numerator of this node if of
+type @link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink, or the 
+numerical value of the node if of type 
+@link ASTNodeType_t#AST_INTEGER AST_INTEGER@endlink; C<0> otherwise.
+This function should be called only when
+@if clike getType()@else ASTNode::getType()@endif@~ returns
+@link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink or
+@link ASTNodeType_t#AST_INTEGER AST_INTEGER@endlink.
+It will return C<0> if the node type is another type, but since C<0> may
+be a valid value for the denominator of a rational number or of an integer, it is
+important to be sure that the node type is the correct type in order to
+correctly interpret the returned value.
+@return the value of the numerator of this ASTNode if
+@link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink, the value if 
+@link ASTNodeType_t#AST_INTEGER AST_INTEGER@endlink, or C<0> otherwise.
+@see getDenominator()
+@see getInteger()
 
 
 =item ASTNode::getDenominator
 
-Gets the value of the denominator of this node.  This function should
-be called only when
-@if clike getType()@else ASTNode::getType()@endif@~
-C<== @link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink>.
-@return the value of the denominator of this ASTNode.
+Returns the value of the denominator of this node.
+@return the value of the denominator of this ASTNode, or C<1> (true) if
+this node is not of type @link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink.
+@note This function should be called only when
+@if clike getType()@else ASTNode::getType()@endif@~ returns
+@link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink.
+It will return C<1> if the node type is another type, but since C<1> may
+be a valid value for the denominator of a rational number, it is
+important to be sure that the node type is the correct type in order to
+correctly interpret the returned value.
+@see getNumerator()
 
 
 =item ASTNode::getReal
 
-Gets the real-numbered value of this node.  This function
-should be called only when
-@if clike isReal()@else ASTNode::isReal()@endif@~
-C<== true>.
+Returns the real-numbered value of this node.
 This function performs the necessary arithmetic if the node type is
 @link ASTNodeType_t#AST_REAL_E AST_REAL_E@endlink (<em>mantissa  
-10<sup> exponent</sup></em>) or @link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink (<em>numerator / denominator</em>).
-@return the value of this ASTNode as a real (double).
+10<sup>exponent</sup></em>) or
+@link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink
+(<em>numerator / denominator</em>).
+@return the value of this ASTNode as a real (double), or C<0>
+if this is not a node that holds a number.
+@note This function should be called only when this ASTNode has a
+numerical value type.  It will return C<0> if the node type is another
+type, but since C<0> may be a valid value, it is important to be sure
+that the node type is the correct type in order to correctly interpret
+the returned value.
 
 
 =item ASTNode::getMantissa
 
-Gets the mantissa value of this node.  This function should be called
-only when @if clike getType()@else ASTNode::getType()@endif@~
-returns @link ASTNodeType_t#AST_REAL_E AST_REAL_E@endlink
-or @link ASTNodeType_t#AST_REAL AST_REAL@endlink.
-If @if clike getType()@else ASTNode::getType()@endif@~
-returns @link ASTNodeType_t#AST_REAL AST_REAL@endlink,
-this method is identical to
-@if clike getReal()@else ASTNode::getReal()@endif.
-@return the value of the mantissa of this ASTNode.
+Returns the mantissa value of this node.
+If @if clike getType()@else ASTNode::getType()@endif@~ returns
+@link ASTNodeType_t#AST_REAL AST_REAL@endlink, this method is
+identical to ASTNode::getReal().
+@return the value of the mantissa of this ASTNode, or C<0> if this
+node is not a type that has a real-numbered value.
+@note This function should be called only when
+@if clike getType()@else ASTNode::getType()@endif@~ returns
+@link ASTNodeType_t#AST_REAL_E AST_REAL_E@endlink,
+@link ASTNodeType_t#AST_REAL AST_REAL@endlink or
+@link ASTNodeType_t#AST_NAME_AVOGADRO AST_NAME_AVOGADRO@endlink.  It
+will return C<0> if the node type is another type, but since C<0> may be
+a valid value, it is important to be sure that the node type is the
+correct type in order to correctly interpret the returned value.
+@see getExponent()
 
 
 =item ASTNode::getExponent
 
-Gets the exponent value of this ASTNode.  This function should be
-called only when
+Returns the exponent value of this ASTNode.
+@return the value of the exponent of this ASTNode, or C<0> if this
+is not a type of node that has an exponent.
+@note This function should be called only when
 @if clike getType()@else ASTNode::getType()@endif@~
-returns @link ASTNodeType_t#AST_REAL_E AST_REAL_E@endlink
-or @link ASTNodeType_t#AST_REAL AST_REAL@endlink.
-@return the value of the exponent of this ASTNode.
+returns @link ASTNodeType_t#AST_REAL_E AST_REAL_E@endlink.
+It will return C<0> if the node type is another type, but since C<0> may
+be a valid value, it is important to be sure that the node type is the
+correct type in order to correctly interpret the returned value.
+@see getMantissa()
 
 
 =item ASTNode::getValue
@@ -34420,7 +34444,7 @@ of type @link ASTNodeType_t#AST_NAME_TIME AST_NAME_TIME@endlink.
 
 =item ASTNode::getPrecedence
 
-Gets the precedence of this node in the infix math syntax of SBML
+Returns the precedence of this node in the infix math syntax of SBML
 Level&nbsp;1.  For more information about the infix syntax, see the
 discussion about <a href="#math-convert">text string formulas</a> at
 the top of the documentation for ASTNode.
@@ -34429,101 +34453,106 @@ the top of the documentation for ASTNode.
 
 =item ASTNode::getType
 
-Gets the type of this ASTNode.  The value returned is one of the
-enumeration values such as @link ASTNodeType_t#AST_LAMBDA AST_LAMBDA@endlink, @link ASTNodeType_t#AST_PLUS AST_PLUS@endlink,
-etc.
-
+Returns the type of this ASTNode.
+The value returned is one of the Core AST type codes such as
+@link ASTNodeType_t#AST_LAMBDA AST_LAMBDA@endlink,
+@link ASTNodeType_t#AST_PLUS AST_PLUS@endlink, etc.
 @return the type of this ASTNode.
 
 
 =item ASTNode::getUnits
 
-Gets the units of this ASTNode.  
+Returns the units of this ASTNode.  
 @htmlinclude about-sbml-units-attrib.html
 @return the units of this ASTNode.
 @note The C<sbml:units> attribute is only available in SBML
 Level&nbsp;3.  It may not be used in Levels 1&ndash;2 of SBML.
-@if clike @see SBML_parseL3Formula()@endif@~
-@if csharp @see SBML_parseL3Formula()@endif@~
-@if python @see libsbml.parseL3Formula()@endif@~
-@if java @see <code><a href="libsbml.html#parseL3Formula(String formula)">libsbml.parseL3Formula(String formula)</a></code>@endif@~
+@see @sbmlfunction{parseL3Formula, String}
 
 
 =item ASTNode::isAvogadro
 
-Returns C<true> (non-zero) if this node is the special 
+Returns C<true> (nonzero) if this node is the special 
 symbol C<avogadro>.  The predicate returns C<false> (zero) otherwise.
-@return C<true> if this ASTNode is the special symbol avogadro.
-@if clike @see SBML_parseL3Formula()@endif@~
-@if csharp @see SBML_parseL3Formula()@endif@~
-@if python @see libsbml.parseL3Formula()@endif@~
-@if java @see <code><a href="libsbml.html#parseL3Formula(String formula)">libsbml.parseL3Formula(String formula)</a></code>@endif@~
+SBML Level&nbsp;3 introduced a predefined MathML C<&lt;csymbol&gt;>
+for the value of Avogadro's constant.  LibSBML stores this internally as
+a node of type @link ASTNodeType_t#AST_NAME_AVOGADRO AST_NAME_AVOGADRO@endlink.
+This method returns C<true> if this node has that type.
+@return C<true> if this ASTNode is the special symbol avogadro,
+C<false> otherwise.
+@see @sbmlfunction{parseL3Formula, String}
 
 
 =item ASTNode::isBoolean
 
-Returns C<true> (non-zero) if this node has a boolean type
-(a logical operator, a relational operator, or the constants C<true>
-or C<false>).
-@return true if this ASTNode is a boolean, false otherwise.
+Returns C<true> if this node has a Boolean type.
+The ASTNode objects that have Boolean types are the logical operators,
+relational operators, and the constants C<true> or C<false>.
+@return C<true> if this ASTNode has a Boolean type, C<false> otherwise.
 
 
 =item ASTNode::returnsBoolean
 
-Returns C<true> (non-zero) if this node returns a boolean type
+Returns C<true> (nonzero) if this node returns a Boolean type
 or C<false> (zero) otherwise.
 This function looks at the whole ASTNode rather than just the top 
 level of the ASTNode. Thus it will consider return values from
 piecewise statements.  In addition, if this ASTNode uses a function
 call, the return value of the functionDefinition will be determined.
 Note that this is only possible where the ASTNode can trace its parent
-Model, that is, the ASTNode must represent the math element of some
+Model, that is, the ASTNode must represent the C<&lt;math&gt;> element of some
 SBML object that has already been added to an instance of an SBMLDocument.
+If this is not the case, this function will return C<false> unless
+isBoolean() returns C<true>.
 @see isBoolean()
-@return true if this ASTNode returns a boolean, false otherwise.
+@return C<true> if this ASTNode returns a Boolean, C<false> otherwise.
 
 
 =item ASTNode::isConstant
 
-Returns C<true> (non-zero) if this node represents a MathML
+Returns C<true> (nonzero) if this node represents a MathML
 constant (e.g., C<true>, C<Pi>).
 @return C<true> if this ASTNode is a MathML constant, C<false> otherwise.
-@note this function will also return C<true> for @link ASTNodeType_t#AST_NAME_AVOGADRO AST_NAME_AVOGADRO@endlink in SBML Level&nbsp;3.
+@note this function will also return C<true> for nodes of type
+@link ASTNodeType_t#AST_NAME_AVOGADRO AST_NAME_AVOGADRO@endlink in SBML Level&nbsp;3.
 
 
 =item ASTNode::isCiNumber
 
-Returns C<true> (non-zero) if this node represents a MathML
+Returns C<true> (nonzero) if this node represents a MathML
 ci element representing a value not a function (e.g., C<true>, C<Pi>).
 @return C<true> if this ASTNode is a MathML ci element, C<false> otherwise.
 
 
 =item ASTNode::isConstantNumber
 
-Returns C<true> (non-zero) if this node represents a MathML
-constant with numeric value(e.g., C<Pi>).
+Returns C<true> (nonzero) if this node represents a MathML
+constant with numeric value (e.g., C<Pi>).
 @return C<true> if this ASTNode is a MathML constant, C<false> otherwise.
-@note this function will also return C<true> for @link ASTNodeType_t#AST_NAME_AVOGADRO AST_NAME_AVOGADRO@endlink in SBML Level&nbsp;3.
+@note this function will also return C<true> for 
+@link ASTNodeType_t#AST_NAME_AVOGADRO AST_NAME_AVOGADRO@endlink in SBML Level&nbsp;3.
 
 
 =item ASTNode::isCSymbolFunction
 
-Returns C<true> (non-zero) if this node represents a MathML
+Returns C<true> (nonzero) if this node represents a MathML
 csymbol representing a function.
 @return C<true> if this ASTNode is a MathML csymbol function, C<false> otherwise.
 
 
 =item ASTNode::isFunction
 
-Returns C<true> (non-zero) if this node represents a
-MathML function (e.g., C<abs()>), or an SBML Level&nbsp;1
-function, or a user-defined function.
+Returns C<true> if this node represents a function.
+The three types of functions in SBML are MathML functions (e.g.,
+C<abs()>), SBML Level&nbsp;1 functions (in the SBML
+Level&nbsp;1 math syntax), and user-defined functions (using
+FunctionDefinition in SBML Level&nbsp;2 and&nbsp;3).
 @return C<true> if this ASTNode is a function, C<false> otherwise.
 
 
 =item ASTNode::isInfinity
 
-Returns C<true> (non-zero) if this node represents
+Returns C<true> (nonzero) if this node represents
 the special IEEE 754 value infinity, C<false> (zero) otherwise.
 @return C<true> if this ASTNode is the special IEEE 754 value infinity,
 C<false> otherwise.
@@ -34531,60 +34560,71 @@ C<false> otherwise.
 
 =item ASTNode::isInteger
 
-Returns C<true> (non-zero) if this node contains an
+Returns C<true> (nonzero) if this node contains an
 integer value, C<false> (zero) otherwise.
 @return C<true> if this ASTNode is of type @link ASTNodeType_t#AST_INTEGER AST_INTEGER@endlink, C<false> otherwise.
 
 
 =item ASTNode::isLambda
 
-Returns C<true> (non-zero) if this node is a MathML
+Returns C<true> (nonzero) if this node is a MathML
 C<&lt;lambda&gt;>, C<false> (zero) otherwise.
 @return C<true> if this ASTNode is of type @link ASTNodeType_t#AST_LAMBDA AST_LAMBDA@endlink, C<false> otherwise.
 
 
 =item ASTNode::isLog10
 
-Returns C<true> (non-zero) if this node represents a 
-C<log10> function, C<false> (zero) otherwise.  More precisely, this
-predicate returns C<true> if the node type is @link ASTNodeType_t#AST_FUNCTION_LOG AST_FUNCTION_LOG@endlink with two
+Returns C<true> (nonzero) if this node represents a 
+C<log10> function, C<false> (zero) otherwise. 
+More precisely, this predicate returns C<true> if the node type is 
+@link ASTNodeType_t#AST_FUNCTION_LOG AST_FUNCTION_LOG@endlink with two
 children, the first of which is an @link ASTNodeType_t#AST_INTEGER AST_INTEGER@endlink equal to 10.
-@return C<true> if the given ASTNode represents a log10() function, @c
-false otherwise.
-@if clike @see SBML_parseL3Formula()@endif@~
-@if csharp @see SBML_parseL3Formula()@endif@~
-@if python @see libsbml.parseL3Formula()@endif@~
-@if java @see <code><a href="libsbml.html#parseL3Formula(String formula)">libsbml.parseL3Formula(String formula)</a></code>@endif@~
+@return C<true> if the given ASTNode represents a log10() function,
+C<false> otherwise.
+@see @sbmlfunction{parseL3Formula, String}
 
 
 =item ASTNode::isLogical
 
-Returns C<true> (non-zero) if this node is a MathML
-logical operator (i.e., C<and>, C<or>, C<not>, C<xor>).
-@return C<true> if this ASTNode is a MathML logical operator
+Returns C<true> (nonzero) if this node is a MathML
+logical operator.
+The possible MathML logical operators in SBML core are C<and>, C<or>, C<not>,
+C<xor>, and (as of SBML Level&nbsp;3 Version&nbsp;2) C<implies>.  If
+the node represents a logical operator defined in a Level&nbsp;3 package,
+it will also return C<true>.
+@return C<true> if this ASTNode is a MathML logical operator, C<false>
+otherwise.
 
 
 =item ASTNode::isName
 
-Returns C<true> (non-zero) if this node is a user-defined
-variable name in SBML L1, L2 (MathML), or the special symbols C<time>
-or C<avogadro>.  The predicate returns C<false> (zero) otherwise.
+Returns C<true> if this node is a user-defined variable name
+or the symbols for time or Avogadro's constant.
+SBML Levels&nbsp;2 and&nbsp;3 provides C<&lt;csymbol&gt;>
+definitions for "time" and "avogadro", which can be used to represent
+simulation time and Avogadro's constant in MathML.  Note that this
+method does I<not> return C<true> for the other C<csymbol>
+values defined by SBML, "delay", because the "delay" is a function
+and not a constant or variable.  Similarly, this function returns
+C<false> for the csymbol functions added by the 'Distributions' package.
 @return C<true> if this ASTNode is a user-defined variable name in SBML
-L1, L2 (MathML) or the special symbols delay or time.
+or the special symbols for time or Avogadro's constant. It returns
+C<false> otherwise.
 
 
 =item ASTNode::isNaN
 
-Returns C<true> (non-zero) if this node represents the
+Returns C<true> (nonzero) if this node represents the
 special IEEE 754 value "not a number" (NaN), C<false> (zero)
 otherwise.
 
-@return C<true> if this ASTNode is the special IEEE 754 NaN.
+@return C<true> if this ASTNode is the special IEEE 754 NaN, C<false>
+otherwise.
 
 
 =item ASTNode::isNegInfinity
 
-Returns C<true> (non-zero) if this node represents the
+Returns C<true> (nonzero) if this node represents the
 special IEEE 754 value "negative infinity", C<false> (zero) otherwise.
 @return C<true> if this ASTNode is the special IEEE 754 value negative
 infinity, C<false> otherwise.
@@ -34592,7 +34632,7 @@ infinity, C<false> otherwise.
 
 =item ASTNode::isNumber
 
-Returns C<true> (non-zero) if this node contains a number,
+Returns C<true> (nonzero) if this node contains a number,
 C<false> (zero) otherwise.  This is functionally equivalent to the
 following code:
 @verbatim
@@ -34604,29 +34644,35 @@ isInteger() || isReal()
 
 =item ASTNode::isOperator
 
-Returns C<true> (non-zero) if this node is a mathematical
-operator, meaning, C<+>, C<->, C< >, 
-C</> or C<^> (power).
-@return C<true> if this ASTNode is an operator.
+Returns C<true> if this node is a mathematical
+operator.
+
+The possible mathematical operators in the MathML syntax supported by
+SBML are C<+>, C<->, C< >, C</>
+and C<^> (power).
+@return C<true> if this ASTNode is an operator, C<false> otherwise.
 
 
 =item ASTNode::isPiecewise
 
-Returns C<true> (non-zero) if this node is the MathML
-C<&lt;piecewise&gt;> construct, C<false> (zero) otherwise.
-@return C<true> if this ASTNode is a MathML C<piecewise> function
+Returns C<true> (nonzero) if this node is the MathML
+C<&lt;piecewise&gt;> construct.
+@return C<true> if this ASTNode is a MathML C<piecewise> function, 
+C<false> (zero) otherwise.
 
 
 =item ASTNode::isRational
 
-Returns C<true> (non-zero) if this node represents a rational
-number, C<false> (zero) otherwise.
-@return C<true> if this ASTNode is of type @link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink.
+Returns C<true> (nonzero) if this node represents a rational
+number.
+
+@return C<true> if this ASTNode is of type 
+@link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink, C<false> (zero) otherwise.
 
 
 =item ASTNode::isReal
 
-Returns C<true> (non-zero) if this node can represent a
+Returns C<true> (nonzero) if this node can represent a
 real number, C<false> (zero) otherwise.
 More precisely, this node must be of one of the following types: @link ASTNodeType_t#AST_REAL AST_REAL@endlink, @link ASTNodeType_t#AST_REAL_E AST_REAL_E@endlink or @link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink.
 @return C<true> if the value of this ASTNode can represented as a real
@@ -34635,8 +34681,9 @@ number, C<false> otherwise.
 
 =item ASTNode::isRelational
 
-Returns C<true> (non-zero) if this node is a MathML
-relational operator, meaning C<==>, C<&gt;=>,
+Returns C<true> if this node is a MathML
+relational operator.
+The MathML relational operators are C<==>, C<&gt;=>,
 C<&gt;>, C<&lt;>, and C<!=>.
 @return C<true> if this ASTNode is a MathML relational operator, @c
 false otherwise
@@ -34644,7 +34691,7 @@ false otherwise
 
 =item ASTNode::isSqrt
 
-Returns C<true> (non-zero) if this node represents a
+Returns C<true> (nonzero) if this node represents a
 square root function, C<false> (zero) otherwise.
 More precisely, the node type must be @link ASTNodeType_t#AST_FUNCTION_ROOT AST_FUNCTION_ROOT@endlink with two
 children, the first of which is an @link ASTNodeType_t#AST_INTEGER AST_INTEGER@endlink node having value equal to 2.
@@ -34654,28 +34701,23 @@ C<false> otherwise.
 
 =item ASTNode::isUMinus
 
-Returns C<true> (non-zero) if this node is a unary minus
+Returns C<true> (nonzero) if this node is a unary minus
 operator, C<false> (zero) otherwise.
 A node is defined as a unary minus node if it is of type @link ASTNodeType_t#AST_MINUS AST_MINUS@endlink and has exactly one child.
 For numbers, unary minus nodes can be "collapsed" by negating the
-number.  In fact, 
-@if clike SBML_parseFormula()@endif@if csharp SBML_parseFormula()@endif@if python libsbml.parseFormula()@endif@if java <code><a href="libsbml.html#parseFormula(java.lang.String)">libsbml.parseFormula(String formula)</a></code>@endif@~
-does this during its parsing process, and 
-@if clike SBML_parseL3Formula()@endif@if csharp SBML_parseL3Formula()@endif@if python libsbml.parseL3Formula()@endif@if java <code><a href="libsbml.html#parseL3Formula(java.lang.String)">libsbml.parseL3Formula(String formula)</a></code>@endif@~
+number.  In fact, @sbmlfunction{parseFormula, String} 
+does this during its parsing process, and @sbmlfunction{parseL3Formula, String} 
 has a configuration option that allows this behavior to be turned
 on or off.  However, unary minus nodes for symbols
 (@link ASTNodeType_t#AST_NAME AST_NAME@endlink) cannot
 be "collapsed", so this predicate function is necessary.
 @return C<true> if this ASTNode is a unary minus, C<false> otherwise.
-@if clike @see SBML_parseL3Formula()@endif@~
-@if csharp @see SBML_parseL3Formula()@endif@~
-@if python @see libsbml.parseL3Formula()@endif@~
-@if java @see <code><a href="libsbml.html#parseL3Formula(String formula)">libsbml.parseL3Formula(String formula)</a></code>@endif@~
+@see @sbmlfunction{parseL3Formula, String}
 
 
 =item ASTNode::isUPlus
 
-Returns C<true> (non-zero) if this node is a unary plus
+Returns C<true> (nonzero) if this node is a unary plus
 operator, C<false> (zero) otherwise.  A node is defined as a unary
 minus node if it is of type @link ASTNodeType_t#AST_MINUS AST_MINUS@endlink and has exactly one child.
 @return C<true> if this ASTNode is a unary plus, C<false> otherwise.
@@ -34683,15 +34725,15 @@ minus node if it is of type @link ASTNodeType_t#AST_MINUS AST_MINUS@endlink and 
 
 =item ASTNode::isUserFunction
 
-Returns C<true> (non-zero) if this node represents a
+Returns C<true> (nonzero) if this node represents a
 MathML user-defined function.
 @return C<true> if this ASTNode is a user-defined function, C<false> otherwise.
 
 
 =item ASTNode::hasTypeAndNumChildren
 
-Returns C<true> if this node is of type @param type
-and has @param numchildren number of children.  Designed
+Returns C<true> if this node is of type C<type>
+and has C<numchildren> number of children.  Designed
 for use in cases where it is useful to discover if the node is
 a unary not or unary minus, or a times node with no children, etc.
 @return C<true> if this ASTNode is has the specified type and number
@@ -34700,10 +34742,12 @@ of children, C<false> otherwise.
 
 =item ASTNode::isUnknown
 
-Returns C<true> (non-zero) if this node has an unknown type.
-"Unknown" nodes have the type @link ASTNodeType_t#AST_UNKNOWN AST_UNKNOWN@endlink.  Nodes with unknown types will not appear in an
+Returns C<true> (nonzero) if this node has an unknown type.
+"Unknown" nodes have the type @link ASTNodeType_t#AST_UNKNOWN AST_UNKNOWN@endlink.  
+Nodes with unknown types will not appear in an
 ASTNode tree returned by libSBML based upon valid SBML input; the only
-situation in which a node with type @link ASTNodeType_t#AST_UNKNOWN AST_UNKNOWN@endlink may appear is immediately after having create a
+situation in which a node with type @link ASTNodeType_t#AST_UNKNOWN AST_UNKNOWN@endlink 
+may appear is immediately after having create a
 new, untyped node using the ASTNode constructor.  Callers creating
 nodes should endeavor to set the type to a valid node type as soon as
 possible after creating new nodes.
@@ -34712,45 +34756,61 @@ possible after creating new nodes.
 
 =item ASTNode::isSetId
 
-Returns C<true> (non-zero) if this node has a value for the MathML
+Returns C<true> (nonzero) if this node has a value for the MathML
 attribute "id".
-@return true if this ASTNode has an attribute id, false otherwise.
+@return C<true> if this ASTNode has an attribute id, C<false> otherwise.
+@see isSetClass()
+@see isSetStyle()
+@see setId(const std::string& id)
+@see unsetId()
 
 
 =item ASTNode::isSetClass
 
-Returns C<true> (non-zero) if this node has a value for the MathML
+Returns C<true> (nonzero) if this node has a value for the MathML
 attribute "class".
-@return true if this ASTNode has an attribute class, false otherwise.
+@return C<true> if this ASTNode has an attribute class, C<false> otherwise.
+@see isSetId()
+@see isSetStyle()
+@see @if java setClassName(const std::string& id)@else setClass()@endif@~
+@see unsetClass()
 
 
 =item ASTNode::isSetStyle
 
-Returns C<true> (non-zero) if this node has a value for the MathML
+Returns C<true> (nonzero) if this node has a value for the MathML
 attribute "style".
-@return true if this ASTNode has an attribute style, false otherwise.
+@return C<true> if this ASTNode has an attribute style, C<false> otherwise.
+@see isSetClass()
+@see isSetId()
+@see setStyle(const std::string& id)
+@see unsetStyle()
 
 
 =item ASTNode::isSetUnits
 
-Returns C<true> (non-zero) if this node has the attribute
+Returns C<true> (nonzero) if this node has the attribute
 C<sbml:units>.
 
 @htmlinclude about-sbml-units-attrib.html
 @return C<true> if this ASTNode has units associated with it, C<false> otherwise.
 @note The C<sbml:units> attribute is only available in SBML
 Level&nbsp;3.  It may not be used in Levels 1&ndash;2 of SBML.
+@see hasUnits()
+@see setUnits(const std::string& units)
 
 
 =item ASTNode::hasUnits
 
-Returns C<true> (non-zero) if this node or any of its
+Returns C<true> (nonzero) if this node or any of its
 children nodes have the attribute C<sbml:units>.
 @htmlinclude about-sbml-units-attrib.html
 @return C<true> if this ASTNode or its children has units associated
 with it, C<false> otherwise.
 @note The C<sbml:units> attribute is only available in SBML
 Level&nbsp;3.  It may not be used in Levels 1&ndash;2 of SBML.
+@see isSetUnits()
+@see setUnits(const std::string& units)
 
 
 =item ASTNode::setCharacter
@@ -34762,38 +34822,54 @@ will be set to @link ASTNodeType_t#AST_UNKNOWN AST_UNKNOWN@endlink.
 @param value the character value to which the node's value should be
 set.
 
-C<opydetails> doc_returns_success_code
+C<opydetails> doc_returns_one_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 
 
 =item ASTNode::setId
 
-Sets the MathML id of this ASTNode to id.
+Sets the MathML attribute C<id> of this ASTNode.
 @param id C<string> representing the identifier.
-C<opydetails> doc_returns_success_code
+C<opydetails> doc_returns_one_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
+@see isSetId()
+@see getId()
+@see unsetId()
 
 
 =item ASTNode::setClass
 
-Sets the MathML class of this ASTNode to className.
+Sets the MathML attribute C<class> of this ASTNode to C<className>.
 @param className C<string> representing the MathML class for this node.
-C<opydetails> doc_returns_success_code
+C<opydetails> doc_returns_one_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
+@if java
+@note In the API interfaces for languages other than Java, this method
+is named C<setClass()>, but in Java it is renamed
+C<setClassName()> to avoid a name collision with Java's
+standard object method of the same name.
+@endif@~
+
+@see isSetClass()
+@see getClass()
+@see unsetClass()
 
 
 =item ASTNode::setStyle
 
-Sets the MathML style of this ASTNode to style.
+Sets the MathML attribute C<style> of this ASTNode to style.
 @param style C<string> representing the identifier.
-C<opydetails> doc_returns_success_code
+C<opydetails> doc_returns_one_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
+@see isSetStyle()
+@see getStyle()
+@see unsetStyle()
 
 
 =item ASTNode::setName
 
 Sets the value of this ASTNode to the given name.
-As a side-effect, this ASTNode object's type will be reset to
+As a side effect, this ASTNode object's type will be reset to
 @link ASTNodeType_t#AST_NAME AST_NAME@endlink if (and <em>only
 if</em>) the ASTNode was previously an operator (
 @if clike isOperator()@else ASTNode::isOperator()@endif@~
@@ -34802,8 +34878,8 @@ C<== true>), number (
 C<== true>), or unknown.
 This allows names to be set for @link ASTNodeType_t#AST_FUNCTION AST_FUNCTION@endlink nodes and the like.
 @param name the string containing the name to which this node's value
-should be set
-C<opydetails> doc_returns_success_code
+should be set.
+C<opydetails> doc_returns_one_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 
 
@@ -34811,8 +34887,8 @@ C<opydetails> doc_returns_success_code
 
 Sets the value of this ASTNode to the given integer and sets the node
 type to @link ASTNodeType_t#AST_INTEGER AST_INTEGER@endlink.
-@param value the integer to which this node's value should be set
-C<opydetails> doc_returns_success_code
+@param value the integer to which this node's value should be set.
+C<opydetails> doc_returns_one_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 
 
@@ -34820,8 +34896,8 @@ C<opydetails> doc_returns_success_code
 
 Sets the value of this ASTNode to the given (C<long>) integer and sets
 the node type to @link ASTNodeType_t#AST_INTEGER AST_INTEGER@endlink.
-@param value the integer to which this node's value should be set
-C<opydetails> doc_returns_success_code
+@param value the integer to which this node's value should be set.
+C<opydetails> doc_returns_one_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 
 
@@ -34829,9 +34905,9 @@ C<opydetails> doc_returns_success_code
 
 Sets the value of this ASTNode to the given rational in two parts: the
 numerator and denominator.  The node type is set to @link ASTNodeType_t#AST_RATIONAL AST_RATIONAL@endlink.
-@param numerator the numerator value of the rational
-@param denominator the denominator value of the rational
-C<opydetails> doc_returns_success_code
+@param numerator the numerator value of the rational.
+@param denominator the denominator value of the rational.
+C<opydetails> doc_returns_one_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 
 
@@ -34844,8 +34920,8 @@ This is functionally equivalent to:
 setValue(value, 0);
 @endverbatim
 @param value the C<double> format number to which this node's value
-should be set
-C<opydetails> doc_returns_success_code
+should be set.
+C<opydetails> doc_returns_one_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 
 
@@ -34854,16 +34930,16 @@ C<opydetails> doc_returns_success_code
 Sets the value of this ASTNode to the given real (C<double>) in two
 parts: the mantissa and the exponent.  The node type is set to
 @link ASTNodeType_t#AST_REAL_E AST_REAL_E@endlink.
-@param mantissa the mantissa of this node's real-numbered value
-@param exponent the exponent of this node's real-numbered value
-C<opydetails> doc_returns_success_code
+@param mantissa the mantissa of this node's real-numbered value.
+@param exponent the exponent of this node's real-numbered value.
+C<opydetails> doc_returns_one_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 
 
 =item ASTNode::setType
 
 Sets the type of this ASTNode to the given type code.
-@param type the type to which this node should be set
+@param type the type to which this node should be set.
 C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 @li @link OperationReturnValues_t#LIBSBML_INVALID_ATTRIBUTE_VALUE LIBSBML_INVALID_ATTRIBUTE_VALUE@endlink
@@ -34887,6 +34963,8 @@ C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_INVALID_ATTRIBUTE_VALUE LIBSBML_INVALID_ATTRIBUTE_VALUE@endlink
 @note The C<sbml:units> attribute is only available in SBML
 Level&nbsp;3.  It may not be used in Levels 1&ndash;2 of SBML.
+@see isSetUnits()
+@see hasUnits()
 
 
 =item ASTNode::swapChildren
@@ -34894,7 +34972,7 @@ Level&nbsp;3.  It may not be used in Levels 1&ndash;2 of SBML.
 Swaps the children of this ASTNode object with the children of the
 given ASTNode object.
 @param that the other node whose children should be used to replace
-<em>this</em> node's children
+<em>this</em> node's children.
 C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_FAILED LIBSBML_OPERATION_FAILED@endlink
@@ -34908,7 +34986,10 @@ Renames all the SIdRef attributes on this node and any child node
 =item ASTNode::renameUnitSIdRefs
 
 Renames all the UnitSIdRef attributes on this node and any child node.
-(The only place UnitSIDRefs appear in MathML C<&lt;cn&gt;> elements.)
+The only place UnitSIDRefs appear is in MathML C<&lt;cn&gt;>
+elements, so the effects of this method are limited to that.
+@param oldid the old identifier.
+@param newid the new identifier.
 
 
 =item ASTNode::replaceIDWithFunction
@@ -34932,7 +35013,7 @@ C<opydetails> doc_returns_success_code
 
 =item ASTNode::unsetId
 
-Unsets the MathML id of this ASTNode.
+Unsets the MathML C<id> attribute of this ASTNode.
 C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_FAILED LIBSBML_OPERATION_FAILED@endlink
@@ -34940,7 +35021,7 @@ C<opydetails> doc_returns_success_code
 
 =item ASTNode::unsetClass
 
-Unsets the MathML class of this ASTNode.
+Unsets the MathML C<class> attribute of this ASTNode.
 C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_FAILED LIBSBML_OPERATION_FAILED@endlink
@@ -34948,7 +35029,7 @@ C<opydetails> doc_returns_success_code
 
 =item ASTNode::unsetStyle
 
-Unsets the MathML style of this ASTNode.
+Unsets the MathML C<style> attribute of this ASTNode.
 C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_FAILED LIBSBML_OPERATION_FAILED@endlink
@@ -34981,21 +35062,24 @@ C<opydetails> doc_returns_success_code
 
 =item ASTNode::getDefinitionURL
 
-Gets the MathML "definitionURL" attribute value.
+Returns the MathML C<definitionURL> attribute value.
 @return the value of the C<definitionURL> attribute, in the form of
 a libSBML XMLAttributes object.
+@see setDefinitionURL(XMLAttributes url)
+@see setDefinitionURL(const std::string& url)
+@see getDefinitionURLString()
 
 
 =item ASTNode::replaceArgument
 
-Replaces occurences of a given name within this ASTNode with the
-name/value/formula represented by C<arg>.
+Replaces occurrences of a given name with a given ASTNode.
 For example, if the formula in this ASTNode is C<x + y>,
-then the C<&lt;bvar&gt;> is C<x> and C<arg> is an ASTNode
-representing the real value C<3>.  This method substitutes C<3> for @c
-x within this ASTNode object.
-@param bvar a string representing the variable name to be substituted
-@param arg an ASTNode representing the name/value/formula to substitute
+and the function is called with C<bvar> = C<"x"> and C<arg> = an ASTNode
+representing the real value C<3>.  This method would substitute C<3> for
+C<x> within this ASTNode object, resulting in the forula C<3 + y>.
+@param bvar a string representing the variable name to be substituted.
+@param arg an ASTNode representing the name/value/formula to use as
+a replacement.
 
 
 =item ASTNode::setParentSBMLObject
@@ -35007,6 +35091,9 @@ x within this ASTNode object.
 
 Returns the parent SBML object.
 @return the parent SBML object of this ASTNode.
+@see isSetParentSBMLObject()
+@if clike @see setParentSBMLObject()@endif@~
+@see unsetParentSBMLObject()
 
 
 =item ASTNode::unsetParentSBMLObject
@@ -35017,6 +35104,7 @@ C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_FAILED LIBSBML_OPERATION_FAILED@endlink
 @see isSetParentSBMLObject()
 @see getParentSBMLObject()
+@if clike @see setParentSBMLObject()@endif@~
 
 
 =item ASTNode::isSetParentSBMLObject
@@ -35024,15 +35112,16 @@ C<opydetails> doc_returns_success_code
 Returns C<true> if this node has a value for the parent SBML
 object.
 
-@return true if this ASTNode has an parent SBML object set, C<false> otherwise.
+@return C<true> if this ASTNode has an parent SBML object set, C<false> otherwise.
 @see getParentSBMLObject()
 @if clike @see setParentSBMLObject()@endif@~
+@see unsetParentSBMLObject()
 
 
 =item ASTNode::reduceToBinary
 
 Reduces this ASTNode to a binary tree.
-Example: if this ASTNode is C<and(x, y, z)>, then the 
+Example: if this ASTNode is C<and(x, y, z)>, then the
 formula of the reduced node is C<and(and(x, y), z)>.  The
 operation replaces the formula stored in the current ASTNode object.
 
@@ -35043,18 +35132,27 @@ Sets the user data of this node.
 The user data can be used by the application developer to attach custom
 information to the node.  In case of a deep copy, this attribute will
 passed as it is. The attribute will be never interpreted by this class.
-@param userData specifies the new user data. 
+@param userData specifies the new user data.
 C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_FAILED LIBSBML_OPERATION_FAILED@endlink
+@if clike
+@see isSetUserData()
+@see getUserData()
+@see unsetUserData()
+@endif
 
 
 =item ASTNode::*getUserData
 
 Returns the user data that has been previously set via setUserData().
-@return the user data of this node, or C<NULL> if no user data has been set.
+@return the user data of this node, or C<NULL> if no user data has been
+set.
+
 @if clike
-@see ASTNode::setUserData
+@see isSetUserData()
+@see setUserData()
+@see unsetUserData()
 @endif@~
 
 
@@ -35068,22 +35166,22 @@ C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_FAILED LIBSBML_OPERATION_FAILED@endlink
 @if clike
-@see ASTNode::setUserData()
-@see ASTNode::getUserData()
-@see ASTNode::isSetUserData()
+@see setUserData()
+@see getUserData()
+@see isSetUserData()
 @endif@~
 
 
 =item ASTNode::isSetUserData
 
 Returns C<true> if this node has a user data object.
-@return true if this ASTNode has a user data object set, C<false>
+@return C<true> if this ASTNode has a user data object set, C<false>
 otherwise.
 
 @if clike
-@see ASTNode::setUserData()
-@see ASTNode::getUserData()
-@see ASTNode::unsetUserData()
+@see setUserData()
+@see getUserData()
+@see unsetUserData()
 @endif@~
 
 
@@ -35100,13 +35198,14 @@ still be invalid in the context of its use within an SBML model.
 
 =item ASTNode::hasCorrectNumberArguments
 
-Returns C<true> or C<false> depending on whether this
-ASTNode has the correct number of children for its type.
-For example, an ASTNode with type @link ASTNodeType_t#AST_PLUS AST_PLUS@endlink expects 2 child nodes.
-@note This function performs a check on the top-level node only.  Child
-nodes are not checked.
+Returns C<true> if this ASTNode has the correct number of children for
+its type.
+For example, an ASTNode with type @link ASTNodeType_t#AST_MINUS AST_MINUS@endlink
+expects 1 or 2 child nodes.
 @return C<true> if this ASTNode has the appropriate number of children
 for its type, C<false> otherwise.
+@note This function performs a check on the top-level node only.  Child
+nodes are not checked.
 @see isWellFormedASTNode()
 
 
@@ -35176,32 +35275,72 @@ Returns the MathML C<definitionURL> attribute value as a string.
 
 =item ASTNode::getASTPlugin
 
-
-
-
-=item ASTNode::getASTPlugin
-
-
-
-
-=item ASTNode::getASTPlugin
-
-
+Returns a plug-in object (extension interface) for an SBML Level&nbsp;3
+package extension with the given C<sbmlns>.
+@param sbmlns the namespace of the plugin to return.
+@return the plug-in object (the libSBML extension interface) of
+a package extension with the given package name or URI, or C<NULL>
+if none exist.
 
 
 =item ASTNode::getASTPlugin
 
-
+Returns a plug-in object (extension interface) for an SBML Level&nbsp;3
+package extension for the package that defines the given C<type>.
+@param type the @if clike #ASTNodeType_t@else type@endif@~ that is defined by the given plugin.
+@return the plug-in object (the libSBML extension interface) of
+a package extension that defines the given C<type>, or C<NULL>
+if none exist.
 
 
 =item ASTNode::getASTPlugin
 
-
+Returns a plug-in object (extension interface) for an SBML Level&nbsp;3
+package extension for the package with the given constraints.
+@param name the type or csymbol defined by the returned plugin.
+@param isCsymbol Boolean indicator of whether the C<name> is a csymbol
+(if C<true>) or type (if C<false>).
+@param strCmpIsCaseSensitive whether to search for the matching type
+or csymbol in case-sensitve manner (if C<true>) or case-insensitive
+manner (if C<false>).
+@return the plug-in object (the libSBML extension interface) of
+a package extension that defines the given C<name>, or C<NULL>
+if none exist.
 
 
 =item ASTNode::getASTPlugin
 
+Returns a plug-in object (extension interface) for an SBML Level&nbsp;3
+package extension with the given C<sbmlns>.
+@param sbmlns the namespace of the plugin to return.
+@return the plug-in object (the libSBML extension interface) of
+a package extension with the given package name or URI, or C<NULL>
+if none exist.
 
+
+=item ASTNode::getASTPlugin
+
+Returns a plug-in object (extension interface) for an SBML Level&nbsp;3
+package extension for the package that defines the given C<type>.
+@param type the @if clike #ASTNodeType_t@else type@endif@~ that is defined by the given plugin.
+@return the plug-in object (the libSBML extension interface) of
+a package extension that defines the given C<type>, or C<NULL>
+if none exist.
+
+
+=item ASTNode::getASTPlugin
+
+Returns a plug-in object (extension interface) for an SBML Level&nbsp;3
+package extension for the package with the given constraints.
+@param name the type or csymbol defined by the returned plugin.
+@param isCsymbol Boolean indicator of whether the C<name> is a csymbol
+(if C<true>) or type (if C<false>).
+@param strCmpIsCaseSensitive whether to search for the matching type
+or csymbol in case-sensitve manner (if C<true>) or case-insensitive
+manner (if C<false>).
+@return the plug-in object (the libSBML extension interface) of
+a package extension that defines the given C<name>, or C<NULL>
+if none exist.
 
 
 =item ASTNode::getPlugin
@@ -35283,7 +35422,7 @@ Returns the MathML C<definitionURL> attribute value as a string.
 
 Reads the MathML from the given XML string, constructs a corresponding
 abstract syntax tree, and returns a pointer to the root of the tree.
-@param xml a string containing a full MathML expression
+@param xml a string containing a full MathML expression.
 @return the root of an AST corresponding to the given mathematical
 expression, otherwise C<NULL> is returned if the given string is C<NULL>
 or invalid.
@@ -35296,7 +35435,7 @@ or invalid.
 
 Reads the MathML from the given XML string, constructs a corresponding
 abstract syntax tree, and returns a pointer to the root of the tree.
-@param xml a string containing a full MathML expression
+@param xml a string containing a full MathML expression.
 @param xmlns an @if conly XMLNamespaces_t structure @else XMLNamespaces
 object@endif@~ containing namespaces that are considered active during the
 read. (For example, an SBML Level&nbsp;3 package namespace.)
@@ -35310,7 +35449,7 @@ or invalid.
 
 =item writeMathMLToString
 
-Writes the given ASTNode (and its children) to a string as MathML, and
+Writes the given AST node (and its children) to a string as MathML, and
 returns the string.
 @param node the root of an AST to write out to the stream.
 @return a string containing the written-out MathML representation
@@ -35341,41 +35480,24 @@ argument is C<NULL>.
 
 =item SBML_parseFormula
 
-Parses the given SBML formula and returns a representation of it as an
-Abstract Syntax Tree (AST).
-C<opydetails> doc_summary_of_string_math 
-C<opydetails> doc_warning_L1_math_string_syntax
-@param formula the text-string formula expression to be parsed
-@return the root node of the AST corresponding to the C<formula>, or @c
-NULL if an error occurred in parsing the formula
-@if clike @see SBML_formulaToString()
-@see SBML_parseL3FormulaWithSettings()
-@see SBML_parseL3Formula()
-@see SBML_parseL3FormulaWithModel()
-@see SBML_getLastParseL3Error()
-@see SBML_getDefaultL3ParserSettings()
-@endif@~
-@if csharp @see SBML_formulaToString()
-@see SBML_parseL3FormulaWithSettings()
-@see SBML_parseL3Formula()
-@see SBML_parseL3FormulaWithModel()
-@see SBML_getLastParseL3Error()
-@see SBML_getDefaultL3ParserSettings()
-@endif@~
-@if python @see libsbml.formulaToString()
-@see libsbml.parseL3FormulaWithSettings()
-@see libsbml.parseL3Formula()
-@see libsbml.parseL3FormulaWithModel()
-@see libsbml.getLastParseL3Error()
-@see libsbml.getDefaultL3ParserSettings()
-@endif@~
-@if java @see <code><a href="libsbml.html#formulaToString(org.sbml.libsbml.ASTNode tree)">libsbml.formulaToString(ASTNode tree)</a></code>
-@see <code><a href="libsbml.html#parseL3FormulaWithSettings(java.lang.String, org.sbml.libsbml.L3ParserSettings)">libsbml.parseL3FormulaWithSettings(String formula, L3ParserSettings settings)</a></code>
-@see <code><a href="libsbml.html#parseL3Formula(java.lang.String)">libsbml.parseL3Formula(String formula)</a></code>
-@see <code><a href="libsbml.html#parseL3FormulaWithModel(java.lang.String, org.sbml.libsbml.Model)">parseL3FormulaWithModel(String formula, Model model)</a></code>
-@see <code><a href="libsbml.html#getLastParseL3Error()">getLastParseL3Error()</a></code>
-@see <code><a href="libsbml.html#getDefaultL3ParserSettings()">getDefaultL3ParserSettings()</a></code>
-@endif@~
+Parses a text string as a mathematical formula and returns an AST
+representation of it.
+C<opydetails> doc_summary_of_string_math
+@param formula the text-string formula expression to be parsed.
+@return the root node of the AST corresponding to the C<formula>, or
+C<NULL> if an error occurred in parsing the formula
+@see @sbmlfunction{parseL3Formula, String}
+@see @sbmlfunction{formulaToString, ASTNode}
+@see @sbmlfunction{formulaToL3String, ASTNode}
+@see @sbmlfunction{formulaToL3StringWithSettings, ASTNode\, L3ParserSettings}
+@see @sbmlfunction{parseL3FormulaWithSettings, String\, L3ParserSettings}
+@see @sbmlfunction{parseL3FormulaWithModel, String\, Model}
+@see L3ParserSettings
+C<opydetails> doc_note_l3_parser_encouraged
+C<opydetails> doc_note_math_string_syntax
+@if conly
+@memberof ASTNode_t
+@endif
 
 
 =item SBML_formulaToL3String
@@ -35385,38 +35507,20 @@ derived from SBML Level&nbsp;1, but extended to include elements from
 SBML Level&nbsp;2 and SBML Level&nbsp;3.
 C<opydetails> doc_summary_of_string_math_l3
 @param tree the AST to be converted.
-@return the formula from the given AST as an SBML Level 3 text-string
-mathematical formula.  The caller owns the returned string and is
-responsible for freeing it when it is no longer needed.
-@if clike @see SBML_formulaToL3String()
-@see SBML_parseL3FormulaWithSettings()
-@see SBML_parseL3Formula()
-@see SBML_parseL3FormulaWithModel()
-@see SBML_getLastParseL3Error()
-@see SBML_getDefaultL3ParserSettings()
-@endif@~
-@if csharp @see SBML_formulaToL3String()
-@see SBML_parseL3FormulaWithSettings()
-@see SBML_parseL3Formula()
-@see SBML_parseL3FormulaWithModel()
-@see SBML_getLastParseL3Error()
-@see SBML_getDefaultL3ParserSettings()
-@endif@~
-@if python @see libsbml.formulaToString()
-@see libsbml.parseL3FormulaWithSettings()
-@see libsbml.parseL3Formula()
-@see libsbml.parseL3FormulaWithModel()
-@see libsbml.getLastParseL3Error()
-@see libsbml.getDefaultL3ParserSettings()
-@endif@~
-@if java @see <code><a href="libsbml.html#formulaToString(org.sbml.libsbml.ASTNode tree)">libsbml.formulaToString(ASTNode tree)</a></code>
-@see <code><a href="libsbml.html#parseL3FormulaWithSettings(java.lang.String, org.sbml.libsbml.L3ParserSettings)">libsbml.parseL3FormulaWithSettings(String formula, L3ParserSettings settings)</a></code>
-@see <code><a href="libsbml.html#parseL3Formula(java.lang.String)">libsbml.parseL3Formula(String formula)</a></code>
-@see <code><a href="libsbml.html#parseL3FormulaWithModel(java.lang.String, org.sbml.libsbml.Model)">parseL3FormulaWithModel(String formula, Model model)</a></code>
-@see <code><a href="libsbml.html#getLastParseL3Error()">getLastParseL3Error()</a></code>
-@see <code><a href="libsbml.html#getDefaultL3ParserSettings()">getDefaultL3ParserSettings()</a></code>
-@endif@~
+@return the formula from the given AST as text string, with a syntax
+oriented towards the capabilities defined in SBML Level&nbsp;3.  The
+caller owns the returned string and is responsible for freeing it when it
+is no longer needed.  If C<tree> is a null pointer, then a null pointer is
+returned.
 
+@see @sbmlfunction{formulaToL3StringWithSettings, ASTNode\, L3ParserSettings}
+@see @sbmlfunction{formulaToString, ASTNode}
+@see @sbmlfunction{parseL3FormulaWithSettings, String\, L3ParserSettings}
+@see @sbmlfunction{parseL3FormulaWithModel, String\, Model}
+@see @sbmlfunction{parseFormula, String}
+@see L3ParserSettings
+@see @sbmlfunction{getDefaultL3ParserSettings,}
+@see @sbmlfunction{getLastParseL3Error,}
 @if conly
 @memberof ASTNode_t
 @endif
@@ -35424,34 +35528,53 @@ responsible for freeing it when it is no longer needed.
 
 =item SBML_formulaToL3StringWithSettings
 
-Converts an AST to a string representation of a formula using a syntax
-basically derived from SBML Level&nbsp;1, with behavior modifiable with
-custom settings.
-This function behaves identically to SBML_formulaToL3String(), but 
-its behavior can be modified by two settings in the @param settings
-object, namely:
-@li ParseUnits:  If this is set to 'true' (the default), the function will 
-write out the units of any numerical ASTNodes that have them, producing
-(for example) "3 mL", "(3/4) m", or "5.5e-10 M".  If this is set to
-'false', this function will only write out the number itself ("3",
-"(3/4)", and "5.5e-10", in the previous examples).
-@li CollapseMinus: If this is set to 'false' (the default), the function
-will write out explicitly any doubly-nested unary minus ASTNodes,
-producing (for example) "--x" or even "-----3.1".  If this is set
-to 'true', the function will collapse the nodes before producing the
-infix, producing "x" and "-3.1" in the previous examples.
-All other settings will not affect the behavior of this function:  the
-'parseLog' setting is ignored, and "log10(x)", "ln(x)", and "log(x, y)" 
-are always produced.  Nothing in the Model object is used, and whether
-Avogadro is a csymbol or not is immaterial to the produced infix.
+Converts an AST to a text string representation of a formula, using
+specific formatter settings.
+This function behaves identically to @sbmlfunction{formulaToL3String,
+ASTNode} but its behavior is controlled by two fields in the @p
+settings object, namely:
+@li <em>parseunits</em> ("parse units"): If this field in the C<settings>
+object is set to C<true> (the default), the function will
+write out the units of any numerical ASTNodes that have them,
+producing (for example) &quot;C<3 mL>&quot;,
+&quot;C<(3/4) m>&quot;, or &quot;C<5.5e-10
+M>&quot;.  If this is set to C<false>, this function
+will only write out the number itself (&quot;C<3>&quot;,
+&quot;C<(3/4)>&quot;, and &quot;C<5.5e-10>&quot;,
+in the previous examples).
+@li <em>collapseminus</em> ("collapse minus"): If this field in the @p
+settings object is set to C<false> (the default), the
+function will write out explicitly any doubly-nested unary minus
+ASTNodes, producing (for example) &quot;C<- -x>&quot; or
+even &quot;C<- - - - -3.1>&quot;.  If this is set to
+C<true>, the function will collapse the nodes before
+producing the infix form, producing &quot;C<x>&quot; and
+&quot;C<-3.1>&quot; in the previous examples.
+All the other settings of the L3ParserSettings object passed in as @p
+settings will be ignored for the purposes of this function: the
+<em>parselog</em> ("parse log") setting is ignored so that
+&quot;C<log10(x)>&quot;, &quot;C<ln(x)>&quot;, and
+&quot;C<log(x, y)>&quot; are always produced; the
+<em>avocsymbol</em> ("Avogadro csymbol") is irrelevant to the behavior
+of this function; and nothing in the Model object set via the
+<em>model</em> setting is used.
 @param tree the AST to be converted.
-@param settings the L3ParserSettings object used to modify behavior.
-@return the formula from the given AST as an SBML Level 3 text-string
-mathematical formula.  The caller owns the returned string and is
-responsible for freeing it when it is no longer needed.
-@see SBML_parseFormula()
-@see SBML_parseL3Formula()
-@see SBML_formulaToL3String()
+@param settings the L3ParserSettings object used to modify the behavior of
+this function.
+@return the formula from the given AST as text string, with a syntax
+oriented towards the capabilities defined in SBML Level&nbsp;3.  The
+caller owns the returned string and is responsible for freeing it when it
+is no longer needed.  If C<tree> is a null pointer, then a null pointer is
+returned.
+
+@see @sbmlfunction{formulaToL3String, ASTNode}
+@see @sbmlfunction{formulaToString, ASTNode}
+@see @sbmlfunction{parseL3FormulaWithSettings, String\, L3ParserSettings}
+@see @sbmlfunction{parseL3FormulaWithModel, String\, Model}
+@see @sbmlfunction{parseFormula, String}
+@see L3ParserSettings
+@see @sbmlfunction{getDefaultL3ParserSettings,}
+@see @sbmlfunction{getLastParseL3Error,}
 @if conly
 @memberof ASTNode_t
 @endif
@@ -35462,40 +35585,17 @@ responsible for freeing it when it is no longer needed.
 Converts an AST to a string representation of a formula using a syntax
 basically derived from SBML Level&nbsp;1.
 C<opydetails> doc_summary_of_string_math 
-C<opydetails> doc_warning_L1_math_string_syntax 
+C<opydetails> doc_note_l3_parser_encouraged 
 @param tree the AST to be converted.
 @return the formula from the given AST as an SBML Level 1 text-string
 mathematical formula.  The caller owns the returned string and is
 responsible for freeing it when it is no longer needed.
-@if clike @see SBML_formulaToString()
-@see SBML_parseL3FormulaWithSettings()
-@see SBML_parseL3Formula()
-@see SBML_parseL3FormulaWithModel()
-@see SBML_getLastParseL3Error()
-@see SBML_getDefaultL3ParserSettings()
-@endif@~
-@if csharp @see SBML_formulaToString()
-@see SBML_parseL3FormulaWithSettings()
-@see SBML_parseL3Formula()
-@see SBML_parseL3FormulaWithModel()
-@see SBML_getLastParseL3Error()
-@see SBML_getDefaultL3ParserSettings()
-@endif@~
-@if python @see libsbml.formulaToString()
-@see libsbml.parseL3FormulaWithSettings()
-@see libsbml.parseL3Formula()
-@see libsbml.parseL3FormulaWithModel()
-@see libsbml.getLastParseL3Error()
-@see libsbml.getDefaultL3ParserSettings()
-@endif@~
-@if java @see <code><a href="libsbml.html#formulaToString(org.sbml.libsbml.ASTNode tree)">libsbml.formulaToString(ASTNode tree)</a></code>
-@see <code><a href="libsbml.html#parseL3FormulaWithSettings(java.lang.String, org.sbml.libsbml.L3ParserSettings)">libsbml.parseL3FormulaWithSettings(String formula, L3ParserSettings settings)</a></code>
-@see <code><a href="libsbml.html#parseL3Formula(java.lang.String)">libsbml.parseL3Formula(String formula)</a></code>
-@see <code><a href="libsbml.html#parseL3FormulaWithModel(java.lang.String, org.sbml.libsbml.Model)">parseL3FormulaWithModel(String formula, Model model)</a></code>
-@see <code><a href="libsbml.html#getLastParseL3Error()">getLastParseL3Error()</a></code>
-@see <code><a href="libsbml.html#getDefaultL3ParserSettings()">getDefaultL3ParserSettings()</a></code>
-@endif@~
-
+@see @sbmlfunction{formulaToL3String, ASTNode}
+@see @sbmlfunction{formulaToL3StringWithSettings, ASTNode\, L3ParserSettings}
+@see @sbmlfunction{parseL3FormulaWithSettings, String\, L3ParserSettings}
+@see @sbmlfunction{parseL3FormulaWithModel, String\, Model}
+@see @sbmlfunction{parseFormula, String}
+C<opydetails> doc_note_math_string_syntax
 @if conly
 @memberof ASTNode_t
 @endif
@@ -35743,22 +35843,28 @@ functions such as C<"sin"> will be matched no matter what their case is:
 C<"Sin">, C<"SIN">, etc.  If the flag is set to the value
 @link #L3P_COMPARE_BUILTINS_CASE_SENSITIVE L3P_COMPARE_BUILTINS_CASE_SENSITIVE@endlink, symbols are
 interpreted in a case-sensitive manner.
-@param modulol3v2 ("modulo l3v2") a flag that controls how the
-parser will handle the '%' ('modulo') symbol in formulas.  By default, 
-the parser will convert 'a % b' to a piecewise function that properly
-calculates the remainder of a with respect to be, but the parser can
-also be set to produce the MathML C<rem> function, should the target
-of the produced ASTNode be an SBML Level&nbsp;3 Version&nbsp;2 
-document, where the C<rem> function is legal.
-The possible values of this field are
-@link #L3P_MODULO_IS_PIECEWISE L3P_MODULO_IS_PIECEWISE@endlink (to parse '%' as a piecewise function) and
-@link #L3P_MODULO_IS_REM L3P_MODULO_IS_REM@endlink (to parse '%' as C<rem>).
 @param sbmlns ("SBML namespaces") an SBML namespaces object.  The
 namespaces identify the SBML Level&nbsp;3 packages that can extend the
 syntax understood by the formula parser.  When non-C<NULL>, the parser
 will interpret additional syntax defined by the packages; for example,
 it may understand vector/array extensions introduced by the SBML
 Level&nbsp;3 I<Arrays> package.
+@param moduloL3v2 ("modulo L3v2") a flag that controls how the
+parser will handle the @% ('modulo') symbol in formulas.  By default, 
+the parser will convert 'a % b' to a piecewise function that properly
+calculates the remainder of a with respect to be, but the parser can
+also be set to produce the MathML C<rem> function, should the target
+of the produced ASTNode be an SBML Level&nbsp;3 Version&nbsp;2 
+document, where the C<rem> function is legal.
+The possible values of this field are
+@link #L3P_MODULO_IS_PIECEWISE L3P_MODULO_IS_PIECEWISE@endlink (to parse @% as a piecewise function) and
+@link #L3P_MODULO_IS_REM L3P_MODULO_IS_REM@endlink (to parse @% as C<rem>).
+@param l3v2functions ("parse L3v2 functions directly") is a Boolean flag
+that controls how to translate certain mathematical functions added in SBML
+Level&nbsp;3 Version&nbsp;2 Core.  The parser can either turn them into
+specific AST node types, or turn them all into
+@link ASTNodeType_t#AST_FUNCTION AST_FUNCTION@endlink with the name set to the
+function name in question.
 @ifnot hasDefaultArgs @htmlinclude warn-default-args-in-docs.html @endif@~
 @see getModel()
 @see setModel(@if java Model@endif)
@@ -35947,8 +36053,8 @@ or
 Sets the parser's behavior with respect to case sensitivity for
 recognizing predefined symbols.
 C<opydetails> doc_case_sensitivity
-@param strcmp a boolean indicating whether to be case sensitive (if @c
-true) or be case insensitive (if C<false>).
+@param strcmp a boolean indicating whether to be case sensitive (if
+C<true>) or be case insensitive (if C<false>).
 @see getComparisonCaseSensitivity()
 
 
@@ -35965,25 +36071,25 @@ constants regardless of case,.
 
 =item L3ParserSettings::setParseModuloL3v2
 
-Sets the behavior for handling the '%' sumbol in mathematical
+Sets the behavior for handling the @% symbol in mathematical
 formulas.
 
 C<opydetails> doc_modulo_l3v2_settings
 This method lets you tell the parser which behavior to use---either
-parse '%' as the 'rem' function or as a piecewise function with the
+parse @% as the 'rem' function or as a piecewise function with the
 same interpretation.  The two possibilities are
 represented using the following constants:
 C<opydetails> doc_modulo_l3v2_values
 @param modulol3v2 a boolean value (one of the constants
 @link #L3P_MODULO_IS_PIECEWISE L3P_MODULO_IS_PIECEWISE@endlink or
 @link #L3P_MODULO_IS_REM L3P_MODULO_IS_REM@endlink)
-indicating how the '%' symbol in the input should be handled.
+indicating how the @% symbol in the input should be handled.
 @see getParseModuloL3v2()
 
 
 =item L3ParserSettings::getParseModuloL3v2
 
-Indicates the current behavior set for handling the '%' sumbol in 
+Indicates the current behavior set for handling the @% symbol in 
 mathematical formulas.
 C<opydetails> doc_modulo_l3v2_settings
 @return A boolean indicating the behavior currently set.  The possible
@@ -36017,7 +36123,7 @@ C<opydetails> doc_l3v2_function_settings
 @return A boolean indicating the behavior currently set.  The possible
 values are as follows:
 C<opydetails> doc_l3v2_function_values
-@see setParsePackageMath(@if java boolean@endif)
+@see setParseL3v2Functions(@if java boolean@endif)
 
 
 =item L3ParserSettings::setParsePackageMath
@@ -36030,11 +36136,13 @@ or as generic functions with that name (to be defined by SBML as
 function definitions).  The two possibilities are
 represented using the following constants:
 C<opydetails> doc_package_math_values
-@param l3v2functions a boolean value (one of the constants
+@param package an ExtendedMathType_t indicating the extended math package
+to be queried.
+@param parsepackage a boolean value (one of the constants
 @link #L3P_PARSE_L3V2_FUNCTIONS_DIRECTLY L3P_PARSE_L3V2_FUNCTIONS_DIRECTLY@endlink or
 @link #L3P_PARSE_L3V2_FUNCTIONS_AS_GENERIC L3P_PARSE_L3V2_FUNCTIONS_AS_GENERIC@endlink)
 indicating how to interpret those function names.
-@see getParsePackageMath()
+@see getParsePackageMath(@if java ExtendedMathType_t@endif)
 
 
 =item L3ParserSettings::getParsePackageMath
@@ -36042,10 +36150,12 @@ indicating how to interpret those function names.
 Indicates the current behavior set for handling whether to
 parse the functions added in the given package as that MathML or not.
 C<opydetails> doc_package_math_settings
+@param package an ExtendedMathType_t indicating the extended math package
+to be set.
 @return A boolean indicating the behavior currently set.  The possible
 values are as follows:
 C<opydetails> doc_package_math_values
-@see setParsePackageMath(@if java boolean@endif)
+@see setParsePackageMath(@if java ExtendedMathType_t, boolean@endif)
 
 
 =item L3ParserSettings::visitPackageInfixSyntax
@@ -36111,7 +36221,8 @@ registry.  This static method provides the means for doing that.
 =item DefinitionURLRegistry::addDefinitionURL
 
 Adds the given DefinitionURL to the registry of SBML DefinitionURLs.
-@param DefinitionURL the DefinitionURL to add to the registry.
+@param url the DefinitionURL to add to the registry.
+@param type the ASTNodeType_t of the URL to add to the registry.
 C<opydetails> doc_returns_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 @li @link OperationReturnValues_t#LIBSBML_INVALID_OBJECT LIBSBML_INVALID_OBJECT@endlink
@@ -63046,7 +63157,7 @@ C<false> is returned.
 =item MultiASTPlugin::setSpeciesReference
 
 Sets the value of the "speciesReference" attribute of this MultiASTPlugin.
-@param id std::string& value of the "speciesReference" attribute to be set.
+@param speciesReference std::string& value of the "speciesReference" attribute to be set.
 C<opydetails> doc_returns_one_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 Calling this function with C<speciesReference> = C<NULL> or an empty string is
@@ -63076,7 +63187,7 @@ C<false> is returned.
 =item MultiASTPlugin::setRepresentationType
 
 Sets the value of the "representationType" attribute of this MultiASTPlugin.
-@param id std::string& value of the "representationType" attribute to be set.
+@param representationType std::string& value of the "representationType" attribute to be set.
 C<opydetails> doc_returns_one_success_code
 @li @link OperationReturnValues_t#LIBSBML_OPERATION_SUCCESS LIBSBML_OPERATION_SUCCESS@endlink
 Calling this function with C<representationType> = C<NULL> or an empty string is
@@ -86737,6 +86848,9 @@ sub new {
 *removePkgNamespace = *LibSBMLc::SBMLNamespaces_removePkgNamespace;
 *isSBMLNamespace = *LibSBMLc::SBMLNamespaces_isSBMLNamespace;
 *isValidCombination = *LibSBMLc::SBMLNamespaces_isValidCombination;
+*setLevel = *LibSBMLc::SBMLNamespaces_setLevel;
+*setVersion = *LibSBMLc::SBMLNamespaces_setVersion;
+*setNamespaces = *LibSBMLc::SBMLNamespaces_setNamespaces;
 *getPackageName = *LibSBMLc::SBMLNamespaces_getPackageName;
 sub DISOWN {
     my $self = shift;
@@ -100211,6 +100325,7 @@ package LibSBML;
 *LIBSBML_SEV_SCHEMA_ERROR = *LibSBMLc::LIBSBML_SEV_SCHEMA_ERROR;
 *LIBSBML_SEV_GENERAL_WARNING = *LibSBMLc::LIBSBML_SEV_GENERAL_WARNING;
 *LIBSBML_SEV_NOT_APPLICABLE = *LibSBMLc::LIBSBML_SEV_NOT_APPLICABLE;
+*LIBSBML_SEV_UNKNOWN = *LibSBMLc::LIBSBML_SEV_UNKNOWN;
 *MODEL_QUALIFIER = *LibSBMLc::MODEL_QUALIFIER;
 *BIOLOGICAL_QUALIFIER = *LibSBMLc::BIOLOGICAL_QUALIFIER;
 *UNKNOWN_QUALIFIER = *LibSBMLc::UNKNOWN_QUALIFIER;
